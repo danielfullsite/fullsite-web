@@ -1383,13 +1383,13 @@ footer{
 }
 
 /* Hero entrance — staggered */
-nav.top{opacity:0;animation:fm-enter 0.6s var(--ease-soft) 0.05s both}
-.hero-badge{opacity:0;animation:fm-enter 0.7s var(--ease-spring) 0.1s both}
-h1.hero-title{opacity:0;animation:fm-enter 1s var(--ease-spring) 0.22s both}
-.hero-sub{opacity:0;animation:fm-enter 0.9s var(--ease-spring) 0.4s both}
-.hero-ctas{opacity:0;animation:fm-enter 0.9s var(--ease-spring) 0.55s both}
-.hero-visual{opacity:0;animation:fm-enter-scale 1.3s var(--ease-spring) 0.7s both}
-.hero-logos{opacity:0;animation:fm-enter 0.9s var(--ease-spring) 1.1s both}
+nav.top{opacity:0;animation:fm-enter 0.8s var(--ease-soft) 0.05s both}
+.hero-badge{opacity:0;animation:fm-enter 0.9s var(--ease-spring) 0.2s both}
+h1.hero-title{opacity:0;animation:fm-enter 1.2s var(--ease-spring) 0.35s both}
+.hero-sub{opacity:0;animation:fm-enter 1s var(--ease-spring) 0.55s both}
+.hero-ctas{opacity:0;animation:fm-enter 1s var(--ease-spring) 0.75s both}
+.hero-visual{opacity:0;animation:fm-enter-scale 1.6s var(--ease-spring) 0.95s both}
+.hero-logos{opacity:0;animation:fm-enter 1s var(--ease-spring) 1.4s both}
 
 /* Pills float after visual appears */
 .hero-pill{animation:fm-float 4s ease-in-out infinite}
@@ -1398,25 +1398,33 @@ h1.hero-title{opacity:0;animation:fm-enter 1s var(--ease-spring) 0.22s both}
 .hero-pill.p3{animation-delay:2s}
 .hero-pill.p4{animation-delay:3s}
 
-/* Scroll reveal */
+/* Scroll reveal — premium transitions */
 .reveal{
   opacity:0;
-  transform:translateY(36px);
-  filter:blur(2px);
-  transition:opacity 0.85s var(--ease-spring), transform 0.85s var(--ease-spring), filter 0.85s ease;
+  transform:translateY(40px) scale(0.98);
+  filter:blur(4px);
+  transition:opacity 1s var(--ease-spring), transform 1s var(--ease-spring), filter 0.8s ease;
 }
-.reveal.in{opacity:1;transform:translateY(0);filter:blur(0)}
+.reveal.in{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
 .reveal-stagger > *{
   opacity:0;
-  transform:translateY(26px);
-  transition:opacity 0.75s var(--ease-spring), transform 0.75s var(--ease-spring);
+  transform:translateY(28px) scale(0.97);
+  filter:blur(2px);
+  transition:opacity 0.8s var(--ease-spring), transform 0.8s var(--ease-spring), filter 0.6s ease;
 }
-.reveal-stagger.in > *{opacity:1;transform:translateY(0)}
+.reveal-stagger.in > *{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
 .reveal-stagger.in > *:nth-child(1){transition-delay:0s}
-.reveal-stagger.in > *:nth-child(2){transition-delay:0.1s}
-.reveal-stagger.in > *:nth-child(3){transition-delay:0.2s}
-.reveal-stagger.in > *:nth-child(4){transition-delay:0.3s}
-.reveal-stagger.in > *:nth-child(5){transition-delay:0.4s}
+.reveal-stagger.in > *:nth-child(2){transition-delay:0.08s}
+.reveal-stagger.in > *:nth-child(3){transition-delay:0.16s}
+.reveal-stagger.in > *:nth-child(4){transition-delay:0.24s}
+.reveal-stagger.in > *:nth-child(5){transition-delay:0.32s}
+.reveal-stagger.in > *:nth-child(6){transition-delay:0.40s}
+
+/* Parallax scroll effect for sections */
+.parallax-slow{
+  will-change:transform;
+  transition:transform 0.1s linear;
+}
 .reveal-stagger.in > *:nth-child(6){transition-delay:0.5s}
 
 /* Bento stagger */
@@ -2622,6 +2630,19 @@ nav.top.scrolled{
           hl3Inner.style.transform = 'translateY(' + liftY + 'px)';
           ticking = false;
         });
+      }
+    }, { passive: true });
+  }
+
+  /* ── PARALLAX SCROLL EFFECTS ─────────────────────────────── */
+  if (!reducedMotion) {
+    var heroBg = document.querySelector('.hero-bg');
+    var heroVisual = document.querySelector('.hero-visual');
+    window.addEventListener('scroll', function(){
+      var sy = window.scrollY;
+      if (sy < 1200) {
+        if (heroBg) heroBg.style.transform = 'translateY(' + (sy * 0.15) + 'px)';
+        if (heroVisual) heroVisual.style.transform = 'translateY(' + (sy * 0.05) + 'px)';
       }
     }, { passive: true });
   }
