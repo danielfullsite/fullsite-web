@@ -33,7 +33,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(0,0,0,.8);ba
 .n-links a{font-size:13px;font-weight:500;color:rgba(255,255,255,.5);transition:color .2s}
 .n-links a:hover{color:#fff}
 .n-cta{background:var(--g)!important;color:#000!important;padding:8px 20px;border-radius:8px;font-weight:700!important}
-@media(max-width:768px){.n-links a:not(.n-cta){display:none}}
+.n-ham{display:none;width:24px;height:24px;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;background:none;border:none;padding:0}
+.n-ham span{display:block;width:18px;height:1.5px;background:#fff;border-radius:2px;transition:transform .3s,opacity .3s}
+.n-mob{display:none;position:fixed;top:52px;left:0;right:0;background:rgba(0,0,0,.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.06);flex-direction:column;padding:20px 24px;gap:16px;z-index:99}
+.n-mob.open{display:flex}
+.n-mob a{font-size:15px;font-weight:500;color:rgba(255,255,255,.6);padding:8px 0}
+.n-mob .n-cta{text-align:center;margin-top:8px}
+@media(max-width:768px){.n-links{display:none}.n-ham{display:flex}}
 
 /* HERO */
 .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 24px 60px;position:relative;overflow:hidden}
@@ -42,7 +48,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(0,0,0,.8);ba
 .hero-logo .dot{display:inline-block;width:clamp(12px,1.8vw,24px);height:clamp(12px,1.8vw,24px);background:var(--g);margin-left:2px;margin-bottom:clamp(6px,1vw,14px)}
 .hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:7px 18px;border-radius:99px;font-size:12px;font-weight:500;color:rgba(255,255,255,.6);margin-bottom:28px}
 .hero-tag-dot{width:5px;height:5px;border-radius:50%;background:var(--g);box-shadow:0 0 8px rgba(0,255,136,.5)}
-.hero h2{font-size:clamp(20px,3vw,32px);font-weight:500;color:rgba(255,255,255,.5);max-width:600px;line-height:1.5;margin-bottom:32px}
+.hero h2{font-size:clamp(20px,3vw,32px);font-weight:500;color:rgba(255,255,255,.5);max-width:640px;line-height:1.5;margin-bottom:16px}
+.hero-sub{font-size:clamp(14px,1.6vw,16px);color:rgba(255,255,255,.35);max-width:520px;line-height:1.7;margin-bottom:32px;text-align:center}
 .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:10px;font-size:15px;font-weight:700;font-family:var(--sans);border:none;cursor:pointer;transition:transform .2s,box-shadow .2s}
 .btn-primary{background:var(--g);color:#000;box-shadow:0 4px 20px rgba(0,255,136,.2)}
@@ -58,6 +65,21 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(0,0,0,.8);ba
 .stat-num{font-size:clamp(24px,3vw,36px);font-weight:800;letter-spacing:-.03em;line-height:1}
 .stat-label{font-size:11px;color:rgba(255,255,255,.35);margin-top:4px}
 @media(max-width:600px){.stats-inner{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:none}.stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid rgba(255,255,255,.04)}}
+
+/* PROOF */
+.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.proof-metrics{display:flex;gap:32px;margin-top:32px}
+.proof-m{display:flex;flex-direction:column;gap:2px}
+.proof-num{font-size:24px;font-weight:800;color:#fff;letter-spacing:-.02em}
+.proof-lab{font-size:11px;color:rgba(255,255,255,.35)}
+.proof-terminal{background:var(--s1);border:1px solid rgba(255,255,255,.08);border-radius:14px;overflow:hidden}
+.proof-term-bar{display:flex;gap:6px;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.05)}
+.proof-term-bar span{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.08)}
+.proof-term-bar span:first-child{background:#ff5f57}
+.proof-term-bar span:nth-child(2){background:#febc2e}
+.proof-term-bar span:last-child{background:#28c840}
+.proof-term-body{padding:20px;font-family:monospace;font-size:12px;color:rgba(255,255,255,.6);line-height:1.7}
+@media(max-width:860px){.proof-grid{grid-template-columns:1fr}.proof-metrics{flex-wrap:wrap;gap:20px}}
 
 /* SECTION */
 section{padding:clamp(80px,10vh,120px) 0}
@@ -180,18 +202,29 @@ footer{padding:32px clamp(20px,4vw,48px);border-top:1px solid rgba(255,255,255,.
       <a href="#security">Seguridad</a>
       <a href="#cta" class="n-cta">Agendar demo</a>
     </div>
+    <button class="n-ham" aria-label="Menu" onclick="document.querySelector('.n-mob').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<div class="n-mob">
+  <a href="#features" onclick="this.parentElement.classList.remove('open')">Producto</a>
+  <a href="#agents" onclick="this.parentElement.classList.remove('open')">Agentes</a>
+  <a href="#pricing" onclick="this.parentElement.classList.remove('open')">Precio</a>
+  <a href="#security" onclick="this.parentElement.classList.remove('open')">Seguridad</a>
+  <a href="#cta" class="n-cta" onclick="this.parentElement.classList.remove('open')">Agendar demo</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-tag"><span class="hero-tag-dot"></span>POS + IA para restaurantes · Monterrey, MX</div>
   <div class="hero-logo">fullsite<span class="dot"></span></div>
-  <h2>El primer POS con IA que te dice que hacer — ahora, no en el reporte de fin de mes.</h2>
+  <h2>Tu restaurante genera los datos.<br><strong style="color:#fff">Nosotros los convertimos en decisiones.</strong></h2>
+  <p class="hero-sub">26 agentes de IA que monitorean ventas, meseros, fraude e inventario — y te avisan por WhatsApp antes de que sea problema.</p>
   <div class="hero-ctas">
     <a href="#cta" class="btn btn-primary">Agendar demo →</a>
-    <a href="#features" class="btn btn-ghost">Ver como funciona</a>
+    <a href="#proof" class="btn btn-ghost">Ver caso real</a>
   </div>
 </section>
 
@@ -204,6 +237,40 @@ footer{padding:32px clamp(20px,4vw,48px);border-top:1px solid rgba(255,255,255,.
     <div class="stat"><div class="stat-num">24/7</div><div class="stat-label">autonomo</div></div>
   </div>
 </div>
+
+<!-- SOCIAL PROOF -->
+<section id="proof" style="border-bottom:1px solid rgba(255,255,255,.05)">
+  <div class="wrap">
+    <div class="proof-grid rv">
+      <div class="proof-text">
+        <div class="sec-label">Caso real</div>
+        <div class="sec-title">Operando en AMALAY<br>desde el dia 1.</div>
+        <div class="sec-desc">869 dias de datos reales. No es una demo — es un restaurante en Monterrey con mas de 181,000 tickets procesados y $70M MXN analizados.</div>
+        <div class="proof-metrics">
+          <div class="proof-m"><span class="proof-num">2.4 seg</span><span class="proof-lab">Respuesta promedio del bot</span></div>
+          <div class="proof-m"><span class="proof-num">26</span><span class="proof-lab">Agentes activos 24/7</span></div>
+          <div class="proof-m"><span class="proof-num">7:01 AM</span><span class="proof-lab">Briefing diario automatico</span></div>
+        </div>
+      </div>
+      <div class="proof-terminal">
+        <div class="proof-term-bar"><span></span><span></span><span></span></div>
+        <div class="proof-term-body">
+<span style="color:rgba(255,255,255,.3)">$ fullsite status --client amalay</span>
+<br><br>
+<span style="color:var(--g)">✓</span> POS sync &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:var(--g)">live</span> (last: 4s ago)
+<br><span style="color:var(--g)">✓</span> Agentes activos &nbsp;&nbsp; <span style="color:#fff">26/26</span>
+<br><span style="color:var(--g)">✓</span> Anomalias hoy &nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#fff">0 alertas</span>
+<br><span style="color:var(--g)">✓</span> WhatsApp bot &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:var(--g)">online</span>
+<br><span style="color:var(--g)">✓</span> Briefing 7AM &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:var(--g)">enviado</span>
+<br><br>
+<span style="color:rgba(255,255,255,.3)">ventas_hoy:</span> <span style="color:#fff;font-weight:700">$18,420</span> <span style="color:var(--g)">+12% vs ayer</span>
+<br><span style="color:rgba(255,255,255,.3)">tickets:</span> &nbsp;&nbsp;&nbsp; <span style="color:#fff">74</span>
+<br><span style="color:rgba(255,255,255,.3)">top_mesero:</span> <span style="color:#fff">Omar $4,200</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- FEATURES -->
 <section id="features">
@@ -289,9 +356,10 @@ footer{padding:32px clamp(20px,4vw,48px);border-top:1px solid rgba(255,255,255,.
       <div class="ag"><div class="ag-top"><div class="ag-icon" style="background:linear-gradient(135deg,#10b981,#059669)"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M5 22v-2a7 7 0 0114 0v2"/></svg></div><div><h4>Staff optimizer</h4><div class="ag-st">Analizando</div></div></div><p>Horario optimo basado en ventas/hora.</p><div class="ag-term">→ Lun 2-4pm: sobran 2<br>→ Sab 1pm: faltan 2<br>→ Ahorro: $3,200/sem</div></div>
       <div class="ag"><div class="ag-top"><div class="ag-icon" style="background:linear-gradient(135deg,#ec4899,#db2777)"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><h4>Anti-fraude</h4><div class="ag-st">Vigilando</div></div></div><p>Cancelaciones y descuentos sospechosos.</p><div class="ag-term">→ 12 cancelaciones/sem<br>→ 8 del mismo mesero<br><span style="color:#ff6b4a">→ Reporte listo</span></div></div>
       <div class="ag"><div class="ag-top"><div class="ag-icon" style="background:linear-gradient(135deg,#3b82f6,#2563eb)"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg></div><div><h4>Menu engineering</h4><div class="ag-st">Optimizando</div></div></div><p>Clasifica tus platillos: estrellas, vacas, perros.</p><div class="ag-term">→ Margaritas: 78% ★<br>→ Sandwich: 18% ↓<br>→ Mover pag 1: +$12k</div></div>
-      <div class="ag"><div class="ag-top"><div class="ag-icon" style="background:linear-gradient(135deg,#22d3ee,#06b6d4)"><svg viewBox="0 0 24 24"><path d="M8 2v4M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg></div><div><h4>Briefing 7AM</h4><div class="ag-st">Diario</div></div></div><p>Ventas, propinas, top platillos cada manana.</p><div class="ag-term">→ Ventas ayer: $18,420<br>→ Top: Omar $4,200<br><span style="color:var(--g)">→ Enviado 7:01 AM</span></div></div>
-      <div class="ag"><div class="ag-top"><div class="ag-icon" style="background:linear-gradient(135deg,#10b981,#059669)"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div><h4>KB 24/7</h4><div class="ag-st">On-demand</div></div></div><p>Pregunta por Telegram — responde al instante.</p><div class="ag-term">→ "Cuanto vendimos?"<br>→ $14,820 (62 tickets)<br><span style="color:var(--g)">→ 4 seg respuesta</span></div></div>
-      <div class="ag"><div class="ag-top"><div class="ag-icon" style="background:linear-gradient(135deg,#a855f7,#9333ea)"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg></div><div><h4>Reporte semanal</h4><div class="ag-st">Lunes 9AM</div></div></div><p>Ejecutivo con tendencias y recomendaciones.</p><div class="ag-term">→ Semana +8% vs ant.<br>→ Jueves mejor dia<br><span style="color:var(--g)">→ Ejecutivo enviado</span></div></div>
+    </div>
+    <div class="ag-more rv" style="text-align:center;margin-top:28px">
+      <p style="font-size:14px;color:rgba(255,255,255,.4)">+ 20 agentes mas: briefing diario, reporte semanal, KB 24/7, staffing, waste, suppliers, tips, CRM...</p>
+      <a href="#cta" class="btn btn-ghost" style="margin-top:16px;display:inline-flex">Agenda demo para verlos todos →</a>
     </div>
   </div>
 </section>
