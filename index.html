@@ -28,9 +28,9 @@ a{color:inherit;text-decoration:none}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .4s,border-color .4s}
 nav.scrolled{background:rgba(0,0,0,.85);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,.06)}
 .nav-inner{max-width:1200px;margin:0 auto;padding:16px clamp(20px,4vw,48px);display:flex;align-items:center;justify-content:space-between}
-.n-logo{display:flex;align-items:center;opacity:.8;transition:opacity .2s}
+.n-logo{font-weight:900;font-size:18px;letter-spacing:-.04em;display:flex;align-items:flex-end;gap:2px;opacity:.8;transition:opacity .2s}
 .n-logo:hover{opacity:1}
-.n-logo img{height:22px;filter:invert(1);mix-blend-mode:screen}
+.n-dot{width:5px;height:5px;background:var(--g);margin-bottom:3px}
 .n-links{display:flex;gap:28px;align-items:center}
 .n-links a{font-size:12px;font-weight:500;color:rgba(255,255,255,.4);transition:color .2s;letter-spacing:.01em}
 .n-links a:hover{color:#fff}
@@ -48,8 +48,8 @@ nav.scrolled{background:rgba(0,0,0,.85);backdrop-filter:blur(24px);-webkit-backd
 .hero-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-55%);width:min(800px,100vw);height:min(800px,100vw);background:radial-gradient(circle,rgba(0,255,136,.1) 0%,rgba(0,255,136,.03) 30%,transparent 60%);pointer-events:none;animation:glowPulse 6s ease-in-out infinite}
 @keyframes glowPulse{0%,100%{opacity:.7;transform:translate(-50%,-55%) scale(1)}50%{opacity:1;transform:translate(-50%,-55%) scale(1.08)}}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.015) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 60% 50% at 50% 40%,#000 20%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse 60% 50% at 50% 40%,#000 20%,transparent 70%);pointer-events:none}
-.hero-logo{position:relative;z-index:1;margin-bottom:8px}
-.hero-logo img{width:clamp(320px,55vw,650px);filter:invert(1);mix-blend-mode:screen}
+.hero-logo{font-size:clamp(90px,16vw,220px);font-weight:900;letter-spacing:-.07em;line-height:.85;position:relative;z-index:1}
+.hero-logo .dot{display:inline-block;width:clamp(14px,2.2vw,32px);height:clamp(14px,2.2vw,32px);background:var(--g);margin-left:2px;margin-bottom:clamp(8px,1.2vw,18px);box-shadow:0 0 40px rgba(0,255,136,.4),0 0 80px rgba(0,255,136,.15)}
 .hero-sub{font-size:clamp(16px,2vw,20px);font-weight:400;color:rgba(255,255,255,.4);max-width:540px;line-height:1.6;margin-top:16px;position:relative;z-index:1}
 .hero-sub strong{color:rgba(255,255,255,.75);font-weight:600}
 .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:36px;position:relative;z-index:1}
@@ -200,7 +200,7 @@ footer{padding:32px clamp(20px,4vw,48px);border-top:1px solid rgba(255,255,255,.
 
 <nav>
   <div class="nav-inner">
-    <a href="#" class="n-logo"><img src="logo.png" alt="fullsite"></a>
+    <a href="#" class="n-logo">fullsite<span class="n-dot"></span></a>
     <div class="n-links">
       <a href="#features">Producto</a>
       <a href="#agents">Agentes</a>
@@ -225,7 +225,7 @@ footer{padding:32px clamp(20px,4vw,48px);border-top:1px solid rgba(255,255,255,.
 <section class="hero">
   <div class="hero-glow"></div>
   <div class="hero-grid"></div>
-  <div class="hero-logo"><img src="logo.png" alt="fullsite."></div>
+  <div class="hero-logo">fullsite<span class="dot"></span></div>
   <p class="hero-sub">El POS con <strong>26 agentes de IA</strong> que monitorean tu restaurante 24/7 y te avisan por WhatsApp antes de que sea problema.</p>
   <div class="hero-ctas">
     <a href="#cta" class="btn btn-primary">Agendar demo →</a>
@@ -451,7 +451,7 @@ footer{padding:32px clamp(20px,4vw,48px);border-top:1px solid rgba(255,255,255,.
 <footer>
   <div class="foot-inner">
     <div style="display:flex;align-items:center;gap:12px">
-      <a href="#" class="n-logo" style="opacity:.5"><img src="logo.png" alt="fullsite" style="height:16px"></a>
+      <a href="#" class="n-logo" style="font-size:16px;opacity:.5">fullsite<span class="n-dot"></span></a>
       <span style="font-size:11px;color:rgba(255,255,255,.15)">© 2026 Monterrey, MX</span>
     </div>
     <div class="foot-links">
