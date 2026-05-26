@@ -24,13 +24,13 @@ body{background:#000;color:#fff;font-family:var(--sans);font-size:16px;line-heig
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
 
-/* NAV — transparent, minimal */
+/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .4s,border-color .4s}
 nav.scrolled{background:rgba(0,0,0,.85);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,.06)}
 .nav-inner{max-width:1200px;margin:0 auto;padding:16px clamp(20px,4vw,48px);display:flex;align-items:center;justify-content:space-between}
-.n-logo{font-weight:900;font-size:18px;letter-spacing:-.04em;display:flex;align-items:flex-end;gap:2px;opacity:.7;transition:opacity .2s}
+.n-logo{display:flex;align-items:center;opacity:.8;transition:opacity .2s}
 .n-logo:hover{opacity:1}
-.n-dot{width:5px;height:5px;background:var(--g);margin-bottom:3px}
+.n-logo img{height:22px;filter:brightness(0) invert(1)}
 .n-links{display:flex;gap:28px;align-items:center}
 .n-links a{font-size:12px;font-weight:500;color:rgba(255,255,255,.4);transition:color .2s;letter-spacing:.01em}
 .n-links a:hover{color:#fff}
@@ -43,28 +43,28 @@ nav.scrolled{background:rgba(0,0,0,.85);backdrop-filter:blur(24px);-webkit-backd
 .n-mob .n-cta{text-align:center;margin-top:8px}
 @media(max-width:768px){.n-links{display:none}.n-ham{display:flex}}
 
-/* HERO — massive centered logo */
+/* HERO */
 .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 24px;position:relative;overflow:hidden}
-.hero-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-55%);width:min(800px,100vw);height:min(800px,100vw);background:radial-gradient(circle,rgba(0,255,136,.12) 0%,rgba(0,255,136,.04) 30%,transparent 65%);pointer-events:none;animation:glowPulse 6s ease-in-out infinite}
+.hero-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-55%);width:min(800px,100vw);height:min(800px,100vw);background:radial-gradient(circle,rgba(0,255,136,.1) 0%,rgba(0,255,136,.03) 30%,transparent 60%);pointer-events:none;animation:glowPulse 6s ease-in-out infinite}
 @keyframes glowPulse{0%,100%{opacity:.7;transform:translate(-50%,-55%) scale(1)}50%{opacity:1;transform:translate(-50%,-55%) scale(1.08)}}
-.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 60% 50% at 50% 40%,#000 20%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse 60% 50% at 50% 40%,#000 20%,transparent 70%);pointer-events:none}
-.hero-logo{font-size:clamp(90px,16vw,220px);font-weight:900;letter-spacing:-.07em;line-height:.85;position:relative;z-index:1}
-.hero-logo .dot{display:inline-block;width:clamp(14px,2.2vw,32px);height:clamp(14px,2.2vw,32px);background:var(--g);margin-left:2px;margin-bottom:clamp(8px,1.2vw,18px);box-shadow:0 0 40px rgba(0,255,136,.4),0 0 80px rgba(0,255,136,.15)}
-.hero-sub{font-size:clamp(16px,2vw,22px);font-weight:400;color:rgba(255,255,255,.45);max-width:560px;line-height:1.6;margin-top:24px;position:relative;z-index:1}
-.hero-sub strong{color:rgba(255,255,255,.8);font-weight:600}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.015) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 60% 50% at 50% 40%,#000 20%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse 60% 50% at 50% 40%,#000 20%,transparent 70%);pointer-events:none}
+.hero-logo{position:relative;z-index:1;margin-bottom:8px}
+.hero-logo img{width:clamp(320px,55vw,650px);filter:brightness(0) invert(1)}
+.hero-sub{font-size:clamp(16px,2vw,20px);font-weight:400;color:rgba(255,255,255,.4);max-width:540px;line-height:1.6;margin-top:16px;position:relative;z-index:1}
+.hero-sub strong{color:rgba(255,255,255,.75);font-weight:600}
 .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:36px;position:relative;z-index:1}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:10px;font-size:14px;font-weight:700;font-family:var(--sans);border:none;cursor:pointer;transition:transform .2s,box-shadow .2s}
 .btn-primary{background:var(--g);color:#000;box-shadow:0 4px 24px rgba(0,255,136,.2)}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 40px rgba(0,255,136,.3)}
 .btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.12)}
 .btn-ghost:hover{border-color:rgba(255,255,255,.25)}
-.hero-scroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;color:rgba(255,255,255,.2);font-size:10px;letter-spacing:.15em;text-transform:uppercase}
-.hero-scroll::after{content:'';width:1px;height:24px;background:linear-gradient(rgba(255,255,255,.2),transparent);animation:scrollDown 2s ease-in-out infinite}
+.hero-scroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;color:rgba(255,255,255,.15);font-size:10px;letter-spacing:.15em;text-transform:uppercase}
+.hero-scroll::after{content:'';width:1px;height:24px;background:linear-gradient(rgba(255,255,255,.15),transparent);animation:scrollDown 2s ease-in-out infinite}
 @keyframes scrollDown{0%{opacity:0;transform:translateY(-8px)}50%{opacity:1}100%{opacity:0;transform:translateY(8px)}}
 
 /* STATS BAR */
 .stats{padding:0 24px;margin-top:-40px;position:relative;z-index:2}
-.stats-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);background:var(--s2);border:1px solid rgba(255,255,255,.06);border-radius:16px;overflow:hidden;backdrop-filter:blur(20px)}
+.stats-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);background:var(--s2);border:1px solid rgba(255,255,255,.06);border-radius:16px;overflow:hidden}
 .stat{padding:28px 20px;text-align:center;border-right:1px solid rgba(255,255,255,.04)}
 .stat:last-child{border-right:none}
 .stat-num{font-size:clamp(22px,3vw,34px);font-weight:800;letter-spacing:-.03em;line-height:1}
@@ -77,21 +77,6 @@ section{padding:clamp(80px,12vh,140px) 0}
 .sec-title{font-size:clamp(28px,4.5vw,52px);font-weight:800;letter-spacing:-.04em;line-height:1.05;margin-bottom:16px}
 .sec-desc{font-size:16px;color:rgba(255,255,255,.45);max-width:520px;line-height:1.7}
 
-/* PROOF */
-.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.proof-metrics{display:flex;gap:36px;margin-top:36px}
-.proof-m{display:flex;flex-direction:column;gap:3px}
-.proof-num{font-size:22px;font-weight:800;color:#fff;letter-spacing:-.02em}
-.proof-lab{font-size:10px;color:rgba(255,255,255,.3);letter-spacing:.02em}
-.proof-terminal{background:var(--s1);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden}
-.proof-term-bar{display:flex;gap:6px;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.04)}
-.proof-term-bar span{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.06)}
-.proof-term-bar span:first-child{background:#ff5f57}
-.proof-term-bar span:nth-child(2){background:#febc2e}
-.proof-term-bar span:last-child{background:#28c840}
-.proof-term-body{padding:20px;font-family:'SF Mono',SFMono-Regular,Menlo,monospace;font-size:12px;color:rgba(255,255,255,.55);line-height:1.8}
-@media(max-width:860px){.proof-grid{grid-template-columns:1fr}.proof-metrics{flex-wrap:wrap;gap:24px}}
-
 /* FEATURES */
 .features{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.04);margin-top:48px;border-radius:20px;overflow:hidden}
 .feat{background:var(--s1);padding:32px 28px;transition:background .3s}
@@ -102,26 +87,39 @@ section{padding:clamp(80px,12vh,140px) 0}
 .feat p{font-size:13px;color:rgba(255,255,255,.35);line-height:1.6}
 @media(max-width:768px){.features{grid-template-columns:1fr}}
 
-/* WA SECTION */
+/* WA SECTION — realistic WhatsApp */
 .wa-sec{background:var(--s1);border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04)}
 .wa-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-top:48px}
-.wa-phone{max-width:360px;background:var(--s2);border:1px solid rgba(255,255,255,.06);border-radius:20px;padding:14px;box-shadow:0 20px 60px rgba(0,0,0,.4)}
-.wa-header{display:flex;align-items:center;gap:10px;padding:6px 10px;margin-bottom:10px}
-.wa-avatar{width:28px;height:28px;border-radius:50%;background:var(--g);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#000}
-.wa-name{font-size:12px;font-weight:600;color:rgba(255,255,255,.7)}
-.wa-online{font-size:9px;color:var(--g)}
-.wa-chat{padding:10px;background:rgba(0,0,0,.3);border-radius:14px;min-height:240px;display:flex;flex-direction:column;gap:6px}
-.wa-msg{padding:8px 12px;border-radius:10px;font-size:12px;line-height:1.5;max-width:82%;opacity:0;transform:translateY(8px);transition:opacity .3s,transform .3s}
-.wa-msg.show{opacity:1;transform:translateY(0)}
-.wa-msg.bot{background:rgba(255,255,255,.06);color:rgba(255,255,255,.7);align-self:flex-start;border-bottom-left-radius:3px}
-.wa-msg.user{background:rgba(0,255,136,.1);color:rgba(255,255,255,.85);align-self:flex-end;border-bottom-right-radius:3px}
-.wa-msg .hi{color:var(--g);font-weight:700}
-.wa-typing{display:flex;gap:3px;padding:8px 12px;background:rgba(255,255,255,.06);border-radius:10px;align-self:flex-start;border-bottom-left-radius:3px;opacity:0;transition:opacity .2s}
-.wa-typing.show{opacity:1}
-.wa-typing span{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.3);animation:td 1.4s ease-in-out infinite}
-.wa-typing span:nth-child(2){animation-delay:.2s}
-.wa-typing span:nth-child(3){animation-delay:.4s}
+.wa-phone{max-width:380px;background:#0b141a;border:1px solid rgba(255,255,255,.08);border-radius:20px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.5)}
+.wa-topbar{background:#1f2c34;padding:10px 14px;display:flex;align-items:center;gap:10px}
+.wa-back{color:rgba(255,255,255,.5);font-size:18px}
+.wa-avatar{width:32px;height:32px;border-radius:50%;background:var(--g);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#000}
+.wa-contact{flex:1}
+.wa-name{font-size:13px;font-weight:600;color:#e9edef}
+.wa-online{font-size:10px;color:#00a884}
+.wa-actions{display:flex;gap:16px;color:rgba(255,255,255,.5)}
+.wa-actions svg{width:16px;height:16px;fill:currentColor}
+.wa-chatbg{padding:12px;min-height:300px;display:flex;flex-direction:column;gap:4px;background:#0b141a;background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5c1 0 2 1 2 2s-1 2-2 2-2-1-2-2 1-2 2-2zm15 25c1 0 2 1 2 2s-1 2-2 2-2-1-2-2 1-2 2-2zm-30 0c1 0 2 1 2 2s-1 2-2 2-2-1-2-2 1-2 2-2z' fill='rgba(255,255,255,.015)'/%3E%3C/svg%3E")}
+.wa-date{text-align:center;margin:4px 0 8px}
+.wa-date span{background:rgba(255,255,255,.06);color:rgba(255,255,255,.45);font-size:10px;padding:4px 12px;border-radius:6px}
+.wa-bubble{padding:6px 10px 2px;border-radius:8px;font-size:13px;line-height:1.45;max-width:80%;position:relative;opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s}
+.wa-bubble.show{opacity:1;transform:translateY(0)}
+.wa-bubble.out{background:#005c4b;color:#e9edef;align-self:flex-end;border-top-right-radius:2px}
+.wa-bubble.in{background:#1f2c34;color:#e9edef;align-self:flex-start;border-top-left-radius:2px}
+.wa-bubble .g{color:#00ff88;font-weight:600}
+.wa-time{display:flex;justify-content:flex-end;align-items:center;gap:3px;margin-top:2px}
+.wa-time span{font-size:10px;color:rgba(255,255,255,.4)}
+.wa-time .checks{color:#53bdeb;font-size:10px}
+.wa-typing-ind{display:flex;gap:3px;padding:8px 12px;background:#1f2c34;border-radius:8px;align-self:flex-start;border-top-left-radius:2px;opacity:0;transition:opacity .2s}
+.wa-typing-ind.show{opacity:1}
+.wa-typing-ind span{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.3);animation:td 1.4s ease-in-out infinite}
+.wa-typing-ind span:nth-child(2){animation-delay:.2s}
+.wa-typing-ind span:nth-child(3){animation-delay:.4s}
 @keyframes td{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
+.wa-input{background:#1f2c34;padding:8px 12px;display:flex;align-items:center;gap:8px}
+.wa-input-field{flex:1;background:#2a3942;border:none;border-radius:20px;padding:8px 14px;color:#e9edef;font-size:12px;font-family:var(--sans)}
+.wa-input-mic{width:36px;height:36px;border-radius:50%;background:#00a884;display:flex;align-items:center;justify-content:center}
+.wa-input-mic svg{width:16px;height:16px;fill:#fff}
 @media(max-width:860px){.wa-grid{grid-template-columns:1fr}.wa-phone{margin:0 auto}}
 
 /* AGENTS */
@@ -202,7 +200,7 @@ footer{padding:32px clamp(20px,4vw,48px);border-top:1px solid rgba(255,255,255,.
 
 <nav>
   <div class="nav-inner">
-    <a href="#" class="n-logo">fullsite<span class="n-dot"></span></a>
+    <a href="#" class="n-logo"><img src="logo.png" alt="fullsite"></a>
     <div class="n-links">
       <a href="#features">Producto</a>
       <a href="#agents">Agentes</a>
@@ -227,11 +225,11 @@ footer{padding:32px clamp(20px,4vw,48px);border-top:1px solid rgba(255,255,255,.
 <section class="hero">
   <div class="hero-glow"></div>
   <div class="hero-grid"></div>
-  <div class="hero-logo">fullsite<span class="dot"></span></div>
+  <div class="hero-logo"><img src="logo.png" alt="fullsite."></div>
   <p class="hero-sub">El POS con <strong>26 agentes de IA</strong> que monitorean tu restaurante 24/7 y te avisan por WhatsApp antes de que sea problema.</p>
   <div class="hero-ctas">
     <a href="#cta" class="btn btn-primary">Agendar demo →</a>
-    <a href="#proof" class="btn btn-ghost">Ver caso real</a>
+    <a href="#features" class="btn btn-ghost">Ver como funciona</a>
   </div>
   <div class="hero-scroll">scroll</div>
 </section>
@@ -245,40 +243,6 @@ footer{padding:32px clamp(20px,4vw,48px);border-top:1px solid rgba(255,255,255,.
     <div class="stat"><div class="stat-num">24/7</div><div class="stat-label">autonomo</div></div>
   </div>
 </div>
-
-<!-- SOCIAL PROOF -->
-<section id="proof">
-  <div class="wrap">
-    <div class="proof-grid rv">
-      <div>
-        <div class="sec-label">Caso real</div>
-        <div class="sec-title">Operando en AMALAY<br>desde el dia 1.</div>
-        <div class="sec-desc">869 dias de datos reales. No es una demo — es un restaurante en Monterrey con mas de 181,000 tickets procesados y $70M MXN analizados.</div>
-        <div class="proof-metrics">
-          <div class="proof-m"><span class="proof-num">2.4s</span><span class="proof-lab">Respuesta del bot</span></div>
-          <div class="proof-m"><span class="proof-num">26</span><span class="proof-lab">Agentes activos</span></div>
-          <div class="proof-m"><span class="proof-num">7:01</span><span class="proof-lab">Briefing diario</span></div>
-        </div>
-      </div>
-      <div class="proof-terminal rv rv-d1">
-        <div class="proof-term-bar"><span></span><span></span><span></span></div>
-        <div class="proof-term-body">
-<span style="color:rgba(255,255,255,.25)">$ fullsite status --client amalay</span>
-<br><br>
-<span style="color:var(--g)">✓</span> POS sync &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:var(--g)">live</span> <span style="color:rgba(255,255,255,.2)">(4s ago)</span>
-<br><span style="color:var(--g)">✓</span> Agentes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#fff">26/26</span>
-<br><span style="color:var(--g)">✓</span> Anomalias &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#fff">0 alertas</span>
-<br><span style="color:var(--g)">✓</span> WhatsApp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:var(--g)">online</span>
-<br><span style="color:var(--g)">✓</span> Briefing 7AM &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:var(--g)">enviado</span>
-<br><br>
-<span style="color:rgba(255,255,255,.25)">ventas_hoy:</span> <span style="color:#fff;font-weight:700">$18,420</span> <span style="color:var(--g)">+12%</span>
-<br><span style="color:rgba(255,255,255,.25)">tickets:</span> &nbsp;&nbsp;&nbsp; <span style="color:#fff">74</span>
-<br><span style="color:rgba(255,255,255,.25)">top_mesero:</span> <span style="color:#fff">Omar $4,200</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- FEATURES -->
 <section id="features">
@@ -333,17 +297,33 @@ footer{padding:32px clamp(20px,4vw,48px);border-top:1px solid rgba(255,255,255,.
         <div class="sec-desc">Fullsite vive donde ya vives: WhatsApp. Pregunta en palabras normales, recibe datos reales de tu operacion en segundos.</div>
       </div>
       <div class="wa-phone rv rv-d1" id="waDemo">
-        <div class="wa-header">
+        <!-- WhatsApp top bar -->
+        <div class="wa-topbar">
+          <span class="wa-back">‹</span>
           <div class="wa-avatar">F</div>
-          <div><div class="wa-name">Fullsite Bot</div><div class="wa-online">en linea</div></div>
+          <div class="wa-contact">
+            <div class="wa-name">Fullsite Bot</div>
+            <div class="wa-online">en linea</div>
+          </div>
+          <div class="wa-actions">
+            <svg viewBox="0 0 24 24"><path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          </div>
         </div>
-        <div class="wa-chat" data-live>
-          <div class="wa-msg user">Como vamos hoy?</div>
-          <div class="wa-typing"><span></span><span></span><span></span></div>
-          <div class="wa-msg bot">Ventas: <span class="hi">$14,820</span> (62 tickets)<br>Ticket promedio: <span class="hi">$239</span><br>Mejor mesero: Julio <span class="hi">$3,200</span></div>
-          <div class="wa-msg user">Y vs la semana pasada?</div>
-          <div class="wa-typing"><span></span><span></span><span></span></div>
-          <div class="wa-msg bot">+12% en ventas, +$1,680<br>Ticket promedio subio <span class="hi">$18</span><br>Chilaquiles dominan: <span class="hi">28 ordenes</span></div>
+        <!-- Chat area -->
+        <div class="wa-chatbg" data-live>
+          <div class="wa-date"><span>Hoy</span></div>
+          <div class="wa-bubble out">Como vamos hoy?<div class="wa-time"><span>9:41 AM</span><span class="checks">✓✓</span></div></div>
+          <div class="wa-typing-ind"><span></span><span></span><span></span></div>
+          <div class="wa-bubble in">Ventas: <span class="g">$14,820</span> (62 tickets)<br>Ticket promedio: <span class="g">$239</span><br>Mejor mesero: Julio <span class="g">$3,200</span><div class="wa-time"><span>9:41 AM</span></div></div>
+          <div class="wa-bubble out">Y vs la semana pasada?<div class="wa-time"><span>9:42 AM</span><span class="checks">✓✓</span></div></div>
+          <div class="wa-typing-ind"><span></span><span></span><span></span></div>
+          <div class="wa-bubble in">+12% en ventas, +$1,680<br>Ticket promedio subio <span class="g">$18</span><br>Chilaquiles dominan: <span class="g">28 ordenes</span><div class="wa-time"><span>9:42 AM</span></div></div>
+        </div>
+        <!-- Input bar -->
+        <div class="wa-input">
+          <input class="wa-input-field" placeholder="Mensaje" disabled>
+          <div class="wa-input-mic"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3zM19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8"/></svg></div>
         </div>
       </div>
     </div>
@@ -471,7 +451,7 @@ footer{padding:32px clamp(20px,4vw,48px);border-top:1px solid rgba(255,255,255,.
 <footer>
   <div class="foot-inner">
     <div style="display:flex;align-items:center;gap:12px">
-      <a href="#" class="n-logo" style="font-size:16px">fullsite<span class="n-dot"></span></a>
+      <a href="#" class="n-logo" style="opacity:.5"><img src="logo.png" alt="fullsite" style="height:16px"></a>
       <span style="font-size:11px;color:rgba(255,255,255,.15)">© 2026 Monterrey, MX</span>
     </div>
     <div class="foot-links">
@@ -484,7 +464,7 @@ footer{padding:32px clamp(20px,4vw,48px);border-top:1px solid rgba(255,255,255,.
 
 <script>
 (function(){
-/* Nav scroll state */
+/* Nav scroll */
 var nav=document.querySelector('nav');
 window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>60)},{passive:true});
 
@@ -508,29 +488,29 @@ document.querySelectorAll('.faq-i').forEach(function(item){
   });
 });
 
-/* WA Chat typing */
+/* WA Chat typing — realistic */
 function animateChat(c){
   if(!c)return;
-  var msgs=c.querySelectorAll('.wa-msg'),typings=c.querySelectorAll('.wa-typing'),i=0,t;
+  var msgs=c.querySelectorAll('.wa-bubble'),typings=c.querySelectorAll('.wa-typing-ind'),i=0,t;
   msgs.forEach(function(m){m.classList.remove('show')});
   typings.forEach(function(tp){tp.classList.remove('show')});
   function next(){
-    if(i>=msgs.length){t=setTimeout(function(){msgs.forEach(function(m){m.classList.remove('show')});typings.forEach(function(tp){tp.classList.remove('show')});i=0;t=setTimeout(next,800)},3000);return}
+    if(i>=msgs.length){t=setTimeout(function(){msgs.forEach(function(m){m.classList.remove('show')});typings.forEach(function(tp){tp.classList.remove('show')});i=0;t=setTimeout(next,1200)},4000);return}
     var msg=msgs[i];
-    if(msg.classList.contains('bot')){
+    if(msg.classList.contains('in')){
       var tp=msg.previousElementSibling;
-      if(tp&&tp.classList.contains('wa-typing')){tp.classList.add('show');t=setTimeout(function(){tp.classList.remove('show');msg.classList.add('show');i++;t=setTimeout(next,1000)},1400)}
-      else{msg.classList.add('show');i++;t=setTimeout(next,800)}
-    } else {msg.classList.add('show');i++;t=setTimeout(next,700)}
+      if(tp&&tp.classList.contains('wa-typing-ind')){tp.classList.add('show');t=setTimeout(function(){tp.classList.remove('show');msg.classList.add('show');i++;t=setTimeout(next,1200)},1800)}
+      else{msg.classList.add('show');i++;t=setTimeout(next,1000)}
+    } else {msg.classList.add('show');i++;t=setTimeout(next,900)}
   }
-  t=setTimeout(next,500);
+  t=setTimeout(next,600);
   c._stop=function(){clearTimeout(t)};
 }
 var wa=document.querySelector('[data-live]');
 if(wa){
   var wio=new IntersectionObserver(function(entries){entries.forEach(function(e){
     if(e.isIntersecting)animateChat(e.target);
-    else if(e.target._stop){e.target._stop();e.target.querySelectorAll('.wa-msg').forEach(function(m){m.classList.add('show')});e.target.querySelectorAll('.wa-typing').forEach(function(tp){tp.classList.remove('show')})}
+    else if(e.target._stop){e.target._stop();e.target.querySelectorAll('.wa-bubble').forEach(function(m){m.classList.add('show')});e.target.querySelectorAll('.wa-typing-ind').forEach(function(tp){tp.classList.remove('show')})}
   })},{threshold:.3});
   wio.observe(wa);
 }
