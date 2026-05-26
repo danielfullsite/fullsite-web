@@ -423,7 +423,8 @@ footer{padding:40px clamp(20px,5vw,80px);border-top:1px solid var(--w05)}
 
   <div class="hero-content">
     <div class="hero-badge" id="heroBadge"><span class="hero-badge-dot"></span>Monterrey, MX — POS + IA para restaurantes</div>
-    <h1 class="hero-title">
+    <div class="hero-logo" id="heroLogo" style="font-size:clamp(80px,14vw,200px);font-weight:900;letter-spacing:-.07em;line-height:1;text-align:center;margin-bottom:clamp(24px,4vh,48px);opacity:0">fullsite<span style="display:inline-block;width:clamp(14px,2vw,28px);height:clamp(14px,2vw,28px);background:var(--g);margin-left:4px;margin-bottom:clamp(8px,1.2vw,16px);border-radius:0"></span></div>
+    <h1 class="hero-title" style="font-size:clamp(28px,4vw,48px);letter-spacing:-.03em;line-height:1.1;margin-bottom:clamp(16px,2vh,28px)">
       <span class="hl"><span class="hl-i">Tu restaurante</span></span>
       <span class="hl"><span class="hl-i">operando <em>solo.</em></span></span>
     </h1>
@@ -814,8 +815,9 @@ window.addEventListener('scroll',function(){document.getElementById('nav').class
 
 /* === HERO === */
 var htl=gsap.timeline({delay:.1});
-htl.to('.hl-i',{yPercent:0,duration:1,ease:'power4.out',stagger:.1})
-   .to('#heroBadge',{opacity:1,duration:.5,ease:'power2.out'},'-=.4')
+htl.to('#heroBadge',{opacity:1,duration:.5,ease:'power2.out'})
+   .to('#heroLogo',{opacity:1,duration:.8,ease:'power3.out'},'-=.2')
+   .to('.hl-i',{yPercent:0,duration:1,ease:'power4.out',stagger:.1},'-=.4')
    .to('#heroSub',{opacity:1,duration:.5,ease:'power2.out'},'-=.2')
    .to('#heroCtas',{opacity:1,duration:.5,ease:'power2.out'},'-=.2')
    .to('#heroDash',{opacity:1,y:0,duration:1,ease:'power3.out'},'-=.1')
