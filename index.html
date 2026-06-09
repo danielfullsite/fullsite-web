@@ -2610,7 +2610,12 @@ nav.top.scrolled{
       var volOff=document.getElementById('exp-vol-off');
 
       var audioFiles=['audio/slide1.mp3','audio/slide2.mp3','audio/slide3.mp3','audio/slide4.mp3','audio/slide5.mp3','audio/slide6.mp3'];
-      var current=0,playing=false,muted=false,startTime=0,totalDur=70,audio=null;
+      var current=0,playing=false,paused=false,muted=false,startTime=0,pausedElapsed=0,totalDur=70,audio=null,advanceTimer=null;
+
+      function stopAudio(){
+        if(audio){try{audio.pause();audio.currentTime=0;audio.onended=null;audio.onerror=null;}catch(e){}}
+        if(advanceTimer){clearTimeout(advanceTimer);advanceTimer=null;}
+      }
 
       function show(i){
         slides.forEach(function(s){s.style.opacity='0';s.style.pointerEvents='none'});
@@ -2620,7 +2625,7 @@ nav.top.scrolled{
 
       function updateTime(){
         if(!playing)return;
-        var elapsed=Math.min((Date.now()-startTime)/1000,totalDur);
+        var elapsed=Math.min(pausedElapsed+(Date.now()-startTime)/1000,totalDur);
         bar.style.width=Math.min((elapsed/totalDur)*100,100)+'%';
         var m=Math.floor(elapsed/60),s=Math.floor(elapsed%60);
         timeEl.textContent=m+':'+(s<10?'0':'')+s+' / 1:10';
@@ -2629,35 +2634,32 @@ nav.top.scrolled{
 
       function playSlide(i){
         if(!playing||i>=slides.length)return;
+        stopAudio();
         show(i);
-        if(i>=slides.length-1){
-          // Last slide — play audio then stop
-          audio=new Audio(audioFiles[i]);
-          audio.muted=muted;
-          audio.play().catch(function(){});
-          audio.onended=function(){
-            playing=false;bar.style.width='100%';
-            pauseIcon.style.display='none';playIcon.style.display='block';
-          };
-          return;
-        }
         audio=new Audio(audioFiles[i]);
         audio.muted=muted;
-        audio.play().catch(function(){});
         audio.onended=function(){
-          if(playing)setTimeout(function(){playSlide(i+1)},400);
+          if(!playing)return;
+          if(i>=slides.length-1){
+            playing=false;bar.style.width='100%';
+            pauseIcon.style.display='none';playIcon.style.display='block';
+          }else{
+            advanceTimer=setTimeout(function(){playSlide(i+1)},400);
+          }
         };
-        // Fallback if audio fails to load
         audio.onerror=function(){
-          if(playing)setTimeout(function(){playSlide(i+1)},4000);
+          if(playing)advanceTimer=setTimeout(function(){playSlide(i+1)},3000);
         };
+        audio.play().catch(function(){
+          if(playing)advanceTimer=setTimeout(function(){playSlide(i+1)},3000);
+        });
       }
 
       function start(){
         overlay.style.opacity='0';
         setTimeout(function(){overlay.style.display='none'},400);
         controls.style.display='flex';
-        playing=true;startTime=Date.now();current=0;
+        playing=true;paused=false;startTime=Date.now();pausedElapsed=0;current=0;
         pauseIcon.style.display='block';playIcon.style.display='none';
         updateTime();
         playSlide(0);
@@ -2667,13 +2669,22 @@ nav.top.scrolled{
 
       pauseBtn.onclick=function(e){
         e.stopPropagation();
-        if(playing){
-          playing=false;
-          if(audio)audio.pause();
+        if(playing&&!paused){
+          // Pause
+          playing=false;paused=true;
+          pausedElapsed+=(Date.now()-startTime)/1000;
+          if(audio)try{audio.pause()}catch(e){}
+          if(advanceTimer){clearTimeout(advanceTimer);advanceTimer=null;}
           pauseIcon.style.display='none';playIcon.style.display='block';
-        }else{
-          playing=true;
-          if(audio)audio.play().catch(function(){});
+        }else if(paused){
+          // Resume
+          playing=true;paused=false;
+          startTime=Date.now();
+          if(audio&&audio.paused&&audio.currentTime>0){
+            audio.play().catch(function(){});
+          }else{
+            playSlide(current);
+          }
           pauseIcon.style.display='block';playIcon.style.display='none';
           updateTime();
         }
