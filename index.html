@@ -2608,44 +2608,9 @@ nav.top.scrolled{
       var muteBtn=document.getElementById('exp-mute-btn');
       var volOn=document.getElementById('exp-vol-on');
       var volOff=document.getElementById('exp-vol-off');
-      var current=0,timer=null,playing=false,muted=false,startTime=0,totalDur=70;
-      var synth=window.speechSynthesis;
-      var voiceReady=false,spanishVoice=null;
 
-      // Find best Spanish voice
-      function loadVoices(){
-        var voices=synth.getVoices();
-        // Prefer: Paulina (macOS/iOS), Monica, Jorge, Google español
-        var prefs=['Paulina','Monica','Jorge','Google español','Microsoft Helena'];
-        for(var p=0;p<prefs.length;p++){
-          for(var v=0;v<voices.length;v++){
-            if(voices[v].name.indexOf(prefs[p])!==-1&&voices[v].lang.indexOf('es')!==-1){spanishVoice=voices[v];voiceReady=true;return;}
-          }
-        }
-        // Fallback: any es voice
-        for(var v=0;v<voices.length;v++){
-          if(voices[v].lang.indexOf('es')!==-1){spanishVoice=voices[v];voiceReady=true;return;}
-        }
-      }
-      loadVoices();
-      if(synth.onvoiceschanged!==undefined)synth.onvoiceschanged=loadVoices;
-
-      function speak(text,cb){
-        synth.cancel();
-        if(muted){setTimeout(cb,4000);return;}
-        var u=new SpeechSynthesisUtterance(text);
-        u.lang='es-MX';
-        u.rate=1.05;
-        u.pitch=1.0;
-        if(spanishVoice)u.voice=spanishVoice;
-        u.onend=function(){setTimeout(cb,600)};
-        u.onerror=function(){setTimeout(cb,600)};
-        // Chrome bug: long utterances get cut off. Resume periodically.
-        var resumeInterval=setInterval(function(){if(synth.speaking)synth.resume();},5000);
-        u.onend=function(){clearInterval(resumeInterval);setTimeout(cb,600)};
-        u.onerror=function(){clearInterval(resumeInterval);setTimeout(cb,600)};
-        synth.speak(u);
-      }
+      var audioFiles=['audio/slide1.mp3','audio/slide2.mp3','audio/slide3.mp3','audio/slide4.mp3','audio/slide5.mp3','audio/slide6.mp3'];
+      var current=0,playing=false,muted=false,startTime=0,totalDur=70,audio=null;
 
       function show(i){
         slides.forEach(function(s){s.style.opacity='0';s.style.pointerEvents='none'});
@@ -2656,69 +2621,75 @@ nav.top.scrolled{
       function updateTime(){
         if(!playing)return;
         var elapsed=Math.min((Date.now()-startTime)/1000,totalDur);
-        var pct=(elapsed/totalDur)*100;
-        bar.style.width=pct+'%';
+        bar.style.width=Math.min((elapsed/totalDur)*100,100)+'%';
         var m=Math.floor(elapsed/60),s=Math.floor(elapsed%60);
         timeEl.textContent=m+':'+(s<10?'0':'')+s+' / 1:10';
         if(elapsed<totalDur)requestAnimationFrame(updateTime);
       }
 
-      function advance(){
-        if(!playing)return;
-        if(current>=slides.length-1){
-          playing=false;bar.style.width='100%';
-          pauseIcon.style.display='none';playIcon.style.display='block';
+      function playSlide(i){
+        if(!playing||i>=slides.length)return;
+        show(i);
+        if(i>=slides.length-1){
+          // Last slide — play audio then stop
+          audio=new Audio(audioFiles[i]);
+          audio.muted=muted;
+          audio.play().catch(function(){});
+          audio.onended=function(){
+            playing=false;bar.style.width='100%';
+            pauseIcon.style.display='none';playIcon.style.display='block';
+          };
           return;
         }
-        show(current+1);
-        var text=slides[current].getAttribute('data-voice')||'';
-        if(text)speak(text,advance);
-        else setTimeout(advance,4000);
+        audio=new Audio(audioFiles[i]);
+        audio.muted=muted;
+        audio.play().catch(function(){});
+        audio.onended=function(){
+          if(playing)setTimeout(function(){playSlide(i+1)},400);
+        };
+        // Fallback if audio fails to load
+        audio.onerror=function(){
+          if(playing)setTimeout(function(){playSlide(i+1)},4000);
+        };
       }
 
       function start(){
         overlay.style.opacity='0';
         setTimeout(function(){overlay.style.display='none'},400);
         controls.style.display='flex';
-        playing=true;startTime=Date.now();
-        show(0);
+        playing=true;startTime=Date.now();current=0;
         pauseIcon.style.display='block';playIcon.style.display='none';
         updateTime();
-        var text=slides[0].getAttribute('data-voice')||'';
-        if(text)speak(text,advance);
-        else setTimeout(advance,4000);
+        playSlide(0);
       }
 
-      // Click play overlay
       overlay.onclick=start;
 
-      // Pause/resume
       pauseBtn.onclick=function(e){
         e.stopPropagation();
         if(playing){
-          playing=false;synth.pause();
+          playing=false;
+          if(audio)audio.pause();
           pauseIcon.style.display='none';playIcon.style.display='block';
         }else{
-          playing=true;synth.resume();
+          playing=true;
+          if(audio)audio.play().catch(function(){});
           pauseIcon.style.display='block';playIcon.style.display='none';
           updateTime();
         }
       };
 
-      // Mute
       muteBtn.onclick=function(e){
         e.stopPropagation();
         muted=!muted;
         volOn.style.display=muted?'none':'block';
         volOff.style.display=muted?'block':'none';
-        if(muted)synth.cancel();
+        if(audio)audio.muted=muted;
       };
 
-      // Click on video area = pause/play
       document.getElementById('explainer').onclick=function(e){
         if(overlay.style.display!=='none')return;
-        if(e.target.closest('#exp-controls'))return;
-        if(e.target.closest('a'))return;
+        if(e.target.closest('#exp-controls')||e.target.closest('a'))return;
         pauseBtn.click();
       };
     })();
