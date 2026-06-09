@@ -1765,6 +1765,109 @@ nav.top.scrolled{
   </div>
 </section>
 
+<!-- =================== VIDEO EXPLAINER =================== -->
+<section style="padding:60px 0 40px">
+  <div class="wrap">
+    <style>
+      @keyframes expFadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+      @keyframes expScale{from{opacity:0;transform:scale(0.9)}to{opacity:1;transform:scale(1)}}
+      @keyframes expGlow{0%,100%{box-shadow:0 0 20px rgba(0,255,136,0.15)}50%{box-shadow:0 0 40px rgba(0,255,136,0.35)}}
+      .exp-slide.active .exp-anim{animation:expFadeUp .6s ease both}
+      .exp-slide.active .exp-anim-2{animation:expFadeUp .6s ease .2s both}
+      .exp-slide.active .exp-anim-3{animation:expFadeUp .6s ease .4s both}
+      .exp-slide.active .exp-anim-s{animation:expScale .5s ease .15s both}
+      #explainer{aspect-ratio:4/3}
+      @media(min-width:640px){#explainer{aspect-ratio:16/9}}
+      .exp-agents-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;max-width:520px;width:100%}
+      @media(min-width:480px){.exp-agents-grid{grid-template-columns:repeat(4,1fr);gap:8px}}
+    </style>
+    <div class="reveal" id="explainer" style="max-width:840px;margin:0 auto;border-radius:20px;overflow:hidden;border:1px solid var(--line-2);position:relative;cursor:pointer;user-select:none;background:var(--bg)">
+      <div id="exp-bg" style="position:absolute;inset:0;transition:background 0.8s ease;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(0,255,136,0.04),transparent)"></div>
+      <div id="exp-slides" style="position:absolute;inset:0">
+        <div class="exp-slide active" data-bg="radial-gradient(ellipse 60% 50% at 50% 50%,rgba(239,68,68,0.08),transparent)" style="text-align:center;padding:clamp(24px,5vw,48px);opacity:1;transition:opacity 0.7s;position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
+          <div class="exp-anim" style="width:56px;height:56px;border-radius:16px;background:rgba(239,68,68,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:20px"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg></div>
+          <div class="exp-anim-2" style="font-size:clamp(22px,4.5vw,40px);font-weight:800;color:var(--ink);line-height:1.15;letter-spacing:-0.03em;max-width:580px">Imagina llegar y <span style="color:#ef4444">ya saber</span> exactamente cómo va todo.</div>
+          <div class="exp-anim-3" style="margin-top:16px;font-size:clamp(14px,2vw,16px);color:var(--ink-3);max-width:420px">Sin revisar reportes. Sin esperar al cierre.</div>
+        </div>
+        <div class="exp-slide" data-bg="radial-gradient(ellipse 70% 50% at 50% 40%,rgba(0,255,136,0.08),transparent)" style="text-align:center;padding:clamp(24px,5vw,48px);opacity:0;transition:opacity 0.7s;position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
+          <div class="exp-anim" style="display:flex;gap:8px;margin-bottom:20px"><div style="width:10px;height:10px;border-radius:50%;background:#10b981;animation:pulse 2s infinite"></div><div style="width:10px;height:10px;border-radius:50%;background:#10b981;animation:pulse 2s infinite .4s"></div><div style="width:10px;height:10px;border-radius:50%;background:#10b981;animation:pulse 2s infinite .8s"></div></div>
+          <div class="exp-anim-2" style="font-size:clamp(22px,4.5vw,40px);font-weight:800;color:var(--ink);line-height:1.15;letter-spacing:-0.03em;max-width:600px"><span style="color:var(--accent)">30 agentes de IA</span> monitorean tu restaurante.</div>
+          <div class="exp-anim-3" style="margin-top:16px;font-size:clamp(14px,2vw,16px);color:var(--ink-2);max-width:460px">Ventas, meseros, inventario, costos. Todo el día, todos los días.</div>
+        </div>
+        <div class="exp-slide" data-bg="radial-gradient(ellipse 60% 50% at 50% 50%,rgba(59,130,246,0.06),transparent)" style="padding:clamp(20px,3vw,32px) clamp(24px,5vw,48px);opacity:0;transition:opacity 0.7s;position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
+          <div class="exp-anim" style="font-size:11px;color:var(--accent);font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:14px">Dashboard en tiempo real</div>
+          <div class="exp-anim-s" style="background:var(--bg-1);border:1px solid var(--line-2);border-radius:16px;padding:clamp(14px,2.5vw,24px);width:100%;max-width:560px;box-shadow:0 20px 60px rgba(0,0,0,0.3)">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px"><div style="width:8px;height:8px;border-radius:50%;background:var(--accent)"></div><span style="font-size:11px;color:var(--ink-3);font-weight:600">AMALAY · Hoy</span><span style="margin-left:auto;font-size:10px;color:var(--accent);font-weight:600">EN VIVO</span></div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px">
+              <div style="background:linear-gradient(135deg,rgba(0,255,136,0.1),rgba(0,255,136,0.02));border:1px solid rgba(0,255,136,0.15);border-radius:10px;padding:12px;text-align:center"><div style="font-size:9px;color:var(--ink-3);margin-bottom:3px;font-weight:600">VENTAS</div><div style="font-size:clamp(18px,3vw,24px);font-weight:800;color:var(--accent)">$155K</div></div>
+              <div style="background:var(--bg-3);border:1px solid var(--line);border-radius:10px;padding:12px;text-align:center"><div style="font-size:9px;color:var(--ink-3);margin-bottom:3px;font-weight:600">ORDENES</div><div style="font-size:clamp(18px,3vw,24px);font-weight:800;color:var(--ink)">186</div></div>
+              <div style="background:var(--bg-3);border:1px solid var(--line);border-radius:10px;padding:12px;text-align:center"><div style="font-size:9px;color:var(--ink-3);margin-bottom:3px;font-weight:600">TICKET</div><div style="font-size:clamp(18px,3vw,24px);font-weight:800;color:var(--ink)">$837</div></div>
+            </div>
+            <div style="display:flex;gap:4px;align-items:end;height:40px"><div style="flex:1;background:linear-gradient(to top,var(--accent),rgba(0,255,136,0.4));border-radius:3px 3px 0 0;height:65%"></div><div style="flex:1;background:linear-gradient(to top,var(--accent),rgba(0,255,136,0.4));border-radius:3px 3px 0 0;height:42%"></div><div style="flex:1;background:linear-gradient(to top,var(--accent),rgba(0,255,136,0.4));border-radius:3px 3px 0 0;height:88%"></div><div style="flex:1;background:linear-gradient(to top,var(--accent),rgba(0,255,136,0.4));border-radius:3px 3px 0 0;height:55%"></div><div style="flex:1;background:linear-gradient(to top,var(--accent),rgba(0,255,136,0.4));border-radius:3px 3px 0 0;height:92%"></div><div style="flex:1;background:linear-gradient(to top,var(--accent),rgba(0,255,136,0.3));border-radius:3px 3px 0 0;height:100%"></div><div style="flex:1;background:linear-gradient(to top,var(--accent),rgba(0,255,136,0.4));border-radius:3px 3px 0 0;height:72%"></div><div style="flex:1;background:linear-gradient(to top,var(--accent),rgba(0,255,136,0.4));border-radius:3px 3px 0 0;height:80%"></div><div style="flex:1;background:linear-gradient(to top,var(--accent),rgba(0,255,136,0.4));border-radius:3px 3px 0 0;height:58%"></div></div>
+          </div>
+          <div class="exp-anim-3" style="margin-top:12px;font-size:13px;color:var(--ink-3)">Compara contra ayer, la semana pasada o todo tu historial.</div>
+        </div>
+        <div class="exp-slide" data-bg="radial-gradient(ellipse 60% 50% at 50% 50%,rgba(37,211,102,0.06),transparent)" style="padding:clamp(20px,3vw,32px) clamp(24px,5vw,48px);opacity:0;transition:opacity 0.7s;position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
+          <div class="exp-anim" style="font-size:11px;color:#25d366;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:14px">WhatsApp · Respuesta en 2 seg</div>
+          <div class="exp-anim-s" style="background:#0b141a;border-radius:16px;padding:16px;width:100%;max-width:400px;box-shadow:0 20px 60px rgba(0,0,0,0.4)">
+            <div style="display:flex;align-items:center;gap:10px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.06);margin-bottom:12px"><div style="width:32px;height:32px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:var(--bg)">F</div><div><div style="font-size:13px;font-weight:600;color:white">Fullsite Bot</div><div style="font-size:10px;color:rgba(255,255,255,0.4)">en linea</div></div></div>
+            <div style="background:rgba(255,255,255,0.08);border-radius:0 10px 10px 10px;padding:10px 14px;margin-bottom:8px;font-size:13px;color:rgba(255,255,255,0.85);max-width:88%">¿Cómo vamos hoy vs el viernes pasado?</div>
+            <div style="background:#005c4b;border-radius:10px 0 10px 10px;padding:10px 14px;margin-left:auto;font-size:12px;color:white;max-width:92%;line-height:1.6"><strong>Hoy $155,715</strong> vs viernes $141,200<br><span style="color:#25d366;font-weight:700">+10.3%</span> · 186 órdenes<br>Top: Omar $38,400<br>Cierre estimado: <strong>$168K</strong><div style="text-align:right;font-size:10px;color:rgba(255,255,255,0.35);margin-top:4px">2:34 PM ✓✓</div></div>
+          </div>
+        </div>
+        <div class="exp-slide" data-bg="radial-gradient(ellipse 70% 50% at 50% 40%,rgba(139,92,246,0.06),transparent)" style="text-align:center;padding:clamp(20px,3vw,32px) clamp(24px,5vw,40px);opacity:0;transition:opacity 0.7s;position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
+          <div class="exp-anim" style="font-size:11px;color:var(--accent);font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:6px">30 agentes activos</div>
+          <div class="exp-anim-2" style="font-size:clamp(18px,3vw,26px);font-weight:800;color:var(--ink);margin-bottom:16px">Todo automático. Sin que hagas nada.</div>
+          <div class="exp-anim-3 exp-agents-grid">
+            <div style="background:var(--bg-2);border:1px solid var(--line-2);border-radius:10px;padding:10px 8px;text-align:center"><div style="width:8px;height:8px;border-radius:50%;background:#10b981;margin:0 auto 6px;animation:pulse 2s infinite"></div><div style="font-size:10px;font-weight:600;color:var(--ink-1)">Anti-fraude</div></div>
+            <div style="background:var(--bg-2);border:1px solid var(--line-2);border-radius:10px;padding:10px 8px;text-align:center"><div style="width:8px;height:8px;border-radius:50%;background:#10b981;margin:0 auto 6px;animation:pulse 2s infinite .2s"></div><div style="font-size:10px;font-weight:600;color:var(--ink-1)">Predicción</div></div>
+            <div style="background:var(--bg-2);border:1px solid var(--line-2);border-radius:10px;padding:10px 8px;text-align:center"><div style="width:8px;height:8px;border-radius:50%;background:#10b981;margin:0 auto 6px;animation:pulse 2s infinite .4s"></div><div style="font-size:10px;font-weight:600;color:var(--ink-1)">Staffing</div></div>
+            <div style="background:var(--bg-2);border:1px solid var(--line-2);border-radius:10px;padding:10px 8px;text-align:center"><div style="width:8px;height:8px;border-radius:50%;background:#10b981;margin:0 auto 6px;animation:pulse 2s infinite .6s"></div><div style="font-size:10px;font-weight:600;color:var(--ink-1)">Food Cost</div></div>
+            <div style="background:var(--bg-2);border:1px solid var(--line-2);border-radius:10px;padding:10px 8px;text-align:center"><div style="width:8px;height:8px;border-radius:50%;background:#10b981;margin:0 auto 6px;animation:pulse 2s infinite .8s"></div><div style="font-size:10px;font-weight:600;color:var(--ink-1)">Auto-86</div></div>
+            <div style="background:var(--bg-2);border:1px solid var(--line-2);border-radius:10px;padding:10px 8px;text-align:center"><div style="width:8px;height:8px;border-radius:50%;background:#10b981;margin:0 auto 6px;animation:pulse 2s infinite 1s"></div><div style="font-size:10px;font-weight:600;color:var(--ink-1)">Anomalias</div></div>
+            <div style="background:var(--bg-2);border:1px solid var(--line-2);border-radius:10px;padding:10px 8px;text-align:center"><div style="width:8px;height:8px;border-radius:50%;background:#10b981;margin:0 auto 6px;animation:pulse 2s infinite 1.2s"></div><div style="font-size:10px;font-weight:600;color:var(--ink-1)">Menu Eng</div></div>
+            <div style="background:linear-gradient(135deg,var(--bg-2),var(--bg-3));border:1px solid var(--line-2);border-radius:10px;padding:10px 8px;text-align:center"><div style="width:8px;height:8px;border-radius:50%;background:#f59e0b;margin:0 auto 6px"></div><div style="font-size:10px;font-weight:700;color:var(--accent)">+22 más</div></div>
+          </div>
+        </div>
+        <div class="exp-slide" data-bg="radial-gradient(ellipse 70% 50% at 50% 50%,rgba(0,255,136,0.1),transparent)" style="text-align:center;padding:clamp(24px,5vw,48px);opacity:0;transition:opacity 0.7s;position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
+          <div class="exp-anim" style="font-size:clamp(26px,5vw,46px);font-weight:800;color:var(--ink);line-height:1.1;letter-spacing:-0.03em;margin-bottom:12px">¿Listo para <span style="color:var(--accent)">probarlo</span>?</div>
+          <div class="exp-anim-2" style="font-size:15px;color:var(--ink-2);margin-bottom:28px;max-width:400px">Te mostramos todo corriendo en un restaurante real, con datos de hoy. Sin compromiso.</div>
+          <a class="exp-anim-3" href="https://wa.me/528115324371?text=Hola%20Daniel%2C%20vi%20la%20landing%20de%20Fullsite%20y%20me%20interesa%20agendar%20una%20demo." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--bg);padding:16px 36px;border-radius:14px;font-weight:800;font-size:16px;text-decoration:none;animation:expGlow 3s ease-in-out infinite">Agendar demo gratuita <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+      <!-- Play overlay -->
+      <div id="exp-play-overlay" style="position:absolute;inset:0;z-index:20;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:linear-gradient(135deg,rgba(10,10,11,0.85),rgba(10,10,11,0.75));backdrop-filter:blur(12px);transition:opacity 0.5s">
+        <div style="width:88px;height:88px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;box-shadow:0 0 80px rgba(0,255,136,0.3);transition:transform 0.2s;animation:expGlow 3s ease-in-out infinite" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'"><svg width="36" height="36" viewBox="0 0 24 24" fill="var(--bg)" stroke="none"><polygon points="9.5,5.5 19.5,12 9.5,18.5"/></svg></div>
+        <span style="font-size:17px;color:var(--ink);font-weight:700">Conoce Fullsite en 1 minuto</span>
+        <span style="font-size:12px;color:var(--ink-3);display:flex;align-items:center;gap:6px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 010 7.07"/></svg>Con audio</span>
+      </div>
+      <!-- Controls -->
+      <div id="exp-controls" style="position:absolute;bottom:0;left:0;right:0;z-index:15;background:linear-gradient(transparent,rgba(0,0,0,0.8));padding:12px 16px 14px;display:none;align-items:center;gap:12px">
+        <button id="exp-pause-btn" style="background:none;border:none;cursor:pointer;padding:0;display:flex;align-items:center;justify-content:center;width:28px;height:28px"><svg id="exp-pause-icon" width="16" height="16" viewBox="0 0 24 24" fill="white"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg><svg id="exp-play-icon" width="16" height="16" viewBox="0 0 24 24" fill="white" style="display:none"><polygon points="8,5 20,12 8,19"/></svg></button>
+        <div style="flex:1;height:4px;background:rgba(255,255,255,0.15);border-radius:2px"><div id="exp-progress" style="height:4px;width:0%;background:var(--accent);border-radius:2px;transition:width 0.3s linear;position:relative"><div style="position:absolute;right:-5px;top:-3px;width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 6px rgba(0,255,136,0.5)"></div></div></div>
+        <span id="exp-time" style="font-size:11px;color:rgba(255,255,255,0.7);font-variant-numeric:tabular-nums;min-width:70px;text-align:right;font-family:var(--mono)">0:00 / 1:10</span>
+        <button id="exp-mute-btn" style="background:none;border:none;cursor:pointer;padding:0;display:flex;align-items:center;width:28px;height:28px"><svg id="exp-vol-on" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 010 7.07"/><path d="M19.07 4.93a10 10 0 010 14.14"/></svg><svg id="exp-vol-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" style="display:none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg></button>
+      </div>
+    </div>
+    <script>
+    (function(){
+      var slides=document.querySelectorAll('.exp-slide'),overlay=document.getElementById('exp-play-overlay'),controls=document.getElementById('exp-controls'),bar=document.getElementById('exp-progress'),timeEl=document.getElementById('exp-time'),pauseBtn=document.getElementById('exp-pause-btn'),pauseIcon=document.getElementById('exp-pause-icon'),playIcon=document.getElementById('exp-play-icon'),muteBtn=document.getElementById('exp-mute-btn'),volOn=document.getElementById('exp-vol-on'),volOff=document.getElementById('exp-vol-off'),expBg=document.getElementById('exp-bg');
+      var audioFiles=['audio/slide1.mp3','audio/slide2.mp3','audio/slide3.mp3','audio/slide4.mp3','audio/slide5.mp3','audio/slide6.mp3'];
+      var current=0,playing=false,paused=false,muted=false,startTime=0,pausedElapsed=0,totalDur=70,audio=null,advanceTimer=null;
+      function stopAudio(){if(audio){try{audio.pause();audio.currentTime=0;audio.onended=null;audio.onerror=null}catch(e){}}if(advanceTimer){clearTimeout(advanceTimer);advanceTimer=null}}
+      function show(i){slides.forEach(function(s){s.style.opacity='0';s.style.pointerEvents='none';s.classList.remove('active')});if(slides[i]){slides[i].style.opacity='1';slides[i].style.pointerEvents='auto';slides[i].classList.add('active');var bg=slides[i].getAttribute('data-bg');if(bg&&expBg)expBg.style.background=bg}current=i}
+      function updateTime(){if(!playing)return;var elapsed=Math.min(pausedElapsed+(Date.now()-startTime)/1000,totalDur);bar.style.width=Math.min((elapsed/totalDur)*100,100)+'%';var m=Math.floor(elapsed/60),s=Math.floor(elapsed%60);timeEl.textContent=m+':'+(s<10?'0':'')+s+' / 1:10';if(elapsed<totalDur)requestAnimationFrame(updateTime)}
+      function playSlide(i){if(!playing||i>=slides.length)return;stopAudio();show(i);audio=new Audio(audioFiles[i]);audio.muted=muted;audio.onended=function(){if(!playing)return;if(i>=slides.length-1){playing=false;bar.style.width='100%';pauseIcon.style.display='none';playIcon.style.display='block'}else{advanceTimer=setTimeout(function(){playSlide(i+1)},400)}};audio.onerror=function(){if(playing)advanceTimer=setTimeout(function(){playSlide(i+1)},3000)};audio.play().catch(function(){if(playing)advanceTimer=setTimeout(function(){playSlide(i+1)},3000)})}
+      function start(){overlay.style.opacity='0';setTimeout(function(){overlay.style.display='none'},400);controls.style.display='flex';playing=true;paused=false;startTime=Date.now();pausedElapsed=0;current=0;pauseIcon.style.display='block';playIcon.style.display='none';updateTime();playSlide(0)}
+      overlay.onclick=start;
+      pauseBtn.onclick=function(e){e.stopPropagation();if(playing&&!paused){playing=false;paused=true;pausedElapsed+=(Date.now()-startTime)/1000;if(audio)try{audio.pause()}catch(e){}if(advanceTimer){clearTimeout(advanceTimer);advanceTimer=null}pauseIcon.style.display='none';playIcon.style.display='block'}else if(paused){playing=true;paused=false;startTime=Date.now();if(audio&&audio.paused&&audio.currentTime>0){audio.play().catch(function(){})}else{playSlide(current)}pauseIcon.style.display='block';playIcon.style.display='none';updateTime()}};
+      muteBtn.onclick=function(e){e.stopPropagation();muted=!muted;volOn.style.display=muted?'none':'block';volOff.style.display=muted?'block':'none';if(audio)audio.muted=muted};
+      document.getElementById('explainer').onclick=function(e){if(overlay.style.display!=='none')return;if(e.target.closest('#exp-controls')||e.target.closest('a'))return;pauseBtn.click()};
+    })();
+    </script>
+  </div>
+</section>
+
 <!-- =================== WA TABS SECTION =================== -->
 <section class="wa-section" id="bot">
   <div class="section-divider"><div class="section-divider-glow"></div></div>
