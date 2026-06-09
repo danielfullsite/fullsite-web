@@ -2508,33 +2508,20 @@ nav.top.scrolled{
       <p class="section-sub">Te mostramos el sistema corriendo en un restaurante real. Si tiene sentido para el tuyo, armamos tu plan a la medida.</p>
     </div>
 
-    <!-- Animated explainer — auto-playing product showcase -->
-    <div class="reveal" id="explainer" style="max-width:800px;margin:48px auto;border-radius:20px;overflow:hidden;border:1px solid var(--line-2);position:relative;aspect-ratio:16/9;background:var(--bg-1);cursor:default">
-      <!-- Progress bar -->
-      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:var(--line);z-index:10">
-        <div id="exp-progress" style="height:3px;width:0%;background:var(--accent);transition:width 0.3s linear;border-radius:0 2px 2px 0"></div>
-      </div>
-      <!-- Slides container -->
-      <div id="exp-slides" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">
-        <!-- Slide 1: Problem -->
-        <div class="exp-slide active" style="text-align:center;padding:40px;opacity:1;transition:opacity 0.6s">
+    <!-- Video-style explainer with voice narration -->
+    <div class="reveal" id="explainer" style="max-width:800px;margin:48px auto;border-radius:20px;overflow:hidden;border:1px solid var(--line-2);position:relative;aspect-ratio:16/9;background:linear-gradient(135deg,var(--bg-1),var(--bg-2));cursor:pointer;user-select:none">
+      <!-- Slides -->
+      <div id="exp-slides" style="position:absolute;inset:0">
+        <div class="exp-slide" data-voice="¿Cuántas veces revisas los reportes de tu restaurante al final del día, cuando ya es demasiado tarde para hacer algo?" style="text-align:center;padding:40px;opacity:1;transition:opacity 0.6s;position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
           <div style="font-size:14px;color:var(--accent);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px">El problema</div>
-          <div style="font-size:clamp(22px,4vw,36px);font-weight:800;color:var(--ink);line-height:1.2;letter-spacing:-0.03em;max-width:560px;margin:0 auto">
-            Revisas reportes al final del día.<br>
-            <span style="color:var(--ink-3)">Cuando ya es tarde para actuar.</span>
-          </div>
+          <div style="font-size:clamp(22px,4vw,36px);font-weight:800;color:var(--ink);line-height:1.2;letter-spacing:-0.03em;max-width:560px">Revisas reportes al final del día.<br><span style="color:var(--ink-3)">Cuando ya es tarde para actuar.</span></div>
         </div>
-        <!-- Slide 2: Solution -->
-        <div class="exp-slide" style="text-align:center;padding:40px;opacity:0;position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.6s">
+        <div class="exp-slide" data-voice="Fullsite conecta 30 agentes de inteligencia artificial a tu restaurante. Monitorean ventas, meseros, inventario y costos, las 24 horas. Y te avisan por WhatsApp antes de que algo se vuelva problema." style="text-align:center;padding:40px;opacity:0;transition:opacity 0.6s;position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
           <div style="font-size:14px;color:var(--accent);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px">La solución</div>
-          <div style="font-size:clamp(22px,4vw,36px);font-weight:800;color:var(--ink);line-height:1.2;letter-spacing:-0.03em;max-width:560px;margin:0 auto">
-            30 agentes de IA monitorean<br>
-            <span style="color:var(--accent)">tu restaurante 24/7.</span>
-          </div>
+          <div style="font-size:clamp(22px,4vw,36px);font-weight:800;color:var(--ink);line-height:1.2;letter-spacing:-0.03em;max-width:560px">30 agentes de IA monitorean<br><span style="color:var(--accent)">tu restaurante 24/7.</span></div>
           <div style="margin-top:20px;font-size:15px;color:var(--ink-2);max-width:440px">Te avisan por WhatsApp antes de que sea problema.</div>
         </div>
-        <!-- Slide 3: Dashboard -->
-        <div class="exp-slide" style="text-align:center;padding:32px 40px;opacity:0;position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.6s">
+        <div class="exp-slide" data-voice="Tu dashboard muestra ventas, órdenes y ticket promedio en tiempo real. Navega 883 días de historia. Compara hoy contra el mismo viernes del año pasado." style="text-align:center;padding:32px 40px;opacity:0;transition:opacity 0.6s;position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
           <div style="font-size:12px;color:var(--accent);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px">Dashboard en tiempo real</div>
           <div style="background:var(--bg-2);border:1px solid var(--line-2);border-radius:12px;padding:20px;width:100%;max-width:520px">
             <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:16px">
@@ -2553,80 +2540,187 @@ nav.top.scrolled{
             </div>
           </div>
         </div>
-        <!-- Slide 4: WhatsApp -->
-        <div class="exp-slide" style="text-align:center;padding:32px 40px;opacity:0;position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.6s">
+        <div class="exp-slide" data-voice="Pregúntale lo que quieras por WhatsApp. Cómo vamos hoy, quién vendió más, cuánto llevamos en propinas. Respuesta en 2 segundos, con datos reales, no estimaciones." style="text-align:center;padding:32px 40px;opacity:0;transition:opacity 0.6s;position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
           <div style="font-size:12px;color:var(--accent);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px">Pregúntale lo que quieras</div>
           <div style="background:#ece5dd;border-radius:12px;padding:16px;width:100%;max-width:380px;text-align:left">
             <div style="background:white;border-radius:8px;padding:10px 14px;margin-bottom:8px;font-size:14px;color:#303030;max-width:85%">¿Cómo vamos hoy vs el viernes pasado?</div>
-            <div style="background:#dcf8c6;border-radius:8px;padding:10px 14px;margin-left:auto;font-size:13px;color:#303030;max-width:90%">
-              <strong>Hoy $155,715</strong> vs viernes pasado $141,200<br>
-              <span style="color:#10b981;font-weight:600">+10.3% arriba</span> · 186 órdenes<br>
-              Top mesero: Omar $38,400<br>
-              Predicción cierre: <strong>$168,000</strong>
-            </div>
+            <div style="background:#dcf8c6;border-radius:8px;padding:10px 14px;margin-left:auto;font-size:13px;color:#303030;max-width:90%"><strong>Hoy $155,715</strong> vs viernes pasado $141,200<br><span style="color:#10b981;font-weight:600">+10.3% arriba</span> · 186 órdenes<br>Top mesero: Omar $38,400<br>Predicción cierre: <strong>$168,000</strong></div>
           </div>
-          <div style="margin-top:12px;font-size:13px;color:var(--ink-3)">Respuesta en 2 segundos con datos reales.</div>
         </div>
-        <!-- Slide 5: Agents -->
-        <div class="exp-slide" style="text-align:center;padding:32px 40px;opacity:0;position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.6s">
+        <div class="exp-slide" data-voice="Detrás, 30 agentes especializados trabajan sin parar. Anti-fraude, predicción de cierre, optimización de staff, food cost, Auto 86 y muchos más. Todo automático." style="text-align:center;padding:32px 40px;opacity:0;transition:opacity 0.6s;position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
           <div style="font-size:12px;color:var(--accent);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px">30 agentes trabajando ahora</div>
           <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;max-width:480px">
-            <span style="display:inline-flex;align-items:center;gap:6px;background:var(--bg-3);border:1px solid var(--line-2);padding:6px 14px;border-radius:99px;font-size:12px;color:var(--ink-1)"><span style="width:6px;height:6px;border-radius:50%;background:#10b981"></span>Anti-fraude</span>
-            <span style="display:inline-flex;align-items:center;gap:6px;background:var(--bg-3);border:1px solid var(--line-2);padding:6px 14px;border-radius:99px;font-size:12px;color:var(--ink-1)"><span style="width:6px;height:6px;border-radius:50%;background:#10b981"></span>Predicción</span>
-            <span style="display:inline-flex;align-items:center;gap:6px;background:var(--bg-3);border:1px solid var(--line-2);padding:6px 14px;border-radius:99px;font-size:12px;color:var(--ink-1)"><span style="width:6px;height:6px;border-radius:50%;background:#10b981"></span>Staffing</span>
-            <span style="display:inline-flex;align-items:center;gap:6px;background:var(--bg-3);border:1px solid var(--line-2);padding:6px 14px;border-radius:99px;font-size:12px;color:var(--ink-1)"><span style="width:6px;height:6px;border-radius:50%;background:#10b981"></span>Food Cost</span>
-            <span style="display:inline-flex;align-items:center;gap:6px;background:var(--bg-3);border:1px solid var(--line-2);padding:6px 14px;border-radius:99px;font-size:12px;color:var(--ink-1)"><span style="width:6px;height:6px;border-radius:50%;background:#10b981"></span>Auto-86</span>
-            <span style="display:inline-flex;align-items:center;gap:6px;background:var(--bg-3);border:1px solid var(--line-2);padding:6px 14px;border-radius:99px;font-size:12px;color:var(--ink-1)"><span style="width:6px;height:6px;border-radius:50%;background:#10b981"></span>Anomalías</span>
-            <span style="display:inline-flex;align-items:center;gap:6px;background:var(--bg-3);border:1px solid var(--line-2);padding:6px 14px;border-radius:99px;font-size:12px;color:var(--ink-1)"><span style="width:6px;height:6px;border-radius:50%;background:#10b981"></span>Menu Eng.</span>
+            <span style="display:inline-flex;align-items:center;gap:6px;background:var(--bg-3);border:1px solid var(--line-2);padding:6px 14px;border-radius:99px;font-size:12px;color:var(--ink-1)"><span style="width:6px;height:6px;border-radius:50%;background:#10b981;animation:pulse 2s infinite"></span>Anti-fraude</span>
+            <span style="display:inline-flex;align-items:center;gap:6px;background:var(--bg-3);border:1px solid var(--line-2);padding:6px 14px;border-radius:99px;font-size:12px;color:var(--ink-1)"><span style="width:6px;height:6px;border-radius:50%;background:#10b981;animation:pulse 2s infinite .3s"></span>Predicción</span>
+            <span style="display:inline-flex;align-items:center;gap:6px;background:var(--bg-3);border:1px solid var(--line-2);padding:6px 14px;border-radius:99px;font-size:12px;color:var(--ink-1)"><span style="width:6px;height:6px;border-radius:50%;background:#10b981;animation:pulse 2s infinite .6s"></span>Staffing</span>
+            <span style="display:inline-flex;align-items:center;gap:6px;background:var(--bg-3);border:1px solid var(--line-2);padding:6px 14px;border-radius:99px;font-size:12px;color:var(--ink-1)"><span style="width:6px;height:6px;border-radius:50%;background:#10b981;animation:pulse 2s infinite .9s"></span>Food Cost</span>
+            <span style="display:inline-flex;align-items:center;gap:6px;background:var(--bg-3);border:1px solid var(--line-2);padding:6px 14px;border-radius:99px;font-size:12px;color:var(--ink-1)"><span style="width:6px;height:6px;border-radius:50%;background:#10b981;animation:pulse 2s infinite 1.2s"></span>Auto-86</span>
+            <span style="display:inline-flex;align-items:center;gap:6px;background:var(--bg-3);border:1px solid var(--line-2);padding:6px 14px;border-radius:99px;font-size:12px;color:var(--ink-1)"><span style="width:6px;height:6px;border-radius:50%;background:#10b981;animation:pulse 2s infinite 1.5s"></span>Anomalías</span>
+            <span style="display:inline-flex;align-items:center;gap:6px;background:var(--bg-3);border:1px solid var(--line-2);padding:6px 14px;border-radius:99px;font-size:12px;color:var(--ink-1)"><span style="width:6px;height:6px;border-radius:50%;background:#10b981;animation:pulse 2s infinite 1.8s"></span>Menu Eng.</span>
             <span style="display:inline-flex;align-items:center;gap:6px;background:var(--bg-3);border:1px solid var(--line-2);padding:6px 14px;border-radius:99px;font-size:12px;color:var(--ink-1)"><span style="width:6px;height:6px;border-radius:50%;background:#f59e0b"></span>+22 más</span>
           </div>
-          <div style="margin-top:20px;font-size:14px;color:var(--ink-2)">Monitorean ventas, meseros, inventario y costos sin que hagas nada.</div>
         </div>
-        <!-- Slide 6: CTA -->
-        <div class="exp-slide" style="text-align:center;padding:40px;opacity:0;position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.6s">
-          <div style="font-size:clamp(24px,4.5vw,40px);font-weight:800;color:var(--ink);line-height:1.2;letter-spacing:-0.03em;margin-bottom:8px">
-            ¿Listo para <span style="color:var(--accent)">probarlo</span>?
-          </div>
+        <div class="exp-slide" data-voice="883 días de operación real. Más de 72 millones de pesos en ventas analizadas. Agenda una demo de 20 minutos y te mostramos todo con datos de hoy." style="text-align:center;padding:40px;opacity:0;transition:opacity 0.6s;position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
+          <div style="font-size:clamp(24px,4.5vw,40px);font-weight:800;color:var(--ink);line-height:1.2;letter-spacing:-0.03em;margin-bottom:8px">¿Listo para <span style="color:var(--accent)">probarlo</span>?</div>
           <div style="font-size:15px;color:var(--ink-2);margin-bottom:24px;max-width:400px">883 días operando en restaurantes reales.<br>$72M+ en ventas analizadas.</div>
-          <a href="https://wa.me/528115324371?text=Hola%20Daniel%2C%20vi%20la%20landing%20de%20Fullsite%20y%20me%20interesa%20agendar%20una%20demo." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--bg);padding:14px 32px;border-radius:12px;font-weight:700;font-size:15px;text-decoration:none;box-shadow:0 0 30px rgba(0,255,136,0.25)">
-            Agendar demo gratuita →
-          </a>
+          <a href="https://wa.me/528115324371?text=Hola%20Daniel%2C%20vi%20la%20landing%20de%20Fullsite%20y%20me%20interesa%20agendar%20una%20demo." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--bg);padding:14px 32px;border-radius:12px;font-weight:700;font-size:15px;text-decoration:none;box-shadow:0 0 30px rgba(0,255,136,0.25)">Agendar demo gratuita →</a>
         </div>
       </div>
-      <!-- Replay button (hidden until complete) -->
-      <div id="exp-replay" style="display:none;position:absolute;bottom:12px;right:12px;z-index:10">
-        <button onclick="startExplainer()" style="background:var(--bg-3);border:1px solid var(--line-2);color:var(--ink-2);padding:6px 14px;border-radius:8px;font-size:11px;cursor:pointer;font-weight:500">↻ Ver de nuevo</button>
+
+      <!-- Play overlay -->
+      <div id="exp-play-overlay" style="position:absolute;inset:0;z-index:20;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:rgba(10,10,11,0.7);backdrop-filter:blur(8px);transition:opacity 0.4s">
+        <div style="width:80px;height:80px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;box-shadow:0 0 60px rgba(0,255,136,0.35);transition:transform 0.2s" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--bg)" stroke="none"><polygon points="9,5 20,12 9,19"/></svg>
+        </div>
+        <span style="font-size:15px;color:var(--ink-1);font-weight:600">Conoce Fullsite en 1 minuto</span>
+        <span style="font-size:12px;color:var(--ink-3)">Con audio · 1:10 min</span>
+      </div>
+
+      <!-- Video controls bar -->
+      <div id="exp-controls" style="position:absolute;bottom:0;left:0;right:0;z-index:15;background:linear-gradient(transparent,rgba(0,0,0,0.8));padding:12px 16px 14px;display:none;align-items:center;gap:12px">
+        <button id="exp-pause-btn" style="background:none;border:none;cursor:pointer;padding:0;display:flex;align-items:center;justify-content:center;width:28px;height:28px">
+          <svg id="exp-pause-icon" width="16" height="16" viewBox="0 0 24 24" fill="white"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+          <svg id="exp-play-icon" width="16" height="16" viewBox="0 0 24 24" fill="white" style="display:none"><polygon points="8,5 20,12 8,19"/></svg>
+        </button>
+        <div style="flex:1;position:relative;height:4px;background:rgba(255,255,255,0.15);border-radius:2px;cursor:pointer" id="exp-timeline">
+          <div id="exp-progress" style="height:4px;width:0%;background:var(--accent);border-radius:2px;transition:width 0.3s linear;position:relative">
+            <div style="position:absolute;right:-5px;top:-3px;width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 6px rgba(0,255,136,0.5)"></div>
+          </div>
+        </div>
+        <span id="exp-time" style="font-size:11px;color:rgba(255,255,255,0.7);font-variant-numeric:tabular-nums;min-width:70px;text-align:right;font-family:var(--mono)">0:00 / 1:10</span>
+        <button id="exp-mute-btn" style="background:none;border:none;cursor:pointer;padding:0;display:flex;align-items:center;width:28px;height:28px">
+          <svg id="exp-vol-on" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 010 7.07"/><path d="M19.07 4.93a10 10 0 010 14.14"/></svg>
+          <svg id="exp-vol-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" style="display:none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+        </button>
       </div>
     </div>
 
     <script>
     (function(){
-      var slides=document.querySelectorAll('.exp-slide'),bar=document.getElementById('exp-progress'),replay=document.getElementById('exp-replay');
-      var durations=[3500,3500,4000,4500,3500,5000];// ms per slide
-      var total=durations.reduce(function(a,b){return a+b},0);
-      var current=0,timer=null,started=false;
+      var slides=document.querySelectorAll('.exp-slide');
+      var overlay=document.getElementById('exp-play-overlay');
+      var controls=document.getElementById('exp-controls');
+      var bar=document.getElementById('exp-progress');
+      var timeEl=document.getElementById('exp-time');
+      var pauseBtn=document.getElementById('exp-pause-btn');
+      var pauseIcon=document.getElementById('exp-pause-icon');
+      var playIcon=document.getElementById('exp-play-icon');
+      var muteBtn=document.getElementById('exp-mute-btn');
+      var volOn=document.getElementById('exp-vol-on');
+      var volOff=document.getElementById('exp-vol-off');
+      var current=0,timer=null,playing=false,muted=false,startTime=0,totalDur=70;
+      var synth=window.speechSynthesis;
+      var voiceReady=false,spanishVoice=null;
+
+      // Find best Spanish voice
+      function loadVoices(){
+        var voices=synth.getVoices();
+        // Prefer: Paulina (macOS/iOS), Monica, Jorge, Google español
+        var prefs=['Paulina','Monica','Jorge','Google español','Microsoft Helena'];
+        for(var p=0;p<prefs.length;p++){
+          for(var v=0;v<voices.length;v++){
+            if(voices[v].name.indexOf(prefs[p])!==-1&&voices[v].lang.indexOf('es')!==-1){spanishVoice=voices[v];voiceReady=true;return;}
+          }
+        }
+        // Fallback: any es voice
+        for(var v=0;v<voices.length;v++){
+          if(voices[v].lang.indexOf('es')!==-1){spanishVoice=voices[v];voiceReady=true;return;}
+        }
+      }
+      loadVoices();
+      if(synth.onvoiceschanged!==undefined)synth.onvoiceschanged=loadVoices;
+
+      function speak(text,cb){
+        synth.cancel();
+        if(muted){setTimeout(cb,4000);return;}
+        var u=new SpeechSynthesisUtterance(text);
+        u.lang='es-MX';
+        u.rate=1.05;
+        u.pitch=1.0;
+        if(spanishVoice)u.voice=spanishVoice;
+        u.onend=function(){setTimeout(cb,600)};
+        u.onerror=function(){setTimeout(cb,600)};
+        // Chrome bug: long utterances get cut off. Resume periodically.
+        var resumeInterval=setInterval(function(){if(synth.speaking)synth.resume();},5000);
+        u.onend=function(){clearInterval(resumeInterval);setTimeout(cb,600)};
+        u.onerror=function(){clearInterval(resumeInterval);setTimeout(cb,600)};
+        synth.speak(u);
+      }
+
       function show(i){
         slides.forEach(function(s){s.style.opacity='0';s.style.pointerEvents='none'});
-        slides[i].style.opacity='1';slides[i].style.pointerEvents='auto';
+        if(slides[i]){slides[i].style.opacity='1';slides[i].style.pointerEvents='auto';}
         current=i;
       }
-      function updateBar(){
-        var elapsed=0;for(var j=0;j<current;j++)elapsed+=durations[j];
-        bar.style.width=Math.min((elapsed/total)*100,100)+'%';
+
+      function updateTime(){
+        if(!playing)return;
+        var elapsed=Math.min((Date.now()-startTime)/1000,totalDur);
+        var pct=(elapsed/totalDur)*100;
+        bar.style.width=pct+'%';
+        var m=Math.floor(elapsed/60),s=Math.floor(elapsed%60);
+        timeEl.textContent=m+':'+(s<10?'0':'')+s+' / 1:10';
+        if(elapsed<totalDur)requestAnimationFrame(updateTime);
       }
-      function next(){
-        if(current<slides.length-1){show(current+1);updateBar();timer=setTimeout(next,durations[current]);}
-        else{bar.style.width='100%';replay.style.display='block';}
+
+      function advance(){
+        if(!playing)return;
+        if(current>=slides.length-1){
+          playing=false;bar.style.width='100%';
+          pauseIcon.style.display='none';playIcon.style.display='block';
+          return;
+        }
+        show(current+1);
+        var text=slides[current].getAttribute('data-voice')||'';
+        if(text)speak(text,advance);
+        else setTimeout(advance,4000);
       }
-      window.startExplainer=function(){
-        replay.style.display='none';bar.style.width='0%';show(0);
-        clearTimeout(timer);timer=setTimeout(next,durations[0]);
+
+      function start(){
+        overlay.style.opacity='0';
+        setTimeout(function(){overlay.style.display='none'},400);
+        controls.style.display='flex';
+        playing=true;startTime=Date.now();
+        show(0);
+        pauseIcon.style.display='block';playIcon.style.display='none';
+        updateTime();
+        var text=slides[0].getAttribute('data-voice')||'';
+        if(text)speak(text,advance);
+        else setTimeout(advance,4000);
+      }
+
+      // Click play overlay
+      overlay.onclick=start;
+
+      // Pause/resume
+      pauseBtn.onclick=function(e){
+        e.stopPropagation();
+        if(playing){
+          playing=false;synth.pause();
+          pauseIcon.style.display='none';playIcon.style.display='block';
+        }else{
+          playing=true;synth.resume();
+          pauseIcon.style.display='block';playIcon.style.display='none';
+          updateTime();
+        }
       };
-      // Start when scrolled into view
-      var obs=new IntersectionObserver(function(entries){
-        if(entries[0].isIntersecting&&!started){started=true;window.startExplainer();obs.disconnect();}
-      },{threshold:0.5});
-      obs.observe(document.getElementById('explainer'));
+
+      // Mute
+      muteBtn.onclick=function(e){
+        e.stopPropagation();
+        muted=!muted;
+        volOn.style.display=muted?'none':'block';
+        volOff.style.display=muted?'block':'none';
+        if(muted)synth.cancel();
+      };
+
+      // Click on video area = pause/play
+      document.getElementById('explainer').onclick=function(e){
+        if(overlay.style.display!=='none')return;
+        if(e.target.closest('#exp-controls'))return;
+        if(e.target.closest('a'))return;
+        pauseBtn.click();
+      };
     })();
     </script>
 
