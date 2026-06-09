@@ -2508,15 +2508,127 @@ nav.top.scrolled{
       <p class="section-sub">Te mostramos el sistema corriendo en un restaurante real. Si tiene sentido para el tuyo, armamos tu plan a la medida.</p>
     </div>
 
-    <!-- Video placeholder -->
-    <div class="reveal" style="max-width:800px;margin:48px auto;border-radius:20px;overflow:hidden;border:1px solid var(--line-2);position:relative;aspect-ratio:16/9;background:var(--bg-2)">
-      <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;cursor:pointer" onclick="this.parentElement.innerHTML='<iframe src=\'https://www.youtube.com/embed/PLACEHOLDER_ID?autoplay=1\' style=\'width:100%;height:100%;border:none\' allow=\'autoplay;encrypted-media\' allowfullscreen></iframe>'">
-        <div style="width:72px;height:72px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;box-shadow:0 0 40px rgba(0,255,136,0.3)">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="var(--bg)" stroke="none"><polygon points="9,6 19,12 9,18"/></svg>
+    <!-- Animated explainer — auto-playing product showcase -->
+    <div class="reveal" id="explainer" style="max-width:800px;margin:48px auto;border-radius:20px;overflow:hidden;border:1px solid var(--line-2);position:relative;aspect-ratio:16/9;background:var(--bg-1);cursor:default">
+      <!-- Progress bar -->
+      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:var(--line);z-index:10">
+        <div id="exp-progress" style="height:3px;width:0%;background:var(--accent);transition:width 0.3s linear;border-radius:0 2px 2px 0"></div>
+      </div>
+      <!-- Slides container -->
+      <div id="exp-slides" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">
+        <!-- Slide 1: Problem -->
+        <div class="exp-slide active" style="text-align:center;padding:40px;opacity:1;transition:opacity 0.6s">
+          <div style="font-size:14px;color:var(--accent);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px">El problema</div>
+          <div style="font-size:clamp(22px,4vw,36px);font-weight:800;color:var(--ink);line-height:1.2;letter-spacing:-0.03em;max-width:560px;margin:0 auto">
+            Revisas reportes al final del día.<br>
+            <span style="color:var(--ink-3)">Cuando ya es tarde para actuar.</span>
+          </div>
         </div>
-        <span style="font-size:14px;color:var(--ink-2);font-weight:500">Ver cómo funciona Fullsite</span>
+        <!-- Slide 2: Solution -->
+        <div class="exp-slide" style="text-align:center;padding:40px;opacity:0;position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.6s">
+          <div style="font-size:14px;color:var(--accent);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px">La solución</div>
+          <div style="font-size:clamp(22px,4vw,36px);font-weight:800;color:var(--ink);line-height:1.2;letter-spacing:-0.03em;max-width:560px;margin:0 auto">
+            30 agentes de IA monitorean<br>
+            <span style="color:var(--accent)">tu restaurante 24/7.</span>
+          </div>
+          <div style="margin-top:20px;font-size:15px;color:var(--ink-2);max-width:440px">Te avisan por WhatsApp antes de que sea problema.</div>
+        </div>
+        <!-- Slide 3: Dashboard -->
+        <div class="exp-slide" style="text-align:center;padding:32px 40px;opacity:0;position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.6s">
+          <div style="font-size:12px;color:var(--accent);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px">Dashboard en tiempo real</div>
+          <div style="background:var(--bg-2);border:1px solid var(--line-2);border-radius:12px;padding:20px;width:100%;max-width:520px">
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:16px">
+              <div style="background:var(--bg-3);border-radius:8px;padding:12px;text-align:center"><div style="font-size:10px;color:var(--ink-3);margin-bottom:4px">VENTAS HOY</div><div style="font-size:20px;font-weight:800;color:var(--accent)">$155K</div></div>
+              <div style="background:var(--bg-3);border-radius:8px;padding:12px;text-align:center"><div style="font-size:10px;color:var(--ink-3);margin-bottom:4px">ORDENES</div><div style="font-size:20px;font-weight:800;color:var(--ink)">186</div></div>
+              <div style="background:var(--bg-3);border-radius:8px;padding:12px;text-align:center"><div style="font-size:10px;color:var(--ink-3);margin-bottom:4px">TICKET PROM</div><div style="font-size:20px;font-weight:800;color:var(--ink)">$837</div></div>
+            </div>
+            <div style="display:flex;gap:8px;align-items:end;height:48px;padding:0 4px">
+              <div style="flex:1;background:var(--accent);border-radius:4px 4px 0 0;height:70%;opacity:0.6"></div>
+              <div style="flex:1;background:var(--accent);border-radius:4px 4px 0 0;height:45%;opacity:0.6"></div>
+              <div style="flex:1;background:var(--accent);border-radius:4px 4px 0 0;height:85%;opacity:0.7"></div>
+              <div style="flex:1;background:var(--accent);border-radius:4px 4px 0 0;height:60%;opacity:0.6"></div>
+              <div style="flex:1;background:var(--accent);border-radius:4px 4px 0 0;height:90%;opacity:0.8"></div>
+              <div style="flex:1;background:var(--accent);border-radius:4px 4px 0 0;height:100%"></div>
+              <div style="flex:1;background:var(--accent);border-radius:4px 4px 0 0;height:75%;opacity:0.7"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 4: WhatsApp -->
+        <div class="exp-slide" style="text-align:center;padding:32px 40px;opacity:0;position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.6s">
+          <div style="font-size:12px;color:var(--accent);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px">Pregúntale lo que quieras</div>
+          <div style="background:#ece5dd;border-radius:12px;padding:16px;width:100%;max-width:380px;text-align:left">
+            <div style="background:white;border-radius:8px;padding:10px 14px;margin-bottom:8px;font-size:14px;color:#303030;max-width:85%">¿Cómo vamos hoy vs el viernes pasado?</div>
+            <div style="background:#dcf8c6;border-radius:8px;padding:10px 14px;margin-left:auto;font-size:13px;color:#303030;max-width:90%">
+              <strong>Hoy $155,715</strong> vs viernes pasado $141,200<br>
+              <span style="color:#10b981;font-weight:600">+10.3% arriba</span> · 186 órdenes<br>
+              Top mesero: Omar $38,400<br>
+              Predicción cierre: <strong>$168,000</strong>
+            </div>
+          </div>
+          <div style="margin-top:12px;font-size:13px;color:var(--ink-3)">Respuesta en 2 segundos con datos reales.</div>
+        </div>
+        <!-- Slide 5: Agents -->
+        <div class="exp-slide" style="text-align:center;padding:32px 40px;opacity:0;position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.6s">
+          <div style="font-size:12px;color:var(--accent);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px">30 agentes trabajando ahora</div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;max-width:480px">
+            <span style="display:inline-flex;align-items:center;gap:6px;background:var(--bg-3);border:1px solid var(--line-2);padding:6px 14px;border-radius:99px;font-size:12px;color:var(--ink-1)"><span style="width:6px;height:6px;border-radius:50%;background:#10b981"></span>Anti-fraude</span>
+            <span style="display:inline-flex;align-items:center;gap:6px;background:var(--bg-3);border:1px solid var(--line-2);padding:6px 14px;border-radius:99px;font-size:12px;color:var(--ink-1)"><span style="width:6px;height:6px;border-radius:50%;background:#10b981"></span>Predicción</span>
+            <span style="display:inline-flex;align-items:center;gap:6px;background:var(--bg-3);border:1px solid var(--line-2);padding:6px 14px;border-radius:99px;font-size:12px;color:var(--ink-1)"><span style="width:6px;height:6px;border-radius:50%;background:#10b981"></span>Staffing</span>
+            <span style="display:inline-flex;align-items:center;gap:6px;background:var(--bg-3);border:1px solid var(--line-2);padding:6px 14px;border-radius:99px;font-size:12px;color:var(--ink-1)"><span style="width:6px;height:6px;border-radius:50%;background:#10b981"></span>Food Cost</span>
+            <span style="display:inline-flex;align-items:center;gap:6px;background:var(--bg-3);border:1px solid var(--line-2);padding:6px 14px;border-radius:99px;font-size:12px;color:var(--ink-1)"><span style="width:6px;height:6px;border-radius:50%;background:#10b981"></span>Auto-86</span>
+            <span style="display:inline-flex;align-items:center;gap:6px;background:var(--bg-3);border:1px solid var(--line-2);padding:6px 14px;border-radius:99px;font-size:12px;color:var(--ink-1)"><span style="width:6px;height:6px;border-radius:50%;background:#10b981"></span>Anomalías</span>
+            <span style="display:inline-flex;align-items:center;gap:6px;background:var(--bg-3);border:1px solid var(--line-2);padding:6px 14px;border-radius:99px;font-size:12px;color:var(--ink-1)"><span style="width:6px;height:6px;border-radius:50%;background:#10b981"></span>Menu Eng.</span>
+            <span style="display:inline-flex;align-items:center;gap:6px;background:var(--bg-3);border:1px solid var(--line-2);padding:6px 14px;border-radius:99px;font-size:12px;color:var(--ink-1)"><span style="width:6px;height:6px;border-radius:50%;background:#f59e0b"></span>+22 más</span>
+          </div>
+          <div style="margin-top:20px;font-size:14px;color:var(--ink-2)">Monitorean ventas, meseros, inventario y costos sin que hagas nada.</div>
+        </div>
+        <!-- Slide 6: CTA -->
+        <div class="exp-slide" style="text-align:center;padding:40px;opacity:0;position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.6s">
+          <div style="font-size:clamp(24px,4.5vw,40px);font-weight:800;color:var(--ink);line-height:1.2;letter-spacing:-0.03em;margin-bottom:8px">
+            ¿Listo para <span style="color:var(--accent)">probarlo</span>?
+          </div>
+          <div style="font-size:15px;color:var(--ink-2);margin-bottom:24px;max-width:400px">883 días operando en restaurantes reales.<br>$72M+ en ventas analizadas.</div>
+          <a href="https://wa.me/528115324371?text=Hola%20Daniel%2C%20vi%20la%20landing%20de%20Fullsite%20y%20me%20interesa%20agendar%20una%20demo." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--bg);padding:14px 32px;border-radius:12px;font-weight:700;font-size:15px;text-decoration:none;box-shadow:0 0 30px rgba(0,255,136,0.25)">
+            Agendar demo gratuita →
+          </a>
+        </div>
+      </div>
+      <!-- Replay button (hidden until complete) -->
+      <div id="exp-replay" style="display:none;position:absolute;bottom:12px;right:12px;z-index:10">
+        <button onclick="startExplainer()" style="background:var(--bg-3);border:1px solid var(--line-2);color:var(--ink-2);padding:6px 14px;border-radius:8px;font-size:11px;cursor:pointer;font-weight:500">↻ Ver de nuevo</button>
       </div>
     </div>
+
+    <script>
+    (function(){
+      var slides=document.querySelectorAll('.exp-slide'),bar=document.getElementById('exp-progress'),replay=document.getElementById('exp-replay');
+      var durations=[3500,3500,4000,4500,3500,5000];// ms per slide
+      var total=durations.reduce(function(a,b){return a+b},0);
+      var current=0,timer=null,started=false;
+      function show(i){
+        slides.forEach(function(s){s.style.opacity='0';s.style.pointerEvents='none'});
+        slides[i].style.opacity='1';slides[i].style.pointerEvents='auto';
+        current=i;
+      }
+      function updateBar(){
+        var elapsed=0;for(var j=0;j<current;j++)elapsed+=durations[j];
+        bar.style.width=Math.min((elapsed/total)*100,100)+'%';
+      }
+      function next(){
+        if(current<slides.length-1){show(current+1);updateBar();timer=setTimeout(next,durations[current]);}
+        else{bar.style.width='100%';replay.style.display='block';}
+      }
+      window.startExplainer=function(){
+        replay.style.display='none';bar.style.width='0%';show(0);
+        clearTimeout(timer);timer=setTimeout(next,durations[0]);
+      };
+      // Start when scrolled into view
+      var obs=new IntersectionObserver(function(entries){
+        if(entries[0].isIntersecting&&!started){started=true;window.startExplainer();obs.disconnect();}
+      },{threshold:0.5});
+      obs.observe(document.getElementById('explainer'));
+    })();
+    </script>
 
     <!-- 3 value props -->
     <div class="reveal-stagger" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:900px;margin:48px auto 0">
