@@ -1,5 +1,2 @@
-# Dominio canónico: www -> apex (activo cuando www.fullsite.mx esté agregado como custom domain del proyecto)
-https://www.fullsite.mx/* https://fullsite.mx/:splat 301
-
 # Consolidación de keyword: la página de producto POS vive ahora en la landing SEO
 /producto/pos.html /pos-para-restaurantes/ 301
