@@ -168,7 +168,8 @@
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 
 <style>
 /* ===== RESET & BASE ===== */
@@ -275,10 +276,10 @@ ul { list-style: none; }
   border: none;
 }
 .btn-primary {
-  background: #10b981;
+  background: #047857;
   color: #fff;
 }
-.btn-primary:hover { background: #059669; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(16,185,129,0.3); }
+.btn-primary:hover { background: #065f46; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(16,185,129,0.3); }
 .btn-outline {
   background: transparent;
   color: #1a1a1a;
@@ -334,7 +335,7 @@ ul { list-style: none; }
   display: inline-block;
   font-size: 13px;
   font-weight: 600;
-  color: #10b981;
+  color: #047857;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-bottom: 16px;
@@ -889,6 +890,7 @@ ul { list-style: none; }
 </div>
 
 <!-- ===== HERO ===== -->
+<main>
 <section class="hero">
   <div class="container">
     <div class="hero-grid">
@@ -902,7 +904,7 @@ ul { list-style: none; }
         </div>
       </div>
       <div class="reveal" style="transition-delay:0.15s;">
-        <img src="/img-terminal.jpg" alt="Terminal punto de venta Fullsite operando en un restaurante" class="hero-img" width="1254" height="1254" fetchpriority="high">
+        <img src="/img-terminal-800.jpg" srcset="/img-terminal-800.jpg 800w, /img-terminal.jpg 1254w" sizes="(max-width:900px) 92vw, 520px" alt="Terminal punto de venta Fullsite operando en un restaurante" class="hero-img" width="800" height="800" fetchpriority="high">
       </div>
     </div>
   </div>
@@ -913,7 +915,7 @@ ul { list-style: none; }
   <div class="container">
     <div class="feature-row reveal">
       <div class="feature-visual">
-        <img src="/img-dashboard.jpg" alt="Dashboard operativo de Fullsite con ventas e inventario en tiempo real" class="feature-img" width="1254" height="1254" loading="lazy">
+        <img src="/img-dashboard-800.jpg" srcset="/img-dashboard-800.jpg 800w, /img-dashboard.jpg 1254w" sizes="(max-width:900px) 92vw, 520px" alt="Dashboard operativo de Fullsite con ventas e inventario en tiempo real" class="feature-img" width="800" height="800" loading="lazy">
       </div>
       <div class="feature-text">
         <span class="feature-tag">Un solo sistema</span>
@@ -940,7 +942,7 @@ ul { list-style: none; }
         </ul>
       </div>
       <div class="feature-visual">
-        <img src="/img-bartender.jpg" alt="Personal de barra cobrando con Fullsite sin conexión a internet" class="feature-img" width="1254" height="1254" loading="lazy">
+        <img src="/img-bartender-800.jpg" srcset="/img-bartender-800.jpg 800w, /img-bartender.jpg 1254w" sizes="(max-width:900px) 92vw, 520px" alt="Personal de barra cobrando con Fullsite sin conexión a internet" class="feature-img" width="800" height="800" loading="lazy">
       </div>
     </div>
   </div>
@@ -981,23 +983,23 @@ ul { list-style: none; }
     <p class="integrations-sub reveal">Conectamos tu operación con las plataformas que mueven tu negocio.</p>
     <div class="integrations-grid">
       <div class="integrations-track">
-        <div class="int-card"><img src="/logo-ubereats.png" alt="Uber Eats"></div>
-        <div class="int-card"><img src="/logo-rappi.png" alt="Rappi"></div>
-        <div class="int-card"><span style="font-size:20px;font-weight:800;color:#FF6633">Didi Food</span></div>
-        <div class="int-card"><img src="/logo-sat.jpg" alt="SAT"></div>
-        <div class="int-card"><img src="/logo-mercadopago.svg" alt="Mercado Pago"></div>
+        <div class="int-card"><img src="/logo-ubereats.png" alt="Uber Eats" width="3000" height="1700" loading="lazy"></div>
+        <div class="int-card"><img src="/logo-rappi.png" alt="Rappi" width="1280" height="538" loading="lazy"></div>
+        <div class="int-card"><span style="font-size:20px;font-weight:800;color:#C2410C">Didi Food</span></div>
+        <div class="int-card"><img src="/logo-sat.jpg" alt="SAT" width="1024" height="460" loading="lazy"></div>
+        <div class="int-card"><img src="/logo-mercadopago.svg" alt="Mercado Pago" width="800" height="209" loading="lazy"></div>
         <div class="int-card"><span style="font-size:18px;font-weight:700;color:#25D366">WhatsApp</span></div>
-        <div class="int-card"><img src="/logo-ubereats.png" alt="Uber Eats"></div>
-        <div class="int-card"><img src="/logo-rappi.png" alt="Rappi"></div>
-        <div class="int-card"><span style="font-size:20px;font-weight:800;color:#FF6633">Didi Food</span></div>
-        <div class="int-card"><img src="/logo-sat.jpg" alt="SAT"></div>
-        <div class="int-card"><img src="/logo-mercadopago.svg" alt="Mercado Pago"></div>
+        <div class="int-card"><img src="/logo-ubereats.png" alt="Uber Eats" width="3000" height="1700" loading="lazy"></div>
+        <div class="int-card"><img src="/logo-rappi.png" alt="Rappi" width="1280" height="538" loading="lazy"></div>
+        <div class="int-card"><span style="font-size:20px;font-weight:800;color:#C2410C">Didi Food</span></div>
+        <div class="int-card"><img src="/logo-sat.jpg" alt="SAT" width="1024" height="460" loading="lazy"></div>
+        <div class="int-card"><img src="/logo-mercadopago.svg" alt="Mercado Pago" width="800" height="209" loading="lazy"></div>
         <div class="int-card"><span style="font-size:18px;font-weight:700;color:#25D366">WhatsApp</span></div>
-        <div class="int-card"><img src="/logo-ubereats.png" alt="Uber Eats"></div>
-        <div class="int-card"><img src="/logo-rappi.png" alt="Rappi"></div>
-        <div class="int-card"><span style="font-size:20px;font-weight:800;color:#FF6633">Didi Food</span></div>
-        <div class="int-card"><img src="/logo-sat.jpg" alt="SAT"></div>
-        <div class="int-card"><img src="/logo-mercadopago.svg" alt="Mercado Pago"></div>
+        <div class="int-card"><img src="/logo-ubereats.png" alt="Uber Eats" width="3000" height="1700" loading="lazy"></div>
+        <div class="int-card"><img src="/logo-rappi.png" alt="Rappi" width="1280" height="538" loading="lazy"></div>
+        <div class="int-card"><span style="font-size:20px;font-weight:800;color:#C2410C">Didi Food</span></div>
+        <div class="int-card"><img src="/logo-sat.jpg" alt="SAT" width="1024" height="460" loading="lazy"></div>
+        <div class="int-card"><img src="/logo-mercadopago.svg" alt="Mercado Pago" width="800" height="209" loading="lazy"></div>
         <div class="int-card"><span style="font-size:18px;font-weight:700;color:#25D366">WhatsApp</span></div>
       </div>
     </div>
@@ -1015,13 +1017,13 @@ ul { list-style: none; }
         </div>
         <div style="display:flex;border-bottom:1px solid rgba(0,0,0,0.08);background:#f0ebe3;">
           <button class="iq-tab active" data-tab="ventas" style="flex:1;padding:12px;font-size:12px;font-weight:600;color:#075e54;background:none;border:none;border-bottom:2px solid #075e54;cursor:pointer;font-family:inherit;">Ventas</button>
-          <button class="iq-tab" data-tab="inventario" style="flex:1;padding:12px;font-size:12px;font-weight:500;color:#999;background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;font-family:inherit;">Inventario</button>
-          <button class="iq-tab" data-tab="fraude" style="flex:1;padding:12px;font-size:12px;font-weight:500;color:#999;background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;font-family:inherit;">Fraude</button>
+          <button class="iq-tab" data-tab="inventario" style="flex:1;padding:12px;font-size:12px;font-weight:500;color:#5f6b66;background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;font-family:inherit;">Inventario</button>
+          <button class="iq-tab" data-tab="fraude" style="flex:1;padding:12px;font-size:12px;font-weight:500;color:#5f6b66;background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;font-family:inherit;">Fraude</button>
         </div>
         <div style="padding:20px 16px;min-height:320px;display:flex;flex-direction:column;gap:10px;background:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2240%22 height=%2240%22><rect width=%2240%22 height=%2240%22 fill=%22%23ece5dd%22/><rect width=%221%22 height=%221%22 x=%2210%22 y=%2210%22 fill=%22%23d4cdc4%22 rx=%220.5%22/></svg>') repeat;" id="iq-chat"></div>
       </div>
       <div>
-        <span class="hero-eyebrow" style="color:#10b981;">Inteligencia operativa</span>
+        <span class="hero-eyebrow" style="color:#047857;">Inteligencia operativa</span>
         <h2 class="feature-title">Así te llegan las alertas.</h2>
         <p class="feature-desc">Directo a tu celular por WhatsApp. Sin abrir dashboards, sin reportes complicados. Fullsite detecta lo importante y te dice qué hacer.</p>
         <ul class="feature-list">
@@ -1156,24 +1158,26 @@ ul { list-style: none; }
 </section>
 
 <!-- ===== FOOTER ===== -->
+</main>
+
 <footer style="background:#f8faf9;border-top:1px solid #eee;padding:48px 0;">
   <div class="container">
     <div style="text-align:center;margin-bottom:24px;">
-      <img src="/favicon-512.png" alt="fullsite" style="height:40px;margin:0 auto;">
+      <img src="/favicon-512.png" alt="Fullsite" width="512" height="512" style="height:40px;width:40px;margin:0 auto;" loading="lazy">
     </div>
     <nav aria-label="Fullsite para restaurantes" style="display:flex;justify-content:center;gap:16px 24px;margin-bottom:20px;flex-wrap:wrap;max-width:720px;margin-left:auto;margin-right:auto;">
-      <a href="/pos-para-restaurantes/" style="font-size:13px;color:#888;text-decoration:none;">POS para restaurantes</a>
-      <a href="/pos-restaurantes-monterrey/" style="font-size:13px;color:#888;text-decoration:none;">POS en Monterrey</a>
-      <a href="/pos-sin-internet/" style="font-size:13px;color:#888;text-decoration:none;">POS sin internet</a>
-      <a href="/kds-para-restaurantes/" style="font-size:13px;color:#888;text-decoration:none;">KDS para cocina</a>
-      <a href="/inventario-para-restaurantes/" style="font-size:13px;color:#888;text-decoration:none;">Inventario</a>
-      <a href="/software-grupos-restauranteros/" style="font-size:13px;color:#888;text-decoration:none;">Grupos restauranteros</a>
+      <a href="/pos-para-restaurantes/" style="font-size:13px;color:#555;text-decoration:none;">POS para restaurantes</a>
+      <a href="/pos-restaurantes-monterrey/" style="font-size:13px;color:#555;text-decoration:none;">POS en Monterrey</a>
+      <a href="/pos-sin-internet/" style="font-size:13px;color:#555;text-decoration:none;">POS sin internet</a>
+      <a href="/kds-para-restaurantes/" style="font-size:13px;color:#555;text-decoration:none;">KDS para cocina</a>
+      <a href="/inventario-para-restaurantes/" style="font-size:13px;color:#555;text-decoration:none;">Inventario</a>
+      <a href="/software-grupos-restauranteros/" style="font-size:13px;color:#555;text-decoration:none;">Grupos restauranteros</a>
     </nav>
     <div style="display:flex;justify-content:center;gap:24px;margin-bottom:16px;">
-      <a href="https://wa.me/528115324371?text=Hola%20Daniel%2C%20me%20interesa%20Fullsite" style="font-size:13px;color:#888;text-decoration:none;">WhatsApp</a>
-      <a href="mailto:daniel@fullsite.mx" style="font-size:13px;color:#888;text-decoration:none;">Email</a>
-      <a href="https://app.fullsite.mx/login" style="font-size:13px;color:#888;text-decoration:none;">Log in</a>
-      <a href="/demo.html" style="font-size:13px;color:#888;text-decoration:none;">Agenda una demo</a>
+      <a href="https://wa.me/528115324371?text=Hola%20Daniel%2C%20me%20interesa%20Fullsite" style="font-size:13px;color:#555;text-decoration:none;">WhatsApp</a>
+      <a href="mailto:daniel@fullsite.mx" style="font-size:13px;color:#555;text-decoration:none;">Email</a>
+      <a href="https://app.fullsite.mx/login" style="font-size:13px;color:#555;text-decoration:none;">Log in</a>
+      <a href="/demo.html" style="font-size:13px;color:#555;text-decoration:none;">Agenda una demo</a>
     </div>
     <p style="text-align:center;font-size:12px;color:#bbb;">&copy; 2026 Fullsite. Monterrey, México.</p>
   </div>
