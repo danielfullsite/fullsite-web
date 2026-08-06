@@ -1126,8 +1126,16 @@ ul { list-style: none; }
 .bv2-mod.on .bv2-hub::after{opacity:1}
 /* rail */
 .bv2-rail{padding:34px 32px;display:flex;flex-direction:column;gap:18px;justify-content:center}
+.bv2-ex{display:none;flex-direction:column;gap:18px}
+.bv2-ex.act{display:flex;animation:bv2fade .4s ease}
+@keyframes bv2fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.bv2-ex.act{animation:none}}
 .bv2-chip{display:inline-flex;align-items:center;gap:9px;align-self:flex-start;background:#fffbeb;border:1px solid #fcd34d;color:#92400e;font-size:13.5px;font-weight:700;padding:9px 16px;border-radius:99px;transition:all .3s}
 .bv2-chip .d{width:7px;height:7px;border-radius:50%;background:#f59e0b}
+.bv2-chip.green{background:#ecfdf5;border-color:#a7f3d0;color:#065f46}
+.bv2-chip.green .d{background:#10b981}
+.bv2-chip.red{background:#fef2f2;border-color:#fecaca;color:#991b1b}
+.bv2-chip.red .d{background:#ef4444}
 .bv2-chip.pulse{box-shadow:0 0 0 4px rgba(245,158,11,.14)}
 .bv2-chain{display:flex;flex-direction:column;gap:0;position:relative;padding-left:2px}
 .bv2-ln{display:flex;align-items:center;gap:12px;padding:5px 0}
@@ -1213,25 +1221,88 @@ ul { list-style: none; }
               <span class="bv2-node" style="left:12%;top:30%" data-n="margen">Margen</span>
             </div>
           </div>
-          <div class="bv2-rail">
-            <span class="bv2-chip" id="bv2-chip"><span class="d" aria-hidden="true"></span>Costo del pollo +18%</span>
-            <div class="bv2-chain" id="bv2-chain" aria-label="Relación del cambio detectado">
-              <div class="bv2-ln"><span>PROVEEDOR</span></div>
-              <div class="bv2-ln"><span>INGREDIENTE</span></div>
-              <div class="bv2-ln"><span>RECETAS</span></div>
-              <div class="bv2-ln"><span>COSTO</span></div>
-              <div class="bv2-ln"><span>MARGEN</span></div>
-              <div class="bv2-ln"><span>RECOMENDACIÓN</span></div>
+          <div class="bv2-rail" id="bv2-rail">
+
+            <div class="bv2-ex act" data-ex="conecta">
+              <span class="bv2-chip green"><span class="d" aria-hidden="true"></span>Venta: 2 Chicken Bowl — Mesa 7</span>
+              <div class="bv2-chain" aria-label="Recorrido de la venta por el sistema">
+                <div class="bv2-ln"><span>VENTA</span></div>
+                <div class="bv2-ln"><span>PLATILLO</span></div>
+                <div class="bv2-ln"><span>RECETA</span></div>
+                <div class="bv2-ln"><span>INGREDIENTES</span></div>
+                <div class="bv2-ln"><span>COSTO</span></div>
+              </div>
+              <div class="bv2-card">
+                <div class="tag">Contexto conectado</div>
+                <p><strong>Una venta no es solamente un ticket.</strong></p>
+                <div class="lbl">Relación</div>
+                <p>Receta con 6 ingredientes<br>Inventario descontado al momento</p>
+                <div class="lbl">Resultado</div>
+                <p>Costo y margen del platillo actualizados.</p>
+              </div>
+              <p class="bv2-note">Ejemplo ilustrativo</p>
             </div>
-            <div class="bv2-card" id="bv2-card">
-              <div class="tag">Cambio detectado</div>
-              <p><strong>El costo del pollo aumentó 18%.</strong></p>
-              <div class="lbl">Impacto relacionado</div>
-              <p>12 recetas afectadas<br>Margen estimado a la baja</p>
-              <div class="lbl">Siguiente paso</div>
-              <p>Revisar proveedor y costo por receta.</p>
+
+            <div class="bv2-ex" data-ex="detecta">
+              <span class="bv2-chip"><span class="d" aria-hidden="true"></span>Costo del pollo +18%</span>
+              <div class="bv2-chain" aria-label="Relación del cambio detectado">
+                <div class="bv2-ln"><span>PROVEEDOR</span></div>
+                <div class="bv2-ln"><span>INGREDIENTE</span></div>
+                <div class="bv2-ln"><span>RECETAS</span></div>
+                <div class="bv2-ln"><span>COSTO</span></div>
+                <div class="bv2-ln"><span>MARGEN</span></div>
+              </div>
+              <div class="bv2-card">
+                <div class="tag">Cambio detectado</div>
+                <p><strong>El costo del pollo aumentó 18%.</strong></p>
+                <div class="lbl">Impacto relacionado</div>
+                <p>12 recetas afectadas<br>Margen estimado a la baja</p>
+                <div class="lbl">Siguiente paso</div>
+                <p>Revisar proveedor y costo por receta.</p>
+              </div>
+              <p class="bv2-note">Ejemplo ilustrativo</p>
             </div>
-            <p class="bv2-note">Ejemplo ilustrativo</p>
+
+            <div class="bv2-ex" data-ex="explica">
+              <span class="bv2-chip red"><span class="d" aria-hidden="true"></span>Cancelaciones 3.2× vs patrón</span>
+              <div class="bv2-chain" aria-label="Partes de la operación relacionadas">
+                <div class="bv2-ln"><span>VENTAS</span></div>
+                <div class="bv2-ln"><span>CANCELACIONES</span></div>
+                <div class="bv2-ln"><span>PERSONAL</span></div>
+                <div class="bv2-ln"><span>TURNO</span></div>
+                <div class="bv2-ln"><span>PATRÓN</span></div>
+              </div>
+              <div class="bv2-card">
+                <div class="tag">Explicación</div>
+                <p><strong>7 cancelaciones esta semana — 3.2× el promedio del equipo.</strong></p>
+                <div class="lbl">Contexto</div>
+                <p>Concentradas de 2 a 4 pm en terraza<br>$2,840 MXN acumulados</p>
+                <div class="lbl">Relación</div>
+                <p>Mismo mesero, mismo turno, mismo horario.</p>
+              </div>
+              <p class="bv2-note">Ejemplo ilustrativo</p>
+            </div>
+
+            <div class="bv2-ex" data-ex="recomienda">
+              <span class="bv2-chip"><span class="d" aria-hidden="true"></span>Aguacate: no alcanza el servicio</span>
+              <div class="bv2-chain" aria-label="De la proyección a la recomendación">
+                <div class="bv2-ln"><span>VENTAS</span></div>
+                <div class="bv2-ln"><span>PROYECCIÓN</span></div>
+                <div class="bv2-ln"><span>INVENTARIO</span></div>
+                <div class="bv2-ln"><span>PROVEEDOR</span></div>
+                <div class="bv2-ln"><span>RECOMENDACIÓN</span></div>
+              </div>
+              <div class="bv2-card">
+                <div class="tag">Recomendación</div>
+                <p><strong>El aguacate no alcanza para el servicio de hoy.</strong></p>
+                <div class="lbl">Base</div>
+                <p>Stock: 2.1 kg · Consumo proyectado: 3.8 kg<br>45 órdenes de guacamole en jueves promedio</p>
+                <div class="lbl">Siguiente paso</div>
+                <p>Contactar al proveedor hoy o ajustar el menú del turno.</p>
+              </div>
+              <p class="bv2-note">Ejemplo ilustrativo</p>
+            </div>
+
           </div>
         </div>
       </div>
@@ -1243,40 +1314,50 @@ ul { list-style: none; }
     var mod=document.getElementById('bv2-mod');if(!mod)return;
     var steps=document.querySelectorAll('.bv2-step'),desc=document.getElementById('bv2-desc'),
         nodes=mod.querySelectorAll('.bv2-node'),lines=mod.querySelectorAll('.bv2-svg line'),
-        lns=mod.querySelectorAll('.bv2-ln'),chip=document.getElementById('bv2-chip'),card=document.getElementById('bv2-card');
-    var chainN=['compras','inventario','recetas','costos','margen'];
+        exs=mod.querySelectorAll('.bv2-ex');
     var DESCS={conecta:'Reúne información que normalmente vive separada.',detecta:'Identifica cambios, diferencias y patrones relevantes.',explica:'Muestra qué ocurrió y qué partes de la operación están relacionadas.',recomienda:'Convierte la información en un siguiente paso que el equipo puede revisar.'};
+    var MAP={
+      conecta:{lit:['ventas','recetas','inventario','costos'],amber:[],dim:false,card:false},
+      detecta:{lit:[],amber:['compras'],dim:true,card:false},
+      explica:{lit:['ventas','personal','turnos'],amber:[],dim:true,card:false},
+      recomienda:{lit:['ventas','inventario','compras'],amber:[],dim:true,card:true}
+    };
     var ORDER=['conecta','detecta','explica','recomienda'],timer=null,idx=0;
     var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     function setState(st){
-      mod.classList.add('on');
+      var m=MAP[st];mod.classList.add('on');
       steps.forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.st===st))});
       desc.textContent=DESCS[st];
-      nodes.forEach(function(n){n.classList.remove('lit','amber','dim')});
-      lines.forEach(function(l){l.classList.remove('lit')});
-      lns.forEach(function(l){l.classList.remove('lit')});
-      chip.classList.remove('pulse');card.classList.remove('lit');
-      if(st==='detecta'){
-        chip.classList.add('pulse');
-        nodes.forEach(function(n){n.dataset.n==='compras'?n.classList.add('amber'):n.classList.add('dim')});
-      }else if(st==='explica'){
-        nodes.forEach(function(n){chainN.indexOf(n.dataset.n)>-1?n.classList.add('lit'):n.classList.add('dim')});
-        lines.forEach(function(l){var ns=(l.dataset.n||'').split(' ');if(ns.every(function(x){return chainN.indexOf(x)>-1}))l.classList.add('lit')});
-        lns.forEach(function(l,i){rm?l.classList.add('lit'):setTimeout(function(){l.classList.add('lit')},i*140)});
-      }else if(st==='recomienda'){
-        nodes.forEach(function(n){chainN.indexOf(n.dataset.n)>-1?n.classList.add('lit'):n.classList.add('dim')});
-        lines.forEach(function(l){var ns=(l.dataset.n||'').split(' ');if(ns.every(function(x){return chainN.indexOf(x)>-1}))l.classList.add('lit')});
-        lns.forEach(function(l){l.classList.add('lit')});
-        card.classList.add('lit');
-      }
+      nodes.forEach(function(n){
+        n.classList.remove('lit','amber','dim');
+        if(m.lit.indexOf(n.dataset.n)>-1)n.classList.add('lit');
+        else if(m.amber.indexOf(n.dataset.n)>-1)n.classList.add('amber');
+        else if(m.dim)n.classList.add('dim');
+      });
+      var rel=m.lit.concat(m.amber);
+      lines.forEach(function(l){
+        l.classList.remove('lit');
+        var ns=(l.dataset.n||'').split(' ');
+        if(ns.length&&ns.every(function(x){return rel.indexOf(x)>-1}))l.classList.add('lit');
+      });
+      exs.forEach(function(e){
+        var on=e.dataset.ex===st;
+        e.classList.toggle('act',on);
+        var chip=e.querySelector('.bv2-chip'),card=e.querySelector('.bv2-card'),lns=e.querySelectorAll('.bv2-ln');
+        chip.classList.toggle('pulse',on&&st==='detecta');
+        card.classList.toggle('lit',on&&m.card);
+        lns.forEach(function(l){l.classList.remove('lit')});
+        if(on){lns.forEach(function(l,i){rm?l.classList.add('lit'):setTimeout(function(){l.classList.add('lit')},150+i*140)})}
+      });
     }
     function stopAuto(){if(timer){clearInterval(timer);timer=null}}
     steps.forEach(function(b){b.addEventListener('click',function(){stopAuto();setState(b.dataset.st)})});
+    setState('conecta');
     if(!rm){
       var io=new IntersectionObserver(function(e){
         if(e[0].isIntersecting){
-          io.disconnect();setState(ORDER[0]);
-          timer=setInterval(function(){idx++;if(idx>=ORDER.length){stopAuto();return}setState(ORDER[idx])},3200);
+          io.disconnect();
+          timer=setInterval(function(){idx++;if(idx>=ORDER.length){stopAuto();return}setState(ORDER[idx])},3600);
         }
       },{threshold:.35});
       io.observe(mod);
