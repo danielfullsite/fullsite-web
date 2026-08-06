@@ -1249,6 +1249,7 @@ ul { list-style: none; }
         lns.forEach(function(l,i){rm?l.classList.add('lit'):setTimeout(function(){l.classList.add('lit')},i*140)});
       }else if(st==='recomienda'){
         nodes.forEach(function(n){chainN.indexOf(n.dataset.n)>-1?n.classList.add('lit'):n.classList.add('dim')});
+        lines.forEach(function(l){var ns=(l.dataset.n||'').split(' ');if(ns.every(function(x){return chainN.indexOf(x)>-1}))l.classList.add('lit')});
         lns.forEach(function(l){l.classList.add('lit')});
         card.classList.add('lit');
       }
