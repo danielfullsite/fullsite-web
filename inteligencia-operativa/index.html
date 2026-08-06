@@ -19,26 +19,7 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/favicon-512.png">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Inicio",
-      "item": "https://fullsite.mx/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Inteligencia operativa",
-      "item": "https://fullsite.mx/inteligencia-operativa/"
-    }
-  ]
-}
-</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://fullsite.mx/"}, {"@type": "ListItem", "position": 2, "name": "Inteligencia operativa", "item": "https://fullsite.mx/inteligencia-operativa/"}]}</script>
 <style>*{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:#1f2937;background:#fff;line-height:1.7;-webkit-font-smoothing:antialiased}
@@ -46,39 +27,101 @@ a{color:inherit}
 a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 .btn:active{transform:scale(.98)}
 .nav{position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid #eee;z-index:50}
-.nav-inner{max-width:1080px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.nav-inner{max-width:1120px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
 .nav-inner img{height:48px;width:auto;mix-blend-mode:multiply}
 .nav-links{display:flex;gap:20px;align-items:center}
 .nav-links a{font-size:14px;font-weight:500;color:#555;text-decoration:none}
 .nav-links a:hover{color:#0a0a0a}
-.btn{display:inline-block;padding:12px 24px;border-radius:10px;font-weight:600;font-size:15px;text-decoration:none;transition:opacity .2s}
+.nav-links a.btn-primary{color:#fff}
+.nav-links a.btn-primary:hover{color:#fff}
+.btn{display:inline-block;padding:12px 24px;border-radius:10px;font-weight:600;font-size:15px;text-decoration:none;transition:opacity .2s,transform .2s}
 .btn-primary{background:#047857;color:#fff}
 .btn-primary:hover{opacity:.9}
 .btn-outline{border:1.5px solid #d1d5db;color:#111}
-main{max-width:760px;margin:0 auto;padding:48px 24px 64px}
-.breadcrumb{font-size:13px;color:#6b7280;margin-bottom:28px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.breadcrumb{font-size:13px;color:#6b7280;padding-top:28px}
 .breadcrumb a{color:#6b7280;text-decoration:none}
 .breadcrumb a:hover{color:#111}
-h1{font-size:clamp(30px,5vw,42px);font-weight:700;letter-spacing:-1px;line-height:1.12;color:#0a0a0a;margin-bottom:18px;text-wrap:balance}
-.lead{font-size:18px;color:#4b5563;margin-bottom:40px}
-h2{font-size:clamp(22px,3vw,28px);font-weight:700;letter-spacing:-.5px;color:#0a0a0a;margin:44px 0 14px;text-wrap:balance}
-h3{font-size:18px;font-weight:600;color:#0a0a0a;margin:26px 0 8px}
-p{margin-bottom:16px;color:#374151;font-size:16px}
-ul.checks{list-style:none;margin:0 0 20px}
-ul.checks li{padding-left:28px;position:relative;margin-bottom:10px;color:#374151;font-size:16px}
+/* hero */
+.pv-hero{text-align:center;max-width:760px;margin:0 auto;padding:44px 24px 8px}
+h1{font-size:clamp(32px,5.4vw,52px);font-weight:700;letter-spacing:-1.5px;line-height:1.06;color:#0a0a0a;margin-bottom:20px;text-wrap:balance}
+.lead{font-size:17.5px;color:#4b5563;margin-bottom:28px}
+/* feature blocks */
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding:64px 0}
+.feat+.feat{border-top:1px solid #f0f1f3}
+.feat.rev .feat-mk{order:2}
+.feat-tx h2{font-size:clamp(24px,3vw,32px);font-weight:700;letter-spacing:-.6px;line-height:1.15;color:#0a0a0a;margin-bottom:14px;text-wrap:balance}
+.feat-tx p{font-size:15.5px;color:#4b5563;margin-bottom:14px}
+.feat-tx a{color:#047857;font-weight:600;text-decoration:none}
+.feat-tx a:hover{text-decoration:underline}
+ul.checks{list-style:none;margin:6px 0 0}
+ul.checks li{padding-left:26px;position:relative;margin-bottom:9px;color:#374151;font-size:14.5px}
 ul.checks li::before{content:"✓";position:absolute;left:0;color:#10b981;font-weight:700}
-.note{font-size:14px;color:#4b5563;background:#f9fafb;border:1px solid #eee;border-radius:10px;padding:14px 18px;margin:24px 0}
-.cta{background:#0a0a1a;border-radius:16px;padding:40px 32px;text-align:center;margin-top:56px}
-.cta h2{color:#fff;margin:0 0 10px}
-.cta p{color:rgba(255,255,255,.72);margin-bottom:24px}
+.note{font-size:13px;color:#6b7280;background:#f9fafb;border:1px solid #eee;border-radius:10px;padding:12px 16px;margin-top:18px}
+/* mockups */
+.mk{background:#0c1322;border:1px solid rgba(255,255,255,.07);border-radius:18px;padding:18px;box-shadow:0 32px 64px -32px rgba(10,15,35,.45)}
+.mk-label{font-size:10px;font-weight:700;letter-spacing:1.5px;color:rgba(255,255,255,.42);text-transform:uppercase;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.mk-badge{font-size:10px;font-weight:700;padding:3px 9px;border-radius:99px;background:rgba(16,185,129,.16);color:#34d399;letter-spacing:.3px}
+.mk-badge.warn{background:rgba(251,146,60,.16);color:#fdba74}
+.mk-badge.red{background:rgba(239,68,68,.16);color:#fca5a5}
+.mk-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 12px;border-radius:9px;background:rgba(255,255,255,.035);margin-bottom:6px;font-size:12.5px;color:rgba(255,255,255,.72)}
+.mk-row b{color:#fff;font-weight:600}
+.mk-row small{font-size:10.5px;color:rgba(255,255,255,.4)}
+.mk-num{color:#34d399;font-weight:700;white-space:nowrap}
+.mk-num.bad{color:#f87171}
+.mk-num.warn{color:#fdba74}
+.mk-total{display:flex;justify-content:space-between;padding:12px;border-top:1px solid rgba(255,255,255,.08);margin-top:8px;font-size:13.5px;color:#fff;font-weight:700}
+.mk-btns{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:10px}
+.mk-btn{text-align:center;font-size:11.5px;font-weight:600;color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:9px 4px}
+.mk-btn.go{background:rgba(16,185,129,.16);border-color:rgba(16,185,129,.35);color:#6ee7b7}
+.mesas{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.mesa{aspect-ratio:1;border-radius:9px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:12px;font-weight:700;gap:1px}
+.mesa small{font-size:9px;font-weight:500;opacity:.65}
+.mesa.libre{background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.28);color:#6ee7b7}
+.mesa.ocup{background:rgba(251,146,60,.1);border:1px solid rgba(251,146,60,.3);color:#fdba74}
+.mesa.atn{background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.38);color:#fca5a5}
+.mk-legend{display:flex;gap:14px;margin-top:11px;font-size:10px;color:rgba(255,255,255,.45)}
+.mk-legend i{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:5px}
+.mk-bar{height:7px;border-radius:5px;background:rgba(255,255,255,.08);overflow:hidden;margin:5px 0 2px}
+.mk-bar i{display:block;height:100%;border-radius:5px;background:#10b981}
+.mk-bar i.warn{background:#fb923c}
+.mk-sub{font-size:10.5px;color:rgba(255,255,255,.4);margin-bottom:10px}
+.wa{background:#ece5dd;border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:8px}
+.wa-h{display:flex;align-items:center;gap:9px;background:#075e54;margin:-14px -14px 4px;padding:10px 14px;border-radius:16px 16px 0 0}
+.wa-h img{width:26px;height:26px;border-radius:50%;background:#fff;padding:3px;object-fit:contain}
+.wa-h b{font-size:12.5px;color:#fff}
+.wa-h small{display:block;font-size:9.5px;color:rgba(255,255,255,.7)}
+.wa .in{background:#fff;border-radius:10px;border-bottom-left-radius:3px;padding:8px 12px;font-size:12.5px;color:#333;max-width:90%;box-shadow:0 1px 1px rgba(0,0,0,.06);line-height:1.5}
+.wa .out{background:#dcf8c6;border-radius:10px;border-bottom-right-radius:3px;padding:8px 12px;font-size:12.5px;color:#222;max-width:85%;align-self:flex-end;box-shadow:0 1px 1px rgba(0,0,0,.06)}
+.wa .act{background:#e8f5e9;border-radius:10px;border-bottom-left-radius:3px;padding:8px 12px;font-size:12.5px;color:#1b5e20;max-width:90%;box-shadow:0 1px 1px rgba(0,0,0,.06);line-height:1.5}
+.kds-t{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:11px;padding:12px;margin-bottom:8px}
+.kds-t .top{display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,.45);margin-bottom:7px}
+.kds-t .top b{color:#fff;font-size:12.5px}
+.kds-t .it{font-size:12.5px;color:rgba(255,255,255,.78);padding:2px 0}
+.kds-st{margin-top:8px;text-align:center;font-size:11px;font-weight:700;border-radius:7px;padding:7px}
+.kds-st.rdy{background:rgba(16,185,129,.14);color:#34d399}
+.kds-st.prep{background:rgba(251,146,60,.14);color:#fdba74}
+/* cta final */
+.cta{background:#0a0a1a;border-radius:20px;padding:52px 32px;text-align:center;margin:72px 0}
+.cta h2{color:#fff;font-size:clamp(24px,3.2vw,32px);font-weight:700;letter-spacing:-.5px;margin-bottom:10px;text-wrap:balance}
+.cta p{color:rgba(255,255,255,.72);margin-bottom:26px;font-size:15.5px}
 .cta .btn-outline{border-color:rgba(255,255,255,.3);color:#fff;margin-left:8px}
 footer{border-top:1px solid #eee;background:#f8faf9;padding:40px 24px}
-.foot-inner{max-width:1080px;margin:0 auto}
+.foot-inner{max-width:1120px;margin:0 auto}
 .foot-links{display:flex;flex-wrap:wrap;gap:4px 14px;justify-content:center;margin-bottom:18px}
 .foot-links a{font-size:14px;color:#555;text-decoration:none;padding:8px 6px;display:inline-block}
 .foot-links a:hover{color:#111}
 .copy{text-align:center;font-size:12px;color:#6b7280}
-@media(max-width:640px){.nav-links a:not(.btn){display:none}.cta .btn{display:block;margin:8px auto 0;max-width:280px}.cta .btn-outline{margin-left:auto}main{padding:36px 20px 56px}h1{font-size:28px}}</style>
+@media(max-width:860px){
+  .nav-links a:not(.btn){display:none}
+  .pv-hero{padding-top:28px}
+  .feat{grid-template-columns:1fr;gap:28px;padding:44px 0}
+  .feat.rev .feat-mk{order:0}
+  .cta{margin:48px 0;padding:40px 22px}
+  .cta .btn{display:block;margin:8px auto 0;max-width:280px}
+  .cta .btn-outline{margin-left:auto}
+  .mk{padding:14px}
+}</style>
 </head>
 <body>
 
@@ -86,7 +129,7 @@ footer{border-top:1px solid #eee;background:#f8faf9;padding:40px 24px}
   <div class="nav-inner">
     <a href="/"><img src="/logo-fullsite-nav.png" alt="Fullsite" width="216" height="144"></a>
     <div class="nav-links">
-      <a href="/#features">Producto</a>
+      <a href="/#pos">Producto</a>
       <a href="/precios.html">Precios</a>
       <a href="/demo.html" class="btn btn-primary" style="padding:9px 18px;font-size:14px">Agenda una demo</a>
     </div>
@@ -94,35 +137,76 @@ footer{border-top:1px solid #eee;background:#f8faf9;padding:40px 24px}
 </nav>
 
 <main>
-  <nav class="breadcrumb" aria-label="Migas de pan"><a href="/">Inicio</a> › Inteligencia operativa</nav>
-  <h1>La capa de inteligencia sobre tu operación.</h1>
-  <p class="lead">Un dashboard te muestra números. La inteligencia operativa de Fullsite los cruza, detecta lo que está cambiando durante el turno y te lo dice con contexto — para que la decisión se tome antes del cierre, no después.</p>
-  <h2>Qué hace, en concreto</h2>
-  <ul class="checks">
-    <li><strong>Briefing diario:</strong> cada mañana, un resumen de lo que pasó ayer y lo que requiere atención hoy — reservas, ventas, inventario.</li>
-    <li><strong>Alertas durante el turno:</strong> cancelaciones fuera de patrón, descuentos inusuales, insumos que se consumen más rápido de lo que se vende.</li>
-    <li><strong>Predicción de cierre:</strong> desde media tarde, una proyección del día basada en tu propio histórico.</li>
-    <li><strong>Preguntas en lenguaje natural:</strong> "¿cómo vamos hoy?", "¿quién vendió más esta semana?" — con respuesta al momento.</li>
-  </ul>
-
-  <h2>Por qué funciona: los datos viven juntos</h2>
-  <p>La mayoría de las herramientas de análisis viven separadas del punto de venta. En Fullsite, la inteligencia opera sobre el mismo sistema que registra cada comanda, cada receta y cada movimiento de inventario. Una venta no es solo un ticket: está conectada con un platillo, una receta, sus ingredientes, su costo y el turno en el que ocurrió.</p>
-  <p>Por eso puede relacionar un cambio en el costo de un insumo con las recetas que lo usan y el margen de los platillos que lo venden — y decirte qué revisar.</p>
-
-  <h2>Detecta, explica, recomienda</h2>
-  <p>Cada alerta llega con tres partes: qué cambió, por qué importa y qué conviene revisar. Las recomendaciones son un punto de partida para tu criterio — las acciones importantes siempre las decide una persona.</p>
-
-  <h2>Llega a donde ya estás</h2>
-  <p>Las alertas y el briefing llegan por WhatsApp a tu celular. No necesitas abrir un dashboard ni aprender una herramienta nueva para enterarte de lo que importa. Cuando quieres profundizar, el dashboard tiene el detalle completo.</p>
-
-  <h2>Conectada al resto del sistema</h2>
-  <p>La inteligencia se alimenta del <a href="/pos-para-restaurantes/">punto de venta</a>, el <a href="/inventario-para-restaurantes/">inventario con recetas</a> y los <a href="/costos-y-margen/">costos</a>. Entre más completa tu operación en Fullsite, más contexto tienen sus detecciones.</p>
-  <section class="cta">
-    <h2>Ve Fullsite funcionando con tu operación en mente.</h2>
-    <p>Agenda una demo y revisamos juntos cómo se vería en tu restaurante. Sin compromiso.</p>
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Migas de pan"><a href="/">Inicio</a> › Inteligencia operativa</nav>
+  </div>
+  <header class="pv-hero">
+    <h1>La capa de inteligencia sobre tu operación.</h1>
+    <p class="lead">Un dashboard te muestra números. Fullsite los cruza, detecta lo que está cambiando durante el turno y te lo dice con contexto — para que la decisión se tome antes del cierre, no después.</p>
     <a href="/demo.html" class="btn btn-primary">Agenda una demo</a>
-    <a href="https://wa.me/528115324371?text=Hola%20Daniel%2C%20me%20interesa%20Fullsite" class="btn btn-outline">Escríbenos por WhatsApp</a>
-  </section>
+  </header>
+  <div class="wrap">
+    <div class="feat">
+      <div class="feat-tx">
+        <h2>Tu operación te escribe por WhatsApp.</h2>
+        <p>El briefing de cada mañana y las alertas del turno llegan a tu celular. No necesitas abrir dashboards ni aprender software nuevo para enterarte de lo que importa.</p>
+        <ul class="checks">
+          <li><strong>Briefing diario:</strong> lo que pasó ayer y lo que requiere atención hoy</li>
+          <li><strong>Predicción de cierre:</strong> proyección del día desde media tarde</li>
+          <li><strong>Preguntas al momento:</strong> "¿cómo vamos hoy?", "¿quién vendió más?"</li>
+        </ul>
+      </div>
+      <div class="feat-mk">
+        <div class="wa">
+          <div class="wa-h"><img src="/favicon-512.png" alt=""><div><b>Fullsite</b><small>en línea</small></div></div>
+          <div class="out">¿Cómo vamos hoy?</div>
+          <div class="in">Ventas a las 2:00 pm: <strong>$38,400</strong> — 19% abajo del promedio de martes comparables.</div>
+          <div class="act">Recomendación: revisa la cobertura del siguiente turno antes de autorizar horas adicionales.</div>
+          <p class="mk-sub" style="margin:8px 0 0;text-align:right;font-style:italic">Ejemplo ilustrativo</p>
+        </div>
+      </div>
+    </div>
+    <div class="feat rev">
+      <div class="feat-tx">
+        <h2>Detecta lo que se sale del patrón.</h2>
+        <p>Cancelaciones inusuales, descuentos fuera de política, insumos que se consumen más rápido de lo que se vende. Cada alerta llega con tres partes: qué cambió, por qué importa y qué conviene revisar.</p>
+        <p>Las recomendaciones son un punto de partida para tu criterio — las acciones importantes siempre las decide una persona.</p>
+      </div>
+      <div class="feat-mk">
+        <div class="mk">
+          <div class="mk-label">Alertas del turno <span class="mk-badge red">2 nuevas</span></div>
+          <div class="mk-row"><div><b>Cancelaciones 3.2× vs patrón</b><br><small>Concentradas de 2 a 4 pm · terraza</small></div><span class="mk-num bad">$2,840</span></div>
+          <div class="mk-row"><div><b>Aguacate: consumo acelerado</b><br><small>Stock 2.1 kg · proyección 3.8 kg</small></div><span class="mk-num warn">Revisar</span></div>
+          <div class="mk-row"><div><b>Ticket promedio</b><br><small>Dentro del rango esperado</small></div><span class="mk-num">OK</span></div>
+          <p class="mk-sub" style="margin:8px 0 0;text-align:right;font-style:italic">Ejemplo ilustrativo</p>
+        </div>
+      </div>
+    </div>
+    <div class="feat">
+      <div class="feat-tx">
+        <h2>Funciona porque los datos viven juntos.</h2>
+        <p>La inteligencia opera sobre el mismo sistema que registra cada comanda, cada receta y cada movimiento de inventario. Una venta no es solo un ticket: está conectada con un platillo, sus ingredientes, su costo y el turno en el que ocurrió.</p>
+        <p>Por eso puede relacionar un cambio en el <a href="/costos-y-margen/">costo de un insumo</a> con las recetas que lo usan y el margen de los platillos que lo venden.</p>
+      </div>
+      <div class="feat-mk">
+        <div class="mk">
+          <div class="mk-label">Contexto de una venta</div>
+          <div class="mk-row"><span>Ticket #4821 · Mesa 7</span><b>$420 MXN</b></div>
+          <div class="mk-row"><span>Platillo</span><b>Chicken Bowl</b></div>
+          <div class="mk-row"><span>Receta</span><small>6 ingredientes descontados</small></div>
+          <div class="mk-row"><span>Costo del platillo</span><span class="mk-num">actualizado</span></div>
+          <div class="mk-row"><span>Margen</span><span class="mk-num">dentro del parámetro</span></div>
+          <p class="mk-sub" style="margin:8px 0 0;text-align:right;font-style:italic">Ejemplo ilustrativo</p>
+        </div>
+      </div>
+    </div>
+    <section class="cta">
+      <h2>Ve Fullsite funcionando con tu operación en mente.</h2>
+      <p>Agenda una demo y revisamos juntos cómo se vería en tu restaurante. Sin compromiso.</p>
+      <a href="/demo.html" class="btn btn-primary">Agenda una demo</a>
+      <a href="https://wa.me/528115324371?text=Hola%20Daniel%2C%20me%20interesa%20Fullsite" class="btn btn-outline">Escríbenos por WhatsApp</a>
+    </section>
+  </div>
 </main>
 
 <footer>
