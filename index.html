@@ -1111,7 +1111,9 @@ ul { list-style: none; }
 .bv2-graph{position:relative;min-height:460px;background-image:radial-gradient(circle,#e8eaee 1px,transparent 1px);background-size:26px 26px;border-right:1px solid #eef0f2}
 .bv2-svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 .bv2-svg line{stroke:#dcdfe4;stroke-width:.28;transition:stroke .4s,stroke-width .4s}
-.bv2-svg line.lit{stroke:#10b981;stroke-width:.55}
+.bv2-svg line.lit{stroke:#10b981;stroke-width:.55;stroke-dasharray:1.6 2.4;animation:bv2flow 1.4s linear infinite}
+@keyframes bv2flow{to{stroke-dashoffset:-8}}
+@media(prefers-reduced-motion:reduce){.bv2-svg line.lit{animation:none;stroke-dasharray:none}}
 .bv2-node{position:absolute;transform:translate(-50%,-50%);display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid #e3e6ea;color:#374151;font-family:inherit;font-size:12.5px;font-weight:600;padding:8px 14px;border-radius:99px;cursor:default;transition:all .35s;box-shadow:0 1px 2px rgba(10,10,26,.05);white-space:nowrap}
 .bv2-node::before{content:"";width:6px;height:6px;border-radius:50%;background:#c7ccd3;transition:background .35s}
 .bv2-node.lit{border-color:#10b981;color:#065f46;box-shadow:0 2px 12px rgba(16,185,129,.18)}
