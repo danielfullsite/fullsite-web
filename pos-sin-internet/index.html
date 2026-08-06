@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>POS sin Internet para Restaurantes (Offline-First) | Fullsite</title>
+<meta name="description" content="POS offline para restaurantes: toma órdenes, envía a cocina, cobra y haz el corte aunque se caiga el internet. Sincronización automática al volver la conexión.">
+<link rel="canonical" href="https://fullsite.mx/pos-sin-internet/">
+<meta property="og:title" content="POS sin Internet para Restaurantes (Offline-First) | Fullsite">
+<meta property="og:description" content="POS offline para restaurantes: toma órdenes, envía a cocina, cobra y haz el corte aunque se caiga el internet. Sincronización automática al volver la conexión.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fullsite.mx/pos-sin-internet/">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="Fullsite">
+<meta property="og:image" content="https://fullsite.mx/img-dashboard.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="POS sin Internet para Restaurantes (Offline-First) | Fullsite">
+<meta name="twitter:description" content="POS offline para restaurantes: toma órdenes, envía a cocina, cobra y haz el corte aunque se caiga el internet. Sincronización automática al volver la conexión.">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/favicon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://fullsite.mx/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "POS sin internet",
+      "item": "https://fullsite.mx/pos-sin-internet/"
+    }
+  ]
+}
+</script>
+<style>*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:#1f2937;background:#fff;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.nav{position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid #eee;z-index:50}
+.nav-inner{max-width:1080px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.nav-inner img{height:48px;width:auto;mix-blend-mode:multiply}
+.nav-links{display:flex;gap:20px;align-items:center}
+.nav-links a{font-size:14px;font-weight:500;color:#555;text-decoration:none}
+.nav-links a:hover{color:#0a0a0a}
+.btn{display:inline-block;padding:12px 24px;border-radius:10px;font-weight:600;font-size:15px;text-decoration:none;transition:opacity .2s}
+.btn-primary{background:#10b981;color:#fff}
+.btn-primary:hover{opacity:.9}
+.btn-outline{border:1.5px solid #d1d5db;color:#111}
+main{max-width:760px;margin:0 auto;padding:48px 24px 64px}
+.breadcrumb{font-size:13px;color:#9ca3af;margin-bottom:28px}
+.breadcrumb a{color:#9ca3af;text-decoration:none}
+.breadcrumb a:hover{color:#111}
+h1{font-size:clamp(30px,5vw,42px);font-weight:700;letter-spacing:-1px;line-height:1.12;color:#0a0a0a;margin-bottom:18px;text-wrap:balance}
+.lead{font-size:18px;color:#4b5563;margin-bottom:40px}
+h2{font-size:clamp(22px,3vw,28px);font-weight:700;letter-spacing:-.5px;color:#0a0a0a;margin:44px 0 14px;text-wrap:balance}
+h3{font-size:18px;font-weight:600;color:#0a0a0a;margin:26px 0 8px}
+p{margin-bottom:16px;color:#374151;font-size:16px}
+ul.checks{list-style:none;margin:0 0 20px}
+ul.checks li{padding-left:28px;position:relative;margin-bottom:10px;color:#374151;font-size:16px}
+ul.checks li::before{content:"✓";position:absolute;left:0;color:#10b981;font-weight:700}
+.note{font-size:14px;color:#6b7280;background:#f9fafb;border:1px solid #eee;border-radius:10px;padding:14px 18px;margin:24px 0}
+.cta{background:#0a0a1a;border-radius:16px;padding:40px 32px;text-align:center;margin-top:56px}
+.cta h2{color:#fff;margin:0 0 10px}
+.cta p{color:rgba(255,255,255,.55);margin-bottom:24px}
+.cta .btn-outline{border-color:rgba(255,255,255,.3);color:#fff;margin-left:8px}
+footer{border-top:1px solid #eee;background:#f8faf9;padding:40px 24px}
+.foot-inner{max-width:1080px;margin:0 auto}
+.foot-links{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:center;margin-bottom:18px}
+.foot-links a{font-size:13px;color:#888;text-decoration:none}
+.foot-links a:hover{color:#111}
+.copy{text-align:center;font-size:12px;color:#bbb}
+@media(max-width:640px){.nav-links a:not(.btn){display:none}.cta .btn{display:block;margin:8px auto 0;max-width:280px}}</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Principal">
+  <div class="nav-inner">
+    <a href="/"><img src="/logo-fullsite-nav.png" alt="Fullsite" width="216" height="144"></a>
+    <div class="nav-links">
+      <a href="/#features">Producto</a>
+      <a href="/precios.html">Precios</a>
+      <a href="/demo.html" class="btn btn-primary" style="padding:9px 18px;font-size:14px">Agenda una demo</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <nav class="breadcrumb" aria-label="Migas de pan"><a href="/">Inicio</a> › POS sin internet</nav>
+  <h1>El internet se cae. Tu servicio no debería.</h1>
+  <p class="lead">En un viernes lleno, cinco minutos sin sistema son mesas sin atender, comandas perdidas y una fila en caja. Fullsite está diseñado offline-first: los flujos críticos del turno siguen funcionando sin conexión.</p>
+  <h2>Qué pasa cuando el POS depende del internet</h2>
+  <p>Muchos sistemas modernos viven en la nube — y cuando la conexión falla, el restaurante se detiene: no se pueden abrir mesas, la cocina deja de recibir comandas y el cobro se vuelve libreta y calculadora. El corte de ese día nunca vuelve a cuadrar del todo.</p>
+
+  <h2>Qué sigue funcionando con Fullsite sin conexión</h2>
+  <ul class="checks">
+    <li>Abrir y cerrar mesas, y capturar órdenes completas</li>
+    <li>Enviar comandas a cocina e imprimir en las estaciones</li>
+    <li>Cobrar en efectivo y registrar pagos</li>
+    <li>Hacer el corte de caja del turno</li>
+  </ul>
+  <p>Cada terminal guarda la operación localmente. Cuando la conexión regresa, todo se sincroniza automáticamente — sin capturar dos veces y sin perder tickets.</p>
+
+  <h2>Lo que sí requiere internet (y por qué)</h2>
+  <p>Ser honestos importa más que sonar perfectos: hay funciones que dependen de servicios externos y no pueden operar sin conexión — el cobro con terminal bancaria, la facturación y los pedidos de plataformas de delivery. Fullsite mantiene el servicio corriendo y deja esas operaciones listas para procesarse al volver la red.</p>
+
+  <h2>Offline no fue un parche. Fue el diseño.</h2>
+  <p>Un modo offline agregado al final suele romperse justo cuando más se necesita. En Fullsite, la operación local es la base y la nube es la capa de sincronización — no al revés. Es la diferencia entre &laquo;aguanta una caída corta&raquo; y &laquo;puedes trabajar el turno completo&raquo;.</p>
+
+  <h2>Parte de un sistema completo</h2>
+  <p>El modo sin internet protege el <a href="/pos-para-restaurantes/">punto de venta</a>, la <a href="/kds-para-restaurantes/">cocina</a> y la caja. Y cuando la conexión está activa, Fullsite suma la capa de inteligencia: <a href="/inventario-para-restaurantes/">inventario</a>, costos y alertas operativas durante el turno.</p>
+  <section class="cta">
+    <h2>Ve Fullsite funcionando con tu operación en mente.</h2>
+    <p>Agenda una demo y revisamos juntos cómo se vería en tu restaurante. Sin compromiso.</p>
+    <a href="/demo.html" class="btn btn-primary">Agenda una demo</a>
+    <a href="https://wa.me/528115324371?text=Hola%20Daniel%2C%20me%20interesa%20Fullsite" class="btn btn-outline">Escríbenos por WhatsApp</a>
+  </section>
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <nav class="foot-links" aria-label="Fullsite para restaurantes">
+      <a href="/">Inicio</a>
+      <a href="/pos-para-restaurantes/">POS para restaurantes</a>
+      <a href="/pos-restaurantes-monterrey/">POS en Monterrey</a>
+      <a href="/kds-para-restaurantes/">KDS para cocina</a>
+      <a href="/inventario-para-restaurantes/">Inventario para restaurantes</a>
+      <a href="/software-grupos-restauranteros/">Grupos restauranteros</a>
+      <a href="/implementacion.html">Implementación</a>
+      <a href="/demo.html">Agenda una demo</a>
+    </nav>
+    <p class="copy">&copy; 2026 Fullsite. Monterrey, México.</p>
+  </div>
+</footer>
+
+</body>
+</html>

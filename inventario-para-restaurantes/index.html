@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inventario para Restaurantes: Recetas y Food Cost | Fullsite</title>
+<meta name="description" content="Inventario para restaurantes conectado a ventas: recetas con ingredientes, consumo teórico vs real, mermas, alertas antes de que falte producto y food cost al día.">
+<link rel="canonical" href="https://fullsite.mx/inventario-para-restaurantes/">
+<meta property="og:title" content="Inventario para Restaurantes: Recetas y Food Cost | Fullsite">
+<meta property="og:description" content="Inventario para restaurantes conectado a ventas: recetas con ingredientes, consumo teórico vs real, mermas, alertas antes de que falte producto y food cost al día.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fullsite.mx/inventario-para-restaurantes/">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="Fullsite">
+<meta property="og:image" content="https://fullsite.mx/img-dashboard.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Inventario para Restaurantes: Recetas y Food Cost | Fullsite">
+<meta name="twitter:description" content="Inventario para restaurantes conectado a ventas: recetas con ingredientes, consumo teórico vs real, mermas, alertas antes de que falte producto y food cost al día.">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/favicon-512.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://fullsite.mx/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Inventario para restaurantes",
+      "item": "https://fullsite.mx/inventario-para-restaurantes/"
+    }
+  ]
+}
+</script>
+<style>*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:#1f2937;background:#fff;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.nav{position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid #eee;z-index:50}
+.nav-inner{max-width:1080px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.nav-inner img{height:48px;width:auto;mix-blend-mode:multiply}
+.nav-links{display:flex;gap:20px;align-items:center}
+.nav-links a{font-size:14px;font-weight:500;color:#555;text-decoration:none}
+.nav-links a:hover{color:#0a0a0a}
+.btn{display:inline-block;padding:12px 24px;border-radius:10px;font-weight:600;font-size:15px;text-decoration:none;transition:opacity .2s}
+.btn-primary{background:#10b981;color:#fff}
+.btn-primary:hover{opacity:.9}
+.btn-outline{border:1.5px solid #d1d5db;color:#111}
+main{max-width:760px;margin:0 auto;padding:48px 24px 64px}
+.breadcrumb{font-size:13px;color:#9ca3af;margin-bottom:28px}
+.breadcrumb a{color:#9ca3af;text-decoration:none}
+.breadcrumb a:hover{color:#111}
+h1{font-size:clamp(30px,5vw,42px);font-weight:700;letter-spacing:-1px;line-height:1.12;color:#0a0a0a;margin-bottom:18px;text-wrap:balance}
+.lead{font-size:18px;color:#4b5563;margin-bottom:40px}
+h2{font-size:clamp(22px,3vw,28px);font-weight:700;letter-spacing:-.5px;color:#0a0a0a;margin:44px 0 14px;text-wrap:balance}
+h3{font-size:18px;font-weight:600;color:#0a0a0a;margin:26px 0 8px}
+p{margin-bottom:16px;color:#374151;font-size:16px}
+ul.checks{list-style:none;margin:0 0 20px}
+ul.checks li{padding-left:28px;position:relative;margin-bottom:10px;color:#374151;font-size:16px}
+ul.checks li::before{content:"✓";position:absolute;left:0;color:#10b981;font-weight:700}
+.note{font-size:14px;color:#6b7280;background:#f9fafb;border:1px solid #eee;border-radius:10px;padding:14px 18px;margin:24px 0}
+.cta{background:#0a0a1a;border-radius:16px;padding:40px 32px;text-align:center;margin-top:56px}
+.cta h2{color:#fff;margin:0 0 10px}
+.cta p{color:rgba(255,255,255,.55);margin-bottom:24px}
+.cta .btn-outline{border-color:rgba(255,255,255,.3);color:#fff;margin-left:8px}
+footer{border-top:1px solid #eee;background:#f8faf9;padding:40px 24px}
+.foot-inner{max-width:1080px;margin:0 auto}
+.foot-links{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:center;margin-bottom:18px}
+.foot-links a{font-size:13px;color:#888;text-decoration:none}
+.foot-links a:hover{color:#111}
+.copy{text-align:center;font-size:12px;color:#bbb}
+@media(max-width:640px){.nav-links a:not(.btn){display:none}.cta .btn{display:block;margin:8px auto 0;max-width:280px}}</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Principal">
+  <div class="nav-inner">
+    <a href="/"><img src="/logo-fullsite-nav.png" alt="Fullsite" width="216" height="144"></a>
+    <div class="nav-links">
+      <a href="/#features">Producto</a>
+      <a href="/precios.html">Precios</a>
+      <a href="/demo.html" class="btn btn-primary" style="padding:9px 18px;font-size:14px">Agenda una demo</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <nav class="breadcrumb" aria-label="Migas de pan"><a href="/">Inicio</a> › Inventario para restaurantes</nav>
+  <h1>El inventario no falla solamente porque falte un conteo.</h1>
+  <p class="lead">Falla porque vive desconectado de las ventas. Fullsite descuenta ingredientes con cada platillo vendido, compara el consumo teórico contra el real y te avisa antes de que falte producto — o de que el costo se coma tu margen.</p>
+  <h2>Recetas conectadas a lo que vendes</h2>
+  <p>Cada platillo tiene su receta: ingredientes, cantidades y costo. Cuando el <a href="/pos-para-restaurantes/">punto de venta</a> registra una venta, el inventario descuenta lo que esa receta consume. Sin capturas dobles y sin esperar al conteo del domingo para saber qué pasó.</p>
+
+  <h2>Consumo teórico vs real: ahí vive la merma</h2>
+  <p>Si vendiste 45 guacamoles, tu receta dice cuánto aguacate debió salir. Si salió más, hay una historia que contar: porciones grandes, merma no registrada, o producto que se fue por otra puerta. Fullsite hace esa comparación de forma continua y señala las varianzas que se salen del patrón — con datos, no con sospechas.</p>
+
+  <h2>Alertas antes de que falte producto</h2>
+  <p>El sistema proyecta el consumo del día con base en lo que llevas vendido y lo que históricamente se vende en ese turno. Si el stock no alcanza, te avisa con tiempo para reaccionar: pedirle al proveedor, ajustar el menú o mover producto entre almacenes — en lugar de descubrirlo cuando el mesero regresa a la mesa a decir que ya no hay.</p>
+
+  <h2>Food cost que se mantiene al día</h2>
+  <ul class="checks">
+    <li>Costo por receta y por platillo, actualizado cuando cambian tus insumos</li>
+    <li>Margen real por producto: qué te deja dinero y qué solo da trabajo</li>
+    <li>Mermas y ajustes registrados con motivo y responsable</li>
+    <li>Órdenes de compra y recepción de mercancía conectadas al stock</li>
+  </ul>
+
+  <h2>Pensado para varios almacenes y varias sucursales</h2>
+  <p>Cocina, barra, almacén general — cada punto de stock por separado, con traspasos registrados. Y si operas un <a href="/software-grupos-restauranteros/">grupo restaurantero</a>, cada sucursal maneja su inventario con sus propios costos y proveedores.</p>
+  <section class="cta">
+    <h2>Ve Fullsite funcionando con tu operación en mente.</h2>
+    <p>Agenda una demo y revisamos juntos cómo se vería en tu restaurante. Sin compromiso.</p>
+    <a href="/demo.html" class="btn btn-primary">Agenda una demo</a>
+    <a href="https://wa.me/528115324371?text=Hola%20Daniel%2C%20me%20interesa%20Fullsite" class="btn btn-outline">Escríbenos por WhatsApp</a>
+  </section>
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <nav class="foot-links" aria-label="Fullsite para restaurantes">
+      <a href="/">Inicio</a>
+      <a href="/pos-para-restaurantes/">POS para restaurantes</a>
+      <a href="/pos-restaurantes-monterrey/">POS en Monterrey</a>
+      <a href="/pos-sin-internet/">POS sin internet</a>
+      <a href="/kds-para-restaurantes/">KDS para cocina</a>
+      <a href="/software-grupos-restauranteros/">Grupos restauranteros</a>
+      <a href="/implementacion.html">Implementación</a>
+      <a href="/demo.html">Agenda una demo</a>
+    </nav>
+    <p class="copy">&copy; 2026 Fullsite. Monterrey, México.</p>
+  </div>
+</footer>
+
+</body>
+</html>
