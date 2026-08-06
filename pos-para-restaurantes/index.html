@@ -2,7 +2,7 @@
 <html lang="es-MX">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>POS para Restaurantes | Punto de Venta Fullsite</title>
 <meta name="description" content="Punto de venta para restaurantes conectado a cocina, caja, inventario y costos. Fullsite detecta lo que cambia durante el turno, funciona sin internet y corre en tu hardware actual.">
 <link rel="canonical" href="https://fullsite.mx/pos-para-restaurantes/">
@@ -40,9 +40,11 @@
 }
 </script>
 <style>*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:#1f2937;background:#fff;line-height:1.7;-webkit-font-smoothing:antialiased}
 a{color:inherit}
+a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.btn:active{transform:scale(.98)}
 .nav{position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid #eee;z-index:50}
 .nav-inner{max-width:1080px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
 .nav-inner img{height:48px;width:auto;mix-blend-mode:multiply}
@@ -72,11 +74,11 @@ ul.checks li::before{content:"✓";position:absolute;left:0;color:#10b981;font-w
 .cta .btn-outline{border-color:rgba(255,255,255,.3);color:#fff;margin-left:8px}
 footer{border-top:1px solid #eee;background:#f8faf9;padding:40px 24px}
 .foot-inner{max-width:1080px;margin:0 auto}
-.foot-links{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:center;margin-bottom:18px}
-.foot-links a{font-size:13px;color:#555;text-decoration:none}
+.foot-links{display:flex;flex-wrap:wrap;gap:4px 14px;justify-content:center;margin-bottom:18px}
+.foot-links a{font-size:14px;color:#555;text-decoration:none;padding:8px 6px;display:inline-block}
 .foot-links a:hover{color:#111}
 .copy{text-align:center;font-size:12px;color:#6b7280}
-@media(max-width:640px){.nav-links a:not(.btn){display:none}.cta .btn{display:block;margin:8px auto 0;max-width:280px}}</style>
+@media(max-width:640px){.nav-links a:not(.btn){display:none}.cta .btn{display:block;margin:8px auto 0;max-width:280px}.cta .btn-outline{margin-left:auto}main{padding:36px 20px 56px}h1{font-size:28px}}</style>
 </head>
 <body>
 

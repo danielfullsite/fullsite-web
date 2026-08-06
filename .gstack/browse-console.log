@@ -1,1 +1,2 @@
-[2026-05-26T05:55:23.242Z] [log] initGTMOnEvent
+[2026-08-06T17:09:59.493Z] [warning] The resource https://app.cal.com/_next/static/media/CalSansUI%5Bwght%2CGEOM%5D-s.p.442ac2x6ekkca.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+[2026-08-06T17:10:04.581Z] [warning] The resource https://app.cal.com/_next/static/media/CalSansUI%5Bwght%2CGEOM%5D-s.p.442ac2x6ekkca.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
