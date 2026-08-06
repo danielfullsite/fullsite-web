@@ -835,6 +835,11 @@ ul { list-style: none; }
   .logos-row { gap: 28px; }
   .container { padding: 0 16px; }
 }
+
+@media (max-width: 856px) {
+  .chat-demo-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .chat-demo-grid > div:first-child { max-width: 100% !important; }
+}
 </style>
 </head>
 <body>
@@ -1084,6 +1089,59 @@ ul { list-style: none; }
   </div>
 </section>
 
+<!-- ===== CHAT DEMO ===== -->
+<section class="section" style="background:#fff;padding:96px 24px;border-top:1px solid #eee;">
+  <div class="container">
+    <div class="chat-demo-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
+      <div style="background:#ece5dd;border-radius:20px;overflow:hidden;max-width:420px;box-shadow:0 8px 40px rgba(0,0,0,0.08);">
+        <div style="background:#075e54;padding:14px 20px;display:flex;align-items:center;gap:12px;">
+          <img src="/favicon-512.png" alt="Fullsite" style="width:36px;height:36px;border-radius:50%;background:#fff;object-fit:contain;padding:4px;">
+          <div><div style="font-size:15px;font-weight:600;color:#fff;">Fullsite</div><div style="font-size:11px;color:rgba(255,255,255,0.7);">en línea</div></div>
+        </div>
+        <div style="display:flex;border-bottom:1px solid rgba(0,0,0,0.08);background:#f0ebe3;">
+          <button class="iq-tab active" data-tab="ventas" style="flex:1;padding:12px;font-size:12px;font-weight:600;color:#075e54;background:none;border:none;border-bottom:2px solid #075e54;cursor:pointer;font-family:inherit;">Ventas</button>
+          <button class="iq-tab" data-tab="inventario" style="flex:1;padding:12px;font-size:12px;font-weight:500;color:#999;background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;font-family:inherit;">Inventario</button>
+          <button class="iq-tab" data-tab="fraude" style="flex:1;padding:12px;font-size:12px;font-weight:500;color:#999;background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;font-family:inherit;">Fraude</button>
+        </div>
+        <div style="padding:20px 16px;min-height:320px;display:flex;flex-direction:column;gap:10px;background:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2240%22 height=%2240%22><rect width=%2240%22 height=%2240%22 fill=%22%23ece5dd%22/><rect width=%221%22 height=%221%22 x=%2210%22 y=%2210%22 fill=%22%23d4cdc4%22 rx=%220.5%22/></svg>') repeat;" id="iq-chat"></div>
+      </div>
+      <div>
+        <span class="hero-eyebrow" style="color:#10b981;">Inteligencia operativa</span>
+        <h2 class="feature-title">Así te llegan las alertas.</h2>
+        <p class="feature-desc">Directo a tu celular por WhatsApp. Sin abrir dashboards, sin reportes complicados. Fullsite detecta lo importante y te dice qué hacer.</p>
+        <ul class="feature-list">
+          <li>Predicción de cierre del día desde las 2pm</li>
+          <li>Alertas de inventario antes de que falte producto</li>
+          <li>Patrones sospechosos de cancelaciones y descuentos</li>
+          <li>Recomendaciones concretas con contexto y evidencia</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ASK AI ===== -->
+<section style="background:#fff;padding:80px 24px;text-align:center;border-top:1px solid #eee;">
+  <div style="max-width:640px;margin:0 auto;">
+    <h2 style="font-size:clamp(28px,4vw,40px);font-weight:600;letter-spacing:-0.03em;line-height:1.1;color:#0a0a0a;margin-bottom:16px;">Pregúntale a la IA.</h2>
+    <p style="font-size:16px;color:#6b7280;margin-bottom:40px;line-height:1.6;">Pídele a cualquier IA que compare Fullsite contra tu sistema actual.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;align-items:center;">
+      <a href="https://chatgpt.com/?prompt=Tengo%20un%20restaurante%20en%20M%C3%A9xico%20y%20estoy%20buscando%20el%20mejor%20software.%20Compara%20las%20opciones%20que%20hay%20incluyendo%20Fullsite%20(fullsite.mx).%20Me%20importa%20POS%2C%20inventario%2C%20que%20funcione%20sin%20internet%20y%20que%20me%20ayude%20a%20detectar%20problemas%20en%20la%20operaci%C3%B3n.%20%C2%BFCu%C3%A1l%20me%20recomiendas%3F" target="_blank" style="display:inline-flex;align-items:center;gap:10px;padding:14px 28px;background:#0a0a0a;color:#fff;font-weight:700;font-size:15px;border-radius:99px;">
+        <img src="/logo-chatgpt.webp" alt="ChatGPT" style="height:20px;width:20px;object-fit:contain;filter:invert(1);">
+        ChatGPT
+      </a>
+      <a href="https://www.perplexity.ai/search?q=Tengo+un+restaurante+en+Mexico+y+busco+el+mejor+software.+Compara+las+opciones+incluyendo+Fullsite+(fullsite.mx).+Me+importa+POS+inventario+que+funcione+offline+y+que+detecte+problemas+operativos.+Cual+recomiendas" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:#f3f4f6;color:#0a0a0a;font-weight:600;font-size:15px;border-radius:99px;">
+        <img src="/logo-perplexity.png" alt="Perplexity" style="height:20px;width:20px;object-fit:contain;">
+        Perplexity
+      </a>
+      <a href="https://gemini.google.com/app?q=Tengo%20un%20restaurante%20en%20M%C3%A9xico%20y%20busco%20software.%20Compara%20opciones%20incluyendo%20Fullsite%20(fullsite.mx).%20POS%2C%20inventario%2C%20offline%20y%20detecci%C3%B3n%20de%20problemas%20operativos.%20%C2%BFCu%C3%A1l%20recomiendas%3F" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:#f3f4f6;color:#0a0a0a;font-weight:600;font-size:15px;border-radius:99px;">
+        <img src="/logo-gemini.png" alt="Gemini" style="height:20px;width:20px;object-fit:contain;">
+        Gemini
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ===== CTA ===== -->
 <section class="section" style="background:#fff;border-top:1px solid #eee;">
   <div class="container reveal" style="text-align:center;max-width:600px;">
@@ -1169,5 +1227,20 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
 !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking reset isFeatureEnabled getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group identify setPersonProperties".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
 posthog.init('phc_placeholder',{api_host:'https://us.i.posthog.com',person_profiles:'identified_only'});
 </script>
+
+<!-- Chat animado WhatsApp -->
+<script>
+(function(){
+  var data={ventas:{q:'¿Cómo vamos hoy comparado con el martes pasado?',s:[{t:'typing',d:800},{t:'bot',m:'Ventas a las 2pm: <strong>$38,400</strong> — estás <strong>19% abajo</strong> del martes promedio.',d:2000},{t:'bot',m:'Clima: lluvia por la mañana, sin eventos. En 8 martes similares, las ventas no se recuperaron después de las 3pm.',d:3800},{t:'action',m:'Recomendación: considera liberar 1 mesero después de las 3pm. Ahorro estimado: ~$380 MXN.',d:5200}]},inventario:{q:'¿Cómo anda el inventario?',s:[{t:'typing',d:800},{t:'bot',m:'Aguacate: stock <strong>2.1 kg</strong>. Consumo proyectado hoy: <strong>3.8 kg</strong>.',d:2000},{t:'bot',m:'Basado en 45 órdenes de guacamole promedio los jueves. Proveedor entrega mañana.',d:3800},{t:'action',m:'Recomendación: contacta proveedor para entrega hoy, o ajusta menú.',d:5200}]},fraude:{q:'¿Algo raro en las cancelaciones?',s:[{t:'typing',d:800},{t:'bot',m:'Mesero <strong>"Carlos M."</strong> tiene 7 cancelaciones esta semana — <strong>3.2x</strong> el promedio.',d:2000},{t:'bot',m:'Patrón: cancelaciones entre 2-4pm en terraza. Monto: $2,840 MXN.',d:3800},{t:'action',m:'Recomendación: revisa con el supervisor del turno vespertino.',d:5200}]}};
+  var chat=document.getElementById('iq-chat'),tabs=document.querySelectorAll('.iq-tab'),timers=[];
+  if(!chat) return;
+  function clear(){timers.forEach(clearTimeout);timers=[];}
+  function bubble(html,align,bg,color){var d=document.createElement('div');d.style.cssText='opacity:0;transform:translateY(10px);transition:opacity .35s,transform .35s;display:flex;justify-content:'+align+';';d.innerHTML='<div style="max-width:85%;padding:10px 14px;border-radius:12px;'+(align==='flex-end'?'border-bottom-right-radius:2px;':'border-bottom-left-radius:2px;')+'background:'+bg+';font-size:13px;color:'+color+';line-height:1.5;box-shadow:0 1px 1px rgba(0,0,0,0.06);">'+html+'</div>';return d;}
+  function render(tab){clear();chat.innerHTML='';var d=data[tab]||data.ventas;var q=bubble(d.q,'flex-end','#dcf8c6','#111');chat.appendChild(q);requestAnimationFrame(function(){q.style.opacity='1';q.style.transform='translateY(0)';});d.s.forEach(function(s){var tm=setTimeout(function(){var old=document.getElementById('iq-typing');if(old)old.remove();if(s.t==='typing'){var dots=document.createElement('div');dots.id='iq-typing';dots.style.cssText='opacity:0;transform:translateY(10px);transition:opacity .35s,transform .35s;';dots.innerHTML='<div style="display:flex;gap:4px;padding:10px 18px;background:#fff;border-radius:12px;border-bottom-left-radius:2px;width:fit-content;box-shadow:0 1px 1px rgba(0,0,0,0.06);"><span class="td"></span><span class="td" style="animation-delay:.2s"></span><span class="td" style="animation-delay:.4s"></span></div>';chat.appendChild(dots);requestAnimationFrame(function(){dots.style.opacity='1';dots.style.transform='translateY(0)';});}else if(s.t==='bot'){var m=bubble(s.m,'flex-start','#fff','#333');chat.appendChild(m);requestAnimationFrame(function(){m.style.opacity='1';m.style.transform='translateY(0)';});}else if(s.t==='action'){var a=bubble(s.m,'flex-start','#e8f5e9','#1b5e20');chat.appendChild(a);requestAnimationFrame(function(){a.style.opacity='1';a.style.transform='translateY(0)';});}chat.scrollTop=chat.scrollHeight;},s.d);timers.push(tm);});}
+  tabs.forEach(function(tab){tab.addEventListener('click',function(){tabs.forEach(function(t){t.style.color='#999';t.style.fontWeight='500';t.style.borderBottom='2px solid transparent';});this.style.color='#075e54';this.style.fontWeight='600';this.style.borderBottom='2px solid #075e54';render(this.dataset.tab);});});
+  var sec=chat.closest('section');if(sec){var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){render('ventas');io.disconnect();}},{threshold:.3});io.observe(sec);}
+})();
+</script>
+<style>.td{width:7px;height:7px;border-radius:50%;background:#555;animation:bd 1.2s infinite}@keyframes bd{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}</style>
 </body>
 </html>
