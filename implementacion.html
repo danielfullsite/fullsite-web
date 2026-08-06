@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Implementación de Fullsite para Restaurantes | Fullsite</title>
+<meta name="description" content="Cómo implementamos Fullsite en tu restaurante: diagnóstico, configuración, migración, simulación, turno controlado y estabilización.">
+<link rel="canonical" href="https://fullsite.mx/implementacion.html">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:title" content="Implementación | Fullsite">
+<meta property="og:description" content="Una implementación controlada. No una instalación improvisada. Conoce cómo implementamos Fullsite en tu restaurante.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fullsite.mx/implementacion.html">
+<meta property="og:locale" content="es_MX">
+<meta property="og:image" content="https://fullsite.mx/img-dashboard.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+<link rel="apple-touch-icon" href="/favicon-512.png">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem","position": 1,"name": "Inicio","item": "https://fullsite.mx/"},
+    {"@type": "ListItem","position": 2,"name": "Implementación","item": "https://fullsite.mx/implementacion.html"}
+  ]
+}
+</script>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#1a1a1a;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;height:auto;display:block}
+ul{list-style:none}
+button{font-family:inherit;cursor:pointer}
+
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid #e5e5e5;height:64px;transition:height .25s,box-shadow .25s}
+.nav.shrunk{height:52px;box-shadow:0 2px 12px rgba(0,0,0,.07)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:100%}
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a{font-size:13.5px;font-weight:500;color:#555;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:#0a0a0a}
+.nav-right{display:flex;align-items:center;gap:14px}
+.lang-toggle{display:flex;align-items:center;gap:2px;background:#f3f4f6;border-radius:6px;padding:2px}
+.lang-toggle a{font-size:11.5px;font-weight:600;padding:4px 10px;border-radius:4px;line-height:1;color:#888;transition:all .15s}
+.lang-toggle a.active{background:#0a0a0a;color:#fff}
+.nav-login{font-size:13.5px;font-weight:500;color:#666;transition:color .2s}
+.nav-login:hover{color:#0a0a0a}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-weight:600;font-size:14px;border-radius:8px;padding:10px 20px;transition:all .2s;border:none}
+.btn-primary{background:#10b981;color:#fff}
+.btn-primary:hover{background:#059669;transform:translateY(-1px);box-shadow:0 4px 14px rgba(16,185,129,.3)}
+.btn-outline{background:transparent;color:#1a1a1a;border:1.5px solid #d1d5db}
+.btn-outline:hover{border-color:#10b981;color:#10b981}
+.btn-lg{padding:14px 28px;font-size:15px;border-radius:10px}
+.btn-white{background:#fff;color:#0a0a0a;font-weight:700}
+.btn-white:hover{background:#f0fdf4}
+.btn-ghost-white{background:transparent;color:rgba(255,255,255,.8);border:1.5px solid rgba(255,255,255,.3)}
+.btn-ghost-white:hover{border-color:#fff;color:#fff}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:4px}
+.hamburger span{display:block;width:22px;height:2px;background:#0a0a0a;border-radius:2px;transition:all .3s}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:#fff;border-bottom:1px solid #e5e5e5;padding:24px;z-index:999;flex-direction:column;gap:20px;box-shadow:0 8px 32px rgba(0,0,0,.08)}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:16px;font-weight:500;color:#333;padding:8px 0}
+
+/* HERO */
+.page-hero{padding-top:140px;padding-bottom:80px;background:#0a0a0a}
+.page-hero-eyebrow{display:inline-block;font-size:12px;font-weight:700;color:#10b981;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:16px}
+.page-hero-heading{font-size:clamp(28px,4.5vw,48px);font-weight:700;color:#fff;letter-spacing:-1.5px;line-height:1.08;margin-bottom:20px;text-wrap:balance}
+.page-hero-sub{font-size:17px;color:rgba(255,255,255,.5);line-height:1.7;margin-bottom:36px;max-width:540px}
+.page-hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+
+/* SECTIONS */
+.section-pad{padding:96px 0}
+.section-heading{font-size:clamp(24px,3.5vw,34px);font-weight:700;color:#0a0a0a;letter-spacing:-.5px;margin-bottom:14px;text-wrap:balance}
+.section-sub{font-size:16px;color:#6b7280;line-height:1.7}
+.feature-tag{display:inline-block;font-size:12px;font-weight:700;color:#10b981;background:#f0fdf4;padding:4px 12px;border-radius:20px;margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px}
+.feature-title{font-size:clamp(22px,3vw,32px);font-weight:700;color:#0a0a0a;margin-bottom:12px;letter-spacing:-.5px;line-height:1.2;text-wrap:balance}
+.feature-desc{font-size:15px;color:#6b7280;line-height:1.7}
+
+/* IMPLEMENTATION TABS */
+.impl-tabs-nav{display:flex;gap:0;margin-top:40px;border-bottom:2px solid #e5e7eb;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.impl-tab-btn{font-size:13px;font-weight:600;padding:12px 22px;background:none;border:none;border-bottom:2px solid transparent;color:#9ca3af;cursor:pointer;white-space:nowrap;margin-bottom:-2px;transition:all .2s}
+.impl-tab-btn.active{color:#0a0a0a;border-bottom-color:#10b981}
+.impl-tab-btn:hover:not(.active){color:#555}
+.impl-tab-panels{margin-top:32px}
+.impl-tab-panel{display:none;animation:fadeIn .3s ease}
+.impl-tab-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.impl-tab-num{font-size:42px;font-weight:800;color:#10b981;line-height:1;margin-bottom:12px;opacity:.25}
+.impl-tab-title{font-size:22px;font-weight:700;color:#0a0a0a;margin-bottom:12px;letter-spacing:-.3px}
+.impl-tab-desc{font-size:15px;color:#6b7280;line-height:1.7}
+.impl-tab-visual{background:#0d1b2a;border-radius:12px;padding:20px;min-height:160px;display:flex;flex-direction:column;gap:12px}
+.impl-visual-row{display:flex;align-items:center;gap:10px;font-size:12px;color:rgba(255,255,255,.5)}
+.impl-visual-icon{width:24px;height:24px;border-radius:5px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:12px}
+
+/* COMPARISON */
+.comp-scenario{background:#fafafa;border:1px solid #ebebeb;border-radius:12px;padding:18px 24px;margin-bottom:32px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.comp-scenario-label{font-size:12px;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap}
+.comp-scenario-text{font-size:14px;color:#1a1a1a;font-weight:500}
+.comp-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.comp-col{border-radius:16px;padding:36px 32px}
+.comp-col.old{background:#f9fafb;border:1px solid #f0f0f0}
+.comp-col.new{background:#0a0a0a;border:1px solid #222}
+.comp-col h3{font-size:17px;font-weight:700;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid}
+.comp-col.old h3{color:#888;border-bottom-color:#eee}
+.comp-col.new h3{color:#10b981;border-bottom-color:#222}
+.comp-item{display:flex;align-items:flex-start;gap:10px;font-size:14px;padding:9px 0;border-bottom:1px solid}
+.comp-col.old .comp-item{color:#9ca3af;border-bottom-color:#f5f5f5}
+.comp-col.new .comp-item{color:rgba(255,255,255,.75);border-bottom-color:#1a1a1a}
+.comp-col.old .comp-item::before{content:'–';color:#d1d5db;font-size:16px;flex-shrink:0;margin-top:-1px}
+.comp-col.new .comp-item::before{content:'✓';color:#10b981;font-size:14px;font-weight:700;flex-shrink:0}
+
+/* ACTION LOOP */
+.action-flow-v3{display:flex;align-items:center;flex-wrap:wrap;gap:0;margin:40px 0 32px}
+.action-node{font-size:11px;font-weight:700;color:#6b7280;background:#f3f4f6;border:1.5px solid transparent;border-radius:6px;padding:8px 14px;white-space:nowrap;cursor:pointer;transition:all .2s;letter-spacing:.3px}
+.action-node.active{color:#10b981;background:#f0fdf4;border-color:#a7f3d0;box-shadow:0 0 0 2px rgba(16,185,129,.12)}
+.action-node:hover{color:#10b981;background:#f0fdf4}
+.action-arrow-v3{color:#d1d5db;margin:0 6px;font-size:16px}
+.action-example{background:#fafafa;border:1px solid #ebebeb;border-radius:14px;padding:28px;max-width:640px}
+.action-example-label{font-size:11px;font-weight:700;color:#10b981;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+.action-example-scenario{font-size:15px;font-weight:600;color:#0a0a0a;margin-bottom:20px}
+.action-stage{display:none;flex-direction:column;gap:10px}
+.action-stage.active{display:flex;animation:fadeIn .35s ease}
+.action-stage-row{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:#4b5563;line-height:1.5}
+.action-stage-key{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#10b981;min-width:88px;flex-shrink:0;margin-top:1px}
+.action-stage-val strong{color:#0a0a0a}
+.action-approve-btn{margin-top:14px;padding:10px 24px;border-radius:8px;border:none;background:#10b981;color:#fff;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:8px}
+.action-approve-btn:hover{background:#059669;transform:translateY(-1px)}
+.action-approve-btn.done{background:#065f46;cursor:default;transform:none}
+
+/* BENEFITS */
+.benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+.benefit-card{background:#fff;padding:28px 24px;border:1px solid #ebebeb;border-radius:16px;transition:box-shadow .2s}
+.benefit-card:hover{box-shadow:0 8px 28px rgba(0,0,0,.07)}
+.benefit-icon{width:44px;height:44px;border-radius:13px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.benefit-title{font-size:15px;font-weight:700;color:#111;margin-bottom:8px}
+.benefit-body{font-size:13px;color:#666;line-height:1.6}
+
+/* OWNER CC */
+.cc-section{background:#0a0a1a;padding:96px 0}
+.cc-eyebrow{display:inline-block;font-size:12px;font-weight:700;color:#10b981;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:16px}
+.cc-heading{font-size:clamp(22px,3vw,30px);font-weight:700;color:#fff;letter-spacing:-.5px;line-height:1.2;margin-bottom:12px;text-wrap:balance}
+.cc-sub{font-size:15px;color:rgba(255,255,255,.45);line-height:1.7}
+.cc-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;margin-top:48px}
+.cc-chips{display:flex;flex-direction:column;gap:10px}
+.cc-chip{display:flex;align-items:center;gap:12px;padding:14px 18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:10px;cursor:pointer;transition:all .2s;text-align:left;width:100%}
+.cc-chip:hover,.cc-chip.active{background:rgba(16,185,129,.08);border-color:rgba(16,185,129,.3)}
+.cc-chip-q{font-size:14px;font-weight:500;color:rgba(255,255,255,.7);transition:color .2s;line-height:1.4}
+.cc-chip.active .cc-chip-q{color:#fff}
+.cc-chip-icon{width:28px;height:28px;border-radius:7px;background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:13px;font-weight:800;color:#10b981}
+.cc-panel{background:#0a1628;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:24px;min-height:200px;display:flex;flex-direction:column;gap:12px}
+.cc-panel-bar{display:flex;align-items:center;gap:8px;margin-bottom:4px}
+.cc-panel-dot{width:8px;height:8px;border-radius:50%;background:#10b981;animation:pulse-dot 2s infinite}
+@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+@media(prefers-reduced-motion:reduce){.cc-panel-dot{animation:none}}
+.cc-panel-label{font-size:11px;font-weight:700;color:#10b981;text-transform:uppercase;letter-spacing:1px}
+.cc-panel-output{font-size:14px;color:rgba(255,255,255,.65);line-height:1.7;display:none}
+.cc-panel-output.active{display:block;animation:fadeIn .35s ease}
+.cc-panel-output strong{color:#fff}
+.cc-panel-output .cc-highlight{display:inline-block;background:rgba(16,185,129,.15);color:#10b981;font-weight:700;padding:1px 6px;border-radius:4px;font-size:13px}
+.cc-panel-output .cc-warn{display:inline-block;background:rgba(251,146,60,.15);color:#fb923c;font-weight:700;padding:1px 6px;border-radius:4px;font-size:13px}
+
+/* CTA */
+.cta-section{background:#0a0a1a;padding:96px 0;text-align:center}
+.cta-heading{font-size:clamp(24px,4vw,36px);font-weight:700;color:#fff;margin-bottom:16px;letter-spacing:-.5px;text-wrap:balance}
+.cta-sub{font-size:16px;color:rgba(255,255,255,.45);margin-bottom:36px;max-width:440px;margin-left:auto;margin-right:auto}
+.cta-buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.cta-note{margin-top:20px;font-size:13px;color:rgba(255,255,255,.25)}
+
+/* FOOTER */
+.footer{background:#050510;padding:48px 0;border-top:1px solid rgba(255,255,255,.06)}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer-logo{font-size:18px;font-weight:800;color:#fff}
+.footer-logo-mark{display:inline-block;width:5px;height:5px;background:#10b981;border-radius:1px;vertical-align:super;margin-left:1px}
+.footer-copy{font-size:13px;color:rgba(255,255,255,.3)}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap}
+.footer-links a{font-size:13px;color:rgba(255,255,255,.4);transition:color .2s}
+.footer-links a:hover{color:#fff}
+
+/* WA */
+.wa-float{position:fixed;bottom:24px;right:24px;z-index:999;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,.3);transition:transform .2s,box-shadow .2s}
+.wa-float:hover{transform:scale(1.08);box-shadow:0 6px 24px rgba(37,211,102,.4)}
+.wa-float-inner{width:52px;height:52px;display:flex;align-items:center;justify-content:center}
+
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-links,.nav-right{display:none}
+  .hamburger{display:flex}
+  .page-hero{padding-top:80px;padding-bottom:48px}
+  .impl-tab-panel.active{grid-template-columns:1fr;gap:28px}
+  .comp-grid{grid-template-columns:1fr}
+  .benefits-grid{grid-template-columns:1fr}
+  .cc-grid{grid-template-columns:1fr}
+  .action-flow-v3{overflow-x:auto;flex-wrap:nowrap;padding-bottom:8px;-webkit-overflow-scrolling:touch}
+  .action-node{font-size:10px;padding:7px 10px}
+  .footer-inner{flex-direction:column;text-align:center;gap:20px}
+  .footer-links{justify-content:center;gap:12px}
+  .cta-buttons{flex-direction:column;align-items:center}
+  .cta-buttons .btn{width:100%;max-width:320px;justify-content:center}
+  .page-hero-btns{flex-direction:column}
+  .page-hero-btns .btn{width:100%;max-width:280px}
+}
+@media(max-width:480px){
+  .container{padding:0 16px}
+  .section-pad{padding:64px 0}
+  .benefits-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="main-nav">
+  <div class="nav-inner">
+    <a href="/"><img src="/logo-fullsite.png" alt="Fullsite" style="height:72px;mix-blend-mode:multiply;"></a>
+    <div class="nav-links">
+      <a href="/#pos">Producto</a>
+      <a href="/#intelligence">Inteligencia</a>
+      <a href="/#offline">Offline</a>
+      <a href="/implementacion.html" class="active">Implementación</a>
+      <a href="/#faq">Preguntas frecuentes</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <a href="/implementacion.html" class="active">ES</a>
+        <a href="/en/">EN</a>
+      </div>
+      <a href="https://app.fullsite.mx/login" class="nav-login">Iniciar sesión</a>
+      <a href="/demo.html" class="btn btn-primary">Agenda una demo &rarr;</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="/#pos">Producto</a>
+  <a href="/#intelligence">Inteligencia</a>
+  <a href="/#offline">Offline</a>
+  <a href="/implementacion.html">Implementación</a>
+  <a href="/#faq">Preguntas frecuentes</a>
+  <a href="https://app.fullsite.mx/login">Iniciar sesión</a>
+  <a href="/demo.html" class="btn btn-primary" style="text-align:center">Agenda una demo</a>
+</div>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="reveal">
+      <span class="page-hero-eyebrow">Implementación</span>
+      <h1 class="page-hero-heading">Una implementación controlada.<br>No una instalación improvisada.</h1>
+      <p class="page-hero-sub">Desde el diagnóstico hasta la operación autónoma, cada paso de la implementación de Fullsite está definido, documentado y supervisado. Sin sorpresas.</p>
+      <div class="page-hero-btns">
+        <a href="/demo.html" class="btn btn-primary btn-lg">Agenda tu diagnóstico</a>
+        <a href="https://wa.me/528115324371?text=Hola%20Daniel%2C%20me%20interesa%20la%20implementaci%C3%B3n%20de%20Fullsite" class="btn btn-ghost-white btn-lg">Escríbenos</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPLEMENTACIÓN 6 PASOS -->
+<section class="section-pad" style="background:#f9fafb;border-top:1px solid #eee" id="pasos">
+  <div class="container">
+    <div class="reveal" style="text-align:center;max-width:560px;margin:0 auto">
+      <span class="feature-tag">Proceso</span>
+      <h2 class="section-heading">Seis pasos. Sin etapas ambiguas.</h2>
+      <p class="section-sub">Cada paso tiene un resultado definido. La implementación no avanza hasta que el paso anterior está validado.</p>
+    </div>
+    <div class="impl-tabs-nav reveal" role="tablist">
+      <button class="impl-tab-btn active" data-tab="diag" role="tab">1 · Diagnóstico</button>
+      <button class="impl-tab-btn" data-tab="conf" role="tab">2 · Configuración</button>
+      <button class="impl-tab-btn" data-tab="migr" role="tab">3 · Migración</button>
+      <button class="impl-tab-btn" data-tab="sim" role="tab">4 · Simulación</button>
+      <button class="impl-tab-btn" data-tab="turno" role="tab">5 · Turno controlado</button>
+      <button class="impl-tab-btn" data-tab="estab" role="tab">6 · Estabilización</button>
+    </div>
+    <div class="impl-tab-panels reveal">
+      <div class="impl-tab-panel active" id="impl-diag" role="tabpanel">
+        <div><div class="impl-tab-num">01</div><div class="impl-tab-title">Diagnóstico</div><p class="impl-tab-desc">Revisamos la operación, red, terminales, impresoras, sistema actual, menú, usuarios y necesidades del restaurante. Resultado: una ruta de implementación con cronograma definido.</p></div>
+        <div class="impl-tab-visual">
+          <div class="impl-visual-row"><span class="impl-visual-icon">📋</span>Revisión de equipo existente — POS, tablets, impresoras</div>
+          <div class="impl-visual-row"><span class="impl-visual-icon">🌐</span>Análisis de red y conectividad</div>
+          <div class="impl-visual-row"><span class="impl-visual-icon">📊</span>Revisión de menú, usuarios y flujos actuales</div>
+          <div class="impl-visual-row"><span class="impl-visual-icon">📅</span>Cronograma de implementación</div>
+        </div>
+      </div>
+      <div class="impl-tab-panel" id="impl-conf" role="tabpanel">
+        <div><div class="impl-tab-num">02</div><div class="impl-tab-title">Configuración</div><p class="impl-tab-desc">Creamos sucursales, terminales, estaciones, usuarios, permisos y flujos operativos ajustados a la operación específica del restaurante.</p></div>
+        <div class="impl-tab-visual">
+          <div class="impl-visual-row"><span class="impl-visual-icon">🏪</span>Sucursales y terminales configuradas</div>
+          <div class="impl-visual-row"><span class="impl-visual-icon">👤</span>Usuarios, roles y permisos</div>
+          <div class="impl-visual-row"><span class="impl-visual-icon">🖨</span>Impresoras y enrutamiento de cocina</div>
+          <div class="impl-visual-row"><span class="impl-visual-icon">⚙️</span>Flujos de servicio y caja</div>
+        </div>
+      </div>
+      <div class="impl-tab-panel" id="impl-migr" role="tabpanel">
+        <div><div class="impl-tab-num">03</div><div class="impl-tab-title">Migración</div><p class="impl-tab-desc">Importamos y revisamos menú, productos, recetas, inventario y datos disponibles del sistema anterior. Se valida la calidad y cobertura antes de migrar.</p></div>
+        <div class="impl-tab-visual">
+          <div class="impl-visual-row"><span class="impl-visual-icon">🍽</span>Menú, productos y modificadores</div>
+          <div class="impl-visual-row"><span class="impl-visual-icon">📦</span>Inventario inicial y almacenes</div>
+          <div class="impl-visual-row"><span class="impl-visual-icon">🔬</span>Recetas e ingredientes con cantidades</div>
+          <div class="impl-visual-row"><span class="impl-visual-icon">✅</span>Validación de calidad de datos</div>
+        </div>
+      </div>
+      <div class="impl-tab-panel" id="impl-sim" role="tabpanel">
+        <div><div class="impl-tab-num">04</div><div class="impl-tab-title">Simulación</div><p class="impl-tab-desc">Probamos órdenes, cocina, impresión, caja, cortes, offline, recuperación y sincronización antes del cambio de sistema. El equipo practica en un ambiente real.</p></div>
+        <div class="impl-tab-visual">
+          <div class="impl-visual-row"><span class="impl-visual-icon">🧪</span>Flujo completo de orden a cierre</div>
+          <div class="impl-visual-row"><span class="impl-visual-icon">📴</span>Prueba de operación offline</div>
+          <div class="impl-visual-row"><span class="impl-visual-icon">🔄</span>Sincronización y recuperación</div>
+          <div class="impl-visual-row"><span class="impl-visual-icon">👥</span>Capacitación del equipo completo</div>
+        </div>
+      </div>
+      <div class="impl-tab-panel" id="impl-turno" role="tabpanel">
+        <div><div class="impl-tab-num">05</div><div class="impl-tab-title">Turno controlado</div><p class="impl-tab-desc">Fullsite entra en operación durante una ventana supervisada, con respaldo y procedimiento de recuperación documentado. Soporte en tiempo real.</p></div>
+        <div class="impl-tab-visual">
+          <div class="impl-visual-row"><span class="impl-visual-icon">🟢</span>Go-live con equipo de soporte presente</div>
+          <div class="impl-visual-row"><span class="impl-visual-icon">🛡</span>Respaldo del sistema anterior disponible</div>
+          <div class="impl-visual-row"><span class="impl-visual-icon">📡</span>Monitoreo en tiempo real</div>
+          <div class="impl-visual-row"><span class="impl-visual-icon">📞</span>Canal directo con el equipo de Fullsite</div>
+        </div>
+      </div>
+      <div class="impl-tab-panel" id="impl-estab" role="tabpanel">
+        <div><div class="impl-tab-num">06</div><div class="impl-tab-title">Estabilización</div><p class="impl-tab-desc">Monitoreamos la operación, resolvemos incidencias y capacitamos a cada usuario según su función. El sistema queda certificado para operación autónoma.</p></div>
+        <div class="impl-tab-visual">
+          <div class="impl-visual-row"><span class="impl-visual-icon">📈</span>Monitoreo de los primeros turnos</div>
+          <div class="impl-visual-row"><span class="impl-visual-icon">🔧</span>Ajustes finos de configuración</div>
+          <div class="impl-visual-row"><span class="impl-visual-icon">🎓</span>Capacitación por rol y función</div>
+          <div class="impl-visual-row"><span class="impl-visual-icon">✅</span>Certificación de operación autónoma</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARATIVA -->
+<section class="section-pad" style="border-top:1px solid #eee">
+  <div class="container">
+    <div class="reveal" style="text-align:center;max-width:520px;margin:0 auto 0">
+      <span class="feature-tag">Diferencia</span>
+      <h2 class="section-heading">Un POS registra la operación. Fullsite busca ayudarte a mejorarla.</h2>
+    </div>
+    <div class="comp-scenario reveal">
+      <span class="comp-scenario-label">Escenario</span>
+      <span class="comp-scenario-text">Son las 2:00 p.m. del martes. Ventas acumuladas: $38,400 MXN. El día pasado cerró en $68,200.</span>
+    </div>
+    <div class="comp-grid reveal">
+      <div class="comp-col old">
+        <h3>POS tradicional</h3>
+        <div class="comp-item">Muestra: ventas $38,400</div>
+        <div class="comp-item">Sin comparativo automático contra días anteriores</div>
+        <div class="comp-item">No proyecta cómo podría terminar el día</div>
+        <div class="comp-item">No identifica qué categorías están bajas</div>
+        <div class="comp-item">No recomienda ninguna acción</div>
+        <div class="comp-item">Requiere análisis manual en otra herramienta</div>
+      </div>
+      <div class="comp-col new">
+        <h3>Fullsite</h3>
+        <div class="comp-item">Ventas $38,400 — 12% arriba del promedio de martes</div>
+        <div class="comp-item">Proyección al cierre: $71,200 – $76,800 MXN</div>
+        <div class="comp-item">Categoría bebidas 18% abajo vs. semana pasada</div>
+        <div class="comp-item">Aguacate: stock crítico, se agota en ~2 horas</div>
+        <div class="comp-item">Recomendación de acción disponible ahora</div>
+        <div class="comp-item">Diseñado con arquitectura offline-first</div>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:12px;color:#bbb;margin-top:16px;font-style:italic">Las capacidades pueden variar según configuración y datos disponibles.</p>
+  </div>
+</section>
+
+<!-- INTELIGENCIA EN ACCIÓN -->
+<section class="section-pad" style="background:#fff;border-top:1px solid #eee">
+  <div class="container" style="max-width:860px">
+    <div class="reveal">
+      <span class="feature-tag">Acción, no solamente alertas</span>
+      <h2 class="feature-title">Fullsite no reemplaza tu criterio. Lo amplifica.</h2>
+      <p class="feature-desc">Cada recomendación responde a seis preguntas antes de llegar a ti.</p>
+    </div>
+    <div class="action-flow-v3 reveal" id="action-flow">
+      <div class="action-node active" data-stage="detectar">DETECTAR</div><span class="action-arrow-v3">→</span>
+      <div class="action-node" data-stage="explicar">EXPLICAR</div><span class="action-arrow-v3">→</span>
+      <div class="action-node" data-stage="recomendar">RECOMENDAR</div><span class="action-arrow-v3">→</span>
+      <div class="action-node" data-stage="aprobar">APROBAR</div><span class="action-arrow-v3">→</span>
+      <div class="action-node" data-stage="ejecutar">EJECUTAR</div><span class="action-arrow-v3">→</span>
+      <div class="action-node" data-stage="medir">MEDIR</div><span class="action-arrow-v3">→</span>
+      <div class="action-node" data-stage="aprender">APRENDER</div>
+    </div>
+    <div class="action-example reveal">
+      <div class="action-example-label">Ejemplo en tiempo real</div>
+      <div class="action-example-scenario">Costo del pollo subió 18% esta semana — impacto en margen</div>
+      <div class="action-stage active" id="stage-detectar">
+        <div class="action-stage-row"><span class="action-stage-key">Qué ocurrió</span><span class="action-stage-val">El proveedor actualizó el precio de pechuga de pollo de <strong>$157/kg</strong> a <strong>$185/kg</strong>. Detectado al registrar la compra del lunes.</span></div>
+        <div class="action-stage-row"><span class="action-stage-key">Fuente</span><span class="action-stage-val">Módulo de compras — registro de entrada de inventario</span></div>
+      </div>
+      <div class="action-stage" id="stage-explicar">
+        <div class="action-stage-row"><span class="action-stage-key">Por qué importa</span><span class="action-stage-val">El pollo es el ingrediente principal en <strong>3 platillos top</strong>. El food cost del Chicken Bowl pasa de 25.3% a <strong>29.8%</strong>.</span></div>
+        <div class="action-stage-row"><span class="action-stage-key">Impacto</span><span class="action-stage-val">Pérdida de margen estimada: <strong>~$4,200 MXN/semana</strong> si no se ajusta el precio.</span></div>
+      </div>
+      <div class="action-stage" id="stage-recomendar">
+        <div class="action-stage-row"><span class="action-stage-key">Acción</span><span class="action-stage-val">Ajustar el precio del Chicken Bowl de <strong>$185</strong> a <strong>$215 MXN</strong> para mantener el margen objetivo de 72%.</span></div>
+        <div class="action-stage-row"><span class="action-stage-key">Alternativa</span><span class="action-stage-val">Renegociar con el proveedor o sustituir proveedor temporal.</span></div>
+        <button class="action-approve-btn" id="action-approve-btn">✓ Aprobar ajuste de precio</button>
+      </div>
+      <div class="action-stage" id="stage-aprobar">
+        <div class="action-stage-row"><span class="action-stage-key">Autorizado por</span><span class="action-stage-val"><strong>Gerente de turno</strong> — 14:47 — desde panel de gerente</span></div>
+        <div class="action-stage-row"><span class="action-stage-key">Estado</span><span class="action-stage-val" style="color:#10b981;font-weight:600">✓ Aprobado — ejecutando cambio en menú</span></div>
+      </div>
+      <div class="action-stage" id="stage-ejecutar">
+        <div class="action-stage-row"><span class="action-stage-key">Acción tomada</span><span class="action-stage-val">Precio del Chicken Bowl actualizado a <strong>$215 MXN</strong> en todas las terminales y menús digitales.</span></div>
+        <div class="action-stage-row"><span class="action-stage-key">Registro</span><span class="action-stage-val">Cambio documentado con hora, usuario y razón en el historial de precios.</span></div>
+      </div>
+      <div class="action-stage" id="stage-medir">
+        <div class="action-stage-row"><span class="action-stage-key">Resultado</span><span class="action-stage-val">3 días después: food cost del Chicken Bowl en <strong>25.1%</strong>. Margen recuperado.</span></div>
+        <div class="action-stage-row"><span class="action-stage-key">Impacto</span><span class="action-stage-val">Ventas del platillo bajaron 8% pero el margen total de la semana subió <strong>+2.1 puntos</strong>.</span></div>
+      </div>
+      <div class="action-stage" id="stage-aprender">
+        <div class="action-stage-row"><span class="action-stage-key">Patrón detectado</span><span class="action-stage-val">Este proveedor ajustó precios en <strong>3 ocasiones</strong> en los últimos 6 meses. Fullsite lo registra para alertas futuras más tempranas.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFICIOS -->
+<section class="section-pad" style="background:#f8faf9;border-top:1px solid #eee">
+  <div class="container">
+    <div style="text-align:center;max-width:560px;margin:0 auto 0" class="reveal">
+      <span class="feature-tag">Lo que obtienes</span>
+      <h2 class="section-heading">No necesitas más gráficas. Necesitas saber qué requiere atención.</h2>
+    </div>
+    <div class="benefits-grid reveal">
+      <div class="benefit-card">
+        <div class="benefit-icon" style="background:linear-gradient(135deg,#10b981,#059669)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 16l4-8 4 4 6-6"/></svg></div>
+        <div class="benefit-title">Predicción de cierre</div>
+        <div class="benefit-body">Estima cómo podría terminar el día antes del cierre para que puedas reaccionar a tiempo.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon" style="background:linear-gradient(135deg,#f59e0b,#d97706)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4M12 16h.01"/></svg></div>
+        <div class="benefit-title">Cancelaciones y excepciones</div>
+        <div class="benefit-body">Señala cancelaciones, descuentos, cortesías y movimientos fuera del comportamiento normal del restaurante.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon" style="background:linear-gradient(135deg,#8b5cf6,#7c3aed)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+        <div class="benefit-title">Inventario teórico vs. real</div>
+        <div class="benefit-body">Cada venta descuenta según la receta. Identifica diferencias entre lo que debería existir y lo que realmente existe.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon" style="background:linear-gradient(135deg,#3b82f6,#2563eb)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="benefit-title">Rendimiento del equipo</div>
+        <div class="benefit-body">Ventas, ticket promedio, actividad y resultados por usuario, turno y sucursal — en tiempo real.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon" style="background:linear-gradient(135deg,#ef4444,#dc2626)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8M16 17H8M10 9H8"/></svg></div>
+        <div class="benefit-title">Rentabilidad por producto</div>
+        <div class="benefit-body">Cruza popularidad, precio y costo para identificar productos que conviene revisar, promover o ajustar.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon" style="background:linear-gradient(135deg,#06b6d4,#0891b2)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M2 20h.01M7 20v-4M12 20v-8M17 20V8M22 4v16"/></svg></div>
+        <div class="benefit-title">Variaciones de costos</div>
+        <div class="benefit-body">Detecta cambios en ingredientes, proveedores y recetas que podrían estar afectando el margen.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTROL DESDE CUALQUIER LUGAR -->
+<section class="cc-section">
+  <div class="container">
+    <div class="reveal">
+      <span class="cc-eyebrow">Control desde cualquier lugar</span>
+      <h2 class="cc-heading">No tienes que estar físicamente en el restaurante para saber qué está pasando.</h2>
+      <p class="cc-sub">Fullsite concentra el estado de la operación y te ayuda a identificar qué requiere atención. Sin reportes complicados. Sin esperar al cierre del mes.</p>
+    </div>
+    <div class="cc-grid reveal">
+      <div class="cc-chips" role="list">
+        <button class="cc-chip active" data-answer="hoy" role="listitem"><span class="cc-chip-icon">?</span><span class="cc-chip-q">¿Cómo vamos hoy?</span></button>
+        <button class="cc-chip" data-answer="cambio" role="listitem"><span class="cc-chip-icon">?</span><span class="cc-chip-q">¿Qué cambió?</span></button>
+        <button class="cc-chip" data-answer="perdida" role="listitem"><span class="cc-chip-icon">?</span><span class="cc-chip-q">¿Dónde existe riesgo de pérdida?</span></button>
+        <button class="cc-chip" data-answer="atencion" role="listitem"><span class="cc-chip-icon">?</span><span class="cc-chip-q">¿Qué necesita atención inmediata?</span></button>
+        <button class="cc-chip" data-answer="accion" role="listitem"><span class="cc-chip-icon">?</span><span class="cc-chip-q">¿Qué acción recomienda Fullsite?</span></button>
+      </div>
+      <div class="cc-panel">
+        <div class="cc-panel-bar"><div class="cc-panel-dot"></div><span class="cc-panel-label">Fullsite · Respuesta</span></div>
+        <div class="cc-panel-output active" id="cc-hoy">Ventas 14:30: <span class="cc-highlight">$38,400</span> — <span class="cc-highlight">+12%</span> vs. martes anterior. Proyección al cierre: <strong>$71,200 – $76,800 MXN</strong>.<br><br>Turno vespertino con <strong>5 mesas activas</strong>. Omar Aguilera lleva el mayor ticket del turno.</div>
+        <div class="cc-panel-output" id="cc-cambio">Costo de aguacate subió <span class="cc-warn">+22%</span> en los últimos 7 días ($48 → $59/kg).<br><br>Food cost del guacamole pasó de <strong>31% → 38%</strong>. Afecta 3 platillos del menú.</div>
+        <div class="cc-panel-output" id="cc-perdida">Mesa 12 rotó solo <span class="cc-warn">1 vez</span> en 4 horas. Capacidad sin aprovechar.<br><br>Terraza no operando = <strong>8 mesas sin activar</strong>. Ingresos potenciales no capturados.</div>
+        <div class="cc-panel-output" id="cc-atencion"><span class="cc-warn">3 cancelaciones</span> del mesero Brayan Berlanga en la última hora. Monto acumulado: <strong>$1,240 MXN</strong>.<br><br>Patrón inusual vs. su promedio histórico. Requiere revisión del supervisor.</div>
+        <div class="cc-panel-output" id="cc-accion">Ajustar precio del Chicken Bowl a <span class="cc-highlight">$215 MXN</span> para compensar el alza del costo de pollo.<br><br>Impacto estimado si no se actúa: <span class="cc-warn">-$4,200/semana</span> en margen. Acción requiere autorización de gerente.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container reveal">
+    <h2 class="cta-heading">Agenda tu diagnóstico inicial sin compromiso.</h2>
+    <p class="cta-sub">Revisamos tu operación y definimos una ruta de implementación antes de cualquier compromiso.</p>
+    <div class="cta-buttons">
+      <a href="/demo.html" class="btn btn-white btn-lg">Agenda una demo</a>
+      <a href="mailto:daniel@fullsite.mx" class="btn btn-ghost-white btn-lg">daniel@fullsite.mx</a>
+    </div>
+    <p class="cta-note">La implementación no empieza hasta que el diagnóstico está validado.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">Fullsite<span class="footer-logo-mark"></span></div>
+      <div class="footer-links">
+        <a href="/">Inicio</a>
+        <a href="/#pos">Producto</a>
+        <a href="/#intelligence">Inteligencia</a>
+        <a href="/#offline">Offline</a>
+        <a href="/implementacion.html">Implementación</a>
+        <a href="/privacidad.html">Privacidad</a>
+        <a href="/terminos.html">Términos</a>
+        <a href="https://wa.me/528115324371">WhatsApp</a>
+        <a href="mailto:daniel@fullsite.mx">Email</a>
+        <a href="https://app.fullsite.mx/login">Iniciar sesión</a>
+      </div>
+      <div class="footer-copy">&copy; 2026 Fullsite Technologies. Monterrey, México.</div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/528115324371?text=Hola%20Daniel%2C%20me%20interesa%20Fullsite" class="wa-float" aria-label="WhatsApp">
+  <div class="wa-float-inner"><svg viewBox="0 0 24 24" fill="#fff" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
+</a>
+
+<script>
+(function(){
+var nav=document.getElementById('main-nav');
+window.addEventListener('scroll',function(){nav.classList.toggle('shrunk',window.scrollY>40)},{passive:true});
+var btn=document.getElementById('hamburger');
+var mm=document.getElementById('mobile-menu');
+btn.addEventListener('click',function(){mm.classList.toggle('open')});
+mm.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mm.classList.remove('open')})});
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){var t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}});
+});
+var els=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.12});
+  els.forEach(function(el){obs.observe(el)});
+}else{els.forEach(function(el){el.classList.add('visible')})}
+
+// IMPLEMENTATION TABS
+var implBtns=document.querySelectorAll('.impl-tab-btn');
+var implPanels=document.querySelectorAll('.impl-tab-panel');
+implBtns.forEach(function(b){
+  b.addEventListener('click',function(){
+    implBtns.forEach(function(x){x.classList.remove('active')});
+    implPanels.forEach(function(p){p.classList.remove('active')});
+    b.classList.add('active');
+    var p=document.getElementById('impl-'+b.dataset.tab);
+    if(p)p.classList.add('active');
+  });
+});
+
+// ACTION LOOP
+var actionNodes=document.querySelectorAll('.action-node');
+var stages=['detectar','explicar','recomendar','aprobar','ejecutar','medir','aprender'];
+var currentStage=0;
+function goToStage(idx){
+  actionNodes.forEach(function(n){n.classList.remove('active')});
+  stages.forEach(function(s){var el=document.getElementById('stage-'+s);if(el)el.classList.remove('active')});
+  actionNodes[idx].classList.add('active');
+  var st=document.getElementById('stage-'+stages[idx]);if(st)st.classList.add('active');
+  currentStage=idx;
+}
+actionNodes.forEach(function(node,i){
+  node.addEventListener('click',function(){goToStage(i)});
+  node.setAttribute('tabindex','0');
+  node.addEventListener('keydown',function(e){if(e.key==='Enter')goToStage(i)});
+});
+var approveBtn=document.getElementById('action-approve-btn');
+if(approveBtn){approveBtn.addEventListener('click',function(){if(this.classList.contains('done'))return;this.textContent='✓ Aprobado';this.classList.add('done');setTimeout(function(){goToStage(3)},400)})}
+
+// OWNER CC
+var ccChips=document.querySelectorAll('.cc-chip');
+var ccOutputs=document.querySelectorAll('.cc-panel-output');
+ccChips.forEach(function(chip){
+  chip.addEventListener('click',function(){
+    ccChips.forEach(function(c){c.classList.remove('active')});
+    ccOutputs.forEach(function(o){o.classList.remove('active')});
+    chip.classList.add('active');
+    var out=document.getElementById('cc-'+chip.dataset.answer);
+    if(out)out.classList.add('active');
+  });
+});
+})();
+</script>
+</body>
+</html>

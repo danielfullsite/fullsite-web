@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fullsite | Sistema operativo inteligente para restaurantes</title>
+<title>Software POS para Restaurantes | Fullsite</title>
 <meta name="description" content="Fullsite conecta punto de venta, cocina, inventario, costos e inteligencia operativa para ayudar a los restaurantes a detectar problemas durante el turno.">
 <link rel="canonical" href="https://fullsite.mx/">
 <meta name="keywords" content="POS restaurante Mexico, punto de venta con IA, software restaurante Monterrey, sistema operativo restaurante, alternativa Wansoft, alternativa Soft Restaurant, inventario restaurante, offline restaurante, KDS cocina, Fullsite">
@@ -19,7 +19,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Fullsite | Sistema operativo inteligente para restaurantes">
+<meta name="twitter:title" content="Software POS para Restaurantes | Fullsite">
 <meta name="twitter:description" content="POS, cocina, inventario e inteligencia operativa conectados en un solo sistema.">
 <meta name="twitter:image" content="https://fullsite.mx/img-dashboard.png">
 
@@ -65,10 +65,9 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question","name": "¿Cuánto tiempo toma la implementación?","acceptedAnswer": {"@type": "Answer","text": "Depende del número de sucursales, terminales, impresoras, integraciones y calidad de los datos que se migrarán. Después del diagnóstico inicial se define una ruta de implementación."}},
-    {"@type": "Question","name": "¿Necesito comprar equipo especial?","acceptedAnswer": {"@type": "Answer","text": "Fullsite busca aprovechar el equipo existente siempre que sea compatible. Durante el diagnóstico se revisan computadoras, tablets, impresoras, lectores y red."}},
     {"@type": "Question","name": "¿Funciona sin internet?","acceptedAnswer": {"@type": "Answer","text": "Fullsite está diseñado para mantener los flujos críticos de operación durante una caída de conexión. Algunas funciones externas como pagos bancarios, facturación y marketplaces sí requieren internet."}},
-    {"@type": "Question","name": "¿La inteligencia artificial toma decisiones automáticamente?","acceptedAnswer": {"@type": "Answer","text": "Fullsite detecta, explica y recomienda. Las acciones importantes deben ser aprobadas por una persona autorizada. La automatización se habilita únicamente cuando el flujo ha sido validado."}},
+    {"@type": "Question","name": "¿Pueden migrar información desde otro sistema?","acceptedAnswer": {"@type": "Answer","text": "Sí, siempre que exista una forma segura de exportar o acceder a la información. Antes de migrarla se revisa su calidad, estructura y cobertura."}},
+    {"@type": "Question","name": "¿Necesito comprar equipo especial?","acceptedAnswer": {"@type": "Answer","text": "Fullsite busca aprovechar el equipo existente siempre que sea compatible. Durante el diagnóstico se revisan computadoras, tablets, impresoras, lectores y red."}},
     {"@type": "Question","name": "¿Puedo utilizar Fullsite en varias sucursales?","acceptedAnswer": {"@type": "Answer","text": "Fullsite está diseñado para operar grupos y múltiples sucursales con configuraciones, permisos y datos separados."}}
   ]
 }
@@ -110,7 +109,6 @@ button{font-family:inherit;cursor:pointer}
 .nav.shrunk{height:52px;box-shadow:0 2px 12px rgba(0,0,0,.07)}
 .nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:100%}
 .nav-logo{font-size:22px;font-weight:800;color:#0a0a0a;letter-spacing:-.5px}
-.nav-logo-mark{display:inline-block;width:6px;height:6px;background:#10b981;border-radius:1px;vertical-align:super;margin-left:2px}
 .nav-links{display:flex;gap:24px;align-items:center}
 .nav-links a{font-size:13.5px;font-weight:500;color:#555;transition:color .2s}
 .nav-links a:hover,.nav-links a.active{color:#0a0a0a}
@@ -148,28 +146,6 @@ button{font-family:inherit;cursor:pointer}
 .hero-pill{font-size:12px;font-weight:600;color:#555;background:#f3f4f6;border-radius:20px;padding:4px 12px}
 .hero-proof{font-size:13px;color:#9ca3af;font-weight:500}
 
-/* Hero visual — CSS POS screen */
-.hero-screen{background:#0d1b2a;border-radius:16px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.22),0 4px 16px rgba(0,0,0,.12)}
-.hero-screen-bar{background:#142234;padding:10px 16px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.06)}
-.hero-screen-bar-dot{width:10px;height:10px;border-radius:50%}
-.hero-screen-body{padding:20px}
-.hero-screen-label{font-size:10px;font-weight:700;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px}
-.mesa-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.mesa-cell{aspect-ratio:1;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;position:relative}
-.mesa-cell.libre{background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.3);color:rgba(16,185,129,.7)}
-.mesa-cell.ocupada{background:rgba(251,146,60,.15);border:1px solid rgba(251,146,60,.35);color:rgba(251,146,60,.9)}
-.mesa-cell.atención{background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.4);color:rgba(239,68,68,.9)}
-.hero-screen-stats{display:flex;gap:16px;margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.06)}
-.hss-item{flex:1}
-.hss-val{font-size:18px;font-weight:700;color:#10b981;letter-spacing:-.5px}
-.hss-key{font-size:10px;color:rgba(255,255,255,.35);margin-top:2px}
-.hero-screen-kpi{margin-top:14px;background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.2);border-radius:8px;padding:10px 14px;display:flex;align-items:center;gap:10px}
-.hsk-dot{width:7px;height:7px;border-radius:50%;background:#10b981;flex-shrink:0;animation:pulse-dot 2s infinite}
-@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
-@media(prefers-reduced-motion:reduce){.hsk-dot{animation:none}}
-.hsk-text{font-size:12px;color:rgba(255,255,255,.6);line-height:1.4}
-.hsk-text strong{color:#10b981;font-weight:700}
-
 /* === OVERVIEW === */
 .overview-section{background:#f9fafb;border-top:1px solid #f0f0f0;padding:96px 0}
 .section-heading{font-size:clamp(26px,3.5vw,34px);font-weight:700;color:#0a0a0a;letter-spacing:-.5px;margin-bottom:14px;text-wrap:balance}
@@ -180,12 +156,6 @@ button{font-family:inherit;cursor:pointer}
 .overview-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
 .overview-card h3{font-size:19px;font-weight:700;color:#0a0a0a;margin-bottom:10px}
 .overview-card p{font-size:14px;color:#6b7280;line-height:1.65}
-
-/* === STATS === */
-.stats{background:#0a0a1a;padding:72px 0}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center}
-.stat-number{font-size:42px;font-weight:700;color:#fff;letter-spacing:-1px;margin-bottom:4px}
-.stat-label{font-size:14px;color:rgba(255,255,255,.4);font-weight:400;line-height:1.4}
 
 /* === CHAIN (intelligence) === */
 .chain-section{background:#0a0a0a;padding:96px 0;position:relative}
@@ -198,7 +168,6 @@ button{font-family:inherit;cursor:pointer}
 .chain-node:hover,.chain-node.active{background:rgba(16,185,129,.22);border-color:rgba(16,185,129,.6);color:#fff;box-shadow:0 0 0 2px rgba(16,185,129,.25)}
 .chain-node:focus-visible{outline:2px solid #10b981;outline-offset:2px}
 .chain-arrow{color:rgba(255,255,255,.18);font-size:16px;margin:0 6px;flex-shrink:0}
-/* Chain data panel */
 .chain-panel{max-width:680px;margin:0 auto;min-height:112px;transition:opacity .3s}
 .chain-panel-inner{background:rgba(16,185,129,.06);border:1px solid rgba(16,185,129,.2);border-radius:12px;padding:24px 28px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .cp-label{font-size:10px;font-weight:700;color:#10b981;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px}
@@ -208,23 +177,26 @@ button{font-family:inherit;cursor:pointer}
 .cp-badge.ok{background:rgba(16,185,129,.2);color:#10b981}
 .cp-badge.warn{background:rgba(251,146,60,.2);color:#fb923c}
 
-/* === CHAT DEMO === */
-.chat-demo-section{background:#fff;border-top:1px solid #eee;padding:96px 0}
+/* === CHAT DEMO (dark context) === */
+.chat-demo-section{background:#0a0a0a;border-top:1px solid rgba(255,255,255,.06);padding:96px 0}
 .chat-demo-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
 .iq-tab{flex:1;padding:12px;font-size:12px;font-weight:600;background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;transition:all .2s;color:#999}
 .iq-tab.active{color:#075e54;border-bottom-color:#075e54}
 
 /* === POS MOCKUPS === */
 .pos-section{background:#fff;border-top:1px solid #eee;padding:96px 0}
+.feature-tag{display:inline-block;font-size:12px;font-weight:700;color:#10b981;background:#f0fdf4;padding:4px 12px;border-radius:20px;margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px}
+.feature-title{font-size:32px;font-weight:700;color:#0a0a0a;margin-bottom:16px;letter-spacing:-.5px;line-height:1.15;text-wrap:balance}
+.feature-desc{font-size:16px;color:#6b7280;line-height:1.7;margin-bottom:24px}
 .pos-grid-v3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px}
-.pos-col-v3{display:flex;flex-direction:column;gap:16px}
+.pos-col-v3{display:flex;flex-direction:column;gap:12px}
 .pos-col-label{font-size:12px;font-weight:700;color:#10b981;text-transform:uppercase;letter-spacing:1px}
+.pos-col-cap{font-size:13px;color:#6b7280;line-height:1.5}
 .pos-screen{background:#0d1b2a;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
 .pos-screen-header{background:#142234;padding:9px 14px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.05)}
 .pos-screen-title{font-size:11px;font-weight:700;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:1px}
 .pos-screen-status{font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px;background:rgba(16,185,129,.2);color:#10b981}
 .pos-screen-body{padding:14px}
-/* Mesa map */
 .pos-mesa-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
 .pos-mesa{aspect-ratio:1;border-radius:6px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:9px;font-weight:700}
 .pos-mesa.libre{background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.25);color:rgba(16,185,129,.6)}
@@ -232,194 +204,37 @@ button{font-family:inherit;cursor:pointer}
 .pos-mesa.atencion{background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.35);color:rgba(239,68,68,.9)}
 .pos-mesa-num{font-size:11px;font-weight:800;color:inherit}
 .pos-mesa-guests{font-size:9px;opacity:.7}
-/* Payment screen */
 .pos-order-item{display:flex;justify-content:space-between;font-size:11px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05);color:rgba(255,255,255,.6)}
 .pos-order-item:last-child{border-bottom:none}
 .pos-order-total{display:flex;justify-content:space-between;font-size:13px;font-weight:700;padding:9px 0;border-top:1px solid rgba(255,255,255,.12);margin-top:4px;color:#fff}
 .pos-pay-methods{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px}
-.pos-pay-btn{font-size:10px;font-weight:700;padding:8px 6px;border-radius:6px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:rgba(255,255,255,.6);cursor:pointer;transition:all .15s;text-align:center}
-.pos-pay-btn:hover{background:rgba(16,185,129,.15);border-color:rgba(16,185,129,.4);color:#10b981}
-/* KDS tickets */
+.pos-pay-btn{font-size:10px;font-weight:700;padding:8px 6px;border-radius:6px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:rgba(255,255,255,.6);cursor:default;text-align:center}
 .kds-ticket{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:10px;margin-bottom:8px}
 .kds-ticket-header{display:flex;justify-content:space-between;margin-bottom:8px}
 .kds-ticket-num{font-size:12px;font-weight:800;color:#fff}
 .kds-ticket-time{font-size:10px;color:rgba(255,255,255,.35)}
 .kds-item{font-size:11px;color:rgba(255,255,255,.65);padding:3px 0;border-bottom:1px solid rgba(255,255,255,.04)}
 .kds-item:last-child{border:none}
-.kds-action{font-size:10px;font-weight:700;padding:6px;border-radius:5px;border:none;width:100%;margin-top:8px;cursor:pointer}
+.kds-action{font-size:10px;font-weight:700;padding:6px;border-radius:5px;width:100%;margin-top:8px;cursor:default;pointer-events:none;text-align:center}
 .kds-action.ready{background:rgba(16,185,129,.2);color:#10b981}
 .kds-action.prep{background:rgba(251,146,60,.15);color:#fb923c}
-/* Feature list below each screen */
-.pos-feat-title{font-size:15px;font-weight:700;color:#0a0a0a;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #eee}
-.pos-feat-list{display:flex;flex-direction:column;gap:0}
-.pos-feat-item{font-size:13px;color:#4b5563;padding:6px 0;border-bottom:1px solid #f5f5f5;display:flex;align-items:center;gap:8px}
-.pos-feat-item::before{content:'';flex-shrink:0;width:6px;height:6px;border-radius:50%;background:#10b981}
 
-/* === OFFLINE DEMO === */
+/* === OFFLINE === */
 .offline-section{background:#f0fdf4;border-top:1px solid #d1fae5;padding:96px 0}
-.offline-demo{max-width:720px;margin:40px auto 0}
-.offline-states{position:relative;min-height:200px}
-.offline-state{display:none;animation:fadeIn .4s ease}
-.offline-state.active{display:block}
-@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-@media(prefers-reduced-motion:reduce){@keyframes fadeIn{from{opacity:0}to{opacity:1}}}
-.offline-card{background:#fff;border-radius:16px;padding:28px 32px;box-shadow:0 4px 24px rgba(0,0,0,.07)}
-.offline-card-header{display:flex;align-items:center;gap:14px;margin-bottom:20px}
-.offline-indicator{width:12px;height:12px;border-radius:50%;flex-shrink:0}
-.offline-indicator.green{background:#10b981;box-shadow:0 0 0 4px rgba(16,185,129,.2)}
-.offline-indicator.red{background:#ef4444;box-shadow:0 0 0 4px rgba(239,68,68,.2)}
-.offline-indicator.pulse{animation:pulse-ring 1.5s ease infinite}
-@keyframes pulse-ring{0%,100%{box-shadow:0 0 0 4px rgba(239,68,68,.2)}50%{box-shadow:0 0 0 8px rgba(239,68,68,.05)}}
-@media(prefers-reduced-motion:reduce){.offline-indicator.pulse{animation:none}}
-.offline-label{font-size:14px;font-weight:700;color:#0a0a0a}
-.offline-label span{font-size:12px;font-weight:500;color:#6b7280;margin-left:8px}
-.offline-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:20px}
-.offline-metric{text-align:center;padding:14px;background:#f9fafb;border-radius:10px}
-.offline-metric-val{font-size:22px;font-weight:700;color:#0a0a0a;letter-spacing:-.5px}
-.offline-metric-key{font-size:11px;color:#9ca3af;margin-top:3px}
-.offline-metric-val.green{color:#10b981}
-.offline-metric-val.red{color:#ef4444}
-.offline-banner{padding:12px 16px;border-radius:8px;font-size:13px;font-weight:600;display:flex;align-items:center;gap:10px}
-.offline-banner.warn{background:#fef3c7;color:#92400e;border:1px solid #fcd34d}
-.offline-banner.ok{background:#d1fae5;color:#065f46;border:1px solid #a7f3d0}
-.offline-banner.info{background:#ede9fe;color:#4c1d95;border:1px solid #c4b5fd}
-.offline-nav{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:24px}
-.offline-dot{width:8px;height:8px;border-radius:50%;background:#d1d5db;cursor:pointer;transition:background .2s}
-.offline-dot.active{background:#10b981}
-.offline-btn{font-size:13px;font-weight:600;padding:9px 18px;border-radius:8px;border:1.5px solid #d1d5db;background:#fff;color:#555;cursor:pointer;transition:all .2s}
-.offline-btn:hover{border-color:#10b981;color:#10b981}
 
-/* === ACTION LOOP === */
-.action-section{background:#fff;border-top:1px solid #eee;padding:96px 0}
-.action-steps-v3{display:flex;align-items:flex-start;gap:0;margin:40px 0;overflow-x:auto;padding-bottom:4px}
-.action-step-v3{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:80px;cursor:pointer}
-.action-step-v3:not(:last-child)::after{content:'→';font-size:14px;color:#d1d5db;margin:0 4px;align-self:center;position:relative;top:-16px}
-/* rewrite using a row layout instead */
-.action-flow-v3{display:flex;align-items:center;flex-wrap:wrap;gap:0;margin:40px 0 32px}
-.action-node{font-size:11px;font-weight:700;color:#6b7280;background:#f3f4f6;border:1.5px solid transparent;border-radius:6px;padding:8px 14px;white-space:nowrap;cursor:pointer;transition:all .2s;letter-spacing:.3px}
-.action-node.active{color:#10b981;background:#f0fdf4;border-color:#a7f3d0;box-shadow:0 0 0 2px rgba(16,185,129,.12)}
-.action-node:hover{color:#10b981;background:#f0fdf4}
-.action-arrow-v3{color:#d1d5db;margin:0 6px;font-size:16px}
-.action-example{background:#fafafa;border:1px solid #ebebeb;border-radius:14px;padding:28px;max-width:640px}
-.action-example-label{font-size:11px;font-weight:700;color:#10b981;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
-.action-example-scenario{font-size:15px;font-weight:600;color:#0a0a0a;margin-bottom:20px}
-.action-stage{display:none;flex-direction:column;gap:10px}
-.action-stage.active{display:flex;animation:fadeIn .35s ease}
-.action-stage-row{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:#4b5563;line-height:1.5}
-.action-stage-key{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#10b981;min-width:88px;flex-shrink:0;margin-top:1px}
-.action-stage-val strong{color:#0a0a0a}
-.action-approve-btn{margin-top:14px;padding:10px 24px;border-radius:8px;border:none;background:#10b981;color:#fff;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:8px}
-.action-approve-btn:hover{background:#059669;transform:translateY(-1px)}
-.action-approve-btn.done{background:#065f46;cursor:default;transform:none}
-
-/* === OWNER COMMAND CENTER === */
-.cc-section{background:#0a0a1a;padding:96px 0}
-.cc-eyebrow{display:inline-block;font-size:12px;font-weight:700;color:#10b981;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:16px}
-.cc-heading{font-size:clamp(24px,3.5vw,32px);font-weight:700;color:#fff;letter-spacing:-.5px;line-height:1.2;margin-bottom:12px;text-wrap:balance}
-.cc-sub{font-size:15px;color:rgba(255,255,255,.45);line-height:1.7}
-.cc-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;margin-top:48px}
-.cc-chips{display:flex;flex-direction:column;gap:10px}
-.cc-chip{display:flex;align-items:center;gap:12px;padding:14px 18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:10px;cursor:pointer;transition:all .2s;text-align:left}
-.cc-chip:hover,.cc-chip.active{background:rgba(16,185,129,.08);border-color:rgba(16,185,129,.3)}
-.cc-chip-q{font-size:14px;font-weight:500;color:rgba(255,255,255,.7);transition:color .2s;line-height:1.4}
-.cc-chip.active .cc-chip-q{color:#fff}
-.cc-chip-icon{width:28px;height:28px;border-radius:7px;background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:13px;font-weight:800;color:#10b981}
-.cc-panel{background:#0a1628;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:24px;min-height:240px;display:flex;flex-direction:column;gap:12px}
-.cc-panel-bar{display:flex;align-items:center;gap:8px;margin-bottom:4px}
-.cc-panel-dot{width:8px;height:8px;border-radius:50%;background:#10b981;animation:pulse-dot 2s infinite}
-.cc-panel-label{font-size:11px;font-weight:700;color:#10b981;text-transform:uppercase;letter-spacing:1px}
-.cc-panel-output{font-size:14px;color:rgba(255,255,255,.65);line-height:1.7;display:none}
-.cc-panel-output.active{display:block;animation:fadeIn .35s ease}
-.cc-panel-output strong{color:#fff}
-.cc-panel-output .cc-highlight{display:inline-block;background:rgba(16,185,129,.15);color:#10b981;font-weight:700;padding:1px 6px;border-radius:4px;font-size:13px}
-.cc-panel-output .cc-warn{display:inline-block;background:rgba(251,146,60,.15);color:#fb923c;font-weight:700;padding:1px 6px;border-radius:4px;font-size:13px}
-
-/* === FEATURE ROW (inventory, etc.) === */
-.feature-row{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding:80px 0}
-.feature-row+.feature-row{border-top:1px solid #f0f0f0}
-.feature-row.reverse .feature-text{order:1}
-.feature-row.reverse .feature-visual{order:2}
-.feature-tag{display:inline-block;font-size:12px;font-weight:700;color:#10b981;background:#f0fdf4;padding:4px 12px;border-radius:20px;margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px}
-.feature-title{font-size:32px;font-weight:700;color:#0a0a0a;margin-bottom:16px;letter-spacing:-.5px;line-height:1.15;text-wrap:balance}
-.feature-desc{font-size:16px;color:#6b7280;line-height:1.7;margin-bottom:24px}
-.feature-list{display:flex;flex-direction:column;gap:12px}
-.feature-list li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:#4b5563}
-.feature-list li::before{content:'';flex-shrink:0;width:20px;height:20px;background:#f0fdf4 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%2310b981'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'/%3E%3C/svg%3E") no-repeat center/14px;border-radius:50%;margin-top:1px}
-/* inventory visual placeholder */
-.inv-visual{background:#fafafa;border:1px solid #ebebeb;border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:12px}
-.inv-row{display:flex;align-items:center;gap:12px}
-.inv-row-label{font-size:13px;color:#6b7280;width:120px;flex-shrink:0}
-.inv-bar-wrap{flex:1;background:#f0f0f0;border-radius:4px;height:8px;overflow:hidden}
-.inv-bar{height:100%;border-radius:4px;background:#10b981}
-.inv-bar.warn{background:#fb923c}
-.inv-row-val{font-size:12px;font-weight:700;color:#0a0a0a;width:52px;text-align:right}
-.inv-row-val.warn{color:#fb923c}
-.inv-header{font-size:11px;font-weight:700;color:#10b981;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
-
-/* === BENEFITS === */
-.benefits-section{background:#f8faf9;border-top:1px solid #eee;padding:96px 0}
-.benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.benefit-card{background:#fff;padding:32px 26px;border:1px solid #ebebeb;border-radius:16px}
-.benefit-icon{width:44px;height:44px;border-radius:13px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
-.benefit-title{font-size:16px;font-weight:700;color:#111;margin-bottom:8px}
-.benefit-body{font-size:14px;color:#666;line-height:1.6}
-
-/* === IMPLEMENTATION TABS === */
-.impl-section{background:#f9fafb;border-top:1px solid #eee;padding:96px 0}
-.impl-tabs-nav{display:flex;gap:0;margin-top:40px;border-bottom:2px solid #e5e7eb;overflow-x:auto}
-.impl-tab-btn{font-size:13px;font-weight:600;padding:12px 22px;background:none;border:none;border-bottom:2px solid transparent;color:#9ca3af;cursor:pointer;white-space:nowrap;margin-bottom:-2px;transition:all .2s}
-.impl-tab-btn.active{color:#0a0a0a;border-bottom-color:#10b981}
-.impl-tab-btn:hover:not(.active){color:#555}
-.impl-tab-panels{margin-top:32px}
-.impl-tab-panel{display:none;animation:fadeIn .3s ease}
-.impl-tab-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
-.impl-tab-num{font-size:42px;font-weight:800;color:#10b981;line-height:1;margin-bottom:12px;opacity:.25}
-.impl-tab-title{font-size:22px;font-weight:700;color:#0a0a0a;margin-bottom:12px;letter-spacing:-.3px}
-.impl-tab-desc{font-size:15px;color:#6b7280;line-height:1.7}
-.impl-tab-visual{background:#0d1b2a;border-radius:12px;padding:20px;min-height:160px;display:flex;flex-direction:column;gap:12px}
-.impl-visual-row{display:flex;align-items:center;gap:10px;font-size:12px;color:rgba(255,255,255,.5)}
-.impl-visual-icon{width:24px;height:24px;border-radius:5px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:12px}
-.impl-visual-check{color:#10b981;font-size:14px;font-weight:700}
-.impl-visual-pending{color:rgba(255,255,255,.2)}
-
-/* === INTEGRATIONS HUB === */
-.int-section{background:#0a0a0a;padding:96px 0}
-.int-hub-wrap{margin-top:56px;display:flex;flex-direction:column;align-items:center;gap:48px}
-.int-hub{position:relative;width:560px;height:380px;flex-shrink:0}
-.int-hub-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:88px;height:88px;border-radius:50%;background:#10b981;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:#fff;z-index:2;box-shadow:0 0 0 16px rgba(16,185,129,.08),0 0 0 32px rgba(16,185,129,.04)}
-.int-spoke-item{position:absolute;transform:translate(-50%,-50%)}
-.int-spoke-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:12px 14px;text-align:center;min-width:108px;transition:all .25s;cursor:default}
-.int-spoke-card:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2)}
-.int-spoke-name{font-size:13px;font-weight:700;color:#fff;margin-bottom:5px}
-.int-spoke-badge{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px;letter-spacing:.3px}
-.int-spoke-badge.disponible{background:rgba(16,185,129,.2);color:#10b981}
-.int-spoke-badge.certificacion{background:rgba(251,191,36,.15);color:#f59e0b}
-.int-spoke-badge.proximo{background:rgba(255,255,255,.06);color:rgba(255,255,255,.35)}
-/* SVG spokes line */
-.int-hub svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
-.int-hub-legend{display:flex;gap:24px;justify-content:center}
-.int-legend-item{display:flex;align-items:center;gap:7px;font-size:12px;color:rgba(255,255,255,.4)}
-.int-legend-dot{width:8px;height:8px;border-radius:50%}
-
-/* === COMPARISON === */
-.comp-section{background:#fff;border-top:1px solid #eee;padding:96px 0}
-.comp-scenario{background:#fafafa;border:1px solid #ebebeb;border-radius:12px;padding:18px 24px;margin-bottom:32px;display:flex;align-items:center;gap:14px}
-.comp-scenario-label{font-size:12px;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap}
-.comp-scenario-text{font-size:14px;color:#1a1a1a;font-weight:500}
-.comp-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.comp-col{border-radius:16px;padding:36px 32px}
-.comp-col.old{background:#f9fafb;border:1px solid #f0f0f0}
-.comp-col.new{background:#0a0a0a;border:1px solid #222}
-.comp-col h3{font-size:17px;font-weight:700;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid}
-.comp-col.old h3{color:#888;border-bottom-color:#eee}
-.comp-col.new h3{color:#10b981;border-bottom-color:#222}
-.comp-item{display:flex;align-items:flex-start;gap:10px;font-size:14px;padding:9px 0;border-bottom:1px solid}
-.comp-col.old .comp-item{color:#9ca3af;border-bottom-color:#f5f5f5}
-.comp-col.new .comp-item{color:rgba(255,255,255,.75);border-bottom-color:#1a1a1a}
-.comp-col.old .comp-item::before{content:'–';color:#d1d5db;font-size:16px;flex-shrink:0;margin-top:-1px}
-.comp-col.new .comp-item::before{content:'✓';color:#10b981;font-size:14px;font-weight:700;flex-shrink:0}
+/* === OPERACIÓN REAL === */
+.oper-section{background:#0a0a1a;padding:96px 0}
+.oper-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.oper-heading{font-size:clamp(24px,3.5vw,32px);font-weight:700;color:#fff;letter-spacing:-.5px;line-height:1.2;margin-bottom:16px;text-wrap:balance}
+.oper-sub{font-size:15px;color:rgba(255,255,255,.45);line-height:1.7}
 
 /* === CTA dark === */
+/* === PREGÚNTALE A LA IA === */
+.ask-ai-section{background:#fff;padding:80px 24px;text-align:center;border-top:1px solid #eee}
+.ask-ai-heading{font-size:clamp(28px,4vw,40px);font-weight:700;letter-spacing:-.03em;line-height:1.1;color:#0a0a0a;margin-bottom:16px}
+.ask-ai-sub{font-size:16px;color:#6b7280;margin-bottom:40px;line-height:1.6}
+.ask-ai-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;align-items:center}
+
 .cta-section{background:#0a0a1a;padding:96px 0;text-align:center}
 .cta-heading{font-size:clamp(26px,4vw,38px);font-weight:700;color:#fff;margin-bottom:16px;letter-spacing:-.5px;text-wrap:balance}
 .cta-sub{font-size:16px;color:rgba(255,255,255,.45);margin-bottom:36px;max-width:460px;margin-left:auto;margin-right:auto}
@@ -437,12 +252,6 @@ button{font-family:inherit;cursor:pointer}
 .faq-item summary::after{content:'+';font-size:22px;font-weight:300;color:#9ca3af;transition:transform .3s;flex-shrink:0;margin-left:16px}
 .faq-item[open] summary::after{transform:rotate(45deg)}
 .faq-answer{padding:0 0 20px;font-size:15px;color:#6b7280;line-height:1.7}
-
-/* === ASK AI === */
-.ask-ai-section{background:#fff;padding:80px 24px;text-align:center;border-top:1px solid #eee}
-.ask-ai-heading{font-size:clamp(28px,4vw,40px);font-weight:700;letter-spacing:-.03em;line-height:1.1;color:#0a0a0a;margin-bottom:16px}
-.ask-ai-sub{font-size:16px;color:#6b7280;margin-bottom:40px;line-height:1.6}
-.ask-ai-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;align-items:center}
 
 /* === FOOTER === */
 .footer{background:#050510;padding:48px 0;border-top:1px solid rgba(255,255,255,.06)}
@@ -463,49 +272,69 @@ button{font-family:inherit;cursor:pointer}
 
 /* === RESPONSIVE === */
 @media(max-width:1024px){
-  .stats-grid{grid-template-columns:repeat(2,1fr);gap:40px}
-  .overview-grid{grid-template-columns:1fr}
-  .int-hub-wrap{gap:32px}
+  .overview-grid{grid-template-columns:1fr 1fr}
+  .chain-flow{gap:4px}
 }
 @media(max-width:900px){
-  .comp-grid{grid-template-columns:1fr}
-  .benefits-grid{grid-template-columns:repeat(2,1fr)}
-  .cc-grid{grid-template-columns:1fr}
-  .int-hub{width:100%;max-width:400px;height:320px}
-  .impl-tab-panel.active{grid-template-columns:1fr;gap:28px}
+  .oper-grid{grid-template-columns:1fr;gap:32px}
+  .overview-grid{grid-template-columns:1fr}
 }
 @media(max-width:768px){
+  /* nav */
   .nav-links,.nav-right{display:none}
   .hamburger{display:flex}
-  .hero{padding-top:80px;padding-bottom:40px}
-  .hero-grid{grid-template-columns:1fr;gap:32px;text-align:center}
-  .hero-heading{font-size:32px}
+  /* sections */
+  .hero{padding-top:80px;padding-bottom:48px}
+  .overview-section,.pos-section,.chain-section,.chat-demo-section,.offline-section,.oper-section,.cta-section,.faq-section{padding:64px 0}
+  /* hero */
+  .hero-grid{grid-template-columns:1fr;gap:36px;text-align:center}
+  .hero-heading{font-size:30px;letter-spacing:-.8px}
   .hero-sub{max-width:100%;margin-left:auto;margin-right:auto;font-size:15px}
-  .hero-buttons{justify-content:center}
-  .hero-buttons .btn{width:100%;text-align:center}
+  .hero-buttons{justify-content:center;flex-direction:column;gap:10px}
+  .hero-buttons .btn{width:100%;justify-content:center}
   .hero-pills{justify-content:center}
-  .feature-row{grid-template-columns:1fr;gap:24px;padding:48px 0}
-  .feature-row.reverse .feature-text{order:2}
-  .feature-row.reverse .feature-visual{order:1}
+  .hero-proof{text-align:center}
+  /* overview */
+  .overview-grid{grid-template-columns:1fr;gap:16px}
+  .overview-card{padding:24px 20px}
+  /* product */
   .feature-title{font-size:24px}
-  .stats-grid{grid-template-columns:repeat(2,1fr);gap:24px}
-  .stat-number{font-size:28px}
+  .feature-desc{font-size:15px}
+  .pos-grid-v3{grid-template-columns:1fr;gap:36px}
+  /* intelligence */
+  .chain-intro{margin-bottom:36px}
+  .chain-heading{font-size:24px}
   .chain-panel-inner{grid-template-columns:1fr}
-  .chain-flow{justify-content:flex-start}
-  .pos-grid-v3{grid-template-columns:1fr}
-  .offline-metrics{grid-template-columns:repeat(3,1fr)}
-  .benefits-grid{grid-template-columns:1fr!important}
+  .chain-flow{justify-content:flex-start;overflow-x:auto;padding-bottom:8px;flex-wrap:nowrap;-webkit-overflow-scrolling:touch}
+  .chain-node{font-size:10.5px;padding:7px 11px}
+  .chain-arrow{margin:0 3px}
   .chat-demo-grid{grid-template-columns:1fr!important;gap:32px!important}
-  .footer-inner{flex-direction:column;text-align:center}
-  .footer-links{justify-content:center}
+  /* offline */
+  .offline-section{padding:64px 0}
+  /* oper */
+  .oper-heading{font-size:24px}
+  /* cta */
+  .cta-heading{font-size:24px}
+  .cta-sub{font-size:15px}
+  .cta-buttons{flex-direction:column;align-items:center;gap:10px}
+  .cta-buttons .btn{width:100%;max-width:320px;justify-content:center}
+  /* faq */
+  .faq-heading{font-size:24px;margin-bottom:32px}
+  .faq-item summary{font-size:15px}
+  /* footer */
+  .footer-inner{flex-direction:column;text-align:center;gap:20px}
+  .footer-links{justify-content:center;gap:12px}
 }
 @media(max-width:480px){
-  .stats-grid{grid-template-columns:1fr 1fr}
   .hero-heading{font-size:26px;line-height:1.15}
   .container{padding:0 16px}
   .hero-pills{display:none}
-  .offline-metrics{grid-template-columns:1fr}
-  .int-hub{display:none}
+  .chain-section,.chat-demo-section{padding:48px 0}
+  .section-heading{font-size:22px}
+  .chain-heading{font-size:22px}
+  .btn-lg{padding:13px 22px;font-size:14px}
+  .pos-col-label{font-size:11px}
+  .pos-col-cap{font-size:12px}
 }
 </style>
 </head>
@@ -516,10 +345,10 @@ button{font-family:inherit;cursor:pointer}
   <div class="nav-inner">
     <a href="/" class="nav-logo"><img src="/logo-fullsite.png" alt="fullsite" style="height:72px;mix-blend-mode:multiply;"></a>
     <div class="nav-links">
-      <a href="#intelligence">Inteligencia</a>
       <a href="#pos">Producto</a>
+      <a href="#intelligence">Inteligencia</a>
       <a href="#offline">Offline</a>
-      <a href="#impl">Implementación</a>
+      <a href="/implementacion.html">Implementación</a>
       <a href="#faq">Preguntas frecuentes</a>
     </div>
     <div class="nav-right">
@@ -534,16 +363,16 @@ button{font-family:inherit;cursor:pointer}
   </div>
 </nav>
 <div class="mobile-menu" id="mobile-menu">
-  <a href="#intelligence">Inteligencia</a>
   <a href="#pos">Producto</a>
+  <a href="#intelligence">Inteligencia</a>
   <a href="#offline">Offline</a>
-  <a href="#impl">Implementación</a>
+  <a href="/implementacion.html">Implementación</a>
   <a href="#faq">Preguntas frecuentes</a>
   <a href="https://app.fullsite.mx/login">Iniciar sesión</a>
   <a href="/demo.html" class="btn btn-primary" style="text-align:center">Agenda una demo</a>
 </div>
 
-<!-- HERO -->
+<!-- 1. HERO -->
 <section class="hero">
   <div class="container">
     <div class="hero-grid">
@@ -572,7 +401,7 @@ button{font-family:inherit;cursor:pointer}
   </div>
 </section>
 
-<!-- OVERVIEW: Opera / Entiende / Actúa -->
+<!-- 2. OPERA · ENTIENDE · ACTÚA -->
 <section class="overview-section">
   <div class="container">
     <div class="reveal" style="text-align:center;max-width:640px;margin:0 auto">
@@ -605,84 +434,7 @@ button{font-family:inherit;cursor:pointer}
   </div>
 </section>
 
-<!-- STATS -->
-<section class="stats reveal">
-  <div class="container">
-    <div style="text-align:center;margin-bottom:48px">
-      <p style="font-size:13px;font-weight:700;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px">Probado en operación real</p>
-      <h2 style="font-size:clamp(20px,3vw,28px);font-weight:500;color:#fff;max-width:520px;margin:0 auto;line-height:1.5">Construido en el piso del restaurante, no en una presentación.</h2>
-    </div>
-    <div class="stats-grid">
-      <div><div class="stat-number">$72M+</div><div class="stat-label">en ventas históricas analizadas *</div></div>
-      <div><div class="stat-number">883</div><div class="stat-label">días de historial operacional integrado</div></div>
-      <div><div class="stat-number">500+</div><div class="stat-label">platillos con recetas activas</div></div>
-      <div><div class="stat-number">40</div><div class="stat-label">empleados en producción</div></div>
-    </div>
-    <p style="text-align:center;margin-top:28px;font-size:12px;color:rgba(255,255,255,.18)">* Dato acumulado de restaurante en producción. Las métricas varían por restaurante.</p>
-  </div>
-</section>
-
-<!-- INTELLIGENCE CHAIN — interactive -->
-<section class="chain-section" id="intelligence">
-  <div class="container">
-    <div class="chain-intro reveal">
-      <span class="chain-eyebrow">Inteligencia operativa</span>
-      <h2 class="chain-heading">Tu POS sabe cuánto vendiste.<br>Fullsite te ayuda a entender por qué.</h2>
-      <p class="chain-sub">Una venta no es solamente un ticket. Está conectada con un platillo, una receta, ingredientes, inventario, proveedor, costo, margen, empleado, turno, hora y contexto operativo.</p>
-    </div>
-    <div class="chain-flow reveal" role="group" aria-label="Cadena de inteligencia operativa">
-      <div class="chain-node active" tabindex="0" data-node="venta">VENTA</div><span class="chain-arrow" aria-hidden="true">→</span>
-      <div class="chain-node" tabindex="0" data-node="platillo">PLATILLO</div><span class="chain-arrow" aria-hidden="true">→</span>
-      <div class="chain-node" tabindex="0" data-node="receta">RECETA</div><span class="chain-arrow" aria-hidden="true">→</span>
-      <div class="chain-node" tabindex="0" data-node="inventario">INVENTARIO</div><span class="chain-arrow" aria-hidden="true">→</span>
-      <div class="chain-node" tabindex="0" data-node="costo">COSTO</div><span class="chain-arrow" aria-hidden="true">→</span>
-      <div class="chain-node" tabindex="0" data-node="margen">MARGEN</div><span class="chain-arrow" aria-hidden="true">→</span>
-      <div class="chain-node" tabindex="0" data-node="turno">TURNO</div><span class="chain-arrow" aria-hidden="true">→</span>
-      <div class="chain-node" tabindex="0" data-node="resultado">RESULTADO</div>
-    </div>
-    <!-- Data panel — updated by JS -->
-    <div class="chain-panel reveal" id="chain-panel">
-      <div class="chain-panel-inner" id="chain-panel-inner">
-        <!-- filled by JS -->
-      </div>
-    </div>
-    <p style="text-align:center;margin-top:20px;font-size:12px;color:rgba(255,255,255,.2);font-style:italic">Toca o haz clic en cada nodo para ver los datos conectados.</p>
-  </div>
-</section>
-
-<!-- CHAT DEMO -->
-<section class="chat-demo-section">
-  <div class="container">
-    <div class="chat-demo-grid">
-      <div style="background:#ece5dd;border-radius:20px;overflow:hidden;max-width:420px;box-shadow:0 8px 40px rgba(0,0,0,.08)">
-        <div style="background:#075e54;padding:14px 20px;display:flex;align-items:center;gap:12px">
-          <img src="/favicon-512.png" alt="Fullsite" style="width:36px;height:36px;border-radius:50%;background:#fff;object-fit:contain;padding:4px">
-          <div><div style="font-size:15px;font-weight:600;color:#fff">Fullsite</div><div style="font-size:11px;color:rgba(255,255,255,.7)">en línea</div></div>
-        </div>
-        <div style="display:flex;border-bottom:1px solid rgba(0,0,0,.08);background:#f0ebe3">
-          <button class="iq-tab active" data-tab="ventas">Ventas</button>
-          <button class="iq-tab" data-tab="inventario">Inventario</button>
-          <button class="iq-tab" data-tab="fraude">Excepciones</button>
-        </div>
-        <div style="padding:20px 16px;min-height:320px;display:flex;flex-direction:column;gap:10px;background:#ece5dd" id="iq-chat"></div>
-      </div>
-      <div>
-        <span class="hero-eyebrow">Ejemplo de inteligencia</span>
-        <h2 class="feature-title">Pregúntale a Fullsite cómo va tu restaurante.</h2>
-        <p class="feature-desc">Detección durante el turno, no después del cierre. Fullsite relaciona lo que está pasando con lo que debería pasar y te dice qué hacer.</p>
-        <ul class="feature-list">
-          <li>Predicción de cierre del día desde las 2pm</li>
-          <li>Alertas de inventario antes de que falte producto</li>
-          <li>Cancelaciones, descuentos y cortesías fuera del patrón</li>
-          <li>Recomendaciones con evidencia y contexto</li>
-        </ul>
-        <p style="font-size:12px;color:#bbb;margin-top:20px;font-style:italic">Ejemplo ilustrativo. Las recomendaciones dependen de la calidad, cobertura y contexto de los datos disponibles.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- POS — 3 CSS screen mockups -->
+<!-- 3. PRODUCTO REAL -->
 <section class="pos-section" id="pos">
   <div class="container">
     <div class="reveal">
@@ -717,16 +469,7 @@ button{font-family:inherit;cursor:pointer}
             </div>
           </div>
         </div>
-        <div>
-          <div class="pos-feat-title">Servicio en mesa y mostrador</div>
-          <div class="pos-feat-list">
-            <div class="pos-feat-item">Mesas y comensales</div>
-            <div class="pos-feat-item">Órdenes por persona</div>
-            <div class="pos-feat-item">Modificadores multinivel</div>
-            <div class="pos-feat-item">División de cuenta y pagos</div>
-            <div class="pos-feat-item">Transferencias entre mesas</div>
-          </div>
-        </div>
+        <p class="pos-col-cap">Mesas, comensales y comandas conectadas a cocina.</p>
       </div>
       <!-- Caja -->
       <div class="pos-col-v3">
@@ -749,16 +492,7 @@ button{font-family:inherit;cursor:pointer}
             </div>
           </div>
         </div>
-        <div>
-          <div class="pos-feat-title">Caja y control</div>
-          <div class="pos-feat-list">
-            <div class="pos-feat-item">Apertura y cierre de turno</div>
-            <div class="pos-feat-item">Pagos múltiples</div>
-            <div class="pos-feat-item">Cancelaciones con motivo</div>
-            <div class="pos-feat-item">Autorizaciones de gerente</div>
-            <div class="pos-feat-item">Auditoría por usuario</div>
-          </div>
-        </div>
+        <p class="pos-col-cap">Pagos, descuentos, auditoría y corte de turno.</p>
       </div>
       <!-- KDS Cocina -->
       <div class="pos-col-v3">
@@ -776,7 +510,7 @@ button{font-family:inherit;cursor:pointer}
               </div>
               <div class="kds-item">Chicken Bowl × 1</div>
               <div class="kds-item">Pizza Margherita × 2</div>
-              <button class="kds-action ready">✓ Listo para entregar</button>
+              <div class="kds-action ready">Listo para entregar</div>
             </div>
             <div class="kds-ticket">
               <div class="kds-ticket-header">
@@ -784,87 +518,74 @@ button{font-family:inherit;cursor:pointer}
                 <span class="kds-ticket-time">14:31 · 1 min</span>
               </div>
               <div class="kds-item">Guacamole × 1</div>
-              <button class="kds-action prep">⏳ En preparación</button>
+              <div class="kds-action prep">En preparación</div>
             </div>
           </div>
         </div>
-        <div>
-          <div class="pos-feat-title">Cocina conectada</div>
-          <div class="pos-feat-list">
-            <div class="pos-feat-item">KDS por estación</div>
-            <div class="pos-feat-item">Impresión en cocina y barra</div>
-            <div class="pos-feat-item">Enrutamiento por producto</div>
-            <div class="pos-feat-item">Estados de preparación</div>
-            <div class="pos-feat-item">Recuperación de comandas</div>
-          </div>
-        </div>
+        <p class="pos-col-cap">KDS por estación, impresión y estados en tiempo real.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- OFFLINE — 3-state demo -->
+<!-- 4. INTELIGENCIA OPERATIVA — chain -->
+<section class="chain-section" id="intelligence">
+  <div class="container">
+    <div class="chain-intro reveal">
+      <span class="chain-eyebrow">Inteligencia operativa</span>
+      <h2 class="chain-heading">Tu POS sabe cuánto vendiste.<br>Fullsite te ayuda a entender por qué.</h2>
+      <p class="chain-sub">Una venta no es solamente un ticket. Está conectada con un platillo, una receta, ingredientes, inventario, proveedor, costo, margen, empleado, turno, hora y contexto operativo.</p>
+    </div>
+    <div class="chain-flow reveal" role="group" aria-label="Cadena de inteligencia operativa">
+      <div class="chain-node active" tabindex="0" data-node="venta">VENTA</div><span class="chain-arrow" aria-hidden="true">→</span>
+      <div class="chain-node" tabindex="0" data-node="platillo">PLATILLO</div><span class="chain-arrow" aria-hidden="true">→</span>
+      <div class="chain-node" tabindex="0" data-node="receta">RECETA</div><span class="chain-arrow" aria-hidden="true">→</span>
+      <div class="chain-node" tabindex="0" data-node="inventario">INVENTARIO</div><span class="chain-arrow" aria-hidden="true">→</span>
+      <div class="chain-node" tabindex="0" data-node="costo">COSTO</div><span class="chain-arrow" aria-hidden="true">→</span>
+      <div class="chain-node" tabindex="0" data-node="margen">MARGEN</div><span class="chain-arrow" aria-hidden="true">→</span>
+      <div class="chain-node" tabindex="0" data-node="turno">TURNO</div><span class="chain-arrow" aria-hidden="true">→</span>
+      <div class="chain-node" tabindex="0" data-node="resultado">RESULTADO</div>
+    </div>
+    <div class="chain-panel reveal" id="chain-panel">
+      <div class="chain-panel-inner" id="chain-panel-inner"></div>
+    </div>
+    <p style="text-align:center;margin-top:20px;font-size:12px;color:rgba(255,255,255,.2);font-style:italic">Toca o haz clic en cada nodo para ver los datos conectados.</p>
+  </div>
+</section>
+
+<!-- 4b. CHAT DEMO (continúa Intelligence, fondo oscuro) -->
+<section class="chat-demo-section">
+  <div class="container">
+    <div class="chat-demo-grid">
+      <div style="background:#ece5dd;border-radius:20px;overflow:hidden;max-width:420px;box-shadow:0 8px 40px rgba(0,0,0,.2)">
+        <div style="background:#075e54;padding:14px 20px;display:flex;align-items:center;gap:12px">
+          <img src="/favicon-512.png" alt="Fullsite" style="width:36px;height:36px;border-radius:50%;background:#fff;object-fit:contain;padding:4px">
+          <div><div style="font-size:15px;font-weight:600;color:#fff">Fullsite</div><div style="font-size:11px;color:rgba(255,255,255,.7)">en línea</div></div>
+        </div>
+        <div style="display:flex;border-bottom:1px solid rgba(0,0,0,.08);background:#f0ebe3">
+          <button class="iq-tab active" data-tab="ventas">Ventas</button>
+          <button class="iq-tab" data-tab="inventario">Inventario</button>
+          <button class="iq-tab" data-tab="fraude">Excepciones</button>
+        </div>
+        <div style="padding:20px 16px;min-height:320px;display:flex;flex-direction:column;gap:10px;background:#ece5dd" id="iq-chat"></div>
+      </div>
+      <div>
+        <span class="chain-eyebrow">Ejemplo</span>
+        <h2 style="font-size:clamp(20px,3vw,26px);font-weight:700;color:#fff;letter-spacing:-.3px;line-height:1.25;margin-bottom:14px;text-wrap:balance">Detección durante el turno, no después del cierre.</h2>
+        <p style="font-size:15px;color:rgba(255,255,255,.45);line-height:1.7">Fullsite relaciona lo que está pasando con lo que debería pasar, explica por qué importa y recomienda qué hacer.</p>
+        <p style="font-size:11px;color:rgba(255,255,255,.18);margin-top:20px;font-style:italic">Ejemplo ilustrativo. Las recomendaciones dependen de los datos disponibles.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. OFFLINE-FIRST -->
 <section class="offline-section" id="offline">
   <div class="container">
     <div class="reveal" style="text-align:center;max-width:580px;margin:0 auto">
       <span class="feature-tag">Offline-first</span>
       <h2 class="feature-title">El internet se cae.<br>Tu restaurante no.</h2>
       <p class="feature-desc">Fullsite está construido con una arquitectura offline-first para que la operación crítica no dependa de una conexión constante. Cuando se pierde internet, las terminales continúan y sincronizan cuando la conexión regresa.</p>
-    </div>
-    <div class="offline-demo reveal">
-      <div class="offline-states" id="offline-states">
-        <!-- State 1: Online -->
-        <div class="offline-state active" id="os-0">
-          <div class="offline-card">
-            <div class="offline-card-header">
-              <div class="offline-indicator green"></div>
-              <div class="offline-label">EN LÍNEA <span>· Todo funcionando normalmente</span></div>
-            </div>
-            <div class="offline-metrics">
-              <div class="offline-metric"><div class="offline-metric-val green">18</div><div class="offline-metric-key">Órdenes activas</div></div>
-              <div class="offline-metric"><div class="offline-metric-val">0 ms</div><div class="offline-metric-key">Latencia</div></div>
-              <div class="offline-metric"><div class="offline-metric-val green">✓</div><div class="offline-metric-key">Cocina sincronizada</div></div>
-            </div>
-            <div class="offline-banner ok">✓ Sistema conectado — todas las terminales respondiendo</div>
-          </div>
-        </div>
-        <!-- State 2: Offline -->
-        <div class="offline-state" id="os-1">
-          <div class="offline-card">
-            <div class="offline-card-header">
-              <div class="offline-indicator red pulse"></div>
-              <div class="offline-label">SIN CONEXIÓN <span>· Operación local activa</span></div>
-            </div>
-            <div class="offline-metrics">
-              <div class="offline-metric"><div class="offline-metric-val">18</div><div class="offline-metric-key">Órdenes en cola local</div></div>
-              <div class="offline-metric"><div class="offline-metric-val red">Sin red</div><div class="offline-metric-key">Conectividad</div></div>
-              <div class="offline-metric"><div class="offline-metric-val green">✓</div><div class="offline-metric-key">KDS e impresión OK</div></div>
-            </div>
-            <div class="offline-banner warn">⚠ Sin conexión — tomando órdenes y enviando a cocina en modo local</div>
-          </div>
-        </div>
-        <!-- State 3: Restored -->
-        <div class="offline-state" id="os-2">
-          <div class="offline-card">
-            <div class="offline-card-header">
-              <div class="offline-indicator green"></div>
-              <div class="offline-label">RESTAURADO <span>· Sincronización completada</span></div>
-            </div>
-            <div class="offline-metrics">
-              <div class="offline-metric"><div class="offline-metric-val green">18/18</div><div class="offline-metric-key">Órdenes sincronizadas</div></div>
-              <div class="offline-metric"><div class="offline-metric-val green">0</div><div class="offline-metric-key">Pérdidas de datos</div></div>
-              <div class="offline-metric"><div class="offline-metric-val">4m 32s</div><div class="offline-metric-key">Tiempo offline</div></div>
-            </div>
-            <div class="offline-banner info">✓ 18 órdenes sincronizadas sin pérdidas — operación continúa con normalidad</div>
-          </div>
-        </div>
-      </div>
-      <div class="offline-nav">
-        <div class="offline-dot active" data-state="0"></div>
-        <div class="offline-dot" data-state="1"></div>
-        <div class="offline-dot" data-state="2"></div>
-        <button class="offline-btn" id="offline-next">Simular pérdida de conexión →</button>
-      </div>
     </div>
     <p style="text-align:center;margin-top:28px;font-size:13px;color:#9ca3af;font-style:italic">Algunos servicios externos — autorizaciones bancarias, facturación, marketplaces — requieren conexión.</p>
     <div class="reveal" style="margin-top:40px">
@@ -873,279 +594,37 @@ button{font-family:inherit;cursor:pointer}
   </div>
 </section>
 
-<!-- ACTION LOOP -->
-<section class="action-section">
-  <div class="container" style="max-width:860px">
-    <div class="reveal">
-      <span class="feature-tag">Acción, no solamente alertas</span>
-      <h2 class="feature-title">Fullsite no reemplaza tu criterio. Lo amplifica.</h2>
-      <p class="feature-desc">Cada recomendación responde a seis preguntas antes de llegar a ti.</p>
-    </div>
-    <div class="action-flow-v3 reveal" id="action-flow">
-      <div class="action-node active" data-stage="detectar">DETECTAR</div><span class="action-arrow-v3">→</span>
-      <div class="action-node" data-stage="explicar">EXPLICAR</div><span class="action-arrow-v3">→</span>
-      <div class="action-node" data-stage="recomendar">RECOMENDAR</div><span class="action-arrow-v3">→</span>
-      <div class="action-node" data-stage="aprobar">APROBAR</div><span class="action-arrow-v3">→</span>
-      <div class="action-node" data-stage="ejecutar">EJECUTAR</div><span class="action-arrow-v3">→</span>
-      <div class="action-node" data-stage="medir">MEDIR</div><span class="action-arrow-v3">→</span>
-      <div class="action-node" data-stage="aprender">APRENDER</div>
-    </div>
-    <div class="action-example reveal">
-      <div class="action-example-label">Ejemplo en tiempo real</div>
-      <div class="action-example-scenario">Costo del pollo subió 18% esta semana — impacto en margen</div>
-      <div class="action-stage active" id="stage-detectar">
-        <div class="action-stage-row"><span class="action-stage-key">Qué ocurrió</span><span class="action-stage-val">El proveedor actualizó el precio de pechuga de pollo de <strong>$157/kg</strong> a <strong>$185/kg</strong>. Detectado al registrar la compra del lunes.</span></div>
-        <div class="action-stage-row"><span class="action-stage-key">Fuente</span><span class="action-stage-val">Módulo de compras — registro de entrada de inventario</span></div>
-      </div>
-      <div class="action-stage" id="stage-explicar">
-        <div class="action-stage-row"><span class="action-stage-key">Por qué importa</span><span class="action-stage-val">El pollo es el ingrediente principal en <strong>3 platillos top</strong>. El food cost del Chicken Bowl pasa de 25.3% a <strong>29.8%</strong>.</span></div>
-        <div class="action-stage-row"><span class="action-stage-key">Impacto</span><span class="action-stage-val">Pérdida de margen estimada: <strong>~$4,200 MXN/semana</strong> si no se ajusta el precio.</span></div>
-      </div>
-      <div class="action-stage" id="stage-recomendar">
-        <div class="action-stage-row"><span class="action-stage-key">Acción</span><span class="action-stage-val">Ajustar el precio del Chicken Bowl de <strong>$185</strong> a <strong>$215 MXN</strong> para mantener el margen objetivo de 72%.</span></div>
-        <div class="action-stage-row"><span class="action-stage-key">Alternativa</span><span class="action-stage-val">Renegociar con el proveedor o sustituir proveedor temporal.</span></div>
-        <button class="action-approve-btn" id="action-approve-btn">✓ Aprobar ajuste de precio</button>
-      </div>
-      <div class="action-stage" id="stage-aprobar">
-        <div class="action-stage-row"><span class="action-stage-key">Autorizado por</span><span class="action-stage-val"><strong>Gerente de turno</strong> — 14:47 — desde panel de gerente</span></div>
-        <div class="action-stage-row"><span class="action-stage-key">Estado</span><span class="action-stage-val" style="color:#10b981;font-weight:600">✓ Aprobado — ejecutando cambio en menú</span></div>
-      </div>
-      <div class="action-stage" id="stage-ejecutar">
-        <div class="action-stage-row"><span class="action-stage-key">Acción tomada</span><span class="action-stage-val">Precio del Chicken Bowl actualizado a <strong>$215 MXN</strong> en todas las terminales y menús digitales.</span></div>
-        <div class="action-stage-row"><span class="action-stage-key">Registro</span><span class="action-stage-val">Cambio documentado con hora, usuario y razón en el historial de precios.</span></div>
-      </div>
-      <div class="action-stage" id="stage-medir">
-        <div class="action-stage-row"><span class="action-stage-key">Resultado</span><span class="action-stage-val">3 días después: food cost del Chicken Bowl en <strong>25.1%</strong>. Margen recuperado.</span></div>
-        <div class="action-stage-row"><span class="action-stage-key">Impacto</span><span class="action-stage-val">Ventas del platillo bajaron 8% pero el margen total de la semana subió <strong>+2.1 puntos</strong>.</span></div>
-      </div>
-      <div class="action-stage" id="stage-aprender">
-        <div class="action-stage-row"><span class="action-stage-key">Patrón detectado</span><span class="action-stage-val">Este proveedor ajustó precios en <strong>3 ocasiones</strong> en los últimos 6 meses. Fullsite lo registra para alertas futuras más tempranas.</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- OWNER COMMAND CENTER -->
-<section class="cc-section" id="control">
+<!-- 6. OPERACIÓN REAL -->
+<section class="oper-section">
   <div class="container">
-    <div class="reveal">
-      <span class="cc-eyebrow">Control desde cualquier lugar</span>
-      <h2 class="cc-heading">No tienes que estar físicamente en el restaurante para saber qué está pasando.</h2>
-      <p class="cc-sub">Fullsite concentra el estado de la operación y te ayuda a identificar qué requiere atención. Sin reportes complicados. Sin esperar al cierre del mes.</p>
-    </div>
-    <div class="cc-grid reveal">
-      <div class="cc-chips" role="list">
-        <button class="cc-chip active" data-answer="hoy" role="listitem">
-          <span class="cc-chip-icon">?</span>
-          <span class="cc-chip-q">¿Cómo vamos hoy?</span>
-        </button>
-        <button class="cc-chip" data-answer="cambio" role="listitem">
-          <span class="cc-chip-icon">?</span>
-          <span class="cc-chip-q">¿Qué cambió?</span>
-        </button>
-        <button class="cc-chip" data-answer="perdida" role="listitem">
-          <span class="cc-chip-icon">?</span>
-          <span class="cc-chip-q">¿Dónde existe riesgo de pérdida?</span>
-        </button>
-        <button class="cc-chip" data-answer="atencion" role="listitem">
-          <span class="cc-chip-icon">?</span>
-          <span class="cc-chip-q">¿Qué necesita atención inmediata?</span>
-        </button>
-        <button class="cc-chip" data-answer="accion" role="listitem">
-          <span class="cc-chip-icon">?</span>
-          <span class="cc-chip-q">¿Qué acción recomienda Fullsite?</span>
-        </button>
+    <div class="oper-grid reveal">
+      <div>
+        <span class="chain-eyebrow">Operación real</span>
+        <h2 class="oper-heading">Construido en el piso del restaurante.<br>No en una presentación.</h2>
+        <p class="oper-sub">Fullsite nació de la operación diaria de un restaurante en producción. Cada funcionalidad que existe fue detectada como un problema real durante el turno — no en una junta ni en un análisis de mercado.</p>
+        <p class="oper-sub" style="margin-top:16px">El sistema que tu restaurante necesita no se diseña desde afuera. Se descubre adentro.</p>
       </div>
-      <div class="cc-panel">
-        <div class="cc-panel-bar">
-          <div class="cc-panel-dot"></div>
-          <span class="cc-panel-label">Fullsite · Respuesta</span>
-        </div>
-        <div class="cc-panel-output active" id="cc-hoy">Ventas 14:30: <span class="cc-highlight">$38,400</span> — <span class="cc-highlight">+12%</span> vs. martes anterior. Proyección al cierre: <strong>$71,200 – $76,800 MXN</strong>.<br><br>Turno vespertino con <strong>5 mesas activas</strong>. Omar Aguilera lleva el mayor ticket del turno.</div>
-        <div class="cc-panel-output" id="cc-cambio">Costo de aguacate subió <span class="cc-warn">+22%</span> en los últimos 7 días ($48 → $59/kg).<br><br>Food cost del guacamole pasó de <strong>31% → 38%</strong>. Afecta 3 platillos del menú.</div>
-        <div class="cc-panel-output" id="cc-perdida">Mesa 12 rotó solo <span class="cc-warn">1 vez</span> en 4 horas. Capacidad sin aprovechar.<br><br>Terraza no operando = <strong>8 mesas sin activar</strong>. Ingresos potenciales no capturados.</div>
-        <div class="cc-panel-output" id="cc-atencion"><span class="cc-warn">3 cancelaciones</span> del mesero Brayan Berlanga en la última hora. Monto acumulado: <strong>$1,240 MXN</strong>.<br><br>Patrón inusual vs. su promedio histórico. Requiere revisión del supervisor.</div>
-        <div class="cc-panel-output" id="cc-accion">Ajustar precio del Chicken Bowl a <span class="cc-highlight">$215 MXN</span> para compensar el alza del costo de pollo.<br><br>Impacto estimado si no se actúa: <span class="cc-warn">-$4,200/semana</span> en margen. Acción requiere autorización de gerente.</div>
+      <div class="reveal" style="transition-delay:.15s">
+        <img src="/img-dashboard.png" alt="Dashboard operativo Fullsite" style="border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.25),0 4px 16px rgba(0,0,0,.12);width:100%">
       </div>
     </div>
   </div>
 </section>
 
-<!-- INVENTORY + BENEFITS -->
-<section class="section" style="border-top:1px solid #eee">
-  <div class="container">
-    <div class="feature-row reverse">
-      <div class="feature-text reveal">
-        <span class="feature-tag">Inventario y recetas</span>
-        <h2 class="feature-title">El inventario no falla solamente porque falte un conteo.</h2>
-        <p class="feature-desc">También falla cuando una unidad está mal configurada, una receta está duplicada o alguien cambia un ingrediente sin entender el impacto. Fullsite conecta ventas, recetas, ingredientes, compras y proveedores.</p>
-        <ul class="feature-list">
-          <li>Recetas conectadas con ingredientes, cantidades y rendimientos</li>
-          <li>Historial de cambios — quién modificó, qué cambió, quién autorizó</li>
-          <li>Comparación físico contra teórico</li>
-          <li>Impacto en costos al cambiar receta, rendimiento o proveedor</li>
-          <li>Detección de duplicados, unidades incompatibles y costos fuera de rango</li>
-        </ul>
-        <p style="font-size:13px;color:#9ca3af;margin-top:18px">Los cambios críticos deben ser aprobados por una persona autorizada.</p>
-      </div>
-      <div class="feature-visual reveal" style="transition-delay:.15s">
-        <img src="/img-dashboard.png" alt="Inventario y recetas Fullsite" style="border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,.06);width:100%">
-      </div>
+<!-- 6b. PREGÚNTALE A LA IA -->
+<section class="ask-ai-section">
+  <div style="max-width:640px;margin:0 auto">
+    <h2 class="ask-ai-heading">Pregúntale a la IA.</h2>
+    <p class="ask-ai-sub">Pídele a cualquier IA que compare Fullsite contra tu sistema actual.</p>
+    <div class="ask-ai-links">
+      <a href="https://chatgpt.com/?prompt=Tengo%20un%20restaurante%20en%20M%C3%A9xico%20y%20estoy%20buscando%20el%20mejor%20software.%20Compara%20las%20opciones%20que%20hay%20incluyendo%20Fullsite%20(fullsite.mx).%20Me%20importa%20POS%2C%20inventario%2C%20que%20funcione%20sin%20internet%20y%20que%20me%20ayude%20a%20detectar%20problemas%20en%20la%20operaci%C3%B3n.%20%C2%BFCu%C3%A1l%20me%20recomiendas%3F" target="_blank" style="display:inline-flex;align-items:center;gap:10px;padding:14px 28px;background:#0a0a0a;color:#fff;font-weight:700;font-size:15px;border-radius:99px"><img src="/logo-chatgpt.webp" alt="ChatGPT" style="height:20px;width:20px;object-fit:contain;filter:invert(1)">ChatGPT</a>
+      <a href="https://www.perplexity.ai/search?q=Tengo+un+restaurante+en+Mexico+y+busco+el+mejor+software+POS.+Compara+incluyendo+Fullsite+(fullsite.mx)" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:#f3f4f6;color:#0a0a0a;font-weight:600;font-size:15px;border-radius:99px"><img src="/logo-perplexity.png" alt="Perplexity" style="height:20px;width:20px;object-fit:contain">Perplexity</a>
+      <a href="https://gemini.google.com/app?q=Tengo%20un%20restaurante%20en%20M%C3%A9xico%20y%20busco%20software%20POS.%20Compara%20opciones%20incluyendo%20Fullsite%20(fullsite.mx)" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:#f3f4f6;color:#0a0a0a;font-weight:600;font-size:15px;border-radius:99px"><img src="/logo-gemini.png" alt="Gemini" style="height:20px;width:20px;object-fit:contain">Gemini</a>
     </div>
   </div>
 </section>
 
-<!-- BENEFIT CARDS -->
-<section class="benefits-section">
-  <div class="container">
-    <div style="text-align:center;max-width:560px;margin:0 auto 48px" class="reveal">
-      <h2 style="font-size:clamp(24px,3.5vw,32px);font-weight:700;letter-spacing:-.03em;line-height:1.1;margin-bottom:14px;color:#111">No necesitas más gráficas. Necesitas saber qué requiere atención.</h2>
-    </div>
-    <div class="reveal benefits-grid">
-      <div class="benefit-card">
-        <div class="benefit-icon" style="background:linear-gradient(135deg,#10b981,#059669)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 16l4-8 4 4 6-6"/></svg></div>
-        <div class="benefit-title">Predicción de cierre</div>
-        <div class="benefit-body">Estima cómo podría terminar el día antes del cierre para que puedas reaccionar a tiempo.</div>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon" style="background:linear-gradient(135deg,#f59e0b,#d97706)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4M12 16h.01"/></svg></div>
-        <div class="benefit-title">Cancelaciones y excepciones</div>
-        <div class="benefit-body">Señala cancelaciones, descuentos, cortesías y movimientos fuera del comportamiento normal del restaurante.</div>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon" style="background:linear-gradient(135deg,#8b5cf6,#7c3aed)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
-        <div class="benefit-title">Inventario teórico</div>
-        <div class="benefit-body">Cada venta descuenta según la receta. Identifica diferencias entre lo que debería existir y lo que realmente existe.</div>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon" style="background:linear-gradient(135deg,#3b82f6,#2563eb)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <div class="benefit-title">Rendimiento del equipo</div>
-        <div class="benefit-body">Ventas, ticket promedio, actividad y resultados por usuario, turno y sucursal — en tiempo real.</div>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon" style="background:linear-gradient(135deg,#ef4444,#dc2626)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8M16 17H8M10 9H8"/></svg></div>
-        <div class="benefit-title">Rentabilidad por producto</div>
-        <div class="benefit-body">Cruza popularidad, precio y costo para identificar productos que conviene revisar, promover o ajustar.</div>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon" style="background:linear-gradient(135deg,#06b6d4,#0891b2)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M2 20h.01M7 20v-4M12 20v-8M17 20V8M22 4v16"/></svg></div>
-        <div class="benefit-title">Variaciones de costos</div>
-        <div class="benefit-body">Detecta cambios en ingredientes, proveedores y recetas que podrían estar afectando el margen.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- IMPLEMENTATION — horizontal tabs -->
-<section class="impl-section" id="impl">
-  <div class="container">
-    <div class="reveal" style="text-align:center;max-width:560px;margin:0 auto">
-      <span class="feature-tag">Implementación</span>
-      <h2 style="font-size:clamp(24px,3.5vw,32px);font-weight:700;color:#0a0a0a;letter-spacing:-.5px;line-height:1.2;margin-bottom:12px;text-wrap:balance">Una implementación controlada. No una instalación improvisada.</h2>
-    </div>
-    <div class="impl-tabs-nav reveal" role="tablist">
-      <button class="impl-tab-btn active" data-tab="diag" role="tab">1 · Diagnóstico</button>
-      <button class="impl-tab-btn" data-tab="conf" role="tab">2 · Configuración</button>
-      <button class="impl-tab-btn" data-tab="migr" role="tab">3 · Migración</button>
-      <button class="impl-tab-btn" data-tab="sim" role="tab">4 · Simulación</button>
-      <button class="impl-tab-btn" data-tab="turno" role="tab">5 · Turno controlado</button>
-      <button class="impl-tab-btn" data-tab="estab" role="tab">6 · Estabilización</button>
-    </div>
-    <div class="impl-tab-panels reveal">
-      <div class="impl-tab-panel active" id="impl-diag" role="tabpanel">
-        <div><div class="impl-tab-num">01</div><div class="impl-tab-title">Diagnóstico</div><p class="impl-tab-desc">Revisamos la operación, red, terminales, impresoras, sistema actual, menú, usuarios y necesidades del restaurante. Resultado: una ruta de implementación con cronograma definido.</p></div>
-        <div class="impl-tab-visual">
-          <div class="impl-visual-row"><span class="impl-visual-icon">📋</span>Revisión de equipo existente (POS, tablets, impresoras)</div>
-          <div class="impl-visual-row"><span class="impl-visual-icon">🌐</span>Análisis de red y conectividad</div>
-          <div class="impl-visual-row"><span class="impl-visual-icon">📊</span>Revisión de menú, usuarios y flujos actuales</div>
-          <div class="impl-visual-row"><span class="impl-visual-icon">📅</span>Cronograma de implementación</div>
-        </div>
-      </div>
-      <div class="impl-tab-panel" id="impl-conf" role="tabpanel">
-        <div><div class="impl-tab-num">02</div><div class="impl-tab-title">Configuración</div><p class="impl-tab-desc">Creamos sucursales, terminales, estaciones, usuarios, permisos y flujos operativos ajustados a la operación específica del restaurante.</p></div>
-        <div class="impl-tab-visual">
-          <div class="impl-visual-row"><span class="impl-visual-icon">🏪</span>Sucursales y terminales configuradas</div>
-          <div class="impl-visual-row"><span class="impl-visual-icon">👤</span>Usuarios, roles y permisos</div>
-          <div class="impl-visual-row"><span class="impl-visual-icon">🖨</span>Impresoras y enrutamiento de cocina</div>
-          <div class="impl-visual-row"><span class="impl-visual-icon">⚙️</span>Flujos de servicio y caja</div>
-        </div>
-      </div>
-      <div class="impl-tab-panel" id="impl-migr" role="tabpanel">
-        <div><div class="impl-tab-num">03</div><div class="impl-tab-title">Migración</div><p class="impl-tab-desc">Importamos y revisamos menú, productos, recetas, inventario y datos disponibles del sistema anterior. Se valida la calidad y cobertura antes de migrar.</p></div>
-        <div class="impl-tab-visual">
-          <div class="impl-visual-row"><span class="impl-visual-icon">🍽</span>Menú, productos y modificadores</div>
-          <div class="impl-visual-row"><span class="impl-visual-icon">📦</span>Inventario inicial y almacenes</div>
-          <div class="impl-visual-row"><span class="impl-visual-icon">🔬</span>Recetas e ingredientes con cantidades</div>
-          <div class="impl-visual-row"><span class="impl-visual-icon">✅</span>Validación de calidad de datos</div>
-        </div>
-      </div>
-      <div class="impl-tab-panel" id="impl-sim" role="tabpanel">
-        <div><div class="impl-tab-num">04</div><div class="impl-tab-title">Simulación</div><p class="impl-tab-desc">Probamos órdenes, cocina, impresión, caja, cortes, offline, recuperación y sincronización antes del cambio de sistema. El equipo practica en un ambiente real.</p></div>
-        <div class="impl-tab-visual">
-          <div class="impl-visual-row"><span class="impl-visual-icon">🧪</span>Flujo completo de orden a cierre</div>
-          <div class="impl-visual-row"><span class="impl-visual-icon">📴</span>Prueba de operación offline</div>
-          <div class="impl-visual-row"><span class="impl-visual-icon">🔄</span>Sincronización y recuperación</div>
-          <div class="impl-visual-row"><span class="impl-visual-icon">👥</span>Capacitación del equipo completo</div>
-        </div>
-      </div>
-      <div class="impl-tab-panel" id="impl-turno" role="tabpanel">
-        <div><div class="impl-tab-num">05</div><div class="impl-tab-title">Turno controlado</div><p class="impl-tab-desc">Fullsite entra en operación durante una ventana supervisada, con respaldo y procedimiento de recuperación documentado. Soporte en tiempo real.</p></div>
-        <div class="impl-tab-visual">
-          <div class="impl-visual-row"><span class="impl-visual-icon">🟢</span>Go-live con equipo de soporte presente</div>
-          <div class="impl-visual-row"><span class="impl-visual-icon">🛡</span>Respaldo del sistema anterior disponible</div>
-          <div class="impl-visual-row"><span class="impl-visual-icon">📡</span>Monitoreo en tiempo real</div>
-          <div class="impl-visual-row"><span class="impl-visual-icon">📞</span>Canal directo con el equipo de Fullsite</div>
-        </div>
-      </div>
-      <div class="impl-tab-panel" id="impl-estab" role="tabpanel">
-        <div><div class="impl-tab-num">06</div><div class="impl-tab-title">Estabilización</div><p class="impl-tab-desc">Monitoreamos la operación, resolvemos incidencias y capacitamos a cada usuario según su función. El sistema queda certificado para operación autónoma.</p></div>
-        <div class="impl-tab-visual">
-          <div class="impl-visual-row"><span class="impl-visual-icon">📈</span>Monitoreo de los primeros turnos</div>
-          <div class="impl-visual-row"><span class="impl-visual-icon">🔧</span>Ajustes finos de configuración</div>
-          <div class="impl-visual-row"><span class="impl-visual-icon">🎓</span>Capacitación por rol y función</div>
-          <div class="impl-visual-row"><span class="impl-visual-icon">✅</span>Certificación de operación autónoma</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- COMPARISON — same scenario, two systems -->
-<section class="comp-section">
-  <div class="container">
-    <div class="reveal" style="text-align:center;max-width:520px;margin:0 auto 0">
-      <h2 style="font-size:clamp(24px,3.5vw,32px);font-weight:700;color:#0a0a0a;letter-spacing:-.5px;line-height:1.2;margin-bottom:12px;text-wrap:balance">Un POS registra la operación. Fullsite busca ayudarte a mejorarla.</h2>
-    </div>
-    <div class="comp-scenario reveal">
-      <span class="comp-scenario-label">Escenario</span>
-      <span class="comp-scenario-text">Son las 2:00 p.m. del martes. Ventas acumuladas: $38,400 MXN. El día pasado cerró en $68,200.</span>
-    </div>
-    <div class="comp-grid reveal">
-      <div class="comp-col old">
-        <h3>POS tradicional</h3>
-        <div class="comp-item">Muestra: ventas $38,400</div>
-        <div class="comp-item">Sin comparativo automático contra días anteriores</div>
-        <div class="comp-item">No proyecta cómo podría terminar el día</div>
-        <div class="comp-item">No identifica qué categorías están bajas</div>
-        <div class="comp-item">No recomienda ninguna acción</div>
-        <div class="comp-item">Requiere análisis manual en otra herramienta</div>
-      </div>
-      <div class="comp-col new">
-        <h3>Fullsite</h3>
-        <div class="comp-item">Ventas $38,400 — 12% arriba del promedio de martes</div>
-        <div class="comp-item">Proyección al cierre: $71,200 – $76,800 MXN</div>
-        <div class="comp-item">Categoría bebidas 18% abajo vs. semana pasada</div>
-        <div class="comp-item">Aguacate: stock crítico, se agota en ~2 horas</div>
-        <div class="comp-item">Recomendación de acción disponible ahora</div>
-        <div class="comp-item">Funciona sin internet si cae la conexión</div>
-      </div>
-    </div>
-    <p style="text-align:center;font-size:12px;color:#bbb;margin-top:16px;font-style:italic">Las capacidades pueden variar según configuración y datos disponibles.</p>
-  </div>
-</section>
-
-<!-- CTA — dark -->
+<!-- 7. CTA FINAL -->
 <section class="cta-section">
   <div class="container reveal">
     <h2 class="cta-heading">Deja de descubrir los problemas cuando ya te costaron dinero.</h2>
@@ -1158,32 +637,15 @@ button{font-family:inherit;cursor:pointer}
   </div>
 </section>
 
-<!-- FAQ -->
+<!-- 7b. FAQ — 4 preguntas -->
 <section class="faq-section" id="faq">
   <div class="container">
     <h2 class="faq-heading reveal">Preguntas frecuentes</h2>
     <div class="faq-list reveal">
-      <details class="faq-item"><summary>¿Cuánto tiempo toma la implementación?</summary><div class="faq-answer">Depende del número de sucursales, terminales, impresoras, integraciones y calidad de los datos que se migrarán. Después del diagnóstico inicial se define una ruta de implementación.</div></details>
-      <details class="faq-item"><summary>¿Necesito comprar equipo especial?</summary><div class="faq-answer">Fullsite busca aprovechar el equipo existente siempre que sea compatible. Durante el diagnóstico se revisan computadoras, tablets, impresoras, lectores y red.</div></details>
       <details class="faq-item"><summary>¿Funciona sin internet?</summary><div class="faq-answer">Fullsite está diseñado para mantener los flujos críticos de operación durante una caída de conexión. Algunas funciones externas — como pagos bancarios, facturación y marketplaces — sí requieren internet.</div></details>
       <details class="faq-item"><summary>¿Pueden migrar información desde otro sistema?</summary><div class="faq-answer">Sí, siempre que exista una forma segura de exportar o acceder a la información. Antes de migrarla se revisa su calidad, estructura y cobertura.</div></details>
-      <details class="faq-item"><summary>¿Necesito saber de tecnología?</summary><div class="faq-answer">No. Cada usuario recibe acceso, permisos y capacitación de acuerdo con su función dentro del restaurante.</div></details>
-      <details class="faq-item"><summary>¿La inteligencia artificial toma decisiones automáticamente?</summary><div class="faq-answer">Fullsite detecta, explica y recomienda. Las acciones importantes deben ser aprobadas por una persona autorizada. La automatización se habilita únicamente cuando el flujo ha sido validado.</div></details>
+      <details class="faq-item"><summary>¿Necesito comprar equipo especial?</summary><div class="faq-answer">Fullsite busca aprovechar el equipo existente siempre que sea compatible. Durante el diagnóstico se revisan computadoras, tablets, impresoras, lectores y red.</div></details>
       <details class="faq-item"><summary>¿Puedo utilizar Fullsite en varias sucursales?</summary><div class="faq-answer">Fullsite está diseñado para operar grupos y múltiples sucursales con configuraciones, permisos y datos separados.</div></details>
-      <details class="faq-item"><summary>¿Tiene contrato de permanencia?</summary><div class="faq-answer">Las condiciones, implementación, soporte y alcance se definen claramente dentro de cada propuesta comercial.</div></details>
-    </div>
-  </div>
-</section>
-
-<!-- ASK AI -->
-<section class="ask-ai-section">
-  <div style="max-width:640px;margin:0 auto">
-    <h2 class="ask-ai-heading">Pregúntale a la IA.</h2>
-    <p class="ask-ai-sub">Pídele a cualquier IA que compare Fullsite contra tu sistema actual.</p>
-    <div class="ask-ai-links">
-      <a href="https://chatgpt.com/?prompt=Tengo%20un%20restaurante%20en%20M%C3%A9xico%20y%20estoy%20buscando%20el%20mejor%20software.%20Compara%20las%20opciones%20que%20hay%20incluyendo%20Fullsite%20(fullsite.mx).%20Me%20importa%20POS%2C%20inventario%2C%20que%20funcione%20sin%20internet%20y%20que%20me%20ayude%20a%20detectar%20problemas%20en%20la%20operaci%C3%B3n.%20%C2%BFCu%C3%A1l%20me%20recomiendas%3F" target="_blank" style="display:inline-flex;align-items:center;gap:10px;padding:14px 28px;background:#0a0a0a;color:#fff;font-weight:700;font-size:15px;border-radius:99px"><img src="/logo-chatgpt.webp" alt="ChatGPT" style="height:20px;width:20px;object-fit:contain;filter:invert(1)">ChatGPT</a>
-      <a href="https://www.perplexity.ai/search?q=Tengo+un+restaurante+en+Mexico+y+busco+el+mejor+software+POS.+Compara+incluyendo+Fullsite+(fullsite.mx)" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:#f3f4f6;color:#0a0a0a;font-weight:600;font-size:15px;border-radius:99px"><img src="/logo-perplexity.png" alt="Perplexity" style="height:20px;width:20px;object-fit:contain">Perplexity</a>
-      <a href="https://gemini.google.com/app?q=Tengo%20un%20restaurante%20en%20M%C3%A9xico%20y%20busco%20software%20POS.%20Compara%20opciones%20incluyendo%20Fullsite%20(fullsite.mx)" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:#f3f4f6;color:#0a0a0a;font-weight:600;font-size:15px;border-radius:99px"><img src="/logo-gemini.png" alt="Gemini" style="height:20px;width:20px;object-fit:contain">Gemini</a>
     </div>
   </div>
 </section>
@@ -1197,7 +659,7 @@ button{font-family:inherit;cursor:pointer}
         <a href="#pos">Producto</a>
         <a href="#intelligence">Inteligencia</a>
         <a href="#offline">Offline</a>
-        <a href="#impl">Implementación</a>
+        <a href="/implementacion.html">Implementación</a>
         <a href="/privacidad.html">Privacidad</a>
         <a href="/terminos.html">Términos</a>
         <a href="https://wa.me/528115324371">WhatsApp</a>
@@ -1331,85 +793,9 @@ if(chatSec){
   cio.observe(chatSec);
 }
 
-// ---- OFFLINE 3-STATE ----
-var offlineStates=document.querySelectorAll('.offline-state');
-var offlineDots=document.querySelectorAll('.offline-dot');
-var offlineBtn=document.getElementById('offline-next');
-var offlineLabels=['Simular pérdida de conexión →','Restaurar conexión →','Reiniciar demo →'];
-var currentState=0;
-function goToState(i){
-  offlineStates.forEach(function(s){s.classList.remove('active')});
-  offlineDots.forEach(function(d){d.classList.remove('active')});
-  offlineStates[i].classList.add('active');
-  offlineDots[i].classList.add('active');
-  offlineBtn.textContent=offlineLabels[i];
-  currentState=i;
-}
-offlineBtn&&offlineBtn.addEventListener('click',function(){goToState((currentState+1)%3)});
-offlineDots.forEach(function(dot){dot.addEventListener('click',function(){goToState(parseInt(this.dataset.state))})});
 
-// ---- ACTION LOOP ----
-var actionNodes=document.querySelectorAll('.action-node');
-var stages=['detectar','explicar','recomendar','aprobar','ejecutar','medir','aprender'];
-var currentStage=0;
-function goToStage(idx){
-  actionNodes.forEach(function(n){n.classList.remove('active')});
-  stages.forEach(function(s){
-    var el=document.getElementById('stage-'+s);
-    if(el)el.classList.remove('active');
-  });
-  actionNodes[idx].classList.add('active');
-  var st=document.getElementById('stage-'+stages[idx]);
-  if(st)st.classList.add('active');
-  currentStage=idx;
-}
-actionNodes.forEach(function(node,i){
-  node.addEventListener('click',function(){goToStage(i)});
-  node.setAttribute('tabindex','0');
-  node.addEventListener('keydown',function(e){if(e.key==='Enter'){goToStage(i)}});
-});
-var approveBtn=document.getElementById('action-approve-btn');
-if(approveBtn){
-  approveBtn.addEventListener('click',function(){
-    if(this.classList.contains('done'))return;
-    this.textContent='✓ Aprobado';
-    this.classList.add('done');
-    setTimeout(function(){goToStage(3)},400);
-  });
-}
-
-// ---- OWNER COMMAND CENTER ----
-var ccChips=document.querySelectorAll('.cc-chip');
-var ccOutputs=document.querySelectorAll('.cc-panel-output');
-ccChips.forEach(function(chip){
-  chip.addEventListener('click',function(){
-    ccChips.forEach(function(c){c.classList.remove('active')});
-    ccOutputs.forEach(function(o){o.classList.remove('active')});
-    chip.classList.add('active');
-    var out=document.getElementById('cc-'+chip.dataset.answer);
-    if(out)out.classList.add('active');
-  });
-});
-
-// ---- IMPLEMENTATION TABS ----
-var implBtns=document.querySelectorAll('.impl-tab-btn');
-var implPanels=document.querySelectorAll('.impl-tab-panel');
-implBtns.forEach(function(btn){
-  btn.addEventListener('click',function(){
-    implBtns.forEach(function(b){b.classList.remove('active')});
-    implPanels.forEach(function(p){p.classList.remove('active')});
-    btn.classList.add('active');
-    var panel=document.getElementById('impl-'+btn.dataset.tab);
-    if(panel)panel.classList.add('active');
-  });
-});
 })();
 </script>
 <style>.td{width:7px;height:7px;border-radius:50%;background:#555;animation:bd 1.2s infinite}@keyframes bd{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}@media(prefers-reduced-motion:reduce){.td{animation:none}}</style>
 </body>
 </html>
-
-
-
-</html>
-
