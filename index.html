@@ -1108,9 +1108,9 @@ ul { list-style: none; }
 .bv2-node.amber{border-color:#f59e0b;color:#92400e;box-shadow:0 2px 12px rgba(245,158,11,.22)}
 .bv2-node.amber::before{background:#f59e0b}
 .bv2-node.dim{opacity:.38}
-.bv2-hub{position:absolute;left:46%;top:52%;transform:translate(-50%,-50%);background:#0a0a0a;color:#fff;border-radius:14px;padding:13px 20px;text-align:center;box-shadow:0 8px 28px rgba(10,10,26,.22)}
-.bv2-hub b{display:block;font-size:13.5px;font-weight:800;letter-spacing:.4px}
-.bv2-hub span{font-size:10px;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:1.2px}
+.bv2-hub{position:absolute;left:46%;top:52%;transform:translate(-50%,-50%);background:#fff;border:1px solid #e3e6ea;border-radius:18px;padding:14px 22px 12px;text-align:center;box-shadow:0 12px 36px -8px rgba(10,10,26,.18)}
+.bv2-hub img{width:44px;height:44px;display:block;margin:0 auto 6px}
+.bv2-hub span{font-size:9.5px;color:#9aa1ab;text-transform:uppercase;letter-spacing:1.4px;font-weight:700}
 .bv2-hub::after{content:"";position:absolute;inset:-6px;border-radius:18px;border:1px solid rgba(16,185,129,.35);opacity:0;transition:opacity .4s}
 .bv2-mod.on .bv2-hub::after{opacity:1}
 /* rail */
@@ -1144,7 +1144,12 @@ ul { list-style: none; }
   .bv2-node{position:static;transform:none}
   .bv2-rail{padding:26px 20px}
   .bv2-steps{gap:5px}
-  .bv2-step{padding:8px 14px;font-size:12.5px}
+  .bv2-step{padding:9px 14px;font-size:12.5px;min-height:40px}
+  .bv2-chip{align-self:center}
+  .bv2-chain{align-items:flex-start;margin:0 auto;width:fit-content}
+  .bv2-hub{padding:12px 18px 10px}
+  .bv2-hub img{width:38px;height:38px}
+  .bv2-close{margin-top:36px}
 }
 @media(prefers-reduced-motion:reduce){.bv2 *{transition:none!important}}
 </style>
@@ -1184,7 +1189,7 @@ ul { list-style: none; }
               <line x1="44" y1="90" x2="12" y2="30" data-n="costos margen"/>
               <line x1="24" y1="16" x2="88" y2="30" data-n="ventas recetas"/>
             </svg>
-            <div class="bv2-hub"><b>FULLSITE</b><span>Cerebro operativo</span></div>
+            <div class="bv2-hub"><img src="/logo-brain.png" alt="Fullsite" width="256" height="256"><span>Cerebro operativo</span></div>
             <div class="bv2-nodes">
               <span class="bv2-node" style="left:24%;top:16%" data-n="ventas">Ventas</span>
               <span class="bv2-node" style="left:62%;top:12%" data-n="cocina">Cocina</span>
