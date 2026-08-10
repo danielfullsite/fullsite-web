@@ -6,6 +6,9 @@
 <title>Software para Grupos Restauranteros | Fullsite</title>
 <meta name="description" content="Software para grupos restauranteros: cada sucursal con su configuración, permisos y datos separados, y el grupo completo visible desde un solo lugar. POS, KDS, inventario y costos.">
 <link rel="canonical" href="https://fullsite.mx/software-grupos-restauranteros/">
+<link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/software-grupos-restauranteros/">
+<link rel="alternate" hreflang="en" href="https://fullsite.mx/en/software-grupos-restauranteros/">
+<link rel="alternate" hreflang="x-default" href="https://fullsite.mx/software-grupos-restauranteros/">
 <meta property="og:title" content="Software para Grupos Restauranteros | Fullsite">
 <meta property="og:description" content="Software para grupos restauranteros: cada sucursal con su configuración, permisos y datos separados, y el grupo completo visible desde un solo lugar. POS, KDS, inventario y costos.">
 <meta property="og:type" content="website">
@@ -113,7 +116,11 @@ footer{border-top:1px solid #eee;background:#f8faf9;padding:40px 24px}
 .foot-links a:hover{color:#111}
 .copy{text-align:center;font-size:12px;color:#6b7280}
 @media(max-width:860px){
-  .nav-links a:not(.btn){display:none}
+  .nav-links>a:not(.btn):not(.nav-portal){display:none}
+  .nav-links{gap:10px}
+  .nav-links .btn{padding:8px 12px;font-size:13px}
+  .nav-inner{padding:12px 16px}
+  .nav-inner img{height:40px}
   .pv-hero{padding-top:28px}
   .feat{grid-template-columns:1fr;gap:28px;padding:44px 0}
   .feat.rev .feat-mk{order:0}
@@ -131,6 +138,8 @@ footer{border-top:1px solid #eee;background:#f8faf9;padding:40px 24px}
     <div class="nav-links">
       <a href="/#pos">Producto</a>
       <a href="/precios.html">Precios</a>
+      <div style="display:flex;align-items:center;gap:2px;background:#f3f4f6;border-radius:6px;padding:2px"><a href="/software-grupos-restauranteros/" style="font-size:12px;font-weight:600;color:#fff;background:#0a0a0a;padding:4px 10px;border-radius:4px;line-height:1">ES</a><a href="/en/software-grupos-restauranteros/" style="font-size:12px;font-weight:500;color:#888;padding:4px 10px;border-radius:4px;line-height:1">EN</a></div>
+      <a href="https://app.fullsite.mx/login" class="nav-portal">Log in</a>
       <a href="/demo.html" class="btn btn-primary" style="padding:9px 18px;font-size:14px">Agenda una demo</a>
     </div>
   </div>

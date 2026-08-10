@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a demo — Fullsite</title>
+  <meta name="description" content="Talk directly with the founder of Fullsite. 30 minutes to evaluate whether we can connect your restaurant's operation.">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://fullsite.mx/en/demo.html">
+  <link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/demo.html">
+  <link rel="alternate" hreflang="en" href="https://fullsite.mx/en/demo.html">
+  <link rel="alternate" hreflang="x-default" href="https://fullsite.mx/demo.html">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍃</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green: #10b981;
+      --green-light: #d1fae5;
+      --ink: #0a0a0a;
+      --ink-mid: #374151;
+      --ink-soft: #6b7280;
+      --ink-faint: #9ca3af;
+      --border: #e5e7eb;
+      --bg: #ffffff;
+      --bg-subtle: #f9fafb;
+      --radius: 12px;
+      --nav-h: 64px;
+    }
+
+    html { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; }
+    body { min-height: 100vh; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      height: var(--nav-h);
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; padding: 0 24px;
+    }
+    .nav-inner { width: 100%; max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-size: 18px; font-weight: 800; letter-spacing: -0.02em; display: flex; align-items: center; gap: 6px; }
+    .nav-logo-dot { width: 7px; height: 7px; background: var(--green); border-radius: 50%; display: inline-block; }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a { font-size: 14px; color: var(--ink-soft); font-weight: 500; transition: color .15s; }
+    .nav-links a:hover { color: var(--ink); }
+    .btn-nav { font-size: 13px; font-weight: 600; padding: 8px 18px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg); color: var(--ink); transition: all .15s; }
+    .btn-nav:hover { border-color: #ccc; background: #f5f5f5; }
+    @media (max-width: 640px) { .nav-links { display: none; } }
+
+    /* ── PAGE LAYOUT ── */
+    .page-wrap {
+      min-height: 100vh;
+      padding-top: var(--nav-h);
+      display: grid;
+      grid-template-columns: minmax(0, 480px) 1fr;
+      grid-template-rows: 1fr auto;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    @media (max-width: 900px) {
+      .page-wrap { grid-template-columns: 1fr; }
+    }
+
+    /* ── LEFT COLUMN ── */
+    .left-col {
+      grid-column: 1;
+      grid-row: 1;
+      padding: 56px 48px 56px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    @media (max-width: 900px) {
+      .left-col { grid-column: 1; grid-row: 1; padding: 40px 24px 32px; }
+    }
+    @media (max-width: 480px) {
+      .left-col { padding: 32px 20px 24px; }
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 16px;
+    }
+
+    .left-col h1 {
+      font-size: clamp(26px, 3.5vw, 38px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+
+    .left-col .sub {
+      font-size: 15px;
+      color: var(--ink-mid);
+      line-height: 1.65;
+      margin-bottom: 36px;
+      max-width: 420px;
+    }
+
+    /* ── AGENDA LIST ── */
+    .agenda-list { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-bottom: 40px; }
+    .agenda-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--ink-mid);
+      line-height: 1.55;
+    }
+    .check-icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      background: var(--green-light);
+      border-radius: 50%;
+      position: relative;
+      top: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .check-icon svg { display: block; }
+
+    /* ── PROOF BLOCK ── */
+    .proof-block {
+      padding: 20px 22px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 32px;
+    }
+    .proof-block p {
+      font-size: 13px;
+      color: var(--ink-mid);
+      line-height: 1.65;
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+    .proof-meta { font-size: 12px; color: var(--ink-faint); display: flex; align-items: center; gap: 6px; }
+    .proof-dot { width: 6px; height: 6px; background: var(--green); border-radius: 50%; flex-shrink: 0; }
+
+    /* ── FOUNDER ── */
+    .founder-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 0 0;
+      border-top: 1px solid var(--border);
+    }
+    .founder-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--green), #047857);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 800;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .founder-info .name { font-size: 14px; font-weight: 600; color: var(--ink); }
+    .founder-info .role { font-size: 12px; color: var(--ink-faint); margin-top: 2px; }
+
+    /* ── WA FALLBACK ── */
+    .wa-fallback {
+      display: none;
+      margin-top: 24px;
+      padding: 16px 20px;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: var(--radius);
+      font-size: 14px;
+      color: var(--ink-mid);
+      line-height: 1.5;
+    }
+    .wa-fallback a { color: var(--green); font-weight: 600; }
+
+    /* ── RIGHT COLUMN (CALENDAR) ── */
+    .right-col {
+      grid-column: 2;
+      grid-row: 1;
+      border-left: 1px solid var(--border);
+      background: var(--bg-subtle);
+      display: flex;
+      flex-direction: column;
+      min-height: calc(100vh - var(--nav-h));
+    }
+    @media (max-width: 900px) {
+      .right-col {
+        grid-column: 1;
+        grid-row: 2;
+        border-left: none;
+        border-top: 1px solid var(--border);
+        min-height: 700px;
+      }
+    }
+
+    /* Cal.com fills the column */
+    #cal-booking {
+      width: 100%;
+      flex: 1;
+      min-height: 680px;
+    }
+
+    /* ── LOADING STATE ── */
+    .cal-loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
+      min-height: 400px;
+      color: var(--ink-faint);
+      font-size: 14px;
+    }
+    .spinner {
+      width: 26px; height: 26px;
+      border: 3px solid var(--border);
+      border-top-color: var(--green);
+      border-radius: 50%;
+      animation: spin .8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── FOOTER ── */
+    footer {
+      grid-column: 1 / -1;
+      grid-row: 2;
+      padding: 20px 24px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    @media (max-width: 900px) { footer { grid-row: 3; } }
+    .footer-logo { font-size: 15px; font-weight: 800; display: flex; align-items: center; gap: 5px; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: var(--ink-faint); transition: color .15s; }
+    .footer-links a:hover { color: var(--ink); }
+  </style>
+
+  <!--
+    CAL.COM SETUP (before activating this page):
+    ──────────────────────────────────────────
+    1. Crear cuenta en cal.com (o app.cal.com)
+    2. Crear evento "Demo Fullsite — 30 min"
+       - Description: "We review your operation and assess whether Fullsite is a fit for your restaurant."
+       - Preguntas adicionales: Restaurante (texto), # sucursales (select: 1/2-5/6+), Sistema actual (texto), Principal reto operativo (textarea)
+       - Buffer after: 30 min
+    3. Conectar Google Calendar para disponibilidad
+    4. Habilitar Google Meet como conferencia
+    5. Cal.com slug activo: daniel-e3zvfq/30min
+    ──────────────────────────────────────────
+    Until configured: the WhatsApp fallback is shown automatically.
+  -->
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/en/"><img src="/logo-fullsite.png" alt="Fullsite" style="height:28px;display:block;"></a>
+      <div class="nav-links">
+        <a href="/en/#features">Product</a>
+        <a href="/en/#faq">FAQ</a>
+        <a href="https://app.fullsite.mx/login">Log in</a>
+        <a href="/demo.html" aria-label="Spanish version">ES</a>
+      </div>
+      <a href="/en/" class="btn-nav">← Home</a>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <div class="page-wrap">
+
+    <!-- LEFT: context -->
+    <div class="left-col">
+      <p class="eyebrow">Demo with the founder · 30 min</p>
+      <h1>Let's evaluate together whether Fullsite fits your operation.</h1>
+      <p class="sub">No sales pitch. We look at how you run today and tell you honestly whether we're the right fit — before you commit to anything.</p>
+
+      <ul class="agenda-list">
+        <li>
+          <span class="check-icon">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          How you run today: POS, reports, inventory, team.
+        </li>
+        <li>
+          <span class="check-icon">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          What slips past you at close that you could have acted on earlier.
+        </li>
+        <li>
+          <span class="check-icon">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Which modules apply to your type of operation.
+        </li>
+        <li>
+          <span class="check-icon">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Realistic implementation timelines and next steps.
+        </li>
+      </ul>
+
+      <div class="proof-block">
+        <p>"I used to spend two hours a day going over reports. Now the briefing arrives at 7am with everything I need. The agents catch things I never would have seen."</p>
+        <div class="proof-meta">
+          <span class="proof-dot"></span>
+          Full-service restaurant · Monterrey, MX
+        </div>
+      </div>
+
+
+      <div class="wa-fallback" id="wa-fallback">
+        Prefer to coordinate directly?
+        <br><br>
+        <a href="https://wa.me/528115324371?text=Hola%20Daniel%2C%20me%20interesa%20agendar%20una%20demo%20de%20Fullsite">Message us on WhatsApp →</a>
+        &nbsp;·&nbsp;
+        <a href="mailto:daniel@fullsite.mx">daniel@fullsite.mx</a>
+      </div>
+    </div>
+
+    <!-- RIGHT: Cal.com calendar embed -->
+    <div class="right-col">
+      <div id="cal-booking">
+        <div class="cal-loading" id="cal-loading">
+          <div class="spinner"></div>
+          <span>Loading calendar…</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <a href="/en/"><img src="/logo-fullsite.png" alt="Fullsite" style="height:24px;display:block;"></a>
+      <div class="footer-links">
+        <a href="/en/">Home</a>
+        <a href="/en/#features">Product</a>
+        <a href="mailto:daniel@fullsite.mx">Email</a>
+        <a href="/en/privacidad.html">Privacy</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- CAL.COM EMBED SCRIPT -->
+  <script type="text/javascript">
+    (function (C, A, L) {
+      let p = function (a, ar) { a.q.push(ar); };
+      let d = C.document;
+      C.Cal = C.Cal || function () {
+        let cal = C.Cal; let ar = arguments;
+        if (!cal.loaded) {
+          cal.ns = {}; cal.q = cal.q || [];
+          d.head.appendChild(d.createElement("script")).src = A;
+          cal.loaded = true;
+        }
+        if (ar[0] === L) {
+          const api = function () { p(api, arguments); };
+          const namespace = ar[1];
+          api.q = api.q || [];
+          if (typeof namespace === "string") {
+            cal.ns[namespace] = cal.ns[namespace] || api;
+            p(cal.ns[namespace], ar);
+            p(cal, [L, namespace, ar[2]]);
+          } else p(cal, ar);
+          return;
+        }
+        p(cal, ar);
+      };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
+
+    Cal("init", "demo", { origin: "https://cal.com" });
+
+    Cal.ns.demo("inline", {
+      elementOrSelector: "#cal-booking",
+      calLink: "daniel-e3zvfq",
+      layout: "month_view"
+    });
+
+    Cal.ns.demo("ui", {
+      hideEventTypeDetails: false,
+      layout: "month_view",
+      cssVarsPerTheme: {
+        light: { "cal-brand": "#10b981", "cal-brand-emphasis": "#059669" }
+      }
+    });
+
+    // Show WhatsApp fallback if Cal.com hasn't loaded after 8 seconds
+    var calLoaded = false;
+    window.addEventListener("message", function (e) {
+      if (e.origin === "https://cal.com" || (e.data && e.data.type)) {
+        calLoaded = true;
+        var el = document.getElementById("cal-loading");
+        if (el) el.style.display = "none";
+      }
+    });
+    setTimeout(function () {
+      if (!calLoaded) {
+        var el = document.getElementById("cal-loading");
+        if (el) el.innerHTML = '<p style="font-size:14px;color:#6b7280;padding:24px;text-align:center;">The calendar couldn\'t load.</p>';
+        document.getElementById("wa-fallback").style.display = "block";
+      }
+    }, 8000);
+  </script>
+
+  <!-- PostHog (replace key before launch) -->
+  <script>
+    (function () {
+      try {
+        var key = "phc_placeholder"; // ← Replace with real PostHog key
+        if (key === "phc_placeholder") return;
+        !function (t, e) {
+          var o, n, p, r;
+          e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) {
+            function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]); t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))); }; }
+            (p = t.createElement("script")).type = "text/javascript", p.async = !0, p.src = s.api_host + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r);
+            var u = e;
+            for (void 0 !== a ? u = e[a] = [] : a = e._i.push([i, s, a]), u.config = s, u.toString = function (t) { var e = "posthog."; return t ? e : e + a; }, ["capture", "identify", "alias", "on", "once", "reset"].forEach(function (t) { g(u, t); }), e._i.push([i, s, a]), void 0 !== a && void 0 === e[a] && (e[a] = u), e.__SV = 1);
+          });
+        }(document, window.posthog || {});
+        posthog.init(key, { api_host: "https://app.posthog.com" });
+        posthog.capture("demo_page_view");
+      } catch (e) { }
+    })();
+  </script>
+
+</body>
+</html>
