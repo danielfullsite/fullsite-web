@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://fullsite.mx/sitemap.xml
+Sitemap: https://fullsite.mx/sitemap-profiles.xml
