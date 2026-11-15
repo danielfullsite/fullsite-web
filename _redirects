@@ -14,3 +14,37 @@
 /integraciones.html /fullsite-ia 301
 /en/integraciones /en/fullsite-ai 301
 /en/integraciones.html /en/fullsite-ai 301
+
+# Páginas viejas de producto al sitio nuevo
+/producto/ /pos-inteligente 301
+/producto/index.html /pos-inteligente 301
+/producto /pos-inteligente 301
+/producto/agentes-ia /fullsite-ia 301
+/producto/agentes-ia.html /fullsite-ia 301
+/producto/analytics /fullsite-ia 301
+/producto/analytics.html /fullsite-ia 301
+/producto/inventario /inventario-para-restaurantes/ 301
+/producto/inventario.html /inventario-para-restaurantes/ 301
+/producto/whatsapp-bot /fullsite-ia 301
+/producto/whatsapp-bot.html /fullsite-ia 301
+/en/producto/ /en/smart-pos 301
+/en/producto/index.html /en/smart-pos 301
+/en/producto /en/smart-pos 301
+/en/producto/agentes-ia /en/fullsite-ai 301
+/en/producto/agentes-ia.html /en/fullsite-ai 301
+/en/producto/analytics /en/fullsite-ai 301
+/en/producto/analytics.html /en/fullsite-ai 301
+/en/producto/inventario /en/inventario-para-restaurantes/ 301
+/en/producto/inventario.html /en/inventario-para-restaurantes/ 301
+/en/producto/whatsapp-bot /en/fullsite-ai 301
+/en/producto/whatsapp-bot.html /en/fullsite-ai 301
+/en/soluciones/bar /en/smart-pos 301
+/en/soluciones/bar.html /en/smart-pos 301
+/en/soluciones/cafeteria /en/smart-pos 301
+/en/soluciones/cafeteria.html /en/smart-pos 301
+/en/soluciones/dark-kitchen /en/smart-pos 301
+/en/soluciones/dark-kitchen.html /en/smart-pos 301
+/en/soluciones/multi-sucursal /en/software-grupos-restauranteros/ 301
+/en/soluciones/multi-sucursal.html /en/software-grupos-restauranteros/ 301
+/en/soluciones/restaurante-premium /en/smart-pos 301
+/en/soluciones/restaurante-premium.html /en/smart-pos 301
