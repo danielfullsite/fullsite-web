@@ -993,6 +993,6 @@ body.menu-open header .burger{background:#fff!important;border-color:var(--line-
 /* Celular: la página no se mueve de lado (iPhone ignora overflow-x en body) */
 html,body{overflow-x:hidden;overflow-x:clip;max-width:100%}
 .hero{overflow:hidden;overflow:clip}
-.aichat,.livef,.acb{overscroll-behavior:contain}
+.aichat,.livef,.acb,.cx{overscroll-behavior:auto}
 
 .seo{margin:44px 0 0;font-size:.84rem;line-height:1.65;color:var(--ink-3);max-width:92ch}

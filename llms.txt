@@ -1,0 +1,22 @@
+# Fullsite
+
+> Fullsite es un POS para restaurantes con inteligencia artificial (IA), hecho en Monterrey, México. Se conecta al punto de venta que el restaurante ya usa (Fullsite IA) o lo reemplaza con un POS inteligente que funciona sin internet, con pantalla de cocina (KDS), inventario con recetas, facturación CFDI y pedidos de delivery. La IA detecta fugas de dinero en caja, cuadra el corte Z, controla el food cost y responde preguntas del dueño con el dato exacto.
+
+## Producto
+- [Fullsite IA](https://fullsite.mx/fullsite-ia): inteligencia artificial para restaurantes que se conecta al punto de venta actual.
+- [POS inteligente](https://fullsite.mx/pos-inteligente): punto de venta para restaurantes con IA integrada.
+- [Cómo empezar](https://fullsite.mx/como-empezar): instalación en un día, sin contratos largos.
+
+## Guías
+- [Inteligencia artificial para restaurantes](https://fullsite.mx/inteligencia-artificial-para-restaurantes): usos reales de la IA en restaurantes y cómo empezar.
+- [Mejor POS para restaurantes en México](https://fullsite.mx/mejor-pos-para-restaurantes): 10 criterios para elegir punto de venta.
+- [POS con IA](https://fullsite.mx/pos-con-ia): qué es un POS con inteligencia artificial y qué hace.
+- [POS para restaurantes](https://fullsite.mx/pos-para-restaurantes/)
+- [POS sin internet](https://fullsite.mx/pos-sin-internet/)
+- [KDS para restaurantes](https://fullsite.mx/kds-para-restaurantes/)
+- [Inventario para restaurantes](https://fullsite.mx/inventario-para-restaurantes/)
+- [Blog](https://fullsite.mx/blog/)
+
+## Contacto
+- WhatsApp: +52 81 1532 4371
+- Demo: https://cal.com/daniel-e3zvfq
