@@ -1,6 +1,7 @@
 /* Fullsite · scripts compartidos por todas las páginas. Cada bloque revisa que su sección exista. */
 (function(){
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var LIVE = ((document.currentScript && document.currentScript.src) || 'site.js').replace(/site\.js(\?.*)?$/, 'connect.html');
   var EN = document.documentElement.lang === 'en';
   var $ = function(s){ return document.querySelector(s) }, $$ = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)) };
   function money(n){ return '$' + n.toLocaleString('es-MX', {minimumFractionDigits:2, maximumFractionDigits:2}) }
@@ -45,6 +46,22 @@
       push.innerHTML = '<img src="/site/img/logo-f.jpg" alt=""><span><small><b>FULLSITE</b>' + (EN ? 'now' : 'ahora') + '</small><b>' + d[0] + '</b>' + d[1] + '</span>';
       push.classList.remove('in'); void push.offsetWidth; push.classList.add('in'); setTimeout(function(){ push.classList.remove('in') }, 4600) };
     setTimeout(function(){ showP(); setInterval(showP, 6400) }, 3200);
+  }
+
+  // ── Pantallas con Fullsite Connect real (la app, no una captura). La imagen queda de fondo mientras carga.
+  var lives = $$('[data-live]');
+  if (lives.length) {
+    try { localStorage.setItem('fs-theme', 'light') } catch (e) {}
+    var mount = function(el){
+      var w = +el.dataset.lw || 1440, top = +el.dataset.top || 0, f = document.createElement('iframe');
+      f.className = 'livef'; f.title = 'Fullsite Connect'; f.tabIndex = -1; f.setAttribute('aria-hidden', 'true'); f.setAttribute('scrolling', 'no');
+      var size = function(){ var k = el.clientWidth / w; if (!k) return; f.style.width = w + 'px'; f.style.height = Math.ceil((el.clientHeight - top) / k) + 'px'; f.style.top = top + 'px'; f.style.transform = 'scale(' + k + ')' };
+      f.onload = function(){ size(); setTimeout(function(){ el.classList.add('live-on') }, 500) };
+      f.src = LIVE + '#' + el.dataset.live; el.appendChild(f); size(); addEventListener('resize', size); setTimeout(size, 700);
+    };
+    var started = false, start = function(){ if (started) return; started = true;
+      lives.forEach(function(el, i){ setTimeout(function(){ mount(el) }, i * 1400) }) };
+    if (document.readyState === 'complete') setTimeout(start, 300); else addEventListener('load', function(){ setTimeout(start, 300) });
   }
 
   // ── Panel de Connect: alertas que llegan y venta que sube
@@ -119,7 +136,7 @@
       };
       addEventListener('scroll', sRender, {passive:true}); addEventListener('resize', sRender); sRender();
     }
-    else if (!reduce) setInterval(function(){ var r = term.getBoundingClientRect(); if (r.top < innerHeight && r.bottom > 0) tapOne() }, 1000);
+    else if (!reduce && !$('.possplit')) setInterval(function(){ var r = term.getBoundingClientRect(); if (r.top < innerHeight && r.bottom > 0) tapOne() }, 1000);
     else order.forEach(function(){ tapOne() });
   }
 
@@ -127,25 +144,35 @@
   var acb = $('#acb');
   if (acb) {
     var CV = EN ? [
-      ['me','How is this week going?'],
-      ['ai','You are <b>6% above</b> last week. Saturday was your best day.<div class="alrt" style="margin:10px 0 0">⚠ Heads up: 3 pre-checks dropped <b>&nbsp;$1,240&nbsp;</b> on Friday afternoon.</div><div class="lg2"><span><i></i>This week</span><span><i class="d"></i>Last week</span></div><svg class="mchart" viewBox="0 0 280 110" preserveAspectRatio="none"><g stroke="#e6eae7"><path d="M0 20H280M0 55H280M0 90H280"/></g><defs><linearGradient id="cga" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#10b981" stop-opacity=".28"/><stop offset="1" stop-color="#10b981" stop-opacity="0"/></linearGradient></defs><path class="ar3" d="M2 78 C30 74 40 66 42 64 S70 70 82 62 S110 50 122 52 S150 44 162 40 S190 30 202 28 S230 20 240 18 V96 H2Z" fill="url(#cga)"/><path class="ln2" d="M2 82 C30 80 40 74 42 72 S70 76 82 70 S110 62 122 64 S150 58 162 54 S190 48 202 46 S230 42 240 40" fill="none" stroke="#a1a1aa" stroke-width="1.6" stroke-dasharray="4 5"/><path class="ln" d="M2 78 C30 74 40 66 42 64 S70 70 82 62 S110 50 122 52 S150 44 162 40 S190 30 202 28 S230 20 240 18" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round"/><circle class="fri2" cx="162" cy="40" r="4" fill="none" stroke="#ef4444" stroke-width="1.5"/><circle class="fri" cx="162" cy="40" r="4" fill="#ef4444"/><circle class="ring" cx="240" cy="18" r="4.5" fill="none" stroke="#10b981" stroke-width="1.5"/><circle cx="240" cy="18" r="4.5" fill="#10b981" class="pt"/><text x="2" y="106" class="axis">Mon</text><text x="42" y="106" class="axis">Tue</text><text x="82" y="106" class="axis">Wed</text><text x="122" y="106" class="axis">Thu</text><text x="162" y="106" class="axis">Fri</text><text x="202" y="106" class="axis">Sat</text><text x="242" y="106" class="axis">Sun</text></svg>'],
-      ['me','What should I do?'],
-      ['ai','Here is what I would do today:<ul class="todo2"><li><i>1</i>Review tables 12, 9 and 4 with the register<em>$1,240</em></li><li><i>2</i>Raise the rib eye 10%<em>+$2,800/mo</em></li></ul><div class="qr"><span>Notify manager</span><span>See details</span></div>']
+      ["me","How is this week going?"],
+      ["ai","<div class=\"srcs\"><span>Sales</span><em>+</em><span>Inventory</span><em>+</em><span>Attendance</span><em>→</em></div><span class=\"xt\">Explanation + actions</span><div class=\"cc\"><div class=\"cch\"><span class=\"lg\"><i></i>This week</span><span class=\"lg g\"><i></i>Last week</span><span class=\"seg\"><b>Chart</b><span>Table</span></span></div><svg class=\"cxc\" viewBox=\"0 0 320 146\"><path d=\"M46 122H310\" stroke=\"#eef1ef\"/><text x=\"40\" y=\"125\" text-anchor=\"end\">$0k</text><path d=\"M46 86H310\" stroke=\"#eef1ef\"/><text x=\"40\" y=\"89\" text-anchor=\"end\">$30k</text><path d=\"M46 50H310\" stroke=\"#eef1ef\"/><text x=\"40\" y=\"53\" text-anchor=\"end\">$60k</text><path d=\"M46 14H310\" stroke=\"#eef1ef\"/><text x=\"40\" y=\"17\" text-anchor=\"end\">$90k</text><path class=\"lw\" d=\"M50 63.2 C57.0 63.8 78.0 67.2 92 66.8 C106.0 66.4 120.0 62.4 134 60.8 C148.0 59.2 162.0 58.4 176 57.2 C190.0 56.0 204.0 58.2 218 53.6 C232.0 49.0 246.0 29.2 260 29.6 C274.0 30.0 295.0 51.6 302 56\" fill=\"none\" stroke=\"#71717a\" stroke-width=\"1.6\"/><path class=\"tw\" d=\"M50 59.6 C57.0 60.4 78.0 65.0 92 64.4 C106.0 63.8 120.0 58.0 134 56 C148.0 54.0 162.0 53.6 176 52.4 C190.0 51.2 204.0 54.0 218 48.8 C232.0 43.6 246.0 19.8 260 21.2 C274.0 22.6 295.0 51.2 302 57.2\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"2.4\" stroke-linecap=\"round\"/><circle class=\"dot r\" cx=\"218\" cy=\"48.8\" r=\"3.6\"/><circle class=\"dot g\" cx=\"260\" cy=\"21.2\" r=\"3.6\"/><text x=\"50\" y=\"140\" text-anchor=\"middle\">Mon</text><text x=\"92\" y=\"140\" text-anchor=\"middle\">Tue</text><text x=\"134\" y=\"140\" text-anchor=\"middle\">Wed</text><text x=\"176\" y=\"140\" text-anchor=\"middle\">Thu</text><text x=\"218\" y=\"140\" text-anchor=\"middle\">Fri</text><text x=\"260\" y=\"140\" text-anchor=\"middle\">Sat</text><text x=\"302\" y=\"140\" text-anchor=\"middle\">Sun</text></svg><div class=\"ccf\"><span>Source: your POS · paid tickets</span><span class=\"ok\">✓ Full coverage</span></div></div><div class=\"cls\"><div class=\"cl\"><span class=\"tg tv\">VERIFIED</span><span>You are at <b>$412,380</b> vs. $389,020 last week (+6%).</span></div><div class=\"cl\"><span class=\"tg tv\">VERIFIED</span><span>Saturday was your best day: $84,200.</span></div><div class=\"cl\"><span class=\"tg th\">HYPOTHESIS</span><span>On Friday 3 pre-checks dropped $1,240 in the afternoon. Check if they were authorized.</span></div></div>"],
+      ["me","What should I do?"],
+      ["ai","<div class=\"cls\"><div class=\"cl\"><span class=\"tg tp\">FORECAST</span><span>Estimated week close: $468,000.</span></div><div class=\"cl\"><span class=\"tg tr\">RECOMMENDATION</span><span>Review tables 12, 9 and 4 with the register ($1,240).</span></div><div class=\"cl\"><span class=\"tg tr\">RECOMMENDATION</span><span>Raise the rib eye 10%: +$2,800 a month.</span></div></div><div class=\"cxa\"><span class=\"pri\">Notify manager</span><span>Save investigation</span></div>"]
     ] : [
-      ['me','¿Cómo voy esta semana?'],
-      ['ai','Vas <b>6% arriba</b> de la semana pasada. El sábado fue tu mejor día.<div class="alrt" style="margin:10px 0 0">⚠ Ojo: 3 precuentas bajaron <b>&nbsp;$1,240&nbsp;</b> el viernes en la tarde.</div><div class="lg2"><span><i></i>Esta semana</span><span><i class="d"></i>Semana pasada</span></div><svg class="mchart" viewBox="0 0 280 110" preserveAspectRatio="none"><g stroke="#e6eae7"><path d="M0 20H280M0 55H280M0 90H280"/></g><defs><linearGradient id="cga" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#10b981" stop-opacity=".28"/><stop offset="1" stop-color="#10b981" stop-opacity="0"/></linearGradient></defs><path class="ar3" d="M2 78 C30 74 40 66 42 64 S70 70 82 62 S110 50 122 52 S150 44 162 40 S190 30 202 28 S230 20 240 18 V96 H2Z" fill="url(#cga)"/><path class="ln2" d="M2 82 C30 80 40 74 42 72 S70 76 82 70 S110 62 122 64 S150 58 162 54 S190 48 202 46 S230 42 240 40" fill="none" stroke="#a1a1aa" stroke-width="1.6" stroke-dasharray="4 5"/><path class="ln" d="M2 78 C30 74 40 66 42 64 S70 70 82 62 S110 50 122 52 S150 44 162 40 S190 30 202 28 S230 20 240 18" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round"/><circle class="fri2" cx="162" cy="40" r="4" fill="none" stroke="#ef4444" stroke-width="1.5"/><circle class="fri" cx="162" cy="40" r="4" fill="#ef4444"/><circle class="ring" cx="240" cy="18" r="4.5" fill="none" stroke="#10b981" stroke-width="1.5"/><circle cx="240" cy="18" r="4.5" fill="#10b981" class="pt"/><text x="2" y="106" class="axis">Lun</text><text x="42" y="106" class="axis">Mar</text><text x="82" y="106" class="axis">Mié</text><text x="122" y="106" class="axis">Jue</text><text x="162" y="106" class="axis">Vie</text><text x="202" y="106" class="axis">Sáb</text><text x="242" y="106" class="axis">Dom</text></svg>'],
-      ['me','¿Qué hago?'],
-      ['ai','Esto haría hoy:<ul class="todo2"><li><i>1</i>Revisar con caja las mesas 12, 9 y 4<em>$1,240</em></li><li><i>2</i>Subir 10% el Rib eye<em>+$2,800/mes</em></li></ul><div class="qr"><span>Avisar al gerente</span><span>Ver detalle</span></div>']
+      ["me","¿Cómo voy esta semana?"],
+      ["ai","<div class=\"srcs\"><span>Ventas</span><em>+</em><span>Inventario</span><em>+</em><span>Asistencia</span><em>→</em></div><span class=\"xt\">Explicación + acciones</span><div class=\"cc\"><div class=\"cch\"><span class=\"lg\"><i></i>Esta semana</span><span class=\"lg g\"><i></i>Semana pasada</span><span class=\"seg\"><b>Gráfica</b><span>Tabla</span></span></div><svg class=\"cxc\" viewBox=\"0 0 320 146\"><path d=\"M46 122H310\" stroke=\"#eef1ef\"/><text x=\"40\" y=\"125\" text-anchor=\"end\">$0k</text><path d=\"M46 86H310\" stroke=\"#eef1ef\"/><text x=\"40\" y=\"89\" text-anchor=\"end\">$30k</text><path d=\"M46 50H310\" stroke=\"#eef1ef\"/><text x=\"40\" y=\"53\" text-anchor=\"end\">$60k</text><path d=\"M46 14H310\" stroke=\"#eef1ef\"/><text x=\"40\" y=\"17\" text-anchor=\"end\">$90k</text><path class=\"lw\" d=\"M50 63.2 C57.0 63.8 78.0 67.2 92 66.8 C106.0 66.4 120.0 62.4 134 60.8 C148.0 59.2 162.0 58.4 176 57.2 C190.0 56.0 204.0 58.2 218 53.6 C232.0 49.0 246.0 29.2 260 29.6 C274.0 30.0 295.0 51.6 302 56\" fill=\"none\" stroke=\"#71717a\" stroke-width=\"1.6\"/><path class=\"tw\" d=\"M50 59.6 C57.0 60.4 78.0 65.0 92 64.4 C106.0 63.8 120.0 58.0 134 56 C148.0 54.0 162.0 53.6 176 52.4 C190.0 51.2 204.0 54.0 218 48.8 C232.0 43.6 246.0 19.8 260 21.2 C274.0 22.6 295.0 51.2 302 57.2\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"2.4\" stroke-linecap=\"round\"/><circle class=\"dot r\" cx=\"218\" cy=\"48.8\" r=\"3.6\"/><circle class=\"dot g\" cx=\"260\" cy=\"21.2\" r=\"3.6\"/><text x=\"50\" y=\"140\" text-anchor=\"middle\">Lun</text><text x=\"92\" y=\"140\" text-anchor=\"middle\">Mar</text><text x=\"134\" y=\"140\" text-anchor=\"middle\">Mié</text><text x=\"176\" y=\"140\" text-anchor=\"middle\">Jue</text><text x=\"218\" y=\"140\" text-anchor=\"middle\">Vie</text><text x=\"260\" y=\"140\" text-anchor=\"middle\">Sáb</text><text x=\"302\" y=\"140\" text-anchor=\"middle\">Dom</text></svg><div class=\"ccf\"><span>Fuente: tu POS · tickets cobrados</span><span class=\"ok\">✓ Cobertura completa</span></div></div><div class=\"cls\"><div class=\"cl\"><span class=\"tg tv\">VERIFICADO</span><span>Llevas <b>$412,380</b> contra $389,020 la semana pasada (+6%).</span></div><div class=\"cl\"><span class=\"tg tv\">VERIFICADO</span><span>El sábado fue tu mejor día: $84,200.</span></div><div class=\"cl\"><span class=\"tg th\">HIPÓTESIS</span><span>El viernes 3 precuentas bajaron $1,240 en la tarde. Revisa si fueron autorizadas.</span></div></div>"],
+      ["me","¿Qué hago?"],
+      ["ai","<div class=\"cls\"><div class=\"cl\"><span class=\"tg tp\">PRONÓSTICO</span><span>Cierre de semana estimado: $468,000.</span></div><div class=\"cl\"><span class=\"tg tr\">RECOMENDACIÓN</span><span>Revisa con caja las mesas 12, 9 y 4 ($1,240).</span></div><div class=\"cl\"><span class=\"tg tr\">RECOMENDACIÓN</span><span>Sube 10% el Rib eye: +$2,800 al mes.</span></div></div><div class=\"cxa\"><span class=\"pri\">Avisar al gerente</span><span>Guardar investigación</span></div>"]
     ], ci = 0, busy = false;
     var bubble = function(m, html){ if (m[0] === 'me') { var e = document.createElement('div'); e.className = 'am me'; e.textContent = m[1]; return [e, e] }
-      var row = document.createElement('div'); row.className = 'arow'; row.innerHTML = '<img class="mav" src="/site/img/logo-f.jpg" alt=""><div class="am ai"></div>'; var b = row.lastChild; b.innerHTML = html; return [row, b] };
-    var stepC = function(){ if (busy) return; if (ci >= CV.length) { busy = true; setTimeout(function(){ acb.innerHTML = ''; ci = 0; busy = false; stepC() }, 9000); return }
-      var m = CV[ci++];
-      if (m[0] === 'ai') { busy = true; var x = bubble(m, '<span class="dots"><i></i><i></i><i></i></span>'); acb.appendChild(x[0]); trim(); setTimeout(function(){ x[1].innerHTML = m[1]; setTimeout(function(){ busy = false }, 5000) }, 2400) }
-      else { acb.appendChild(bubble(m)[0]); trim() } };
+      var row = document.createElement('div'); row.className = 'arow'; row.innerHTML = '<img class="mav" src="/site/img/logo-f.jpg" alt=""><div class="am ai"></div>'; var b = row.lastChild; fillC(b, html); return [row, b] };
+    var fillC = function(b, html){ b.innerHTML = html; b.classList.toggle('rich', /class="(srcs|cls)"/.test(html)); if (b.parentNode) b.parentNode.classList.toggle('rich', b.classList.contains('rich'));
+      $$('[data-to]', b).forEach(function(n){ var to = +n.dataset.to, s0 = Date.now(); var iv = setInterval(function(){ var k = Math.min(1, (Date.now() - s0) / 1400), v = Math.round(to * (1 - Math.pow(1 - k, 3))); n.textContent = '$' + v.toLocaleString('es-MX'); if (k >= 1) clearInterval(iv) }, 30) }) };
+    // Conversación real: saludo, la pregunta se escribe en la caja, se envía, "pensando…" y luego la respuesta
+    var WEL = EN ? 'Hi Ana. I am Fullsite AI: ask me anything about your restaurant.' : 'Hola, Ana. Soy Fullsite IA: pregúntame lo que quieras de tu restaurante.';
+    var inp = acb.parentNode.querySelector('.cxi span'), ph = inp ? inp.textContent : '';
+    var welcome = function(){ acb.innerHTML = ''; acb.appendChild(bubble(['ai', WEL], WEL)[0]); ci = 0 };
+    var typeQ = function(q, done){ if (!inp) return done(); var n = 0; inp.classList.add('typing');
+      var iv = setInterval(function(){ inp.textContent = q.slice(0, ++n); if (n >= q.length) { clearInterval(iv); setTimeout(function(){ inp.textContent = ph; inp.classList.remove('typing'); done() }, 450) } }, 48) };
+    var stepC = function(){ if (busy) return;
+      if (ci >= CV.length) { busy = true; setTimeout(function(){ welcome(); busy = false }, 9000); return }
+      var m = CV[ci++]; busy = true;
+      if (m[0] === 'ai') { var x = bubble(m, '<span class="dots"><i></i><i></i><i></i></span>'); acb.appendChild(x[0]); trim(); setTimeout(function(){ fillC(x[1], m[1]); setTimeout(function(){ busy = false }, 5500) }, 2200) }
+      else typeQ(m[1], function(){ acb.appendChild(bubble(m)[0]); trim(); setTimeout(function(){ busy = false }, 500) }) };
     var trim = function(){ while (acb.children.length > 4) acb.removeChild(acb.firstChild) };
     if (reduce) CV.forEach(function(m){ acb.appendChild(bubble(m, m[1])[0]) });
-    else { acb.appendChild(bubble(CV[0])[0]); acb.appendChild(bubble(CV[1], CV[1][1])[0]); ci = 2; setInterval(function(){ var r = acb.getBoundingClientRect(); if (r.top < innerHeight && r.bottom > 0) stepC() }, 2200) }
+    else { welcome(); var seen = 0; setInterval(function(){ var r = acb.getBoundingClientRect(), vis = r.top < innerHeight * .8 && r.bottom > innerHeight * .2;
+      if (!vis) { seen = 0; return } if (++seen >= 2) stepC() }, 600) }
   }
 
   // ── Preguntas que se escriben solas (banda de IA)
@@ -188,14 +215,6 @@
     wrap(h); h.classList.add('wr'); wrs.push(h) });
   var wrCheck = function(){ wrs = wrs.filter(function(h){ if (h.getBoundingClientRect().top < innerHeight * .88) { h.classList.add('in'); return false } return true }) };
   addEventListener('scroll', wrCheck, {passive:true}); wrCheck(); setTimeout(function(){ wrs.forEach(function(h){ h.classList.add('in') }) }, 20000);
-
-  // ── Botones magnéticos: siguen un poco al cursor (solo con mouse)
-  if (!reduce && matchMedia('(hover: hover) and (pointer: fine)').matches) $$('.btn-g, .btn-dark, .hero .btn').forEach(function(b){
-    b.classList.add('mag');
-    b.addEventListener('mousemove', function(e){ var r = b.getBoundingClientRect(), x = e.clientX - r.left - r.width / 2, y = e.clientY - r.top - r.height / 2;
-      b.style.transform = 'translate(' + (x * .18).toFixed(1) + 'px,' + (y * .3).toFixed(1) + 'px)'; b.style.setProperty('--mx', (e.clientX - r.left) + 'px'); b.style.setProperty('--my', (e.clientY - r.top) + 'px') });
-    b.addEventListener('mouseleave', function(){ b.style.transform = '' });
-  });
 
   // ── Scroll: nav, aparición, contadores, pasos
   var heroDk = $('.hero.dk'), hd = $('#hd'), pend = $$('.rv, .sp3'), cnt = $$('[data-count]');
