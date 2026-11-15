@@ -1,0 +1,26 @@
+# Publica fullsite.mx (Cloudflare Pages, proyecto fullsite-landing) en cada push a main.
+# Requiere dos secretos del repo: CLOUDFLARE_API_TOKEN (permiso "Cloudflare Pages: Edit") y CLOUDFLARE_ACCOUNT_ID.
+name: Publicar fullsite.mx
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+concurrency:
+  group: produccion
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Quitar archivos que no son del sitio
+        run: rm -rf .github .gstack DEPLOY-NOTES.md
+      - name: Publicar en Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy . --project-name=fullsite-landing --branch=main --commit-dirty=true
