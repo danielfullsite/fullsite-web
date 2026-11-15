@@ -158,13 +158,21 @@
       var row = document.createElement('div'); row.className = 'arow'; row.innerHTML = '<img class="mav" src="/site/img/logo-f.jpg" alt=""><div class="am ai"></div>'; var b = row.lastChild; fillC(b, html); return [row, b] };
     var fillC = function(b, html){ b.innerHTML = html; b.classList.toggle('rich', /class="(srcs|cls)"/.test(html)); if (b.parentNode) b.parentNode.classList.toggle('rich', b.classList.contains('rich'));
       $$('[data-to]', b).forEach(function(n){ var to = +n.dataset.to, s0 = Date.now(); var iv = setInterval(function(){ var k = Math.min(1, (Date.now() - s0) / 1400), v = Math.round(to * (1 - Math.pow(1 - k, 3))); n.textContent = '$' + v.toLocaleString('es-MX'); if (k >= 1) clearInterval(iv) }, 30) }) };
-    var stepC = function(){ if (busy) return; if (ci >= CV.length) { busy = true; setTimeout(function(){ acb.innerHTML = ''; acb.appendChild(bubble(CV[0])[0]); acb.appendChild(bubble(CV[1], CV[1][1])[0]); ci = 2; busy = false }, 9000); return }
-      var m = CV[ci++];
-      if (m[0] === 'ai') { busy = true; var x = bubble(m, '<span class="dots"><i></i><i></i><i></i></span>'); acb.appendChild(x[0]); trim(); setTimeout(function(){ fillC(x[1], m[1]); setTimeout(function(){ busy = false }, 5000) }, 2400) }
-      else { acb.appendChild(bubble(m)[0]); trim() } };
+    // Conversación real: saludo, la pregunta se escribe en la caja, se envía, "pensando…" y luego la respuesta
+    var WEL = EN ? 'Hi Ana. I am Fullsite AI: ask me anything about your restaurant.' : 'Hola, Ana. Soy Fullsite IA: pregúntame lo que quieras de tu restaurante.';
+    var inp = acb.parentNode.querySelector('.cxi span'), ph = inp ? inp.textContent : '';
+    var welcome = function(){ acb.innerHTML = ''; acb.appendChild(bubble(['ai', WEL], WEL)[0]); ci = 0 };
+    var typeQ = function(q, done){ if (!inp) return done(); var n = 0; inp.classList.add('typing');
+      var iv = setInterval(function(){ inp.textContent = q.slice(0, ++n); if (n >= q.length) { clearInterval(iv); setTimeout(function(){ inp.textContent = ph; inp.classList.remove('typing'); done() }, 450) } }, 48) };
+    var stepC = function(){ if (busy) return;
+      if (ci >= CV.length) { busy = true; setTimeout(function(){ welcome(); busy = false }, 9000); return }
+      var m = CV[ci++]; busy = true;
+      if (m[0] === 'ai') { var x = bubble(m, '<span class="dots"><i></i><i></i><i></i></span>'); acb.appendChild(x[0]); trim(); setTimeout(function(){ fillC(x[1], m[1]); setTimeout(function(){ busy = false }, 5500) }, 2200) }
+      else typeQ(m[1], function(){ acb.appendChild(bubble(m)[0]); trim(); setTimeout(function(){ busy = false }, 500) }) };
     var trim = function(){ while (acb.children.length > 4) acb.removeChild(acb.firstChild) };
     if (reduce) CV.forEach(function(m){ acb.appendChild(bubble(m, m[1])[0]) });
-    else { acb.appendChild(bubble(CV[0])[0]); acb.appendChild(bubble(CV[1], CV[1][1])[0]); ci = 2; setInterval(function(){ var r = acb.getBoundingClientRect(); if (r.top < innerHeight && r.bottom > 0) stepC() }, 2200) }
+    else { welcome(); var seen = 0; setInterval(function(){ var r = acb.getBoundingClientRect(), vis = r.top < innerHeight * .8 && r.bottom > innerHeight * .2;
+      if (!vis) { seen = 0; return } if (++seen >= 2) stepC() }, 600) }
   }
 
   // ── Preguntas que se escriben solas (banda de IA)

@@ -987,5 +987,12 @@ body.menu-open header .burger{background:#fff!important;border-color:var(--line-
 .cxh>div{min-width:0}
 .cxh small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .cxh small i{flex:none}
+.cxi span.typing{color:var(--ink)}
+.cx .arow:not(.rich) .am.ai{max-width:100%}
+
+/* Celular: la página no se mueve de lado (iPhone ignora overflow-x en body) */
+html,body{overflow-x:hidden;overflow-x:clip;max-width:100%}
+.hero{overflow:hidden;overflow:clip}
+.aichat,.livef,.acb{overscroll-behavior:contain}
 
 .seo{margin:44px 0 0;font-size:.84rem;line-height:1.65;color:var(--ink-3);max-width:92ch}
