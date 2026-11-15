@@ -918,7 +918,7 @@ body.menu-open header .burger{background:#fff!important;border-color:var(--line-
 .srcs span{padding:4px 9px;border:1px solid var(--line-2);border-radius:999px;background:#fff;color:var(--ink-2)}
 .srcs em{font-style:normal;color:var(--ink-3)}
 .xt{display:inline-block;margin:8px 0 10px;padding:4px 9px;border-radius:7px;background:#e8f6ef;color:#047857;font-size:12px;font-weight:500}
-.cc{border:1px solid var(--line);border-radius:14px;background:#fff;padding:10px 12px 8px;box-shadow:0 12px 30px -24px rgba(15,26,21,.4)}
+.cc{border:1px solid var(--line);border-radius:14px;background:#fff;padding:10px 12px 8px}
 .cch{display:flex;align-items:center;gap:12px;font-size:11.5px;color:var(--ink-2)}
 .lg{display:flex;align-items:center;gap:6px}.lg i{width:14px;height:2.5px;border-radius:2px;background:#10b981}.lg.g i{background:#71717a;height:2px}
 .seg{margin-left:auto;display:flex;padding:3px;border-radius:8px;background:#f1f3f2;font-size:11px}
@@ -937,7 +937,7 @@ body.menu-open header .burger{background:#fff!important;border-color:var(--line-
 .cl:nth-child(1){animation-delay:.5s}.cl:nth-child(2){animation-delay:.8s}.cl:nth-child(3){animation-delay:1.1s}
 .cls:first-child .cl:nth-child(1){animation-delay:.1s}.cls:first-child .cl:nth-child(2){animation-delay:.4s}.cls:first-child .cl:nth-child(3){animation-delay:.7s}
 .tg{font:600 10px/1 var(--f);letter-spacing:.05em;padding:4px 6px;border-radius:5px;white-space:nowrap}
-.tg.v{background:#e8f6ef;color:#047857}.tg.h{background:#f1ecfe;color:#6d28d9}.tg.p{background:#e8f0fe;color:#1d4ed8}.tg.r{background:#0f1a15;color:#fff}
+.tg.tv{background:#e8f6ef;color:#047857}.tg.th{background:#f1ecfe;color:#6d28d9}.tg.tp{background:#e8f0fe;color:#1d4ed8}.tg.tr{background:#0f1a15;color:#fff}
 .cxa{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;opacity:0;animation:fd2 .5s 1.4s forwards}
 .cxa span{font-size:12px;font-weight:500;padding:7px 11px;border-radius:9px;border:1px solid var(--line-2);color:var(--ink);background:#fff}
 .cxa .pri{background:#0f1a15;border-color:#0f1a15;color:#fff}
@@ -978,5 +978,14 @@ body.menu-open header .burger{background:#fff!important;border-color:var(--line-
 /* héroe sin pastilla ni nota: el título respira */
 .hero h1{margin-top:8px}
 /* fin limpieza */
+
+/* Respuestas planas dentro del chat (sin sombra de tarjeta encima) */
+.cx .am.ai{box-shadow:none!important}
+.cx .am.ai.rich{border-radius:0!important;overflow:visible}
+.cx .tg{display:inline-block;font:600 10px/1 var(--f)!important;letter-spacing:.05em;text-transform:uppercase;margin:0;gap:0}
+.cx .acb{-webkit-mask:linear-gradient(transparent 0,#000 8%);mask:linear-gradient(transparent 0,#000 8%)}
+.cxh>div{min-width:0}
+.cxh small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cxh small i{flex:none}
 
 .seo{margin:44px 0 0;font-size:.84rem;line-height:1.65;color:var(--ink-3);max-width:92ch}
