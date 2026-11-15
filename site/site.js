@@ -38,10 +38,6 @@
     setTimeout(showT, 900); setInterval(showT, 5600);
   }
   function heroLive(){
-    var hkv = $('#hkv');
-    if (hkv) { var to = 87462, s0 = Date.now(), v = 0;
-      var iv = setInterval(function(){ var k = Math.min(1, (Date.now() - s0) / 2200); v = Math.round(to * (1 - Math.pow(1 - k, 4))); hkv.textContent = '$' + v.toLocaleString('es-MX');
-        if (k >= 1) { clearInterval(iv); setInterval(function(){ v += Math.round(80 + Math.random() * 380); hkv.textContent = '$' + v.toLocaleString('es-MX'); hkv.classList.remove('bump'); void hkv.offsetWidth; hkv.classList.add('bump') }, 3200) } }, 30) }
     var push = $('#push'); if (!push) return;
     var PP = EN ? [['Heads up','3 pre-checks dropped $1,240 this afternoon. Want to see which tables?'],['Good pace 🔥','You are 12% above a normal Saturday at this hour.'],['Z report ready','Everything balanced to the cent. You can close.']]
                 : [['Ojo','3 precuentas bajaron $1,240 hoy en la tarde. ¿Te digo qué mesas?'],['Buen ritmo 🔥','Vas 12% arriba de un sábado normal a esta hora.'],['Corte Z listo','Todo cuadró al centavo. Ya puedes cerrar.']];

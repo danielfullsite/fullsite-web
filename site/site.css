@@ -809,12 +809,6 @@ body.menu-open header .burger{background:#fff!important;border-color:var(--line-
 
 /* 1 · La pantalla de la Mac despierta conforme se abre la tapa */
 .mac.scr .screen{position:relative}
-.mac.scr .shotimg{filter:brightness(calc(1 - var(--o) * 1.1)) saturate(calc(1 - var(--o) * .6))}
-.msweep{position:absolute;inset:0;pointer-events:none;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.55) 48%,rgba(16,185,129,.18) 52%,transparent 65%);transform:translateX(-120%);opacity:0}
-.mac.lit .msweep{animation:msweep 1.6s cubic-bezier(.4,0,.2,1) .1s both}
-@keyframes msweep{0%{transform:translateX(-120%);opacity:1}100%{transform:translateX(120%);opacity:1}}
-.mac.lit .screen{animation:mglow 2.4s ease-out both}
-@keyframes mglow{0%{box-shadow:0 0 0 0 rgba(16,185,129,0)}35%{box-shadow:0 0 90px 10px rgba(16,185,129,.35)}100%{box-shadow:0 0 40px 0 rgba(16,185,129,.0)}}
 
 /* aviso dentro de la pantalla */
 .mtoast{position:absolute;left:30%;bottom:26px;display:flex;align-items:center;gap:12px;min-width:300px;padding:12px 16px 12px 14px;border-radius:14px;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 18px 50px -12px rgba(0,0,0,.35),0 0 0 1px rgba(0,0,0,.06);color:#18181b;opacity:0;transform:translateY(16px) scale(.96);transition:opacity .5s,transform .7s cubic-bezier(.16,1,.3,1);pointer-events:none;z-index:2}
@@ -832,21 +826,7 @@ body.menu-open header .burger{background:#fff!important;border-color:var(--line-
 @keyframes ping{0%{transform:scale(.6);opacity:.9}100%{transform:scale(1.8);opacity:0}}
 
 /* tarjeta de venta en vivo junto a la Mac */
-.hkpi{position:absolute;left:0;top:120px;z-index:5;width:236px;padding:16px 18px 14px;border-radius:18px;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 30px 70px -20px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.4);color:#18181b;text-align:left;opacity:0;transform:translate(-30px,20px);transition:opacity 1s 1.2s,transform 1.4s 1.2s cubic-bezier(.16,1,.3,1)}
-.hstage.on .hkpi{opacity:1;transform:none;animation:floaty 7s ease-in-out 3s infinite}
-.hkpi small{display:flex;align-items:center;gap:7px;font:500 11px/1 var(--mono);color:#71717a}
-.hkpi small i{width:7px;height:7px;border-radius:50%;background:#10b981;box-shadow:0 0 0 0 rgba(16,185,129,.6);animation:live 1.8s infinite}
-.hkpi b{display:block;margin:10px 0 6px;font:600 32px/1 var(--f);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
-.hkpi b.bump{animation:bump .6s cubic-bezier(.16,1,.3,1)}
-.hkpi svg{display:block;width:100%;height:44px}
-.hkpi .hkl{stroke-dasharray:260;stroke-dashoffset:260}
-.hkpi .hka{opacity:0}
-.hstage.on .hkpi .hkl{animation:dr 2.2s 1.6s cubic-bezier(.16,1,.3,1) forwards}
-.hstage.on .hkpi .hka{animation:fd2 1.2s 2.4s forwards}
-.hkpi em{display:block;margin-top:8px;font:500 12px/1 var(--f);font-style:normal;color:#047857}
 @keyframes live{0%{box-shadow:0 0 0 0 rgba(16,185,129,.6)}70%{box-shadow:0 0 0 8px rgba(16,185,129,0)}100%{box-shadow:0 0 0 0 rgba(16,185,129,0)}}
-@keyframes bump{0%{transform:translateY(-3px);color:#047857}100%{transform:none}}
-@keyframes floaty{0%,100%{translate:0 0}50%{translate:0 -10px}}
 
 /* 2 · Notificación en el iPhone */
 .push{position:absolute;left:9px;right:9px;top:44px;z-index:4;display:flex;gap:9px;align-items:flex-start;padding:10px 11px;border-radius:20px;background:rgba(245,245,247,.86);backdrop-filter:blur(18px) saturate(1.6);-webkit-backdrop-filter:blur(18px) saturate(1.6);box-shadow:0 12px 30px -10px rgba(0,0,0,.35),0 0 0 .5px rgba(0,0,0,.08);color:#18181b;font:400 11.5px/1.32 var(--f);text-align:left;opacity:0;transform:translateY(-130%) scale(.92);transition:opacity .45s,transform .75s cubic-bezier(.2,1.25,.4,1)}
@@ -916,8 +896,6 @@ body.menu-open header .burger{background:#fff!important;border-color:var(--line-
 .btn-g.mag:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.15),0 14px 30px -10px rgba(4,120,87,.75)}
 
 @media (prefers-reduced-motion: reduce){
-  .mac.scr .shotimg{filter:none}
-  .hkpi,.push,.mtoast,.pst-ai{transition:none}
   .wr .w2>span{transform:none;opacity:1}
 }
 
