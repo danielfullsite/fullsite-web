@@ -1,2 +1,16 @@
 # Consolidación de keyword: la página de producto POS vive ahora en la landing SEO
 /producto/pos.html /pos-para-restaurantes/ 301
+
+# Limpieza: sin nombres de clientes ni páginas internas públicas
+/caso-amalay /caso-restaurante-monterrey 301
+/caso-amalay.html /caso-restaurante-monterrey 301
+/en/caso-amalay /en/caso-restaurante-monterrey 301
+/en/caso-amalay.html /en/caso-restaurante-monterrey 301
+/dashboard / 301
+/dashboard.html / 301
+/pitch / 301
+/pitch.html / 301
+/integraciones /fullsite-ia 301
+/integraciones.html /fullsite-ia 301
+/en/integraciones /en/fullsite-ai 301
+/en/integraciones.html /en/fullsite-ai 301
