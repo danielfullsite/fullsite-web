@@ -10,9 +10,23 @@
     var k = Math.min(1, f.clientWidth / w); inn.style.transform = 'scale(' + k + ')'; inn.style.marginLeft = Math.max(0, (f.clientWidth - w) / 2) + 'px'; f.style.height = Math.ceil(inn.offsetHeight * k) + 'px' }) }
   fit(); addEventListener('resize', fit); addEventListener('load', fit); setTimeout(fit, 600);
 
-  // ── Mac del héroe: la tapa se abre al cargar y luego entra el iPhone
+  // ── Mac del héroe: la tapa se entreabre al cargar y termina de abrirse con el scroll
   var mac = $('#mac'), hstage = $('.hstage');
-  if (mac) { if (reduce) { mac.classList.add('open'); hstage && hstage.classList.add('on') } else setTimeout(function(){ mac.classList.add('open'); hstage && hstage.classList.add('on') }, 250) }
+  if (mac) {
+    if (reduce) { mac.classList.add('open'); hstage && hstage.classList.add('on') }
+    else {
+      mac.classList.add('scr');
+      // Cerrada a ~55° cuando la Mac asoma abajo; abierta del todo cuando su borde llega al 20% superior
+      var oCur = 1, oTgt = 1, oRaf = 0, MAXO = .66;
+      var oCalc = function(){ var r = (hstage || mac).getBoundingClientRect(), vh = innerHeight;
+        oTgt = MAXO * Math.max(0, Math.min(1, (r.top - vh * .2) / (vh * .65))) };
+      var oTick = function(){ oCur += (oTgt - oCur) * .1; if (Math.abs(oTgt - oCur) < .002) oCur = oTgt;
+        mac.style.setProperty('--o', oCur.toFixed(4)); oRaf = oCur !== oTgt ? requestAnimationFrame(oTick) : 0 };
+      var oGo = function(){ oCalc(); if (oRaf) cancelAnimationFrame(oRaf); oRaf = requestAnimationFrame(oTick) };
+      addEventListener('scroll', oGo, {passive:true}); addEventListener('resize', oGo);
+      setTimeout(function(){ hstage && hstage.classList.add('on'); oGo() }, 250);
+    }
+  }
 
   // ── Panel de Connect: alertas que llegan y venta que sube
   var alerts = $('#alerts');

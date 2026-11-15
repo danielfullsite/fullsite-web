@@ -802,4 +802,7 @@ body.menu-open header .burger{background:#fff!important;border-color:var(--line-
 .hw h3{font-size:clamp(1.5rem,2.6vw,2rem);margin-top:12px}.hw p{color:var(--ink-2);margin-top:8px;max-width:56ch}
 .aiband .rotq{margin-bottom:6px}
 
+/* Tapa de la Mac guiada por el scroll (site.js la anima cuadro a cuadro) */
+.hstage .mac.scr .lid{transition:none}
+
 .seo{margin:44px 0 0;font-size:.84rem;line-height:1.65;color:var(--ink-3);max-width:92ch}
