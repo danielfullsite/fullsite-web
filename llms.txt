@@ -15,7 +15,22 @@
 - [POS sin internet](https://fullsite.mx/pos-sin-internet/)
 - [KDS para restaurantes](https://fullsite.mx/kds-para-restaurantes/)
 - [Inventario para restaurantes](https://fullsite.mx/inventario-para-restaurantes/)
+- [Cómo reducir el food cost](https://fullsite.mx/blog/como-reducir-food-cost-restaurante)
+- [Corte de caja en restaurante](https://fullsite.mx/blog/corte-de-caja-restaurante)
+- [Cómo evitar robos en restaurante](https://fullsite.mx/blog/como-evitar-robos-en-restaurante)
 - [Blog](https://fullsite.mx/blog/)
+
+## Ciudades
+- [POS para restaurantes en Monterrey](https://fullsite.mx/pos-restaurantes-monterrey/)
+- [POS para restaurantes en Guadalajara](https://fullsite.mx/pos-restaurantes-guadalajara)
+- [POS para restaurantes en CDMX](https://fullsite.mx/pos-restaurantes-cdmx)
+- [POS para restaurantes en Querétaro](https://fullsite.mx/pos-restaurantes-queretaro)
+- [POS para restaurantes en Puebla](https://fullsite.mx/pos-restaurantes-puebla)
+
+## English
+- [AI for restaurants](https://fullsite.mx/en/inteligencia-artificial-para-restaurantes)
+- [Best restaurant POS](https://fullsite.mx/en/mejor-pos-para-restaurantes)
+- [AI POS](https://fullsite.mx/en/pos-con-ia)
 
 ## Contacto
 - WhatsApp: +52 81 1532 4371
