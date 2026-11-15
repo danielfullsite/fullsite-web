@@ -3,359 +3,158 @@
   <url>
     <loc>https://fullsite.mx/</loc>
     <lastmod>2026-11-15</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/fullsite-ia.html</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/fullsite-ia.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/fullsite-ai.html"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/pos-inteligente.html</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/pos-inteligente.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/smart-pos.html"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/como-empezar.html</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/como-empezar.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/get-started.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/"/>
   </url>
   <url>
     <loc>https://fullsite.mx/en/</loc>
     <lastmod>2026-11-15</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/en/fullsite-ai.html</loc>
+    <loc>https://fullsite.mx/como-empezar</loc>
     <lastmod>2026-11-15</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/fullsite-ia.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/fullsite-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/como-empezar"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/get-started"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/como-empezar"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/en/smart-pos.html</loc>
+    <loc>https://fullsite.mx/en/fullsite-ai</loc>
     <lastmod>2026-11-15</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/pos-inteligente.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/smart-pos.html"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/fullsite-ia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/fullsite-ai"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/fullsite-ia"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/en/get-started.html</loc>
+    <loc>https://fullsite.mx/en/get-started</loc>
     <lastmod>2026-11-15</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/como-empezar.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/get-started.html"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/como-empezar"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/get-started"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/como-empezar"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/pos-para-restaurantes/</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://fullsite.mx/en/pos-para-restaurantes/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/pos-para-restaurantes/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/pos-para-restaurantes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/pos-para-restaurantes/"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/pos-restaurantes-monterrey/</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/pos-restaurantes-monterrey/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/pos-restaurantes-monterrey/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/pos-restaurantes-monterrey/"/>
+    <loc>https://fullsite.mx/en/smart-pos</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/pos-inteligente"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/smart-pos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/pos-inteligente"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/pos-sin-internet/</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/pos-sin-internet/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/pos-sin-internet/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/pos-sin-internet/"/>
+    <loc>https://fullsite.mx/fullsite-ia</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/fullsite-ia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/fullsite-ai"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/fullsite-ia"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/kds-para-restaurantes/</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/kds-para-restaurantes/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/kds-para-restaurantes/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/kds-para-restaurantes/"/>
+    <loc>https://fullsite.mx/pos-inteligente</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/pos-inteligente"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/smart-pos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/pos-inteligente"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/inventario-para-restaurantes/</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/inventario-para-restaurantes/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/inventario-para-restaurantes/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/inventario-para-restaurantes/"/>
+    <loc>https://fullsite.mx/pos-para-restaurantes/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/pos-para-restaurantes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/pos-para-restaurantes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/pos-para-restaurantes/"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/software-grupos-restauranteros/</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://fullsite.mx/blog/pos-con-ia-vs-pos-tradicional</loc>
+    <lastmod>2026-08-27</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/software-grupos-restauranteros/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/software-grupos-restauranteros/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/software-grupos-restauranteros/"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/blog/pos-con-ia-vs-pos-tradicional"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/blog/pos-con-ia-vs-pos-tradicional"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/blog/pos-con-ia-vs-pos-tradicional"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/inteligencia-operativa/</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://fullsite.mx/caso-restaurante-monterrey</loc>
+    <lastmod>2026-11-15</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/inteligencia-operativa/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/inteligencia-operativa/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/inteligencia-operativa/"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/caso-restaurante-monterrey"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/caso-restaurante-monterrey"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/caso-restaurante-monterrey"/>
   </url>
   <url>
     <loc>https://fullsite.mx/costos-y-margen/</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-08-27</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/costos-y-margen/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/costos-y-margen/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/costos-y-margen/"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/implementacion.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://fullsite.mx/en/blog/pos-con-ia-vs-pos-tradicional</loc>
+    <lastmod>2026-08-27</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/implementacion.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/implementacion.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/implementacion.html"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/blog/pos-con-ia-vs-pos-tradicional"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/blog/pos-con-ia-vs-pos-tradicional"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/blog/pos-con-ia-vs-pos-tradicional"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/nosotros.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://fullsite.mx/en/caso-restaurante-monterrey</loc>
+    <lastmod>2026-11-15</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/nosotros.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/nosotros.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/nosotros.html"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/caso-restaurante-monterrey"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/caso-restaurante-monterrey"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/caso-restaurante-monterrey"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/caso-amalay.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://fullsite.mx/en/costos-y-margen/</loc>
+    <lastmod>2026-08-27</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/caso-amalay.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/caso-amalay.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/caso-amalay.html"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/costos-y-margen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/costos-y-margen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/costos-y-margen/"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/producto/</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://fullsite.mx/en/inteligencia-operativa/</loc>
+    <lastmod>2026-08-27</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/producto/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/producto/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/producto/"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/inteligencia-operativa/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/inteligencia-operativa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/inteligencia-operativa/"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/producto/agentes-ia.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://fullsite.mx/en/inventario-para-restaurantes/</loc>
+    <lastmod>2026-08-27</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/producto/agentes-ia.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/producto/agentes-ia.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/producto/agentes-ia.html"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/inventario-para-restaurantes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/inventario-para-restaurantes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/inventario-para-restaurantes/"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/producto/analytics.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://fullsite.mx/en/kds-para-restaurantes/</loc>
+    <lastmod>2026-08-27</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/producto/analytics.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/producto/analytics.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/producto/analytics.html"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/producto/inventario.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/producto/inventario.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/producto/inventario.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/producto/inventario.html"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/producto/whatsapp-bot.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/producto/whatsapp-bot.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/producto/whatsapp-bot.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/producto/whatsapp-bot.html"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/soluciones/bar.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/soluciones/bar.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/soluciones/bar.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/soluciones/bar.html"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/soluciones/cafeteria.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/soluciones/cafeteria.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/soluciones/cafeteria.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/soluciones/cafeteria.html"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/soluciones/dark-kitchen.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/soluciones/dark-kitchen.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/soluciones/dark-kitchen.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/soluciones/dark-kitchen.html"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/soluciones/multi-sucursal.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/soluciones/multi-sucursal.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/soluciones/multi-sucursal.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/soluciones/multi-sucursal.html"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/soluciones/restaurante-premium.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/soluciones/restaurante-premium.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/soluciones/restaurante-premium.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/soluciones/restaurante-premium.html"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/blog/</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/blog/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/blog/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/blog/"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/blog/briefing-diario-restaurante.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/blog/briefing-diario-restaurante.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/blog/briefing-diario-restaurante.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/blog/briefing-diario-restaurante.html"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/blog/como-detectar-fraude-restaurante.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/blog/como-detectar-fraude-restaurante.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/blog/como-detectar-fraude-restaurante.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/blog/como-detectar-fraude-restaurante.html"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/blog/pos-con-ia-vs-pos-tradicional.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/blog/pos-con-ia-vs-pos-tradicional.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/blog/pos-con-ia-vs-pos-tradicional.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/blog/pos-con-ia-vs-pos-tradicional.html"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/blog/que-es-menu-engineering.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/blog/que-es-menu-engineering.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/blog/que-es-menu-engineering.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/blog/que-es-menu-engineering.html"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/precios.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/precios.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/precios.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/precios.html"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/integraciones.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/integraciones.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/integraciones.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/integraciones.html"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/demo.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/demo.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/demo.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/demo.html"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/privacidad.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/privacidad.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/privacidad.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/privacidad.html"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/terminos.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/terminos.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/terminos.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/terminos.html"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/en/pos-para-restaurantes/</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/pos-para-restaurantes/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/pos-para-restaurantes/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/pos-para-restaurantes/"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/kds-para-restaurantes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/kds-para-restaurantes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/kds-para-restaurantes/"/>
   </url>
   <url>
     <loc>https://fullsite.mx/en/pos-restaurantes-monterrey/</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-08-27</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/pos-restaurantes-monterrey/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/pos-restaurantes-monterrey/"/>
@@ -363,263 +162,354 @@
   </url>
   <url>
     <loc>https://fullsite.mx/en/pos-sin-internet/</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-08-27</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/pos-sin-internet/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/pos-sin-internet/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/pos-sin-internet/"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/en/kds-para-restaurantes/</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/kds-para-restaurantes/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/kds-para-restaurantes/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/kds-para-restaurantes/"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/en/inventario-para-restaurantes/</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/inventario-para-restaurantes/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/inventario-para-restaurantes/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/inventario-para-restaurantes/"/>
-  </url>
-  <url>
     <loc>https://fullsite.mx/en/software-grupos-restauranteros/</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-08-27</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/software-grupos-restauranteros/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/software-grupos-restauranteros/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/software-grupos-restauranteros/"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/en/inteligencia-operativa/</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://fullsite.mx/inteligencia-operativa/</loc>
+    <lastmod>2026-08-27</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/inteligencia-operativa/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/inteligencia-operativa/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/inteligencia-operativa/"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/en/costos-y-margen/</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://fullsite.mx/inventario-para-restaurantes/</loc>
+    <lastmod>2026-08-27</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/costos-y-margen/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/costos-y-margen/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/costos-y-margen/"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/inventario-para-restaurantes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/inventario-para-restaurantes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/inventario-para-restaurantes/"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/en/implementacion.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://fullsite.mx/kds-para-restaurantes/</loc>
+    <lastmod>2026-08-27</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/implementacion.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/implementacion.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/implementacion.html"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/kds-para-restaurantes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/kds-para-restaurantes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/kds-para-restaurantes/"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/en/nosotros.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://fullsite.mx/pos-restaurantes-monterrey/</loc>
+    <lastmod>2026-08-27</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/nosotros.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/nosotros.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/nosotros.html"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/pos-restaurantes-monterrey/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/pos-restaurantes-monterrey/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/pos-restaurantes-monterrey/"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/en/caso-amalay.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://fullsite.mx/pos-sin-internet/</loc>
+    <lastmod>2026-08-27</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/caso-amalay.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/caso-amalay.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/caso-amalay.html"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/pos-sin-internet/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/pos-sin-internet/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/pos-sin-internet/"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/en/producto/</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://fullsite.mx/software-grupos-restauranteros/</loc>
+    <lastmod>2026-08-27</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/producto/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/producto/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/producto/"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/software-grupos-restauranteros/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/software-grupos-restauranteros/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/software-grupos-restauranteros/"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/en/producto/agentes-ia.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/producto/agentes-ia.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/producto/agentes-ia.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/producto/agentes-ia.html"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/en/producto/analytics.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/producto/analytics.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/producto/analytics.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/producto/analytics.html"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/en/producto/inventario.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/producto/inventario.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/producto/inventario.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/producto/inventario.html"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/en/producto/whatsapp-bot.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/producto/whatsapp-bot.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/producto/whatsapp-bot.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/producto/whatsapp-bot.html"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/en/soluciones/bar.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/soluciones/bar.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/soluciones/bar.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/soluciones/bar.html"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/en/soluciones/cafeteria.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/soluciones/cafeteria.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/soluciones/cafeteria.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/soluciones/cafeteria.html"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/en/soluciones/dark-kitchen.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/soluciones/dark-kitchen.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/soluciones/dark-kitchen.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/soluciones/dark-kitchen.html"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/en/soluciones/multi-sucursal.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/soluciones/multi-sucursal.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/soluciones/multi-sucursal.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/soluciones/multi-sucursal.html"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/en/soluciones/restaurante-premium.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/soluciones/restaurante-premium.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/soluciones/restaurante-premium.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/soluciones/restaurante-premium.html"/>
-  </url>
-  <url>
-    <loc>https://fullsite.mx/en/blog/</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://fullsite.mx/blog/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/blog/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/blog/"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/en/blog/briefing-diario-restaurante.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/blog/briefing-diario-restaurante.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/blog/briefing-diario-restaurante.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/blog/briefing-diario-restaurante.html"/>
+    <loc>https://fullsite.mx/blog/briefing-diario-restaurante</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/blog/briefing-diario-restaurante"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/blog/briefing-diario-restaurante"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/blog/briefing-diario-restaurante"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/en/blog/como-detectar-fraude-restaurante.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/blog/como-detectar-fraude-restaurante.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/blog/como-detectar-fraude-restaurante.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/blog/como-detectar-fraude-restaurante.html"/>
+    <loc>https://fullsite.mx/blog/como-detectar-fraude-restaurante</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/blog/como-detectar-fraude-restaurante"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/blog/como-detectar-fraude-restaurante"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/blog/como-detectar-fraude-restaurante"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/en/blog/pos-con-ia-vs-pos-tradicional.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/blog/pos-con-ia-vs-pos-tradicional.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/blog/pos-con-ia-vs-pos-tradicional.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/blog/pos-con-ia-vs-pos-tradicional.html"/>
+    <loc>https://fullsite.mx/blog/que-es-menu-engineering</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/blog/que-es-menu-engineering"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/blog/que-es-menu-engineering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/blog/que-es-menu-engineering"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/en/blog/que-es-menu-engineering.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/blog/que-es-menu-engineering.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/blog/que-es-menu-engineering.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/blog/que-es-menu-engineering.html"/>
+    <loc>https://fullsite.mx/en/blog/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/blog/"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/en/precios.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/precios.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/precios.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/precios.html"/>
+    <loc>https://fullsite.mx/en/blog/briefing-diario-restaurante</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/blog/briefing-diario-restaurante"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/blog/briefing-diario-restaurante"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/blog/briefing-diario-restaurante"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/en/integraciones.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/integraciones.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/integraciones.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/integraciones.html"/>
+    <loc>https://fullsite.mx/en/blog/como-detectar-fraude-restaurante</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/blog/como-detectar-fraude-restaurante"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/blog/como-detectar-fraude-restaurante"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/blog/como-detectar-fraude-restaurante"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/en/demo.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/demo.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/demo.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/demo.html"/>
+    <loc>https://fullsite.mx/en/blog/que-es-menu-engineering</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/blog/que-es-menu-engineering"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/blog/que-es-menu-engineering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/blog/que-es-menu-engineering"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/en/privacidad.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>yearly</changefreq>
+    <loc>https://fullsite.mx/en/implementacion</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/implementacion"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/implementacion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/implementacion"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/en/nosotros</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/nosotros"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/nosotros"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/nosotros"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/en/producto/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/producto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/producto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/producto/"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/en/producto/agentes-ia</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/producto/agentes-ia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/producto/agentes-ia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/producto/agentes-ia"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/en/producto/analytics</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/producto/analytics"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/producto/analytics"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/producto/analytics"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/en/producto/inventario</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/producto/inventario"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/producto/inventario"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/producto/inventario"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/en/producto/whatsapp-bot</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/producto/whatsapp-bot"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/producto/whatsapp-bot"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/producto/whatsapp-bot"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/en/soluciones/bar</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/soluciones/bar"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/soluciones/bar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/soluciones/bar"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/en/soluciones/cafeteria</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/soluciones/cafeteria"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/soluciones/cafeteria"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/soluciones/cafeteria"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/en/soluciones/dark-kitchen</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/soluciones/dark-kitchen"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/soluciones/dark-kitchen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/soluciones/dark-kitchen"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/en/soluciones/multi-sucursal</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/soluciones/multi-sucursal"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/soluciones/multi-sucursal"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/soluciones/multi-sucursal"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/en/soluciones/restaurante-premium</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/soluciones/restaurante-premium"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/soluciones/restaurante-premium"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/soluciones/restaurante-premium"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/implementacion</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/implementacion"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/implementacion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/implementacion"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/nosotros</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/nosotros"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/nosotros"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/nosotros"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/producto/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/producto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/producto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/producto/"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/producto/agentes-ia</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/producto/agentes-ia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/producto/agentes-ia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/producto/agentes-ia"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/producto/analytics</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/producto/analytics"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/producto/analytics"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/producto/analytics"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/producto/inventario</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/producto/inventario"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/producto/inventario"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/producto/inventario"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/producto/whatsapp-bot</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/producto/whatsapp-bot"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/producto/whatsapp-bot"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/producto/whatsapp-bot"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/soluciones/bar</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/soluciones/bar"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/soluciones/bar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/soluciones/bar"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/soluciones/cafeteria</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/soluciones/cafeteria"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/soluciones/cafeteria"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/soluciones/cafeteria"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/soluciones/dark-kitchen</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/soluciones/dark-kitchen"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/soluciones/dark-kitchen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/soluciones/dark-kitchen"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/soluciones/multi-sucursal</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/soluciones/multi-sucursal"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/soluciones/multi-sucursal"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/soluciones/multi-sucursal"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/soluciones/restaurante-premium</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/soluciones/restaurante-premium"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/soluciones/restaurante-premium"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/soluciones/restaurante-premium"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/en/privacidad</loc>
+    <lastmod>2026-08-27</lastmod>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/privacidad.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/privacidad.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/privacidad"/>
   </url>
   <url>
-    <loc>https://fullsite.mx/en/terminos.html</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>yearly</changefreq>
+    <loc>https://fullsite.mx/en/terminos</loc>
+    <lastmod>2026-08-27</lastmod>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/terminos.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/terminos.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/terminos.html"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/terminos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/terminos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/terminos"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/privacidad</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/privacidad"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/terminos</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/terminos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/terminos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/terminos"/>
   </url>
 </urlset>
