@@ -145,7 +145,7 @@
       else { acb.appendChild(bubble(m)[0]); trim() } };
     var trim = function(){ while (acb.children.length > 4) acb.removeChild(acb.firstChild) };
     if (reduce) CV.forEach(function(m){ acb.appendChild(bubble(m, m[1])[0]) });
-    else { stepC(); setInterval(function(){ var r = acb.getBoundingClientRect(); if (r.top < innerHeight && r.bottom > 0) stepC() }, 2200) }
+    else { acb.appendChild(bubble(CV[0])[0]); acb.appendChild(bubble(CV[1], CV[1][1])[0]); ci = 2; setInterval(function(){ var r = acb.getBoundingClientRect(); if (r.top < innerHeight && r.bottom > 0) stepC() }, 2200) }
   }
 
   // ── Preguntas que se escriben solas (banda de IA)

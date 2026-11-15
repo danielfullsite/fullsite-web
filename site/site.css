@@ -899,4 +899,8 @@ body.menu-open header .burger{background:#fff!important;border-color:var(--line-
   .wr .w2>span{transform:none;opacity:1}
 }
 
+/* Chat más compacto: arranca con la primera respuesta y no deja hueco vacío */
+.acb{height:400px!important}
+@media (max-width:600px){.acb{height:340px!important;padding:12px 12px!important}.am{font-size:.86rem;padding:9px 12px}.mchart{height:84px}}
+
 .seo{margin:44px 0 0;font-size:.84rem;line-height:1.65;color:var(--ink-3);max-width:92ch}
