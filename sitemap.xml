@@ -129,6 +129,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/costos-y-margen/"/>
   </url>
   <url>
+    <loc>https://fullsite.mx/en/inteligencia-artificial-para-restaurantes</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/inteligencia-artificial-para-restaurantes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/inteligencia-artificial-para-restaurantes"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/inteligencia-artificial-para-restaurantes"/>
+  </url>
+  <url>
     <loc>https://fullsite.mx/en/inteligencia-operativa/</loc>
     <lastmod>2026-11-15</lastmod>
     <priority>0.8</priority>
@@ -151,6 +159,22 @@
     <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/kds-para-restaurantes/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/kds-para-restaurantes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/kds-para-restaurantes/"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/en/mejor-pos-para-restaurantes</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/mejor-pos-para-restaurantes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/mejor-pos-para-restaurantes"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/mejor-pos-para-restaurantes"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/en/pos-con-ia</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/pos-con-ia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/pos-con-ia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/pos-con-ia"/>
   </url>
   <url>
     <loc>https://fullsite.mx/en/pos-restaurantes-monterrey/</loc>
@@ -180,6 +204,9 @@
     <loc>https://fullsite.mx/inteligencia-artificial-para-restaurantes</loc>
     <lastmod>2026-11-15</lastmod>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/inteligencia-artificial-para-restaurantes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/inteligencia-artificial-para-restaurantes"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/inteligencia-artificial-para-restaurantes"/>
   </url>
   <url>
     <loc>https://fullsite.mx/inteligencia-operativa/</loc>
@@ -209,9 +236,25 @@
     <loc>https://fullsite.mx/mejor-pos-para-restaurantes</loc>
     <lastmod>2026-11-15</lastmod>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/mejor-pos-para-restaurantes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/mejor-pos-para-restaurantes"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/mejor-pos-para-restaurantes"/>
   </url>
   <url>
     <loc>https://fullsite.mx/pos-con-ia</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/pos-con-ia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/pos-con-ia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/pos-con-ia"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/pos-restaurantes-cdmx</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/pos-restaurantes-guadalajara</loc>
     <lastmod>2026-11-15</lastmod>
     <priority>0.8</priority>
   </url>
@@ -222,6 +265,16 @@
     <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/pos-restaurantes-monterrey/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/pos-restaurantes-monterrey/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/pos-restaurantes-monterrey/"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/pos-restaurantes-puebla</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/pos-restaurantes-queretaro</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fullsite.mx/pos-sin-internet/</loc>
@@ -262,6 +315,21 @@
     <xhtml:link rel="alternate" hreflang="es-MX" href="https://fullsite.mx/blog/como-detectar-fraude-restaurante"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://fullsite.mx/en/blog/como-detectar-fraude-restaurante"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://fullsite.mx/blog/como-detectar-fraude-restaurante"/>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/blog/como-evitar-robos-en-restaurante</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/blog/como-reducir-food-cost-restaurante</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fullsite.mx/blog/corte-de-caja-restaurante</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fullsite.mx/blog/que-es-menu-engineering</loc>
