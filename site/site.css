@@ -802,4 +802,105 @@ body.menu-open header .burger{background:#fff!important;border-color:var(--line-
 .hw h3{font-size:clamp(1.5rem,2.6vw,2rem);margin-top:12px}.hw p{color:var(--ink-2);margin-top:8px;max-width:56ch}
 .aiband .rotq{margin-bottom:6px}
 
+/* Tapa de la Mac guiada por el scroll (site.js la anima cuadro a cuadro) */
+.hstage .mac.scr .lid{transition:none}
+
+/* ═════════ v12 · animaciones ═════════ */
+
+/* 1 · La pantalla de la Mac despierta conforme se abre la tapa */
+.mac.scr .screen{position:relative}
+
+/* aviso dentro de la pantalla */
+.mtoast{position:absolute;left:30%;bottom:26px;display:flex;align-items:center;gap:12px;min-width:300px;padding:12px 16px 12px 14px;border-radius:14px;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 18px 50px -12px rgba(0,0,0,.35),0 0 0 1px rgba(0,0,0,.06);color:#18181b;opacity:0;transform:translateY(16px) scale(.96);transition:opacity .5s,transform .7s cubic-bezier(.16,1,.3,1);pointer-events:none;z-index:2}
+.mtoast.in{opacity:1;transform:none}
+.mtoast .dot{position:relative;width:10px;height:10px;border-radius:50%;background:var(--c,#ef4444);flex:none}
+.mtoast .dot::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--c,#ef4444);animation:ping 1.6s ease-out infinite}
+.mtoast.r{--c:#ef4444}.mtoast.a{--c:#f59e0b}.mtoast.g{--c:#10b981}
+.mtoast.in.r{box-shadow:0 18px 50px -12px rgba(0,0,0,.35),0 0 0 1px rgba(239,68,68,.25),0 0 40px -6px rgba(239,68,68,.45)}
+.mtoast.in.g{box-shadow:0 18px 50px -12px rgba(0,0,0,.35),0 0 0 1px rgba(16,185,129,.25),0 0 40px -6px rgba(16,185,129,.45)}
+.mtoast .tx{display:grid;gap:1px;flex:1;text-align:left}
+.mtoast small{font:500 10px/1.2 var(--mono);color:#71717a;letter-spacing:.02em}
+.mtoast b{font:600 15px/1.25 var(--f)}
+.mtoast em{font:400 12px/1.3 var(--f);font-style:normal;color:#71717a}
+.mtoast strong{font:600 17px/1 var(--mono);color:var(--c)}
+@keyframes ping{0%{transform:scale(.6);opacity:.9}100%{transform:scale(1.8);opacity:0}}
+
+/* tarjeta de venta en vivo junto a la Mac */
+@keyframes live{0%{box-shadow:0 0 0 0 rgba(16,185,129,.6)}70%{box-shadow:0 0 0 8px rgba(16,185,129,0)}100%{box-shadow:0 0 0 0 rgba(16,185,129,0)}}
+
+/* 2 · Notificación en el iPhone */
+.push{position:absolute;left:9px;right:9px;top:44px;z-index:4;display:flex;gap:9px;align-items:flex-start;padding:10px 11px;border-radius:20px;background:rgba(245,245,247,.86);backdrop-filter:blur(18px) saturate(1.6);-webkit-backdrop-filter:blur(18px) saturate(1.6);box-shadow:0 12px 30px -10px rgba(0,0,0,.35),0 0 0 .5px rgba(0,0,0,.08);color:#18181b;font:400 11.5px/1.32 var(--f);text-align:left;opacity:0;transform:translateY(-130%) scale(.92);transition:opacity .45s,transform .75s cubic-bezier(.2,1.25,.4,1)}
+.push.in{opacity:1;transform:none}
+.push img{width:30px;height:30px;border-radius:8px;flex:none}
+.push span{display:grid;gap:1px;min-width:0}
+.push small{display:flex;justify-content:space-between;font:500 9.5px/1.2 var(--f);color:#71717a;letter-spacing:.02em}
+.push small b{font-weight:600}
+.push>span>b{font-weight:600;font-size:12px}
+
+/* 3 · Gráfica del chat */
+.mchart .ar3{opacity:0;animation:fd2 1s 1.4s forwards}
+.mchart .fri,.mchart .fri2{opacity:0;transform-box:fill-box;transform-origin:center}
+.mchart .fri{animation:fd2 .4s 1.3s forwards}
+.mchart .fri2{animation:ring2 1.8s 1.5s ease-out infinite}
+.mchart .ring{transform-box:fill-box;transform-origin:center;opacity:0;animation:ring2 1.8s 2s ease-out infinite}
+@keyframes ring2{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(3.2)}}
+.am.ai .todo2 li{opacity:0;transform:translateY(8px);animation:tdin .6s cubic-bezier(.16,1,.3,1) forwards}
+.am.ai .todo2 li:nth-child(1){animation-delay:.35s}.am.ai .todo2 li:nth-child(2){animation-delay:.75s}
+.am.ai .qr{opacity:0;animation:fd2 .6s 1.2s forwards}
+.am.ai .alrt{animation:alrtin .7s cubic-bezier(.16,1,.3,1) .2s both}
+@keyframes tdin{to{opacity:1;transform:none}}
+@keyframes alrtin{0%{opacity:0;transform:translateX(-8px)}60%{box-shadow:0 0 0 4px rgba(239,68,68,.15)}100%{opacity:1;transform:none}}
+
+/* 4 · Títulos palabra por palabra */
+.wr .w2{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .02em .12em;margin:0 -.02em -.12em}
+.wr .w2>span{display:inline-block;transform:translateY(110%) rotate(4deg);transform-origin:0 100%;opacity:0;transition:transform 1s cubic-bezier(.16,1,.3,1),opacity .6s;transition-delay:calc(var(--i) * 45ms)}
+.wr.in .w2>span{transform:none;opacity:1}
+
+/* 5 · POS: historia caja → cocina fija con el scroll */
+.posstory{height:250vh;position:relative}
+.pst-sticky{position:sticky;top:76px;padding:8px 0 20px}
+.pst-steps{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 auto 26px;max-width:980px;padding-bottom:16px}
+.pst-s{display:flex;gap:12px;align-items:flex-start;opacity:.38;transition:opacity .5s}
+.pst-s.on,.pst-s.done{opacity:1}
+.pst-s i{flex:none;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--line-2);font:600 13px/1 var(--mono);font-style:normal;color:var(--ink-3);transition:all .5s}
+.pst-s.on i{background:var(--g);border-color:var(--g);color:#fff;box-shadow:0 0 0 6px rgba(16,185,129,.15)}
+.pst-s.done i{background:#e8f6ef;border-color:#a7e3c6;color:var(--g)}
+.pst-s span{display:grid;gap:3px;text-align:left}
+.pst-s b{font:600 15px/1.25 var(--f);color:var(--ink)}
+.pst-s small{font-size:13px;color:var(--ink-3)}
+.pst-bar{position:absolute;left:0;right:0;bottom:0;height:3px;border-radius:3px;background:var(--line)}
+.pst-bar span{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#047857,#10b981);transform-origin:left;transform:scaleX(0)}
+.pst-sticky .posstage{max-width:min(100%,calc((100vh - 300px) * 2.05));margin:0 auto}
+.pst-ai{display:flex;align-items:center;gap:10px;width:max-content;max-width:100%;margin:22px auto 0;padding:10px 16px 10px 10px;border-radius:999px;background:#0f1412;color:#e7efe9;font-size:14px;box-shadow:0 20px 40px -18px rgba(4,120,87,.6),0 0 0 1px rgba(16,185,129,.35);opacity:0;transform:translateY(14px) scale(.96);transition:opacity .5s,transform .7s cubic-bezier(.16,1,.3,1)}
+.pst-ai.in{opacity:1;transform:none}
+.pst-ai img{width:26px;height:26px;border-radius:7px}
+.pst-ai b{color:#6ee7b7;font-weight:600}
+.kt2.ok{border-top-color:#22c55e;background:#132a1f;box-shadow:0 0 0 2px #22c55e,0 0 28px -4px rgba(34,197,94,.6)}
+.kt2.ok b span{color:#4ade80}
+@media (max-width:760px){
+  .posstory{height:210vh}
+  .pst-sticky{top:64px}
+  .pst-steps{gap:8px;margin-bottom:16px}
+  .pst-s{flex-direction:column;gap:6px}
+  .pst-s b{font-size:12.5px}.pst-s small{display:none}
+  .pst-s i{width:24px;height:24px;font-size:11px}
+  .pst-ai{font-size:12px;border-radius:14px;width:auto}
+}
+
+/* 6 · Botones magnéticos con brillo */
+.btn.mag{transition:background .2s,border-color .2s,box-shadow .3s,transform .35s cubic-bezier(.16,1,.3,1);overflow:hidden;isolation:isolate}
+.btn.mag::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(120px circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.35),transparent 60%);opacity:0;transition:opacity .3s}
+.btn.mag:hover::before{opacity:1}
+.btn-g.mag::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;z-index:-1;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);animation:shine 5s 3s ease-in-out infinite}
+@keyframes shine{0%,70%{left:-60%}100%{left:130%}}
+.btn-g.mag:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.15),0 14px 30px -10px rgba(4,120,87,.75)}
+
+@media (prefers-reduced-motion: reduce){
+  .wr .w2>span{transform:none;opacity:1}
+}
+
+/* Chat más compacto: arranca con la primera respuesta y no deja hueco vacío */
+.acb{height:400px!important}
+@media (max-width:600px){.acb{height:340px!important;padding:12px 12px!important}.am{font-size:.86rem;padding:9px 12px}.mchart{height:84px}}
+
 .seo{margin:44px 0 0;font-size:.84rem;line-height:1.65;color:var(--ink-3);max-width:92ch}
