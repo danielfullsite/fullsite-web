@@ -1,6 +1,7 @@
 /* Fullsite · scripts compartidos por todas las páginas. Cada bloque revisa que su sección exista. */
 (function(){
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var LIVE = ((document.currentScript && document.currentScript.src) || 'site.js').replace(/site\.js(\?.*)?$/, 'connect.html');
   var EN = document.documentElement.lang === 'en';
   var $ = function(s){ return document.querySelector(s) }, $$ = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)) };
   function money(n){ return '$' + n.toLocaleString('es-MX', {minimumFractionDigits:2, maximumFractionDigits:2}) }
@@ -45,6 +46,22 @@
       push.innerHTML = '<img src="/site/img/logo-f.jpg" alt=""><span><small><b>FULLSITE</b>' + (EN ? 'now' : 'ahora') + '</small><b>' + d[0] + '</b>' + d[1] + '</span>';
       push.classList.remove('in'); void push.offsetWidth; push.classList.add('in'); setTimeout(function(){ push.classList.remove('in') }, 4600) };
     setTimeout(function(){ showP(); setInterval(showP, 6400) }, 3200);
+  }
+
+  // ── Pantallas con Fullsite Connect real (la app, no una captura). La imagen queda de fondo mientras carga.
+  var lives = $$('[data-live]');
+  if (lives.length) {
+    try { localStorage.setItem('fs-theme', 'light') } catch (e) {}
+    var mount = function(el){
+      var w = +el.dataset.lw || 1440, top = +el.dataset.top || 0, f = document.createElement('iframe');
+      f.className = 'livef'; f.title = 'Fullsite Connect'; f.tabIndex = -1; f.setAttribute('aria-hidden', 'true'); f.setAttribute('scrolling', 'no');
+      var size = function(){ var k = el.clientWidth / w; if (!k) return; f.style.width = w + 'px'; f.style.height = Math.ceil((el.clientHeight - top) / k) + 'px'; f.style.top = top + 'px'; f.style.transform = 'scale(' + k + ')' };
+      f.onload = function(){ size(); setTimeout(function(){ el.classList.add('live-on') }, 500) };
+      f.src = LIVE + '#' + el.dataset.live; el.appendChild(f); size(); addEventListener('resize', size); setTimeout(size, 700);
+    };
+    var started = false, start = function(){ if (started) return; started = true;
+      lives.forEach(function(el, i){ setTimeout(function(){ mount(el) }, i * 1400) }) };
+    if (document.readyState === 'complete') setTimeout(start, 300); else addEventListener('load', function(){ setTimeout(start, 300) });
   }
 
   // ── Panel de Connect: alertas que llegan y venta que sube
@@ -119,7 +136,7 @@
       };
       addEventListener('scroll', sRender, {passive:true}); addEventListener('resize', sRender); sRender();
     }
-    else if (!reduce) setInterval(function(){ var r = term.getBoundingClientRect(); if (r.top < innerHeight && r.bottom > 0) tapOne() }, 1000);
+    else if (!reduce && !$('.possplit')) setInterval(function(){ var r = term.getBoundingClientRect(); if (r.top < innerHeight && r.bottom > 0) tapOne() }, 1000);
     else order.forEach(function(){ tapOne() });
   }
 

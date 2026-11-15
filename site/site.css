@@ -956,4 +956,27 @@ body.menu-open header .burger{background:#fff!important;border-color:var(--line-
 }
 @media (prefers-reduced-motion: reduce){.cl,.cxa,.cxc .lw,.cxc .dot{animation:none;opacity:1}.cxc .tw{animation:none;stroke-dashoffset:0}}
 
+/* Limpieza y pantallas en vivo */
+[data-live]{position:relative}
+.livef{position:absolute;left:0;border:0;transform-origin:0 0;pointer-events:none;opacity:0;transition:opacity .8s ease;z-index:1;background:#fff}
+.live-on .livef{opacity:1}
+.ph3s .sbar2{position:relative;z-index:3;background:#f6f7f5}
+.ph3s .hbar{z-index:3}
+.mtoast{z-index:4}
+/* menos verde: etiquetas de sección neutras, verde solo en botones y datos */
+.eyebrow{color:var(--ink-3)!important}.eyebrow::before{background:var(--ink-3)!important}
+.dark .eyebrow,.proof .eyebrow,.aiband .eyebrow{color:rgba(255,255,255,.55)!important}
+.dark .eyebrow::before,.proof .eyebrow::before,.aiband .eyebrow::before{background:rgba(255,255,255,.4)!important}
+.aiband h2 .g3{color:rgba(255,255,255,.5)}
+.end2 h2 span{color:var(--ink-3)}
+/* más aire y el mismo ritmo entre secciones */
+.feat-s{padding:140px 0 130px}
+.aiband{padding:140px 0}
+.end2{padding:160px 0 150px}
+.feat-s .mods{margin-top:48px}
+@media (max-width:760px){.feat-s{padding:90px 0 80px}.aiband{padding:90px 0}.end2{padding:110px 0 100px}}
+/* héroe sin pastilla ni nota: el título respira */
+.hero h1{margin-top:8px}
+/* fin limpieza */
+
 .seo{margin:44px 0 0;font-size:.84rem;line-height:1.65;color:var(--ink-3);max-width:92ch}
