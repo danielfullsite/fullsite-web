@@ -7,8 +7,17 @@
   function money(n){ return '$' + n.toLocaleString('es-MX', {minimumFractionDigits:2, maximumFractionDigits:2}) }
 
   // ── Escalado de dispositivos: en pantallas chicas se reducen como una imagen, no se reacomodan
+  // El alto cuenta también los dispositivos absolutos (iPhone, tarjetas flotantes): en celular el iPhone se dibuja más
+  // grande y quedaba más alto que la Mac, sobresalía por arriba y tapaba los botones del héroe (iPhone, 2026-11-16).
+  // Se mide con offsetTop/offsetHeight (sin transformaciones) para no leer una animación de entrada a medias.
+  function alcance(inn){ var arr = 0, abj = inn.offsetHeight;
+    $$('.ph2,.ph3,.float', inn).forEach(function(el){ if (!el.offsetParent) return; var y = 0, n = el;
+      while (n && n !== inn) { y += n.offsetTop; n = n.offsetParent }
+      if (n === inn) { arr = Math.min(arr, y); abj = Math.max(abj, y + el.offsetHeight) } });
+    return { arr: arr, abj: abj } }
   function fit(){ $$('.fit').forEach(function(f){ var w = +f.dataset.w, inn = f.firstElementChild; inn.style.width = w + 'px';
-    var k = Math.min(1, f.clientWidth / w); inn.style.transform = 'scale(' + k + ')'; inn.style.marginLeft = Math.max(0, (f.clientWidth - w) / 2) + 'px'; f.style.height = Math.ceil(inn.offsetHeight * k) + 'px' }) }
+    var k = Math.min(1, f.clientWidth / w), a = alcance(inn);
+    inn.style.transform = 'translateY(' + (-a.arr * k) + 'px) scale(' + k + ')'; inn.style.marginLeft = Math.max(0, (f.clientWidth - w) / 2) + 'px'; f.style.height = Math.ceil((a.abj - a.arr) * k) + 'px' }) }
   fit(); addEventListener('resize', fit); addEventListener('load', fit); setTimeout(fit, 600);
 
   // ── Mac del héroe: la tapa se entreabre al cargar y termina de abrirse con el scroll

@@ -16,6 +16,9 @@ jobs:
       deployments: write
     steps:
       - uses: actions/checkout@v4
+      # Cloudflare guarda /site/site.js 4 h en caché; con ?v=<huella> cada cambio llega al momento (2026-11-16).
+      - name: Versionar site.js y site.css en las páginas
+        run: node .github/scripts/version-sitio.mjs
       - name: Quitar archivos que no son del sitio
         run: rm -rf .github .gstack DEPLOY-NOTES.md
       - name: Publicar en Cloudflare Pages
